@@ -1,0 +1,255 @@
+{
+  "categories": {
+    "union": { "ar": "أخبار الاتحاد", "en": "AUASS News" },
+    "lecture": { "ar": "محاضرات", "en": "Lectures" },
+    "announcement": { "ar": "إعلانات", "en": "Announcements" }
+  },
+  "posts": [
+    {
+      "slug": "jordan-sky-october-2026",
+      "date": "2026-09-21",
+      "category": "announcement",
+      "image": "news/jordan-sky-oct-2026.jpg",
+      "imageFit": "contain",
+      "title": { "ar": "أهم الأحداث الفلكية في سماء الأردن: تشرين الأول 2026", "en": "Key Astronomical Events in Jordan's Sky: October 2026" },
+      "excerpt": {
+        "ar": "جدول أبرز الظواهر الفلكية في سماء الأردن خلال تشرين الأول/أكتوبر 2026، من إعداد المدرّبة الفلكية دلال اللالا.",
+        "en": "A guide to the main sky events visible from Jordan in October 2026, prepared by astronomy trainer Dalal Al-Lala."
+      },
+      "body": {
+        "ar": [
+          "ينشر الاتحاد العربي لعلوم الفضاء والفلك جدول أهم الأحداث الفلكية في سماء الأردن لشهر تشرين الأول/أكتوبر 2026، ويتضمن خمسة عشر حدثاً بين أطوار القمر واقترانات الكواكب وذروات زخات الشهب، مع توضيح إمكانية رصد كل حدث من الأردن.",
+          "أعدّت الجدول المدرّبة الفلكية دلال اللالا، عضو الاتحاد العربي لعلوم الفضاء والفلك. والمواعيد بتوقيت عمّان."
+        ],
+        "en": [
+          "The Arab Union for Astronomy and Space Sciences publishes its guide to the main astronomical events in Jordan's sky for October 2026. It covers fifteen events, including Moon phases, planetary conjunctions and meteor shower peaks, and notes whether each can be observed from Jordan.",
+          "The guide was prepared by astronomy trainer Dalal Al-Lala, a member of AUASS. All times are Amman time."
+        ]
+      },
+      "cta": { "href": "#sky", "label": { "ar": "تصفّح سماء الشهر تفاعلياً", "en": "Explore this month's sky" } }
+    },
+    {
+      "slug": "astrophotography-workshop-2026",
+      "date": "2026-09-21",
+      "category": "union",
+      "title": { "ar": "ورشة التصوير الفلكي ومعالجة الصور الفلكية", "en": "Astrophotography and Image Processing Workshop" },
+      "excerpt": {
+        "ar": "عقد الاتحاد في مقره يوم 14 أيلول 2026 ورشة متخصصة في التصوير الفلكي ومعالجة الصور الفلكية بالتعاون مع فريق Luminode.",
+        "en": "On 14 September 2026, AUASS held a specialised astrophotography and image-processing workshop at its headquarters, in cooperation with the Luminode team."
+      },
+      "body": {
+        "ar": [
+          "عقد الاتحاد العربي لعلوم الفضاء والفلك (AUASS) في مقره، يوم الاثنين الموافق 14 أيلول/سبتمبر 2026، ورشة متخصصة في التصوير الفلكي ومعالجة الصور الفلكية (Astrophotography Workshop)، بالتعاون مع فريق Luminode، وسط مشاركة وتفاعل مميزين من المهتمين بعلوم الفضاء والفلك.",
+          "وتناولت الورشة مجموعة من المحاور التطبيقية، شملت التعريف ببيانات FITS وآلية التعامل معها، ومعالجة الصور الفلكية باستخدام برنامج GIMP، وفصل القنوات اللونية ومعالجتها، وصولاً إلى الموازنة اللونية وإنتاج الصور الفلكية النهائية.",
+          "وتخلل الورشة تحدٍّ عملي في معالجة الصور الفلكية، شارك فيه أكثر من 20 متسابقاً قدّموا نماذجهم وصورهم بعد تطبيق مهارات المعالجة عليها، حيث قامت لجنة التحكيم بتقييم الأعمال المشاركة، وتم في ختام المسابقة تكريم أصحاب المراكز الأولى لأفضل الصور الفلكية المقدمة.",
+          "كما شهد اللقاء مسابقة تفاعلية للأسئلة والمعلومات الفلكية، أضفت أجواءً من الحماس والمنافسة بين الحضور، وأسفرت عن فوز ثلاثة مشاركين تم تكريمهم خلال الفعالية.",
+          "وفي ختام اللقاء، تم تسليم شهادات المشاركة لجميع المشاركين في الورشة، تقديراً لمشاركتهم واهتمامهم بتطوير مهاراتهم في مجال التصوير ومعالجة البيانات الفلكية."
+        ],
+        "en": [
+          "On Monday 14 September 2026, the Arab Union for Astronomy and Space Sciences (AUASS) held a specialised astrophotography and image-processing workshop at its headquarters, in cooperation with the Luminode team, with strong participation from people interested in space and astronomy.",
+          "The workshop covered a set of hands-on topics: an introduction to FITS data and how to work with it, processing astronomical images in GIMP, separating and processing colour channels, and colour balancing to produce the final images.",
+          "It included a practical image-processing challenge in which more than 20 contestants submitted their processed images. A judging panel evaluated the entries, and the winners of the top places were honoured at the end of the competition.",
+          "The meeting also featured an interactive astronomy quiz, which brought energy and friendly competition to the room; three participants won and were honoured during the event.",
+          "At the close, all participants received certificates of participation in recognition of their interest in developing their skills in astronomical imaging and data processing."
+        ]
+      }
+    },
+    {
+      "slug": "space-law-lecture-2026",
+      "date": "2026-09-21",
+      "category": "lecture",
+      "title": { "ar": "قانون الفضاء بين الحاضر والمستقبل", "en": "Space Law: Present and Future" },
+      "excerpt": {
+        "ar": "محاضرة علمية قدّمها الباحث زيد الدهامشة عبر منصة الاتحاد حول تطور قانون الفضاء وتحدياته ومستقبله.",
+        "en": "A lecture by researcher Zaid Al-Dahamsheh, held on the AUASS platform, on the evolution, challenges and future of space law."
+      },
+      "body": {
+        "ar": [
+          "أقام الاتحاد العربي لعلوم الفضاء والفلك والمكتب الإقليمي لتنمية الفلك في الوطن العربي، مساء 1 أيلول 2026، عبر منصة الاتحاد، محاضرة علمية بعنوان «قانون الفضاء بين الحاضر والمستقبل»، قدّمها الباحث زيد الدهامشة، الباحث والكاتب في قانون الفضاء والمختص في العلاقات الدولية.",
+          "وتناولت المحاضرة عدداً من المحاور المتعلقة بمفهوم قانون الفضاء وتطوره وأهميته في تنظيم الأنشطة الفضائية، إلى جانب استعراض أبرز القضايا والتحديات التي تواجه التشريعات الفضائية في ظل التطور المتسارع في قطاع الفضاء وتزايد أدوار الدول والمؤسسات والقطاع الخاص.",
+          "كما سلّط الباحث الضوء على مستقبل قانون الفضاء وأهمية تطوير الأطر القانونية والتشريعية بما يواكب التحولات التي يشهدها هذا القطاع، ويسهم في تنظيم الاستخدام السلمي والمسؤول للفضاء.",
+          "وشهدت المحاضرة حضوراً وتفاعلاً كبيرين من المشاركين، حيث أثرت أسئلتهم ومداخلاتهم النقاش حول الجوانب القانونية والسياسية المرتبطة بالأنشطة الفضائية ومستقبلها.",
+          "وتأتي هذه المحاضرة ضمن سلسلة الأنشطة العلمية والتثقيفية التي ينظمها الاتحاد بهدف نشر الثقافة العلمية والفضائية، وإتاحة المجال أمام الباحثين والمختصين العرب لطرح ومناقشة القضايا الحديثة المرتبطة بعلوم وتكنولوجيا وسياسات الفضاء."
+        ],
+        "en": [
+          "On the evening of 1 September 2026, the Arab Union for Astronomy and Space Sciences and the Regional Office of Astronomy for Development in the Arab World held a lecture on the AUASS platform titled \"Space Law: Present and Future\", given by Zaid Al-Dahamsheh, a researcher and writer on space law and a specialist in international relations.",
+          "The lecture covered the concept of space law, how it has developed and why it matters for regulating space activities. It also reviewed the main issues and challenges facing space legislation as the space sector grows quickly and the roles of states, institutions and the private sector expand.",
+          "The speaker also looked ahead to the future of space law and the need to develop legal and legislative frameworks that keep pace with the sector and support the peaceful and responsible use of space.",
+          "The lecture drew strong attendance and engagement; participants' questions and comments enriched the discussion of the legal and political aspects of space activities.",
+          "It is part of the series of scientific and educational activities AUASS organises to spread scientific and space culture and to give Arab researchers and specialists a platform to discuss current issues in space science, technology and policy."
+        ]
+      }
+    },
+    {
+      "slug": "crescent-and-venus-observation-2026",
+      "date": "2026-09-21",
+      "category": "union",
+      "title": { "ar": "رصد الهلال والزهرة", "en": "Observing the Crescent Moon and Venus" },
+      "excerpt": {
+        "ar": "أمسية رصد فلكي في مرج الحمام، عمّان، يوم 14 أيلول 2026، بالتعاون بين الاتحاد وجمعية زركشات.",
+        "en": "An evening of stargazing in Marj Al-Hamam, Amman, on 14 September 2026, organised with the Zarkashat Society."
+      },
+      "body": {
+        "ar": [
+          "بالتعاون مع الاتحاد العربي لعلوم الفضاء والفلك، وبتنظيم من جمعية زركشات، أُقيمت مساء يوم الاثنين الموافق 14 أيلول/سبتمبر 2026 فعالية فلكية بعنوان «رصد الهلال والزهرة» في منطقة مرج الحمام في عمّان.",
+          "وشارك في الفعالية من الاتحاد العربي لعلوم الفضاء والفلك كل من المدرّبة الفلكية دلال اللالا، والأستاذ إبراهيم خضر، والأستاذ إبراهيم العدوان، والأستاذ فارس الحباشنة، والأستاذ وليد صبحي، حيث قدّموا للحضور شروحات ومعلومات فلكية.",
+          "وتضمنت الأمسية إتاحة الفرصة للحضور للرصد باستخدام التلسكوبات، والتعرف بصورة عملية إلى عدد من الأجرام السماوية، في تجربة هدفت إلى تقريب علوم الفضاء والفلك من الجمهور وربط المعلومات العلمية بالمشاهدة المباشرة للسماء.",
+          "وتأتي هذه الفعالية ضمن الجهود المشتركة بين جمعية زركشات والاتحاد العربي لعلوم الفضاء والفلك لنشر الثقافة العلمية والفلكية، وتشجيع مختلف فئات المجتمع، ولا سيما الشباب والمهتمين، على التعرف إلى السماء وممارسة الرصد الفلكي."
+        ],
+        "en": [
+          "On the evening of Monday 14 September 2026, an astronomy event titled \"Observing the Crescent Moon and Venus\" was held in Marj Al-Hamam, Amman, organised by the Zarkashat Society in cooperation with the Arab Union for Astronomy and Space Sciences.",
+          "AUASS was represented by astronomy trainer Dalal Al-Lala, Ibrahim Khader, Ibrahim Al-Adwan, Fares Al-Habashneh and Walid Subhi, who gave the audience explanations and background on what they were seeing.",
+          "Attendees had the chance to observe through telescopes and get to know several celestial objects first-hand, bringing space and astronomy closer to the public and linking scientific knowledge to direct views of the sky.",
+          "The event is part of a joint effort by the Zarkashat Society and AUASS to spread scientific and astronomical culture and to encourage people, especially young people, to get to know the sky and take up observing."
+        ]
+      }
+    },
+    {
+      "slug": "arab-space-innovation-hackathon",
+      "featured": true,
+      "date": "2026-09-05",
+      "category": "union",
+      "image": "news/hackathon.jpg",
+      "title": { "ar": "هاكاثون الابتكار الفضائي العربي", "en": "Arab Space Innovation Hackathon" },
+      "excerpt": {
+        "ar": "يعلن الاتحاد عن رعايته لـ ASI Hack، هاكاثون عربي يجمع الطلاب والشباب للعمل على تحديات حقيقية في الفلك والفضاء والتكنولوجيا، يومي 25 و26 أيلول 2026 عبر الإنترنت.",
+        "en": "AUASS announces its sponsorship of ASI Hack, an Arab hackathon bringing students and young people together to work on real challenges in astronomy, space and technology, held online on 25–26 September 2026."
+      },
+      "facts": [
+        { "k": { "ar": "الموعد", "en": "Dates" }, "v": { "ar": "25–26 أيلول 2026", "en": "25–26 September 2026" } },
+        { "k": { "ar": "المكان", "en": "Where" }, "v": { "ar": "عبر الإنترنت", "en": "Online" } },
+        { "k": { "ar": "الرعاية", "en": "Sponsor" }, "v": { "ar": "الاتحاد العربي لعلوم الفضاء والفلك", "en": "Arab Union for Astronomy and Space Sciences" } },
+        { "k": { "ar": "التنظيم", "en": "Organiser" }, "v": { "ar": "فريق كاسيوبيا مصر", "en": "Cassiopeia Egypt team" } },
+        { "k": { "ar": "شريك استراتيجي", "en": "Strategic partner" }, "v": { "ar": "فريق الفضاء العربي", "en": "Arab Space Team" } }
+      ],
+      "body": {
+        "ar": [
+          "انطلاقاً من إيمان الاتحاد العربي لعلوم الفضاء والفلك بأهمية دعم الشباب العربي، وتعزيز حضورهم في مجالات علوم الفلك والفضاء والتكنولوجيا والابتكار، يعلن الاتحاد عن رعايته لـ «هاكاثون الابتكار الفضائي العربي» (ASI Hack – Arab Space Innovation Hackathon).",
+          "هاكاثون عربي يجمع الطلاب والشباب والمهتمين بالعلوم والتكنولوجيا والفضاء من مختلف أنحاء الوطن العربي، للعمل على تحديات حقيقية، وتحويل الأفكار إلى حلول مبتكرة قابلة للتطوير.",
+          "يقام الهاكاثون تحت رعاية الاتحاد العربي لعلوم الفضاء والفلك، وبتنظيم وإدارة فريق كاسيوبيا مصر، وبالشراكة الاستراتيجية مع فريق الفضاء العربي، عضو الاتحاد العربي لعلوم الفضاء والفلك.",
+          "ومن خلال هذه التجربة، يسعى ASI Hack إلى خلق مساحة عربية تجمع المعرفة بالابتكار، وتدفع الشباب إلى البحث والتجربة والتعاون، وبناء حلول تستجيب لاحتياجات حقيقية في مجالات الفلك والفضاء والتكنولوجيا.",
+          "ويأتي هذا التعاون امتداداً لرسالة الاتحاد في دعم وتطوير علوم الفضاء والفلك في الوطن العربي، وتعزيز البحث والتعليم والتعاون بين المؤسسات والعلماء والباحثين والشباب المهتمين بهذه المجالات.",
+          "من الوطن العربي… نحو الفضاء."
+        ],
+        "en": [
+          "Believing in the importance of supporting young Arabs and strengthening their presence in astronomy, space, technology and innovation, the Arab Union for Astronomy and Space Sciences announces its sponsorship of ASI Hack, the Arab Space Innovation Hackathon.",
+          "ASI Hack is an Arab hackathon that brings together students, young people and anyone interested in science, technology and space from across the Arab world to work on real challenges and turn ideas into innovative, scalable solutions.",
+          "The hackathon is held under the sponsorship of AUASS, organised and run by the Cassiopeia Egypt team, in strategic partnership with the Arab Space Team, a member of AUASS.",
+          "Through this experience, ASI Hack aims to create an Arab space that connects knowledge with innovation, pushes young people to research, experiment and collaborate, and builds solutions that respond to real needs in astronomy, space and technology.",
+          "This cooperation extends AUASS's mission to support and develop space and astronomy sciences in the Arab world, and to strengthen research, education and cooperation between institutions, scientists, researchers and young people interested in these fields.",
+          "From the Arab world… to space."
+        ]
+      },
+      "tags": ["#ASIHack", "#Build_Beyond", "#ArabSpaceInnovationHackathon"]
+    },
+    {
+      "slug": "space-agriculture-lecture",
+      "date": "2026-04-28",
+      "category": "lecture",
+      "image": "news/space-agriculture.jpg",
+      "title": { "ar": "محاضرة: الزراعة في الفضاء", "en": "Lecture: Farming in Space" },
+      "excerpt": {
+        "ar": "محاضرة أسبوعية قدّمها د. خالد رمضان يوم السبت 25 نيسان 2026 عبر منصة Zoom.",
+        "en": "A weekly lecture by Dr. Khaled Ramadan, held on Zoom on Saturday 25 April 2026."
+      },
+      "body": {
+        "ar": [
+          "دعا الاتحاد العربي لعلوم الفضاء والفلك والمكتب الإقليمي لتنمية الفلك في المنطقة العربية والجمعية الفلكية السورية لحضور المحاضرة الأسبوعية بعنوان «الزراعة في الفضاء».",
+          "قدّم المحاضرة د. خالد رمضان، دكتوراه في علم الأحياء وعضو الجمعية الفلكية السورية، يوم السبت 25 نيسان/أبريل 2026، الساعة 20:00 بتوقيت مكة المكرمة (17:00 بتوقيت غرينتش)، عبر منصة Zoom."
+        ],
+        "en": [
+          "The Arab Union for Astronomy and Space Sciences, the Regional Office of Astronomy for Development in the Arab Region and the Syrian Astronomical Society invited the public to the weekly lecture \"Farming in Space\".",
+          "The lecture was given by Dr. Khaled Ramadan, who holds a PhD in biology and is a member of the Syrian Astronomical Society, on Saturday 25 April 2026 at 20:00 Mecca time (17:00 GMT) on Zoom."
+        ]
+      }
+    },
+    {
+      "slug": "mearim7-call-for-participation",
+      "date": "2025-07-05",
+      "category": "announcement",
+      "title": { "ar": "كونوا معنا في مؤتمر MEARIM7: لقاء العلم والفضاء", "en": "Join Us at MEARIM7, Where Science and Space Meet" },
+      "excerpt": {
+        "ar": "دعوة للمشاركة في الاجتماع الإقليمي السابع للاتحاد الفلكي الدولي في الشرق الأوسط وأفريقيا، 11–13 تشرين الثاني 2025 في الجامعة الأردنية.",
+        "en": "A call to take part in the 7th Middle East and Africa Regional IAU Meeting, 11–13 November 2025 at the University of Jordan."
+      },
+      "body": {
+        "ar": [
+          "دعوة للمشاركة في الاجتماع الإقليمي السابع للاتحاد الفلكي الدولي في الشرق الأوسط وأفريقيا (MEARIM7)، تحت عنوان «تعزيز علوم الفضاء والفلك من أجل مستقبل مستدام»، والذي يُعقد في الفترة من 11 إلى 13 تشرين الثاني/نوفمبر 2025 في الجامعة الأردنية، عمّان.",
+          "يُعقد المؤتمر تحت رعاية الاتحاد العربي لعلوم الفضاء والفلك (AUASS) والجامعة الأردنية، بالتعاون مع: جامعة الشارقة – أكاديمية الشارقة لعلوم وتكنولوجيا الفضاء والفلك (SAASST)، والاتحاد الفلكي الدولي (IAU)، واتحاد الجامعات العربية (AArU)، والمعهد القومي للبحوث الفلكية والجيوفيزيقية (NRIAG).",
+          "يشكّل MEARIM7 منصة لتعزيز التعاون العلمي وتشجيع الحوار في السياسات وتطوير الشراكات الإقليمية والدولية في علوم الفضاء والفلك، ويعكس موضوعه التزاماً بمواءمة الابتكار العلمي مع أهداف الأمم المتحدة للتنمية المستدامة.",
+          "ومن موضوعات المؤتمر: الفيزياء الفلكية، وعلوم الكواكب، وعلم الكونيات، والذكاء الاصطناعي في علم الفلك، وتعليم الفلك، والفلك الراديوي، واستكشاف القمر والمريخ، والفلك الثقافي والتراث العربي الإسلامي، وتكنولوجيا الأقمار الصناعية والاستشعار عن بعد، وقانون الفضاء.",
+          "المواعيد المهمة: آخر موعد لتقديم الملخصات 1 آب 2025، وإشعار القبول بحلول 15 آب 2025، وتقديم البحث الكامل للمقبولين 15 تشرين الأول 2025."
+        ],
+        "en": [
+          "A call to take part in the 7th Middle East and Africa Regional IAU Meeting (MEARIM7), themed \"Advancing Space and Astronomy Sciences for a Sustainable Future\", held from 11 to 13 November 2025 at the University of Jordan, Amman.",
+          "The meeting is held under the patronage of the Arab Union for Astronomy and Space Sciences (AUASS) and the University of Jordan, in cooperation with the University of Sharjah – Sharjah Academy for Astronomy, Space Sciences and Technology (SAASST), the International Astronomical Union (IAU), the Association of Arab Universities (AArU) and the National Research Institute of Astronomy and Geophysics (NRIAG).",
+          "MEARIM7 is a platform for scientific cooperation, policy dialogue and regional and international partnerships in space and astronomy, and its theme reflects a commitment to aligning scientific innovation with the UN Sustainable Development Goals.",
+          "Topics include astrophysics, planetary science, cosmology, AI in astronomy, astronomy education, radio astronomy, lunar and Mars exploration, cultural astronomy and Arab-Islamic heritage, satellite technology and remote sensing, and space law.",
+          "Key dates: abstract deadline 1 August 2025; notification of acceptance by 15 August 2025; full papers from accepted authors by 15 October 2025."
+        ]
+      }
+    },
+    {
+      "slug": "jordan-youth-in-space",
+      "date": "2025-05-26",
+      "category": "lecture",
+      "title": { "ar": "شباب الأردن في الفضاء: رحلة نجاح نحو المستقبل", "en": "Jordan's Youth in Space: A Journey of Success" },
+      "excerpt": {
+        "ar": "جلسة شبابية بالتعاون مع نجمة الأردن لأبحاث علوم الفضاء، يوم السبت 24 أيار 2025 عبر منصة Zoom.",
+        "en": "A youth session with Jordan Star for Space Science Research, held on Zoom on Saturday 24 May 2025."
+      },
+      "body": {
+        "ar": [
+          "تحت رعاية أمين عام الاتحاد العربي لعلوم الفضاء والفلك د. م. عوني محمد الخصاونة، دعا الاتحاد ونجمة الأردن لأبحاث علوم الفضاء لحضور الجلسة الشبابية بعنوان «شباب الأردن في الفضاء: رحلة نجاح نحو المستقبل».",
+          "شارك في الجلسة كل من م. محمد أبو عمشة، وم. نورس بن طريف، وم. بشار أيمن الحراحشة، وم. لين حسن بطاح، وذلك يوم السبت 24 أيار/مايو 2025، الساعة 7:00 مساءً بتوقيت مكة المكرمة، عبر منصة Zoom."
+        ],
+        "en": [
+          "Under the patronage of AUASS Secretary General Dr. Eng. Awni Mohammed Al-Khasawneh, AUASS and Jordan Star for Space Science Research invited the public to a youth session titled \"Jordan's Youth in Space: A Journey of Success Towards the Future\".",
+          "Speakers were Eng. Mohammad Abu Amsha, Eng. Nawras Bin Tarif, Eng. Bashar Ayman Al-Harahsheh and Eng. Leen Hasan Battah. The session took place on Saturday 24 May 2025 at 7:00 pm Mecca time on Zoom."
+        ]
+      }
+    },
+    {
+      "slug": "astronomical-skills-course-2025",
+      "date": "2025-05-10",
+      "category": "announcement",
+      "image": "news/astronomical-skills.jpg",
+      "title": { "ar": "دورة المهارات الفلكية", "en": "Astronomical Skills Course" },
+      "excerpt": {
+        "ar": "الدورة الفلكية الأكثر طلباً، تقدّمها المدرّبة الفلكية دلال اللالا من 27 إلى 29 أيار 2025 عبر منصة Zoom.",
+        "en": "AUASS's most requested astronomy course, taught by trainer Dalal Al-Lala on Zoom from 27 to 29 May 2025."
+      },
+      "body": {
+        "ar": [
+          "دعا الاتحاد العربي لعلوم الفضاء والفلك والمكتب الإقليمي لتنمية الفلك في المنطقة العربية للمشاركة في الدورة الفلكية الأكثر طلباً «المهارات الفلكية»، التي تقدّمها المدرّبة الفلكية دلال اللالا، عضو الاتحاد.",
+          "انعقدت الدورة أيام الثلاثاء والأربعاء والخميس 27–29 أيار/مايو 2025، الساعة 7:00 مساءً بتوقيت مكة المكرمة، باللغة العربية عبر منصة Zoom، وهي موجّهة لطلبة الجامعات فما فوق."
+        ],
+        "en": [
+          "AUASS and the Regional Office of Astronomy for Development in the Arab Region invited applications for their most requested astronomy course, \"Astronomical Skills\", taught by astronomy trainer Dalal Al-Lala, a member of AUASS.",
+          "The course ran on Tuesday to Thursday, 27–29 May 2025, at 7:00 pm Mecca time, in Arabic on Zoom, and was aimed at university students and above."
+        ]
+      }
+    },
+    {
+      "slug": "space-law-committee-launch",
+      "date": "2025-05-09",
+      "category": "union",
+      "image": "news/space-law-committee.jpg",
+      "title": { "ar": "إطلاق لجنة قانون الفضاء والتشريعات في الشرق الأوسط", "en": "Launch of the Space Law and Regulation Committee for the Middle East" },
+      "excerpt": {
+        "ar": "فعالية إطلاق لجنة قانون الفضاء والتشريعات التابعة للاتحاد، يوم السبت 17 أيار 2025 عبر منصة Zoom.",
+        "en": "The launch of AUASS's Space Law and Regulation Committee, held on Zoom on Saturday 17 May 2025."
+      },
+      "body": {
+        "ar": [
+          "تحت رعاية الأستاذ الدكتور حميد مجول النعيمي، رئيس الاتحاد العربي لعلوم الفضاء والفلك، دعا الدكتور المهندس عوني الخصاونة، أمين عام الاتحاد، لحضور فعالية إطلاق لجنة قانون الفضاء والتشريعات في الشرق الأوسط التابعة للاتحاد.",
+          "أُقيمت الفعالية يوم السبت 17 أيار/مايو 2025، الساعة 7:00 مساءً بتوقيت مكة المكرمة، باللغتين العربية والإنجليزية عبر منصة Zoom."
+        ],
+        "en": [
+          "Under the patronage of Prof. Hamid M.K. Al-Naimiy, President of AUASS, Secretary General Dr. Eng. Awni Al-Khasawneh invited the public to the launch of AUASS's Space Law and Regulation Committee for the Middle East.",
+          "The launch took place on Saturday 17 May 2025 at 7:00 pm Mecca time, in Arabic and English, on Zoom."
+        ]
+      }
+    }
+  ]
+}

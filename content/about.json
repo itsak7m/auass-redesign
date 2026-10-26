@@ -1,0 +1,141 @@
+{
+  "intro": {
+    "ar": "الاتحاد العربي لعلوم الفضاء والفلك هيئة فلكية فضائية مقرها مدينة عمّان، تأسست رسمياً سنة 1998م، ويضم معظم العلماء والباحثين والهواة العرب في مجال علوم وتكنولوجيا الفضاء والفلك والجو، وفي مجال بحوث الفلك. وهو واحد من الاتحادات النوعية التابعة لمجلس الوحدة الاقتصادية العربية التابع للأمانة العامة لجامعة الدول العربية منذ عام 2001م، كما أنه عضو في الاتحاد الفلكي الدولي.",
+    "en": "The Arab Union for Astronomy and Space Sciences is an astronomy and space body headquartered in Amman, formally established in 1998. It brings together most Arab scientists, researchers and amateurs in space, astronomy and atmospheric science and technology, and in astronomical research. Since 2001 it has been one of the specialised unions affiliated with the Council of Arab Economic Unity of the General Secretariat of the League of Arab States, and it is a member of the International Astronomical Union."
+  },
+  "leadershipLine": {
+    "ar": "يترأسه حالياً الأستاذ الدكتور حميد مجول النعيمي، مدير جامعة الشارقة، وأمينه العام الدكتور المهندس عوني الخصاونة، والرئيس الفخري للاتحاد سمو الشيخ سلطان بن محمد القاسمي، حاكم الشارقة.",
+    "en": "It is currently led by its President, Prof. Hamid M.K. Al-Naimiy, Director of the University of Sharjah, and its Secretary General, Dr. Eng. Awni Al-Khasawneh. Its Honorary President is His Highness Sheikh Sultan bin Mohammed Al Qasimi, Ruler of Sharjah."
+  },
+  "founding": {
+    "ar": "تأسس الاتحاد في آب 1998 ثمرةً للمؤتمر العربي الثاني لعلوم الفلك والفضاء، الذي عُقد في عمّان من 29 آب إلى 1 أيلول 1998، بمشاركة أكثر من 100 فلكي وعالم من 14 دولة عربية، إضافة إلى مراقبين من فرنسا وإيطاليا والولايات المتحدة الأمريكية. وقرر المشاركون تأسيس الاتحاد واتخاذ عمّان مقراً له، بهدف تطوير علوم الفلك والفضاء في الدول العربية من خلال المؤتمرات واللقاءات والنشر والمشاريع البحثية المشتركة، بالتعاون مع المؤسسات الدولية.",
+    "en": "AUASS was established in August 1998 as an outcome of the Second Arab Conference on Astronomy and Space Sciences, held in Amman from 29 August to 1 September 1998. More than 100 astronomers and scientists from 14 Arab countries took part, along with observers from France, Italy and the United States. The participants decided to establish the Union with its headquarters in Amman, to develop astronomy and space sciences in the Arab countries through conferences, meetings, publications and joint research projects, in cooperation with international institutions."
+  },
+  "vision": {
+    "ar": "يسعى الاتحاد العربي لعلوم الفضاء والفلك (AUASS) إلى أن يصبح منظمة ذات شهرة عالمية تعمل على توحيد الأفراد والمؤسسات والمنظمات المعنية بعلم الفلك وعلوم الفضاء، من أجل تقديم مساهمة دائمة في هذه المجالات وضمان التقدم والتطور في العالم العربي.",
+    "en": "AUASS endeavours to become a globally renowned organisation that unites individuals, institutions and organisations concerned with astronomy and space sciences, in order to make a lasting contribution to these fields and to ensure progress and development in the Arab world."
+  },
+  "mission": {
+    "ar": "العمل على رفع مكانة العلماء العرب والمسلمين في مجالات علوم الفلك والفضاء، وتعزيز الاهتمام الوطني والإقليمي بهذه المجالات من خلال التعليم والبحث، واستكشاف الفضاء لصالح تقدم البشرية وتطورها.",
+    "en": "To raise the status of Arab and Muslim scientists in astronomy and space sciences, and to strengthen national and regional interest in these fields through education, research and space exploration, for the benefit of humanity's progress and development."
+  },
+  "goalThemes": [
+    { "id": "research", "glyph": "orbit", "title": { "ar": "البحث وعلوم الفضاء", "en": "Research and space science" }, "goals": [1, 2, 5, 13, 15] },
+    { "id": "education", "glyph": "book", "title": { "ar": "التعليم والتوعية", "en": "Education and outreach" }, "goals": [7, 8, 10, 12] },
+    { "id": "heritage", "glyph": "astrolabe", "title": { "ar": "التراث الفلكي العربي والإسلامي", "en": "Arab and Islamic astronomical heritage" }, "goals": [3, 4, 9] },
+    { "id": "cooperation", "glyph": "network", "title": { "ar": "التعاون العربي والدولي", "en": "Arab and international cooperation" }, "goals": [6, 11, 14] }
+  ],
+  "goals": [
+    { "n": 1, "ar": "العمل على رفع شأن العلوم الفلكية والفضائية والنهوض بمستواها لتقوم بدورها في دفع عجلة التقدم وتطوير المجتمع العربي علمياً وتقنياً.", "en": "Raise the status and level of astronomical and space sciences so they play their part in advancing progress and developing Arab society scientifically and technically." },
+    { "n": 2, "ar": "بناء القدرات في مجال البحث وتطوير الأقمار الصناعية لتضييق الفجوة في تطوير البنية التحتية الفضائية.", "en": "Build capacity in satellite research and development to narrow the gap in space infrastructure." },
+    { "n": 3, "ar": "الحفاظ على التراث الفلكي العربي والإسلامي وإبراز دوره في تقدم الحضارة الإنسانية.", "en": "Preserve the Arab and Islamic astronomical heritage and highlight its role in the advancement of human civilisation." },
+    { "n": 4, "ar": "استخدام الأساليب العلمية لتحديد بدايات الشهور القمرية باستخدام الرصد الفلكي.", "en": "Use scientific methods to determine the beginnings of lunar months, supported by astronomical observation." },
+    { "n": 5, "ar": "بناء القدرات في مجال تدريب المواهب المهنية والارتقاء بمستوى أبحاث الفضاء وتحفيز التطوير.", "en": "Build capacity in training professional talent to raise the level of space research and motivate development." },
+    { "n": 6, "ar": "دراسة القضايا العلمية ذات الطابع المشترك بين البلدان العربية وتبادل المعلومات والخبرات في مختلف الميادين العلمية الأساسية والتطبيقية لعلوم الفضاء والفلك.", "en": "Study scientific issues common to Arab countries and exchange information and experience in the basic and applied fields of space and astronomy." },
+    { "n": 7, "ar": "تقديم الاستشارات العلمية في مجال الفضاء والفلك للمؤسسات والهيئات والأفراد.", "en": "Provide scientific advice on space and astronomy to institutions, bodies and individuals." },
+    { "n": 8, "ar": "تشجيع الاهتمام بعلوم الفضاء والفلك في الدول العربية ودعم المؤسسات والجمعيات العلمية في الوطن العربي.", "en": "Encourage interest in space sciences and astronomy in Arab countries and support scientific institutions and societies in the Arab world." },
+    { "n": 9, "ar": "تشجيع البحث العلمي وإصدار مجلة دورية تُعنى بالتراث العربي والإسلامي.", "en": "Encourage scientific research and publish a periodical devoted to Arab and Islamic heritage." },
+    { "n": 10, "ar": "تنظيم المؤتمرات والندوات وورش العمل والمعارض المتخصصة.", "en": "Organise specialised conferences, seminars, workshops and exhibitions." },
+    { "n": 11, "ar": "إنشاء قاعدة بيانات معنية بالخبراء والعلماء والمهتمين، عرباً وأجانب، في علوم الفضاء والفلك والفيزياء الفلكية.", "en": "Establish a database of experts, scientists and enthusiasts, Arab and international, in space sciences, astronomy and astrophysics." },
+    { "n": 12, "ar": "تشجيع الدول الأعضاء على إدراج علم الفلك وعلوم الفضاء في المناهج الدراسية، وإثراء المكتبة العربية بالكتب والدوريات الفلكية، وتشجيع المتخصصين على الكتابة والترجمة من المصادر المشهورة.", "en": "Encourage member states to include astronomy and space sciences in school curricula, enrich the Arab library with astronomy books and periodicals, and encourage specialists to write and translate from reputable sources." },
+    { "n": 13, "ar": "دعم المشاريع العلمية التي تساهم في التطبيقات الفضائية لتعزيز اكتساب وتقاسم فوائد تكنولوجيا الفضاء لتحقيق أهداف الاتحاد.", "en": "Support scientific projects in space applications that help acquire and share the benefits of space technology in pursuit of AUASS's goals." },
+    { "n": 14, "ar": "التعاون مع الاتحادات والهيئات العربية الأخرى في المجالات ذات الاهتمام المشترك.", "en": "Cooperate with international organisations and other Arab bodies in fields of common interest in astronomy and space." },
+    { "n": 15, "ar": "إنشاء صندوق مالي لتقديم المنح الدراسية للباحثين العرب في علوم الفضاء وعلم الفلك.", "en": "Establish a fund to provide scholarships to Arab researchers in space sciences and astronomy." }
+  ],
+  "leaders": [
+    {
+      "id": "al-naimiy",
+      "photo": "people/al-naimiy.jpg",
+      "name": { "ar": "أ.د. حميد مجول النعيمي", "en": "Prof. Hamid M.K. Al-Naimiy" },
+      "role": { "ar": "مؤسس ورئيس الاتحاد", "en": "Founder and President of AUASS" },
+      "detail": { "ar": "مدير جامعة الشارقة، والمدير العام لأكاديمية الشارقة لعلوم وتكنولوجيا الفضاء والفلك، وأستاذ الفيزياء الفلكية", "en": "Director of the University of Sharjah and General Director of the Sharjah Academy for Astronomy, Space Sciences and Technology; Professor of Astrophysics" }
+    },
+    {
+      "id": "al-khasawneh",
+      "photo": "people/al-khasawneh.jpg",
+      "name": { "ar": "د. م. عوني محمد الخصاونة", "en": "Dr. Eng. Awni Mohammed Al-Khasawneh" },
+      "role": { "ar": "الأمين العام للاتحاد", "en": "Secretary General of AUASS" },
+      "detail": { "ar": "المدير التنفيذي للمكتب الإقليمي لتنمية الفلك في المنطقة العربية التابع للاتحاد الفلكي الدولي", "en": "Executive Director of the IAU Regional Office of Astronomy for Development in the Arab Region" }
+    },
+    {
+      "id": "assiry",
+      "photo": "people/assiry.jpg",
+      "photoPos": "40% 30%",
+      "name": { "ar": "د. محمد العصيري", "en": "Dr. Mohammad Assiry" },
+      "role": { "ar": "نائب رئيس الاتحاد", "en": "Vice President of AUASS" },
+      "detail": { "ar": "رئيس الجمعية الفلكية السورية", "en": "President of the Syrian Astronomical Society" }
+    }
+  ],
+  "words": [
+    {
+      "id": "president",
+      "who": "al-naimiy",
+      "title": { "ar": "كلمة رئيس الاتحاد", "en": "Word from the President" },
+      "lead": {
+        "ar": "الاتحاد العربي لعلوم الفضاء والفلك ماضٍ في استعادة أمجادنا في علوم وتكنولوجيا الفضاء والفلك.",
+        "en": "The Arab Union for Astronomy and Space Sciences: advancing our heritage in space and astronomy sciences."
+      },
+      "body": {
+        "ar": [
+          "خمسة وعشرون عاماً مضت على جمع الزميلات والزملاء من العلماء والباحثين وأعضاء من الهيئات التدريسية والمتخصصين والهواة العرب والمسلمين في ميادين علوم وتكنولوجيا الفضاء والفلك، إلى خلية علمية وثقافية ومعرفية كبرى، تمثلت بمقر الاتحاد العربي لعلوم الفضاء والفلك الذي تفضلت علينا حكومة المملكة الأردنية الهاشمية بمقره منذ عام 1998.",
+          "واليوم ونحن نحتفل بمرور خمسة وعشرين عاماً، أو بما يسمونه باليوبيل الفضي على تأسيس هذا الاتحاد المبارك، نشعر ليس فقط بالفخر والاعتزاز، بل بشرف أداء هذا الواجب القومي والعلمي والشرعي، بأننا عملنا كأعضاء للمجلس الأعلى لهذا الاتحاد بجد وإخلاص وحرص على استحضار الأمانة في ميادين علوم وتكنولوجيا الفضاء والفلك، التي ورثناها عن آبائنا وأجدادنا من علماء الفضاء والفلك والجو العرب والمسلمين ممن رفعوا رايات هذه العلوم على المستويات العالمية.",
+          "فالاتحاد العربي لعلوم الفضاء والفلك هيئة علمية ثقافية عربية متخصصة في الفضاء والفلك والجو وكل ما يتعلق بهذه التخصصات من علوم أساسية وتطبيقية، وهو اليوم عضو بمجلس الوحدة الاقتصادية العربية بجامعة الدول العربية وعضو في الاتحاد الفلكي الدولي. ومنذ تأسيسه وحتى يومنا هذا تتعاظم مسؤولياته، كالتشجيع والمساعدة في إنشاء الجمعيات والمجموعات والأندية الفلكية والفضائية في الدول التي ليس بها جمعيات أو أندية فلكية، واستغلال المراصد والأجهزة الفلكية المتوافرة داخل الوطن العربي وخارجه استغلالاً علمياً مميزاً وإجراء البحوث فيها، ودعوة وزارات التعليم العالي إلى تخصيص منح دراسية في علوم الفضاء والفلك، والمساعدة في بناء المراصد الفلكية لأهداف بحثية وتربوية وعلمية متقدمة.",
+          "ومن حسن الحظ أن العديد من النشاطات الفلكية والفضائية بدأت تظهر على الساحة العربية بشكل واضح ومشرّف خلال السنوات العشر الماضية، كإنشاء مؤسسات فضائية ومراصد فلكية، وهناك دول عربية عديدة بدأت تفكر وتخطط بل وتباشر بجدية في بناء المراصد والمراكز الفلكية وإنشاء الأقسام والبرامج الفلكية والفضائية في الجامعات، وتأسيس المجموعات والجمعيات والأندية الفلكية. وكل هذا يبشرنا ويبشركم جميعاً بأننا سنستعيد مكانة علمائنا العرب والمسلمين التاريخية والعالمية بمشيئة الله تعالى.",
+          "وبهذه المناسبة، مناسبة اليوبيل الفضي لاتحادنا العزيز، لا يسعني إلا أن أقول شكراً جزيلاً ومن القلب لجميع زميلاتي وزملائي الذين عملوا وما زالوا يعملون معنا في نشر الثقافة الفلكية والفضائية في الوطن العربي وتدريب وتأهيل الشباب في هذه التخصصات الهامة، متمنياً للجميع ولاتحادنا دوام النجاح والتقدم.",
+          "والله تعالى ولي الأمر والتوفيق."
+        ],
+        "en": [
+          "Twenty-five years have passed since colleagues, scientists, researchers, faculty members, specialists, Arab and Muslim enthusiasts in the fields of space and astronomy sciences gathered to establish a significant scientific and cultural entity: the Arab Union for Astronomy and Space Sciences. The Hashemite Kingdom of Jordan graciously hosted the headquarters of this union since 1998, and by the grace of Allah, it remains steadfast.",
+          "Today, as we celebrate the silver jubilee of the establishment of this blessed union, we not only feel pride and honour but also the privilege of fulfilling this national, scientific and religious duty as members of its supreme council. We worked diligently and faithfully to uphold integrity and dedication in the fields of space and astronomy sciences, inherited from our ancestors, Arab and Muslim scholars, who raised the banners of these sciences globally.",
+          "The Arab Union for Astronomy and Space Sciences is a specialised Arab scientific and cultural institution focusing on space, astronomy and atmospheric sciences, founded in 1998. Since its inception, it has made significant achievements in promoting Arab space and astronomy centres and their accomplishments. Its responsibilities have grown in the face of significant advancements in space and astronomy sciences globally, particularly encouraging the establishment of astronomical and space societies and clubs in countries lacking such organisations.",
+          "Despite these achievements, the responsibilities of the Union continue to increase, given the rapid advancements in space and astronomy sciences. Fortunately, many Arab countries have begun actively investing in these fields, establishing space agencies, astronomical observatories and space science departments in universities, indicating a promising future for Arab astronomy and space sciences.",
+          "On this occasion of our beloved union's silver jubilee, I express heartfelt gratitude to all my colleagues who have worked tirelessly to promote astronomical and space sciences in the Arab world and train youth in these vital disciplines. I wish success and progress to all and to our Union in reclaiming our historical and global status in these essential and beneficial fields for humanity.",
+          "And Allah is the Bestower of success and guidance."
+        ]
+      },
+      "abridged": true
+    },
+    {
+      "id": "secretary-general",
+      "who": "al-khasawneh",
+      "title": { "ar": "كلمة الأمين العام", "en": "Word from the Secretary General" },
+      "lead": {
+        "ar": "يسعدني أن أرحب بكم في موقع الاتحاد العربي لعلوم الفضاء والفلك.",
+        "en": "Space science and astronomy have become important branches of modern science in the progress of nations and peoples."
+      },
+      "body": {
+        "ar": [
+          "في البداية، يسعدني أن أرحب بكم في موقع الاتحاد العربي لعلوم الفضاء والفلك الإلكتروني، الذي أُنشئ ليكون وسيلة تواصل مع جميع المختصين والهواة في علوم الفضاء والفلك في الوطن العربي وأرض الاغتراب، فيما يخص علوم الفضاء والفلك وتطوير مفاهيم الثقافة الفلكية لدى مجتمعاتنا العربية وإحياء التراث العربي والإسلامي في العلوم عامة وعلوم الفضاء والفلك خاصة، لما بات لهذه العلوم من أهمية كبيرة في تطوير البنية التحتية في الدول العربية.",
+          "الاتحاد العربي لعلوم الفضاء والفلك منظمة رائدة في المنطقة العربية تهدف إلى تعزيز البحث العلمي والتطوير التكنولوجي في مجالات الفضاء والفلك. ويعمل الاتحاد على تنظيم الفعاليات والندوات وورش العمل التي تعزز التواصل وتبادل المعرفة بين الباحثين والهواة في هذا المجال.",
+          "ومن خلال موقعه الإلكتروني، يقدم الاتحاد معلومات شاملة عن رسالته ورؤيته، بالإضافة إلى شرح الإجراءات والأنظمة التي يعمل من خلالها لتحقيق أهدافه. ويسعى الاتحاد دائماً لتحقيق شراكة حقيقية مع الجهات المعنية داخل الوطن العربي وخارجه، بهدف دعم تطوير علوم الفضاء والفلك في المنطقة العربية.",
+          "ويشكّل توفير برامج البحث والتطوير والدعم المالي والفني للباحثين في مجال الفضاء والفلك جزءاً أساسياً من أنشطة الاتحاد. كما يسعى الاتحاد إلى تعزيز التعاون مع الجامعات العربية والعالمية والهيئات الفلكية لدعم البحث العلمي وتوفير بعثات ومنح دراسية للباحثين في هذه العلوم.",
+          "أتمنى لكم زيارة ممتعة ومفيدة على موقع الاتحاد العربي لعلوم الفضاء والفلك."
+        ],
+        "en": [
+          "Space science and astronomy have become important branches of modern science in the progress of nations and peoples, and this field has received great attention and care from the wise and inspiring leaders of our Arab homeland.",
+          "The Arab Union for Astronomy and Space Sciences (AUASS) is one of the scientific beacons whose permanent headquarters is in the Hashemite Kingdom of Jordan, and a starting point for disseminating scientific values and knowledge in space and astronomy.",
+          "AUASS was formally established in 1998 at the invitation of the Jordanian Astronomical Society, as an astronomical body concerned with space and astronomy sciences based in Amman. It has become one of the specialised unions affiliated with the Council of Arab Economic Unity of the General Secretariat of the League of Arab States since 2001, as well as a member of the International Astronomical Union (IAU). AUASS seeks to serve everyone, from students, amateurs and researchers to university faculty and staff, and anyone interested in space sciences and astronomy.",
+          "AUASS strives to obtain scholarships in cooperation with Arab universities and other countries, to qualify staff with scientific degrees in astronomy and space sciences, and to develop their skills through training courses, while encouraging research and publication in peer-reviewed journals.",
+          "The ambitions of AUASS are high: it strives to spread more astronomical bodies and institutions throughout the Arab world and to create a database of Arab scientists and amateurs as a reference for university students and amateurs alike."
+        ]
+      },
+      "abridged": true
+    }
+  ],
+  "timeline": [
+    { "year": "1998", "title": { "ar": "التأسيس في عمّان", "en": "Founded in Amman" },
+      "text": { "ar": "تأسس الاتحاد ثمرةً للمؤتمر العربي الثاني لعلوم الفلك والفضاء (29 آب – 1 أيلول 1998)، بمشاركة أكثر من 100 فلكي وعالم من 14 دولة عربية.", "en": "Established as an outcome of the Second Arab Conference on Astronomy and Space Sciences (29 Aug – 1 Sep 1998), attended by more than 100 astronomers and scientists from 14 Arab countries." } },
+    { "year": "2001", "title": { "ar": "الانضمام لجامعة الدول العربية", "en": "Joins the Arab League framework" },
+      "text": { "ar": "أصبح الاتحاد واحداً من الاتحادات النوعية التابعة لمجلس الوحدة الاقتصادية العربية في الأمانة العامة لجامعة الدول العربية.", "en": "Becomes one of the specialised unions affiliated with the Council of Arab Economic Unity at the League of Arab States." } },
+    { "year": "2012", "title": { "ar": "المؤتمر العربي العاشر، عُمان", "en": "10th Arab Conference, Oman" },
+      "text": { "ar": "جامعة السلطان قابوس، 5–8 شباط 2012: «دور علوم الفضاء والفلك في تنمية المجتمعات المعاصرة»، بمشاركة أكثر من 500 مشارك من 39 دولة.", "en": "Sultan Qaboos University, 5–8 February 2012: \"The Role of Space and Astronomy Sciences in Developing Contemporary Societies\", with more than 500 participants from 39 countries." } },
+    { "year": "2014", "title": { "ar": "المؤتمر العربي الحادي عشر، الشارقة", "en": "11th Arab Conference, Sharjah" },
+      "text": { "ar": "جامعة الشارقة، 8–11 كانون الأول 2014، بالتزامن مع المؤتمر الدولي الثاني لتاريخ العلوم عند العرب والمسلمين.", "en": "University of Sharjah, 8–11 December 2014, alongside the Second International Conference on the History of Science among Arabs and Muslims." } },
+    { "year": "2020", "title": { "ar": "استضافة MEARIM5", "en": "Hosting MEARIM5" },
+      "text": { "ar": "استضاف الاتحاد بالتعاون مع الاتحاد الفلكي الدولي الاجتماع الإقليمي الخامس للشرق الأوسط وأفريقيا عبر منصته الافتراضية (10–12 تشرين الثاني 2020)، بمشاركة أكثر من 37 دولة.", "en": "With the IAU, AUASS hosted the 5th Middle East and Africa Regional Meeting on its virtual platform (10–12 November 2020), with participants from more than 37 countries." } },
+    { "year": "2023", "image": "silver-jubilee.png", "title": { "ar": "اليوبيل الفضي والمؤتمر الرابع عشر", "en": "Silver jubilee and 14th Conference" },
+      "text": { "ar": "جامعة الشارقة، 13–16 تشرين الثاني 2023، بمناسبة مرور 25 عاماً على التأسيس، بمشاركة أكثر من 300 مشارك وعرض أكثر من 240 ورقة بحثية.", "en": "University of Sharjah, 13–16 November 2023, marking 25 years since the founding, with more than 300 attendees and over 240 research papers." } },
+    { "year": "2025", "title": { "ar": "MEARIM7 في الجامعة الأردنية", "en": "MEARIM7 at the University of Jordan" },
+      "text": { "ar": "الاجتماع الإقليمي السابع للاتحاد الفلكي الدولي في الشرق الأوسط وأفريقيا، 11–13 تشرين الثاني 2025، تحت رعاية الاتحاد والجامعة الأردنية.", "en": "The 7th Middle East and Africa Regional IAU Meeting, 11–13 November 2025, under the patronage of AUASS and the University of Jordan." } }
+  ]
+}

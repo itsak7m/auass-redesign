@@ -1,0 +1,76 @@
+{
+  "intro": {
+    "ar": "يضم الاتحاد المؤسسات والجمعيات الفلكية والفضائية في الوطن العربي، والمؤسسات العلمية العربية كالمعاهد والجامعات التي تشمل برامجها علوم الفلك والفضاء، والمختصين في البلدان التي لا توجد فيها جمعيات أو مؤسسات فلكية أو فضائية عربية، وأي جهة يوافق عليها المجلس الأعلى ضمن ضوابط واضحة.",
+    "en": "AUASS brings together astronomy and space institutions and societies in the Arab world, Arab scientific institutions such as institutes and universities whose programmes include astronomy and space sciences, specialists in countries with no Arab astronomy or space society or institution, and any body approved by the Supreme Council under clear criteria."
+  },
+  "levels": [
+    {
+      "id": "full", "glyph": "seal",
+      "title": { "ar": "عضو عامل", "en": "Full member" },
+      "who": {
+        "ar": [
+          "المؤسسات والجمعيات الفلكية أو الفضائية في الوطن العربي المؤسِّسة للاتحاد، وتلك التي تنضم إليه فيما بعد.",
+          "الأشخاص الطبيعيون من ذوي الاختصاص في البلدان التي لا توجد فيها جمعيات أو مؤسسات فلكية أو فضائية عربية.",
+          "أي شخص طبيعي يوافق المجلس الأعلى على تنسيبه."
+        ],
+        "en": [
+          "Astronomy or space institutions and societies in the Arab world that founded the Union, and those that join later.",
+          "Specialists in countries with no Arab astronomy or space society or institution.",
+          "Any individual whose membership is approved by the Supreme Council."
+        ]
+      }
+    },
+    {
+      "id": "associate", "glyph": "orbit",
+      "title": { "ar": "عضو منتسب", "en": "Associate member" },
+      "who": { "ar": ["يُقبل عضواً منتسباً لأسباب خاصة."], "en": ["Accepted as an associate member for special reasons."] }
+    },
+    {
+      "id": "observer", "glyph": "telescope",
+      "title": { "ar": "عضو مراقب", "en": "Observer member" },
+      "who": {
+        "ar": [
+          "مجلس الوحدة الاقتصادية العربية.",
+          "منظمات جامعة الدول العربية.",
+          "الاتحادات العربية المتخصصة ذات العلاقة.",
+          "أي شخص طبيعي يوافق المجلس الأعلى على تنسيبه."
+        ],
+        "en": [
+          "The Council of Arab Economic Unity.",
+          "Organisations of the League of Arab States.",
+          "Related specialised Arab unions.",
+          "Any individual whose membership is approved by the Supreme Council."
+        ]
+      }
+    },
+    {
+      "id": "honorary", "glyph": "star",
+      "title": { "ar": "عضو شرف", "en": "Honorary member" },
+      "who": { "ar": ["تُمنح العضوية تقديراً للخدمات الجليلة للاتحاد وللوطن العربي."], "en": ["Granted in recognition of distinguished service to the Union and the Arab world."] }
+    }
+  ],
+  "steps": [
+    { "ar": "باستثناء الأعضاء المراقبين والشرفيين، تقدّم الهيئة أو الشخص الراغب في الانضمام طلباً رسمياً يتعهد فيه بالتقيد بالنظام الأساسي للاتحاد والالتزام بسداد رسوم واشتراكات العضوية.", "en": "Except for observer and honorary members, the body or individual applying submits a formal application, undertaking to abide by the Union's statutes and to pay membership fees and dues." },
+    { "ar": "يُرفق بالطلب المستندات الدالة على توفر شروط العضوية.", "en": "Documents showing that the membership conditions are met are attached to the application." },
+    { "ar": "يُسدَّد رسم الانضمام خلال ستة أشهر من تاريخ الإخطار بقبول العضوية، وتُسدَّد الاشتراكات السنوية في مواعيدها.", "en": "The joining fee is paid within six months of notification of acceptance, and annual dues are paid on time." }
+  ],
+  "endings": {
+    "title": { "ar": "متى تزول صفة العضوية؟", "en": "When does membership end?" },
+    "items": {
+      "ar": [
+        "عدم تسديد الاشتراكات المقررة لمدة سنتين متتاليتين.",
+        "إبداء العضو رغبته بإنهاء عضويته عن طريق الاستقالة.",
+        "مخالفة النظام الأساسي للاتحاد مخالفة جوهرية.",
+        "حل الاتحاد أو صدور قرار من المؤتمر العام بانقضائه.",
+        "أي أسباب جوهرية أخرى يراها المجلس الأعلى للاتحاد كافية لزوال العضوية."
+      ],
+      "en": [
+        "Non-payment of dues for two consecutive years.",
+        "Resignation by the member.",
+        "A material breach of the Union's statutes.",
+        "Dissolution of the Union or a General Conference decision to end it.",
+        "Any other material reason the Supreme Council considers sufficient."
+      ]
+    }
+  }
+}

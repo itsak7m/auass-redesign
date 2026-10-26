@@ -1,0 +1,11 @@
+{
+  "name": "auass-redesign",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Redesign concept for the Arab Union for Astronomy and Space Sciences website",
+  "scripts": {
+    "build": "node src/build.js",
+    "shots": "node tools/screenshots.js",
+    "check": "node tools/check.js"
+  }
+}

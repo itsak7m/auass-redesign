@@ -1,0 +1,118 @@
+{
+  "types": {
+    "lecture": { "ar": "محاضرات وندوات", "en": "Lectures & talks" },
+    "conference": { "ar": "مؤتمرات", "en": "Conferences" },
+    "workshop": { "ar": "ورش ودورات", "en": "Workshops & courses" },
+    "observation": { "ar": "رصد وفعاليات عامة", "en": "Observing & public events" }
+  },
+  "items": [
+    {
+      "id": "asi-hack-2026",
+      "type": "workshop",
+      "start": "2026-09-25", "end": "2026-09-26",
+      "title": { "ar": "هاكاثون الابتكار الفضائي العربي (ASI Hack)", "en": "Arab Space Innovation Hackathon (ASI Hack)" },
+      "place": { "ar": "عبر الإنترنت", "en": "Online" },
+      "mode": "online",
+      "summary": { "ar": "برعاية الاتحاد، وتنظيم فريق كاسيوبيا مصر بالشراكة مع فريق الفضاء العربي.", "en": "Sponsored by AUASS, organised by Cassiopeia Egypt with the Arab Space Team." },
+      "news": "arab-space-innovation-hackathon"
+    },
+    {
+      "id": "astrophotography-2026",
+      "type": "workshop",
+      "start": "2026-09-14",
+      "title": { "ar": "ورشة التصوير الفلكي ومعالجة الصور الفلكية", "en": "Astrophotography and Image Processing Workshop" },
+      "place": { "ar": "مقر الاتحاد، عمّان", "en": "AUASS headquarters, Amman" },
+      "mode": "in-person",
+      "summary": { "ar": "بالتعاون مع فريق Luminode، وبمشاركة أكثر من 20 متسابقاً في تحدّي معالجة الصور.", "en": "With the Luminode team; more than 20 contestants took part in the image-processing challenge." },
+      "news": "astrophotography-workshop-2026"
+    },
+    {
+      "id": "crescent-venus-2026",
+      "type": "observation",
+      "start": "2026-09-14",
+      "title": { "ar": "رصد الهلال والزهرة", "en": "Observing the Crescent Moon and Venus" },
+      "place": { "ar": "مرج الحمام، عمّان", "en": "Marj Al-Hamam, Amman" },
+      "mode": "in-person",
+      "summary": { "ar": "أمسية رصد بالتلسكوبات بالتعاون مع جمعية زركشات.", "en": "A telescope observing evening with the Zarkashat Society." },
+      "news": "crescent-and-venus-observation-2026"
+    },
+    {
+      "id": "space-law-2026",
+      "type": "lecture",
+      "start": "2026-09-01",
+      "title": { "ar": "قانون الفضاء بين الحاضر والمستقبل", "en": "Space Law: Present and Future" },
+      "place": { "ar": "منصة الاتحاد (عن بُعد)", "en": "AUASS online platform" },
+      "mode": "online",
+      "summary": { "ar": "يقدّمها الباحث زيد الدهامشة.", "en": "Given by researcher Zaid Al-Dahamsheh." },
+      "news": "space-law-lecture-2026"
+    },
+    {
+      "id": "space-agriculture-2026",
+      "type": "lecture",
+      "start": "2026-04-25",
+      "title": { "ar": "الزراعة في الفضاء", "en": "Farming in Space" },
+      "place": { "ar": "عبر Zoom", "en": "On Zoom" },
+      "mode": "online",
+      "summary": { "ar": "محاضرة أسبوعية يقدّمها د. خالد رمضان.", "en": "Weekly lecture by Dr. Khaled Ramadan." },
+      "news": "space-agriculture-lecture"
+    },
+    {
+      "id": "mearim7",
+      "type": "conference",
+      "start": "2025-11-11", "end": "2025-11-13",
+      "title": { "ar": "الاجتماع الإقليمي السابع للاتحاد الفلكي الدولي في الشرق الأوسط وأفريقيا (MEARIM7)", "en": "7th Middle East and Africa Regional IAU Meeting (MEARIM7)" },
+      "place": { "ar": "الجامعة الأردنية، عمّان", "en": "University of Jordan, Amman" },
+      "mode": "in-person",
+      "summary": { "ar": "تحت رعاية الاتحاد والجامعة الأردنية: «تعزيز علوم الفضاء والفلك من أجل مستقبل مستدام».", "en": "Under the patronage of AUASS and the University of Jordan: \"Advancing Space and Astronomy Sciences for a Sustainable Future\"." },
+      "news": "mearim7-call-for-participation"
+    },
+    {
+      "id": "skills-course-2025",
+      "type": "workshop",
+      "start": "2025-05-27", "end": "2025-05-29",
+      "title": { "ar": "دورة المهارات الفلكية", "en": "Astronomical Skills Course" },
+      "place": { "ar": "عبر Zoom", "en": "On Zoom" },
+      "mode": "online",
+      "summary": { "ar": "تقدّمها المدرّبة الفلكية دلال اللالا، لطلبة الجامعات فما فوق.", "en": "Taught by astronomy trainer Dalal Al-Lala, for university students and above." },
+      "news": "astronomical-skills-course-2025"
+    },
+    {
+      "id": "youth-in-space-2025",
+      "type": "lecture",
+      "start": "2025-05-24",
+      "title": { "ar": "شباب الأردن في الفضاء: رحلة نجاح نحو المستقبل", "en": "Jordan's Youth in Space: A Journey of Success" },
+      "place": { "ar": "عبر Zoom", "en": "On Zoom" },
+      "mode": "online",
+      "summary": { "ar": "جلسة شبابية مع نجمة الأردن لأبحاث علوم الفضاء.", "en": "A youth session with Jordan Star for Space Science Research." },
+      "news": "jordan-youth-in-space"
+    },
+    {
+      "id": "space-law-committee-2025",
+      "type": "lecture",
+      "start": "2025-05-17",
+      "title": { "ar": "إطلاق لجنة قانون الفضاء والتشريعات في الشرق الأوسط", "en": "Launch of the Space Law and Regulation Committee" },
+      "place": { "ar": "عبر Zoom", "en": "On Zoom" },
+      "mode": "online",
+      "summary": { "ar": "برعاية رئيس الاتحاد أ.د. حميد مجول النعيمي.", "en": "Under the patronage of AUASS President Prof. Hamid M.K. Al-Naimiy." },
+      "news": "space-law-committee-launch"
+    },
+    {
+      "id": "conf14",
+      "type": "conference",
+      "start": "2023-11-13", "end": "2023-11-16",
+      "title": { "ar": "المؤتمر العربي الرابع عشر لعلوم الفضاء والفلك", "en": "14th Arab Conference on Astronomy and Space Sciences" },
+      "place": { "ar": "جامعة الشارقة، الإمارات", "en": "University of Sharjah, UAE" },
+      "mode": "in-person",
+      "summary": { "ar": "بمناسبة مرور 25 عاماً على تأسيس الاتحاد، بمشاركة أكثر من 300 مشارك وعرض أكثر من 240 ورقة بحثية.", "en": "Marking the 25th anniversary of AUASS, with more than 300 attendees and over 240 research papers presented." }
+    },
+    {
+      "id": "mearim5",
+      "type": "conference",
+      "start": "2020-11-10", "end": "2020-11-12",
+      "title": { "ar": "الاجتماع الإقليمي الخامس للاتحاد الفلكي الدولي في الشرق الأوسط وأفريقيا (MEARIM5)", "en": "5th Middle East and Africa Regional IAU Meeting (MEARIM5)" },
+      "place": { "ar": "عمّان، عبر المنصة الافتراضية للاتحاد", "en": "Amman, on the AUASS virtual platform" },
+      "mode": "online",
+      "summary": { "ar": "بمشاركة علماء وباحثين من أكثر من 37 دولة، ومناقشة أكثر من 60 ورقة علمية.", "en": "With scientists and researchers from more than 37 countries and over 60 papers discussed." }
+    }
+  ]
+}

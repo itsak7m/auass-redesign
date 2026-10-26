@@ -1,0 +1,39 @@
+{
+  "name": { "ar": "الاتحاد العربي لعلوم الفضاء والفلك", "en": "Arab Union for Astronomy and Space Sciences" },
+  "short": "AUASS",
+  "description": {
+    "ar": "الاتحاد العربي لعلوم الفضاء والفلك: هيئة فلكية فضائية مقرها عمّان منذ 1998، تابعة لمجلس الوحدة الاقتصادية العربية في جامعة الدول العربية، وعضو في الاتحاد الفلكي الدولي.",
+    "en": "The Arab Union for Astronomy and Space Sciences: an astronomy and space body headquartered in Amman since 1998, affiliated with the Council of Arab Economic Unity of the League of Arab States, and a member of the International Astronomical Union."
+  },
+  "nav": [
+    { "id": "home", "path": "", "label": { "ar": "الرئيسية", "en": "Home" } },
+    { "id": "about", "path": "about/", "label": { "ar": "عن الاتحاد", "en": "About" } },
+    { "id": "events", "path": "events/", "label": { "ar": "الفعاليات", "en": "Events" } },
+    { "id": "library", "path": "library/", "label": { "ar": "المكتبة", "en": "Library" } },
+    { "id": "news", "path": "news/", "label": { "ar": "الأخبار", "en": "News" } },
+    { "id": "contact", "path": "contact/", "label": { "ar": "اتصل بنا", "en": "Contact" } }
+  ],
+  "join": { "id": "join", "path": "join/", "label": { "ar": "انضم للاتحاد", "en": "Join AUASS" } },
+  "address": { "ar": "شارع وصفي التل، الجاردنز، عمّان، الأردن", "en": "Wasfi Al-Tal Street, Al-Gardens, Amman, Jordan" },
+  "mapUrl": "https://www.google.com/maps/search/?api=1&query=Wasfi+Al-Tal+Street+Gardens+Amman+Jordan",
+  "email": "info@auass.com",
+  "social": [
+    { "id": "facebook", "label": "Facebook", "url": "https://www.facebook.com/profile.php?id=100057598473576" },
+    { "id": "instagram", "label": "Instagram", "url": "https://www.instagram.com/auass.98/" },
+    { "id": "youtube", "label": "YouTube", "url": "https://www.youtube.com/@ArabUnionforAstronomyandSpaceS/videos" }
+  ],
+  "related": [
+    { "label": { "ar": "الاتحاد الفلكي الدولي (IAU)", "en": "International Astronomical Union (IAU)" }, "url": "https://www.iau.org/" },
+    { "label": { "ar": "المكتب الإقليمي العربي لتنمية الفلك", "en": "Arab World Regional Office of Astronomy for Development" }, "url": "https://awroad.net/" },
+    { "label": { "ar": "أكاديمية الشارقة لعلوم وتكنولوجيا الفضاء والفلك", "en": "Sharjah Academy for Astronomy, Space Sciences and Technology" }, "url": "https://www.saasst.ae/" },
+    { "label": { "ar": "المعهد القومي للبحوث الفلكية والجيوفيزيقية", "en": "National Research Institute of Astronomy and Geophysics" }, "url": "https://www.nriag.sci.eg/" },
+    { "label": { "ar": "مركز الفلك الدولي", "en": "International Astronomical Center" }, "url": "https://astronomycenter.net/" },
+    { "label": { "ar": "مشروع الإمارات لاستكشاف المريخ (مسبار الأمل)", "en": "Emirates Mars Mission (Hope Probe)" }, "url": "https://www.emiratesmarsmission.ae/" },
+    { "label": { "ar": "قصر العلوم بالمنستير، تونس", "en": "Palais des Sciences de Monastir, Tunisia" }, "url": "http://www.psm.rnu.tn/en/" }
+  ],
+  "prototypeNote": {
+    "ar": "نموذج مقترح لإعادة تصميم الموقع — إعداد: Ameer Hamam",
+    "en": "A proposed redesign concept for the website, prepared by Ameer Hamam"
+  },
+  "heroCredit": "NASA, ESA, CSA, STScI"
+}

@@ -1,0 +1,2673 @@
+{
+ "collections": [
+  {
+   "id": "magazines",
+   "glyph": "magazine",
+   "title": {
+    "ar": "المجلات",
+    "en": "Magazines"
+   },
+   "desc": {
+    "ar": "أعداد مجلة الثريا الصادرة عن الاتحاد بصيغة PDF.",
+    "en": "Issues of Al-Thuraya magazine, published by AUASS, as PDF."
+   }
+  },
+  {
+   "id": "books",
+   "glyph": "book",
+   "title": {
+    "ar": "دليل كتب الفلك العربية",
+    "en": "Guide to Arabic astronomy books"
+   },
+   "desc": {
+    "ar": "كتب عربية في الفلك الشرعي والعام والتراثي وأعمال المؤتمرات، مع المؤلف والناشر وسنة النشر.",
+    "en": "Arabic books on Islamic, general and heritage astronomy and conference proceedings, with author, publisher and year."
+   }
+  },
+  {
+   "id": "research",
+   "glyph": "paper",
+   "title": {
+    "ar": "الأبحاث العلمية",
+    "en": "Research papers"
+   },
+   "desc": {
+    "ar": "أبحاث منشورة لأعضاء في الاتحاد.",
+    "en": "Published research by AUASS members."
+   }
+  },
+  {
+   "id": "constellations",
+   "glyph": "constellation",
+   "title": {
+    "ar": "أسماء المجموعات النجمية بالعربية",
+    "en": "Arabic names of the constellations"
+   },
+   "desc": {
+    "ar": "المجموعات النجمية الـ 88 بأسمائها العربية واللاتينية ومساحتها ونصف الكرة.",
+    "en": "The 88 constellations with their Arabic and Latin names, area and hemisphere."
+   }
+  },
+  {
+   "id": "craters",
+   "glyph": "crater",
+   "title": {
+    "ar": "فوهات قمرية بأسماء علماء عرب ومسلمين",
+    "en": "Lunar craters named after Arab and Muslim scholars"
+   },
+   "desc": {
+    "ar": "فوهات على سطح القمر سُمّيت تكريماً لعلماء عرب ومسلمين، مع موقعها وقطرها.",
+    "en": "Craters on the Moon named in honour of Arab and Muslim scholars, with location and diameter."
+   }
+  },
+  {
+   "id": "tools",
+   "glyph": "telescope",
+   "title": {
+    "ar": "برامج ومصادر تعليمية",
+    "en": "Software and learning resources"
+   },
+   "desc": {
+    "ar": "برامج فلكية ومواقع تعليمية مجانية، من مصادرها الرسمية.",
+    "en": "Free astronomy software and learning sites, from their official sources."
+   }
+  }
+ ],
+ "items": [
+  {
+   "c": "magazines",
+   "title": {
+    "ar": "مجلة الثريا: عدد نيسان 2016",
+    "en": "Al-Thuraya magazine: April 2016 issue"
+   },
+   "meta": {
+    "ar": "PDF",
+    "en": "PDF"
+   },
+   "url": "https://auass.com/wp-content/uploads/2022/11/%D8%A7%D9%84%D8%AB%D8%B1%D9%8A%D8%A7-%D9%86%D9%8A%D8%B3%D8%A7%D9%86-2016.pdf",
+   "kind": "pdf"
+  },
+  {
+   "c": "magazines",
+   "title": {
+    "ar": "مجلة الثريا: عدد أيار 2016",
+    "en": "Al-Thuraya magazine: May 2016 issue"
+   },
+   "meta": {
+    "ar": "PDF",
+    "en": "PDF"
+   },
+   "url": "https://auass.com/wp-content/uploads/2022/11/%D8%A7%D9%84%D8%AB%D8%B1%D9%8A%D8%A7-%D8%A2%D9%8A%D8%A7%D8%B1-2016.pdf",
+   "kind": "pdf"
+  },
+  {
+   "c": "magazines",
+   "title": {
+    "ar": "مجلة الثريا: عدد حزيران 2016",
+    "en": "Al-Thuraya magazine: June 2016 issue"
+   },
+   "meta": {
+    "ar": "PDF",
+    "en": "PDF"
+   },
+   "url": "https://auass.com/wp-content/uploads/2022/11/%D8%A7%D9%84%D8%AB%D8%B1%D9%8A%D8%A7-%D8%AD%D8%B2%D9%8A%D8%B1%D8%A7%D9%86-2016.pdf",
+   "kind": "pdf"
+  },
+  {
+   "c": "magazines",
+   "title": {
+    "ar": "مجلة الثريا: عدد تموز 2016",
+    "en": "Al-Thuraya magazine: July 2016 issue"
+   },
+   "meta": {
+    "ar": "PDF",
+    "en": "PDF"
+   },
+   "url": "https://auass.com/wp-content/uploads/2022/11/%D8%AB%D8%B1%D9%8A%D8%A7-%D8%AA%D9%85%D9%88%D8%B2-2016.pdf",
+   "kind": "pdf"
+  },
+  {
+   "c": "magazines",
+   "title": {
+    "ar": "مجلة الثريا: عدد آب 2016",
+    "en": "Al-Thuraya magazine: August 2016 issue"
+   },
+   "meta": {
+    "ar": "PDF",
+    "en": "PDF"
+   },
+   "url": "https://auass.com/wp-content/uploads/2022/11/%D8%A7%D9%84%D8%AB%D8%B1%D9%8A%D8%A7-%D8%A2%D8%A8-2016.pdf",
+   "kind": "pdf"
+  },
+  {
+   "c": "magazines",
+   "title": {
+    "ar": "مجلة الثريا: عدد أيلول 2016",
+    "en": "Al-Thuraya magazine: September 2016 issue"
+   },
+   "meta": {
+    "ar": "PDF",
+    "en": "PDF"
+   },
+   "url": "https://auass.com/wp-content/uploads/2022/11/%D8%A7%D9%84%D8%AB%D8%B1%D9%8A%D8%A7-%D8%A7%D9%8A%D9%84%D9%88%D9%84-2016.pdf",
+   "kind": "pdf"
+  },
+  {
+   "c": "magazines",
+   "title": {
+    "ar": "مجلة الثريا: عدد أيلول 2020",
+    "en": "Al-Thuraya magazine: September 2020 issue"
+   },
+   "meta": {
+    "ar": "PDF",
+    "en": "PDF"
+   },
+   "url": "https://auass.com/wp-content/uploads/2022/11/%D8%A7%D9%84%D8%AB%D8%B1%D9%8A%D8%A7-%D8%B3%D8%A8%D8%AA%D9%85%D8%A8%D8%B1-31082020.pdf",
+   "kind": "pdf"
+  },
+  {
+   "c": "magazines",
+   "title": {
+    "ar": "مجلة الثريا: عدد تشرين الأول 2020",
+    "en": "Al-Thuraya magazine: October 2020 issue"
+   },
+   "meta": {
+    "ar": "PDF",
+    "en": "PDF"
+   },
+   "url": "https://auass.com/wp-content/uploads/2022/11/%D8%A7%D9%84%D8%AB%D8%B1%D9%8A%D8%A7-%D8%A3%D9%83%D8%AA%D9%88%D8%A8%D8%B1-01102020.pdf",
+   "kind": "pdf"
+  },
+  {
+   "c": "magazines",
+   "title": {
+    "ar": "خريطة معالم سطح القمر",
+    "en": "Map of lunar surface features"
+   },
+   "meta": {
+    "ar": "PDF",
+    "en": "PDF"
+   },
+   "url": "https://auass.com/wp-content/uploads/2020/12/%D9%85%D8%B9%D8%A7%D9%84%D9%85-%D8%A7%D9%84%D9%82%D9%85%D8%B1.pdf",
+   "kind": "pdf"
+  },
+  {
+   "c": "books",
+   "sub": {
+    "ar": "الفلك الشرعي",
+    "en": "Islamic astronomy"
+   },
+   "title": {
+    "ar": "دورة الهلال",
+    "en": "دورة الهلال"
+   },
+   "meta": {
+    "ar": "صالح العجيري · مكتبة العجيري، الكويت · 2010 · 102 صفحة",
+    "en": "صالح العجيري · مكتبة العجيري، الكويت · 2010 · 102 pp."
+   }
+  },
+  {
+   "c": "books",
+   "sub": {
+    "ar": "الفلك الشرعي",
+    "en": "Islamic astronomy"
+   },
+   "title": {
+    "ar": "الأهلة: نظرة شمولية ودراسات فلكية: 50 عاما لأهلة رمضان وشوال وذي الحجة",
+    "en": "الأهلة: نظرة شمولية ودراسات فلكية: 50 عاما لأهلة رمضان وشوال وذي الحجة"
+   },
+   "meta": {
+    "ar": "عدنان عبد المنعم قاضي · مكتبة كنوز المعرفة، جدة · 2010 · 327 صفحة",
+    "en": "عدنان عبد المنعم قاضي · مكتبة كنوز المعرفة، جدة · 2010 · 327 pp."
+   }
+  },
+  {
+   "c": "books",
+   "sub": {
+    "ar": "الفلك الشرعي",
+    "en": "Islamic astronomy"
+   },
+   "title": {
+    "ar": "اقدروا له: تقدير أوقات الصلاة والصيام لخطوط عرض عليا",
+    "en": "اقدروا له: تقدير أوقات الصلاة والصيام لخطوط عرض عليا"
+   },
+   "meta": {
+    "ar": "عدنان عبد المنعم قاضي · مكتبة كنوز المعرفة، جدة · 2016 · 198 صفحة",
+    "en": "عدنان عبد المنعم قاضي · مكتبة كنوز المعرفة، جدة · 2016 · 198 pp."
+   }
+  },
+  {
+   "c": "books",
+   "sub": {
+    "ar": "الفلك الشرعي",
+    "en": "Islamic astronomy"
+   },
+   "title": {
+    "ar": "المنهال في رؤية الهلال",
+    "en": "المنهال في رؤية الهلال"
+   },
+   "meta": {
+    "ar": "حنان بنت حميد السيابية · الجمعية الفلكية العمانية · 2009 · 100 صفحة",
+    "en": "حنان بنت حميد السيابية · الجمعية الفلكية العمانية · 2009 · 100 pp."
+   }
+  },
+  {
+   "c": "books",
+   "sub": {
+    "ar": "الفلك الشرعي",
+    "en": "Islamic astronomy"
+   },
+   "title": {
+    "ar": "الأهلة: شهود المستحيل",
+    "en": "الأهلة: شهود المستحيل"
+   },
+   "meta": {
+    "ar": "حمزة بن قبلان المزيني · مؤسسة الانتشار العربي، بيروت، لبنان · 2008 · 208 صفحة",
+    "en": "حمزة بن قبلان المزيني · مؤسسة الانتشار العربي، بيروت، لبنان · 2008 · 208 pp."
+   }
+  },
+  {
+   "c": "books",
+   "sub": {
+    "ar": "الفلك الشرعي",
+    "en": "Islamic astronomy"
+   },
+   "title": {
+    "ar": "ترائي الهلال والتقويم الهجري",
+    "en": "ترائي الهلال والتقويم الهجري"
+   },
+   "meta": {
+    "ar": "حسن محمد باصرة · دار جياد للنشر والتوزيع، جدة، المملكة العربية السعودية · 2011 · 183 صفحة",
+    "en": "حسن محمد باصرة · دار جياد للنشر والتوزيع، جدة، المملكة العربية السعودية · 2011 · 183 pp."
+   }
+  },
+  {
+   "c": "books",
+   "sub": {
+    "ar": "الفلك الشرعي",
+    "en": "Islamic astronomy"
+   },
+   "title": {
+    "ar": "الحسابات الفلكية وإثبات شهر رمضان",
+    "en": "الحسابات الفلكية وإثبات شهر رمضان"
+   },
+   "meta": {
+    "ar": "ذو الفقار علي شاه · المعهد العالمي للفكر الإسلامي، بيروت، لبنان · 2009 · 152 صفحة",
+    "en": "ذو الفقار علي شاه · المعهد العالمي للفكر الإسلامي، بيروت، لبنان · 2009 · 152 pp."
+   }
+  },
+  {
+   "c": "books",
+   "sub": {
+    "ar": "الفلك الشرعي",
+    "en": "Islamic astronomy"
+   },
+   "title": {
+    "ar": "التقويم القمري الإسلامي الموحد",
+    "en": "التقويم القمري الإسلامي الموحد"
+   },
+   "meta": {
+    "ar": "جمال الدين عبد الرازق · مرسم، الرباط، المملكة المغربية · 2004 · 128 صفحة",
+    "en": "جمال الدين عبد الرازق · مرسم، الرباط، المملكة المغربية · 2004 · 128 pp."
+   }
+  },
+  {
+   "c": "books",
+   "sub": {
+    "ar": "الفلك الشرعي",
+    "en": "Islamic astronomy"
+   },
+   "title": {
+    "ar": "التقويم الهجري وكيف يحسب",
+    "en": "التقويم الهجري وكيف يحسب"
+   },
+   "meta": {
+    "ar": "صالح العجيري · مكتبة العجيري، الكويت · 2010 · 142 صفحة",
+    "en": "صالح العجيري · مكتبة العجيري، الكويت · 2010 · 142 pp."
+   }
+  },
+  {
+   "c": "books",
+   "sub": {
+    "ar": "الفلك الشرعي",
+    "en": "Islamic astronomy"
+   },
+   "title": {
+    "ar": "مواقيت الصلاة في الجماهيرية العظمى",
+    "en": "مواقيت الصلاة في الجماهيرية العظمى"
+   },
+   "meta": {
+    "ar": "المركز الليبي للاستشعار عن بعد وآخرون · جمعية الدعوة الإسلامية العالمية · 1999 · 224 صفحة",
+    "en": "المركز الليبي للاستشعار عن بعد وآخرون · جمعية الدعوة الإسلامية العالمية · 1999 · 224 pp."
+   }
+  },
+  {
+   "c": "books",
+   "sub": {
+    "ar": "الفلك الشرعي",
+    "en": "Islamic astronomy"
+   },
+   "title": {
+    "ar": "تطبيقات علم الفلك في الشريعة الإسلامية",
+    "en": "تطبيقات علم الفلك في الشريعة الإسلامية"
+   },
+   "meta": {
+    "ar": "عوني محمد الخصاونة · المطابع العسكرية، عمّان، الأردن · 1999 · 257 صفحة",
+    "en": "عوني محمد الخصاونة · المطابع العسكرية، عمّان، الأردن · 1999 · 257 pp."
+   }
+  },
+  {
+   "c": "books",
+   "sub": {
+    "ar": "الفلك الشرعي",
+    "en": "Islamic astronomy"
+   },
+   "title": {
+    "ar": "الحسابات والتطبيقات الفلكية العلمية في خدمة الشريعة الإسلامية",
+    "en": "الحسابات والتطبيقات الفلكية العلمية في خدمة الشريعة الإسلامية"
+   },
+   "meta": {
+    "ar": "أ.د. حميد النعيمي و أ.د. مجيد جراد · الآفاق المشرقة ناشرون، الشارقة، الإمارات · 2011 · 318 صفحة",
+    "en": "أ.د. حميد النعيمي و أ.د. مجيد جراد · الآفاق المشرقة ناشرون، الشارقة، الإمارات · 2011 · 318 pp."
+   }
+  },
+  {
+   "c": "books",
+   "sub": {
+    "ar": "الفلك العام والمتخصص",
+    "en": "General and specialised astronomy"
+   },
+   "title": {
+    "ar": "قناديل السماء",
+    "en": "قناديل السماء"
+   },
+   "meta": {
+    "ar": "شوقي الدلال · 2010 · 271 صفحة",
+    "en": "شوقي الدلال · 2010 · 271 pp."
+   }
+  },
+  {
+   "c": "books",
+   "sub": {
+    "ar": "الفلك العام والمتخصص",
+    "en": "General and specialised astronomy"
+   },
+   "title": {
+    "ar": "الفلك الكروي",
+    "en": "الفلك الكروي"
+   },
+   "meta": {
+    "ar": "أحمد محمد الأنصاري · مكتبة دار العروبة للنشر والتوزيع – الكويت · 2015 · 217 صفحة",
+    "en": "أحمد محمد الأنصاري · مكتبة دار العروبة للنشر والتوزيع – الكويت · 2015 · 217 pp."
+   }
+  },
+  {
+   "c": "books",
+   "sub": {
+    "ar": "الفلك العام والمتخصص",
+    "en": "General and specialised astronomy"
+   },
+   "title": {
+    "ar": "تقويم الكواكب",
+    "en": "تقويم الكواكب"
+   },
+   "meta": {
+    "ar": "أحمد محمد الأنصاري · مكتبة دار العروبة للنشر والتوزيع – الكويت · 2014 · 154 صفحة",
+    "en": "أحمد محمد الأنصاري · مكتبة دار العروبة للنشر والتوزيع – الكويت · 2014 · 154 pp."
+   }
+  },
+  {
+   "c": "books",
+   "sub": {
+    "ar": "الفلك العام والمتخصص",
+    "en": "General and specialised astronomy"
+   },
+   "title": {
+    "ar": "قاموس دار العلم الفلكي",
+    "en": "قاموس دار العلم الفلكي"
+   },
+   "meta": {
+    "ar": "عبد الأمير المؤمن · دار العلم للملايين، بيروت، لبنان · 2006 · 648 صفحة",
+    "en": "عبد الأمير المؤمن · دار العلم للملايين، بيروت، لبنان · 2006 · 648 pp."
+   }
+  },
+  {
+   "c": "books",
+   "sub": {
+    "ar": "الفلك العام والمتخصص",
+    "en": "General and specialised astronomy"
+   },
+   "title": {
+    "ar": "رصد السماء",
+    "en": "رصد السماء"
+   },
+   "meta": {
+    "ar": "د. عبد الرحيم بدر · مؤسسة عبد الحميد شومان، عمّان، الأردن · 1992 · 408 صفحة",
+    "en": "د. عبد الرحيم بدر · مؤسسة عبد الحميد شومان، عمّان، الأردن · 1992 · 408 pp."
+   }
+  },
+  {
+   "c": "books",
+   "sub": {
+    "ar": "الفلك العام والمتخصص",
+    "en": "General and specialised astronomy"
+   },
+   "title": {
+    "ar": "موسوعة أسماء النجوم عند العرب في الفلك القديم والحديث",
+    "en": "موسوعة أسماء النجوم عند العرب في الفلك القديم والحديث"
+   },
+   "meta": {
+    "ar": "د. عبد الرحيم بدر · المجلس الأعلى للعلوم والتكنولوجيا/الجمعية الأردنية لتاريخ العلوم · 1998 · 231 صفحة",
+    "en": "د. عبد الرحيم بدر · المجلس الأعلى للعلوم والتكنولوجيا/الجمعية الأردنية لتاريخ العلوم · 1998 · 231 pp."
+   }
+  },
+  {
+   "c": "books",
+   "sub": {
+    "ar": "الفلك العام والمتخصص",
+    "en": "General and specialised astronomy"
+   },
+   "title": {
+    "ar": "السماء في الليل",
+    "en": "السماء في الليل"
+   },
+   "meta": {
+    "ar": "د. علي عبندة و د. عبد القادر عابد · دار الفرقان، عمّان، الأردن · 1985 · 144 صفحة",
+    "en": "د. علي عبندة و د. عبد القادر عابد · دار الفرقان، عمّان، الأردن · 1985 · 144 pp."
+   }
+  },
+  {
+   "c": "books",
+   "sub": {
+    "ar": "الفلك العام والمتخصص",
+    "en": "General and specialised astronomy"
+   },
+   "title": {
+    "ar": "علم الفلك",
+    "en": "علم الفلك"
+   },
+   "meta": {
+    "ar": "أ.د. عبدالسلام غيث · جامعة اليرموك/ عمادة البحث العلمي والدراسات العليا، عمّان، الأردن · الطبعة الأولى 1992م، الطبعة الثانية 2000م · 241 صفحة",
+    "en": "أ.د. عبدالسلام غيث · جامعة اليرموك/ عمادة البحث العلمي والدراسات العليا، عمّان، الأردن · الطبعة الأولى 1992م، الطبعة الثانية 2000م · 241 pp."
+   }
+  },
+  {
+   "c": "books",
+   "sub": {
+    "ar": "الفلك العام والمتخصص",
+    "en": "General and specialised astronomy"
+   },
+   "title": {
+    "ar": "أساسيات في علم الفلك والتقاويم",
+    "en": "أساسيات في علم الفلك والتقاويم"
+   },
+   "meta": {
+    "ar": "د. محمد باسل الطائي · كلية العلوم، جامعة اليرموك، إربد، الأردن · 2001 · 306 صفحة",
+    "en": "د. محمد باسل الطائي · كلية العلوم، جامعة اليرموك، إربد، الأردن · 2001 · 306 pp."
+   }
+  },
+  {
+   "c": "books",
+   "sub": {
+    "ar": "الفلك العام والمتخصص",
+    "en": "General and specialised astronomy"
+   },
+   "title": {
+    "ar": "مبادئ وأساسيات علم الفلك",
+    "en": "مبادئ وأساسيات علم الفلك"
+   },
+   "meta": {
+    "ar": "مجيد جراد وصبيح الساعدي · مؤسسة العطاء للتوزيع، مسقط، سلطنة عُمان · 2012 · 185 صفحة",
+    "en": "مجيد جراد وصبيح الساعدي · مؤسسة العطاء للتوزيع، مسقط، سلطنة عُمان · 2012 · 185 pp."
+   }
+  },
+  {
+   "c": "books",
+   "sub": {
+    "ar": "الفلك العام والمتخصص",
+    "en": "General and specialised astronomy"
+   },
+   "title": {
+    "ar": "الاستدلال بالنجوم",
+    "en": "الاستدلال بالنجوم"
+   },
+   "meta": {
+    "ar": "حسن بن محمد باصرة · مدينة الملك عبد العزيز للعلوم والتقنية · 2007 · 112 صفحة",
+    "en": "حسن بن محمد باصرة · مدينة الملك عبد العزيز للعلوم والتقنية · 2007 · 112 pp."
+   }
+  },
+  {
+   "c": "books",
+   "sub": {
+    "ar": "الفلك العام والمتخصص",
+    "en": "General and specialised astronomy"
+   },
+   "title": {
+    "ar": "الفلك والأنواء في التراث",
+    "en": "الفلك والأنواء في التراث"
+   },
+   "meta": {
+    "ar": "علي عبندة · 1999 · 368 صفحة",
+    "en": "علي عبندة · 1999 · 368 pp."
+   }
+  },
+  {
+   "c": "books",
+   "sub": {
+    "ar": "الفلك العام والمتخصص",
+    "en": "General and specialised astronomy"
+   },
+   "title": {
+    "ar": "السماء ذات الحبك",
+    "en": "السماء ذات الحبك"
+   },
+   "meta": {
+    "ar": "أ.د. حميد مجول النعيمي · جائزة دبي الدولية للقرآن الكريم · 2016",
+    "en": "أ.د. حميد مجول النعيمي · جائزة دبي الدولية للقرآن الكريم · 2016"
+   }
+  },
+  {
+   "c": "books",
+   "sub": {
+    "ar": "الفلك العام والمتخصص",
+    "en": "General and specialised astronomy"
+   },
+   "title": {
+    "ar": "التوقيت والتقويم",
+    "en": "التوقيت والتقويم"
+   },
+   "meta": {
+    "ar": "د. علي حسن موسى · دار الفكر، دمشق، سوريا · 1998 · 208 صفحة",
+    "en": "د. علي حسن موسى · دار الفكر، دمشق، سوريا · 1998 · 208 pp."
+   }
+  },
+  {
+   "c": "books",
+   "sub": {
+    "ar": "الفلك العام والمتخصص",
+    "en": "General and specialised astronomy"
+   },
+   "title": {
+    "ar": "أجرام مضيئة في سماء الدولة الإسلامية",
+    "en": "أجرام مضيئة في سماء الدولة الإسلامية"
+   },
+   "meta": {
+    "ar": "حسن بن محمد باصرة · دار الفتح للدراسات والنشر، عمّان، المملكة الأردنية الهاشمية · 2004 · 154 صفحة",
+    "en": "حسن بن محمد باصرة · دار الفتح للدراسات والنشر، عمّان، المملكة الأردنية الهاشمية · 2004 · 154 pp."
+   }
+  },
+  {
+   "c": "books",
+   "sub": {
+    "ar": "الفلك التراثي",
+    "en": "Heritage astronomy"
+   },
+   "title": {
+    "ar": "صور الكواكب الثمانية والأربعين",
+    "en": "صور الكواكب الثمانية والأربعين"
+   },
+   "meta": {
+    "ar": "الرازي الصوفي · دار الآفاق الجديدة، بيروت، لبنان",
+    "en": "الرازي الصوفي · دار الآفاق الجديدة، بيروت، لبنان"
+   }
+  },
+  {
+   "c": "books",
+   "sub": {
+    "ar": "الفلك التراثي",
+    "en": "Heritage astronomy"
+   },
+   "title": {
+    "ar": "الأنواء والأزمنة ومعرفة أعيان الكواكب في النجوم",
+    "en": "الأنواء والأزمنة ومعرفة أعيان الكواكب في النجوم"
+   },
+   "meta": {
+    "ar": "عبد الله بن حسين بن عاصم الثقفي · دار الجيل، بيروت، لبنان · 1996 · 174 صفحة",
+    "en": "عبد الله بن حسين بن عاصم الثقفي · دار الجيل، بيروت، لبنان · 1996 · 174 pp."
+   }
+  },
+  {
+   "c": "books",
+   "sub": {
+    "ar": "الفلك التراثي",
+    "en": "Heritage astronomy"
+   },
+   "title": {
+    "ar": "الأنواء في مواسم العرب",
+    "en": "الأنواء في مواسم العرب"
+   },
+   "meta": {
+    "ar": "أبو محمد عبد الله بن مسلم بن قتيبة الدينوري · وزارة الثقافة والإعلام، دار الشؤون الثقافية العامة، بغداد، العراق. · 1988 · 244 صفحة",
+    "en": "أبو محمد عبد الله بن مسلم بن قتيبة الدينوري · وزارة الثقافة والإعلام، دار الشؤون الثقافية العامة، بغداد، العراق. · 1988 · 244 pp."
+   }
+  },
+  {
+   "c": "books",
+   "sub": {
+    "ar": "الفلك التراثي",
+    "en": "Heritage astronomy"
+   },
+   "title": {
+    "ar": "الآثار الباقية عن القرون الخالية",
+    "en": "الآثار الباقية عن القرون الخالية"
+   },
+   "meta": {
+    "ar": "أبو الريحان محمد بن أحمد البيروني · دار الكتب العلمية، بيروت، لبنان · 2000 · 328 صفحة",
+    "en": "أبو الريحان محمد بن أحمد البيروني · دار الكتب العلمية، بيروت، لبنان · 2000 · 328 pp."
+   }
+  },
+  {
+   "c": "books",
+   "sub": {
+    "ar": "الفلك التراثي",
+    "en": "Heritage astronomy"
+   },
+   "title": {
+    "ar": "القانون المسعودي",
+    "en": "القانون المسعودي"
+   },
+   "meta": {
+    "ar": "أبو الريحان محمد بن أحمد البيروني · دار الكتب العلمية، بيروت، لبنان · 2002 · ثلاثة أجزاء صفحة",
+    "en": "أبو الريحان محمد بن أحمد البيروني · دار الكتب العلمية، بيروت، لبنان · 2002 · ثلاثة أجزاء pp."
+   }
+  },
+  {
+   "c": "books",
+   "sub": {
+    "ar": "الفلك التراثي",
+    "en": "Heritage astronomy"
+   },
+   "title": {
+    "ar": "الزيج الصابيء",
+    "en": "الزيج الصابيء"
+   },
+   "meta": {
+    "ar": "محمد بن سنان الحراني المعروف بالبتّاني · دار ومكتبة بيبليون، جبيل، لبنان · 2008 · 280 صفحة",
+    "en": "محمد بن سنان الحراني المعروف بالبتّاني · دار ومكتبة بيبليون، جبيل، لبنان · 2008 · 280 pp."
+   }
+  },
+  {
+   "c": "books",
+   "sub": {
+    "ar": "الفلك التراثي",
+    "en": "Heritage astronomy"
+   },
+   "title": {
+    "ar": "نصب الشرَك لاقتناص ما تشتد إليه الحاجة من علم الفلك",
+    "en": "نصب الشرَك لاقتناص ما تشتد إليه الحاجة من علم الفلك"
+   },
+   "meta": {
+    "ar": "الشيخ عثمان بن أبي بكر العمودي · دار الفتح للدراسات والنشر، عمان، الأردن · 2010 · 130 صفحة",
+    "en": "الشيخ عثمان بن أبي بكر العمودي · دار الفتح للدراسات والنشر، عمان، الأردن · 2010 · 130 pp."
+   }
+  },
+  {
+   "c": "books",
+   "sub": {
+    "ar": "أعمال المؤتمرات",
+    "en": "Conference proceedings"
+   },
+   "title": {
+    "ar": "تطبيقات الحسابات الفلكية في المسائل الإسلامية",
+    "en": "تطبيقات الحسابات الفلكية في المسائل الإسلامية"
+   },
+   "meta": {
+    "ar": "مركز الوثائق والبحوث · 2007 · 306 صفحة",
+    "en": "مركز الوثائق والبحوث · 2007 · 306 pp."
+   }
+  },
+  {
+   "c": "books",
+   "sub": {
+    "ar": "أعمال المؤتمرات",
+    "en": "Conference proceedings"
+   },
+   "title": {
+    "ar": "علم الفلك للمجتمع الإسلامي",
+    "en": "علم الفلك للمجتمع الإسلامي"
+   },
+   "meta": {
+    "ar": "مركز الوثائق والبحوث · 2011 · 328 صفحة",
+    "en": "مركز الوثائق والبحوث · 2011 · 328 pp."
+   }
+  },
+  {
+   "c": "books",
+   "sub": {
+    "ar": "أعمال المؤتمرات",
+    "en": "Conference proceedings"
+   },
+   "title": {
+    "ar": "مطالع الشهور القمرية والتقويم الإسلامي",
+    "en": "مطالع الشهور القمرية والتقويم الإسلامي"
+   },
+   "meta": {
+    "ar": "المنظمة الإسلامية للتربية والعلوم والثقافة – إيسيسكو · 2010 · 450 صفحة",
+    "en": "المنظمة الإسلامية للتربية والعلوم والثقافة – إيسيسكو · 2010 · 450 pp."
+   }
+  },
+  {
+   "c": "books",
+   "sub": {
+    "ar": "أعمال المؤتمرات",
+    "en": "Conference proceedings"
+   },
+   "title": {
+    "ar": "جدلية العلاقة بين الفلك والفقه",
+    "en": "جدلية العلاقة بين الفلك والفقه"
+   },
+   "meta": {
+    "ar": "دار الملاك، بيروت، لبنان · 2011 · 644 صفحة",
+    "en": "دار الملاك، بيروت، لبنان · 2011 · 644 pp."
+   }
+  },
+  {
+   "c": "research",
+   "title": {
+    "ar": "M. A. Al-Wardat, A. M. Hussein, H. M. Al-Naimiy and M. A. Barstow, Comparison of Gaia and Hipparcos parallaxes of close visual binary stars and the impact on determinations of their masses, Publications of the Astronomical Society of Australia (PASA) (A Q1 Journal with IF 5.067), accepted 2020. Mohammad K. Mardini , Vinicius M. Placco , Yohai Meiron , Marina Ishchenko , Branislav Avramov , Matteo Mazzarini , Peter Berczik , Manuel Arca Sedda , Timothy C. Beers , Anna Frebel , Ali Taani , Martina Donnari , Mashhoor A. Al-Wardat, and Gang Zhao, Cosmological Insights into the Early Accretion of r-Process-Enhanced stars. I. A Comprehensive Chemo-dynamical Analysis of LAMOST J1109+0754, Astrophysical Journal, 2020, A Q1 Journal, Impact Factor 2019: 5.745. Ali Taani, Awni Khasawneh, Mohammad Mardini, Ahmad Abushattal, and Mashhoor Al-Wardat, Probability Distribution of Magnetic Field Strengths through the Cyclotron Lines in High-Mass X-ray Binaries, Jordan Journal of Physics (JJP), Volume 13, Number 1, 2020. Ali Taani, Awni Khasawneh, Mohammad Mardini, Ahmad Abushattal, and Mashhoor Al-Wardat, Probability Distribution of Magnetic Field Strengths through the Cyclotron Lines in High-Mass X-ray Binaries, Jordan Journal of Physics (JJP), Volume 13, Number 1, 2020. Mohammad K. Mardini, Nidal Ershiadat, Mashhoor A. Al-Wardat, Ali A. Taani, Sergen Özdemir, Hamid Al-Naimiy and Awni Khasawneh, The Nucleosynthesis and Reaction Rates of Fluorine 19 (19 F) in the Sun, IOP Publishing Ltd, Journal of Physics: Conference Series, 2019, Volume 1258, Number 1. Halabi, G., El Eid M.F “Exploring Masses and CNO Surface Abundances of Red Giant Stars” Monthly Notices Royal Astron. Soc. (.MNRAS), 45, 2957 (2015). Hammoud, M.F. El Eid, M. Darwich “Effect of Magnetic Reconnection in Stellar Plasma ”Journal of Phys. Conf. Ser., 869, 012076 (2017). F. El Eid “Nucleosynthesis in Relation to Cosmology”, Physica Scripta, 93, 044001 (2018). F. El Eid “Comments on Stellar Evolution” Eur. J. Phys. , 133, 372 (2018). R. Makki, M.F. El Eid, G. J. Mathews “A Critical Analysis of the Big Bang Nucleosynthesis”, Mod. Phys. Lett A, 23, 1950194 (2019).",
+    "en": "M. A. Al-Wardat, A. M. Hussein, H. M. Al-Naimiy and M. A. Barstow, Comparison of Gaia and Hipparcos parallaxes of close visual binary stars and the impact on determinations of their masses, Publications of the Astronomical Society of Australia (PASA) (A Q1 Journal with IF 5.067), accepted 2020. Mohammad K. Mardini , Vinicius M. Placco , Yohai Meiron , Marina Ishchenko , Branislav Avramov , Matteo Mazzarini , Peter Berczik , Manuel Arca Sedda , Timothy C. Beers , Anna Frebel , Ali Taani , Martina Donnari , Mashhoor A. Al-Wardat, and Gang Zhao, Cosmological Insights into the Early Accretion of r-Process-Enhanced stars. I. A Comprehensive Chemo-dynamical Analysis of LAMOST J1109+0754, Astrophysical Journal, 2020, A Q1 Journal, Impact Factor 2019: 5.745. Ali Taani, Awni Khasawneh, Mohammad Mardini, Ahmad Abushattal, and Mashhoor Al-Wardat, Probability Distribution of Magnetic Field Strengths through the Cyclotron Lines in High-Mass X-ray Binaries, Jordan Journal of Physics (JJP), Volume 13, Number 1, 2020. Ali Taani, Awni Khasawneh, Mohammad Mardini, Ahmad Abushattal, and Mashhoor Al-Wardat, Probability Distribution of Magnetic Field Strengths through the Cyclotron Lines in High-Mass X-ray Binaries, Jordan Journal of Physics (JJP), Volume 13, Number 1, 2020. Mohammad K. Mardini, Nidal Ershiadat, Mashhoor A. Al-Wardat, Ali A. Taani, Sergen Özdemir, Hamid Al-Naimiy and Awni Khasawneh, The Nucleosynthesis and Reaction Rates of Fluorine 19 (19 F) in the Sun, IOP Publishing Ltd, Journal of Physics: Conference Series, 2019, Volume 1258, Number 1. Halabi, G., El Eid M.F “Exploring Masses and CNO Surface Abundances of Red Giant Stars” Monthly Notices Royal Astron. Soc. (.MNRAS), 45, 2957 (2015). Hammoud, M.F. El Eid, M. Darwich “Effect of Magnetic Reconnection in Stellar Plasma ”Journal of Phys. Conf. Ser., 869, 012076 (2017). F. El Eid “Nucleosynthesis in Relation to Cosmology”, Physica Scripta, 93, 044001 (2018). F. El Eid “Comments on Stellar Evolution” Eur. J. Phys. , 133, 372 (2018). R. Makki, M.F. El Eid, G. J. Mathews “A Critical Analysis of the Big Bang Nucleosynthesis”, Mod. Phys. Lett A, 23, 1950194 (2019)."
+   },
+   "lang": "en"
+  },
+  {
+   "c": "research",
+   "title": {
+    "ar": "Mohammad K. Mardini , Vinicius M. Placco , Yohai Meiron , Marina Ishchenko , Branislav Avramov , Matteo Mazzarini , Peter Berczik , Manuel Arca Sedda , Timothy C. Beers , Anna Frebel , Ali Taani , Martina Donnari , Mashhoor A. Al-Wardat, and Gang Zhao, Cosmological Insights into the Early Accretion of r-Process-Enhanced stars. I. A Comprehensive Chemo-dynamical Analysis of LAMOST J1109+0754, Astrophysical Journal, 2020, A Q1 Journal, Impact Factor 2019: 5.745.",
+    "en": "Mohammad K. Mardini , Vinicius M. Placco , Yohai Meiron , Marina Ishchenko , Branislav Avramov , Matteo Mazzarini , Peter Berczik , Manuel Arca Sedda , Timothy C. Beers , Anna Frebel , Ali Taani , Martina Donnari , Mashhoor A. Al-Wardat, and Gang Zhao, Cosmological Insights into the Early Accretion of r-Process-Enhanced stars. I. A Comprehensive Chemo-dynamical Analysis of LAMOST J1109+0754, Astrophysical Journal, 2020, A Q1 Journal, Impact Factor 2019: 5.745."
+   },
+   "lang": "en"
+  },
+  {
+   "c": "research",
+   "title": {
+    "ar": "Ali Taani, Awni Khasawneh, Mohammad Mardini, Ahmad Abushattal, and Mashhoor Al-Wardat, Probability Distribution of Magnetic Field Strengths through the Cyclotron Lines in High-Mass X-ray Binaries, Jordan Journal of Physics (JJP), Volume 13, Number 1, 2020.",
+    "en": "Ali Taani, Awni Khasawneh, Mohammad Mardini, Ahmad Abushattal, and Mashhoor Al-Wardat, Probability Distribution of Magnetic Field Strengths through the Cyclotron Lines in High-Mass X-ray Binaries, Jordan Journal of Physics (JJP), Volume 13, Number 1, 2020."
+   },
+   "lang": "en"
+  },
+  {
+   "c": "research",
+   "title": {
+    "ar": "Mohammad K. Mardini, Nidal Ershiadat, Mashhoor A. Al-Wardat, Ali A. Taani, Sergen Özdemir, Hamid Al-Naimiy and Awni Khasawneh, The Nucleosynthesis and Reaction Rates of Fluorine 19 (19 F) in the Sun, IOP Publishing Ltd, Journal of Physics: Conference Series, 2019, Volume 1258, Number 1.",
+    "en": "Mohammad K. Mardini, Nidal Ershiadat, Mashhoor A. Al-Wardat, Ali A. Taani, Sergen Özdemir, Hamid Al-Naimiy and Awni Khasawneh, The Nucleosynthesis and Reaction Rates of Fluorine 19 (19 F) in the Sun, IOP Publishing Ltd, Journal of Physics: Conference Series, 2019, Volume 1258, Number 1."
+   },
+   "lang": "en"
+  },
+  {
+   "c": "research",
+   "title": {
+    "ar": "Halabi, G., El Eid M.F “Exploring Masses and CNO Surface Abundances of Red Giant Stars” Monthly Notices Royal Astron. Soc. (.MNRAS), 45, 2957 (2015).",
+    "en": "Halabi, G., El Eid M.F “Exploring Masses and CNO Surface Abundances of Red Giant Stars” Monthly Notices Royal Astron. Soc. (.MNRAS), 45, 2957 (2015)."
+   },
+   "lang": "en"
+  },
+  {
+   "c": "research",
+   "title": {
+    "ar": "Hammoud, M.F. El Eid, M. Darwich “Effect of Magnetic Reconnection in Stellar Plasma ”Journal of Phys. Conf. Ser., 869, 012076 (2017).",
+    "en": "Hammoud, M.F. El Eid, M. Darwich “Effect of Magnetic Reconnection in Stellar Plasma ”Journal of Phys. Conf. Ser., 869, 012076 (2017)."
+   },
+   "lang": "en"
+  },
+  {
+   "c": "research",
+   "title": {
+    "ar": "F. El Eid “Nucleosynthesis in Relation to Cosmology”, Physica Scripta, 93, 044001 (2018).",
+    "en": "F. El Eid “Nucleosynthesis in Relation to Cosmology”, Physica Scripta, 93, 044001 (2018)."
+   },
+   "lang": "en"
+  },
+  {
+   "c": "research",
+   "title": {
+    "ar": "F. El Eid “Comments on Stellar Evolution” Eur. J. Phys. , 133, 372 (2018).",
+    "en": "F. El Eid “Comments on Stellar Evolution” Eur. J. Phys. , 133, 372 (2018)."
+   },
+   "lang": "en"
+  },
+  {
+   "c": "research",
+   "title": {
+    "ar": "R. Makki, M.F. El Eid, G. J. Mathews “A Critical Analysis of the Big Bang Nucleosynthesis”, Mod. Phys. Lett A, 23, 1950194 (2019).",
+    "en": "R. Makki, M.F. El Eid, G. J. Mathews “A Critical Analysis of the Big Bang Nucleosynthesis”, Mod. Phys. Lett A, 23, 1950194 (2019)."
+   },
+   "lang": "en"
+  },
+  {
+   "c": "constellations",
+   "n": 1,
+   "title": {
+    "ar": "المرأة المسلسلة",
+    "en": "Andromeda"
+   },
+   "alt": {
+    "ar": "Andromeda",
+    "en": "المرأة المسلسلة"
+   },
+   "meta": {
+    "ar": "شمالية · المساحة 722.278 درجة مربعة",
+    "en": "Northern · area 722.278 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 2,
+   "title": {
+    "ar": "مفرغة الهواء",
+    "en": "Antlia"
+   },
+   "alt": {
+    "ar": "Antlia",
+    "en": "مفرغة الهواء"
+   },
+   "meta": {
+    "ar": "جنوبية · المساحة 238.901 درجة مربعة",
+    "en": "Southern · area 238.901 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 3,
+   "title": {
+    "ar": "طائر الفردوس",
+    "en": "Apus"
+   },
+   "alt": {
+    "ar": "Apus",
+    "en": "طائر الفردوس"
+   },
+   "meta": {
+    "ar": "جنوبية · المساحة 206.327 درجة مربعة",
+    "en": "Southern · area 206.327 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 4,
+   "title": {
+    "ar": "الدلو",
+    "en": "Aquarius"
+   },
+   "alt": {
+    "ar": "Aquarius",
+    "en": "الدلو"
+   },
+   "meta": {
+    "ar": "جنوبية · المساحة 979.854 درجة مربعة",
+    "en": "Southern · area 979.854 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 5,
+   "title": {
+    "ar": "العقاب",
+    "en": "Aquila"
+   },
+   "alt": {
+    "ar": "Aquila",
+    "en": "العقاب"
+   },
+   "meta": {
+    "ar": "شمالية وجنوبية · المساحة 652.473 درجة مربعة",
+    "en": "Northern & southern · area 652.473 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 6,
+   "title": {
+    "ar": "المجمرة",
+    "en": "Ara"
+   },
+   "alt": {
+    "ar": "Ara",
+    "en": "المجمرة"
+   },
+   "meta": {
+    "ar": "جنوبية · المساحة 237.057 درجة مربعة",
+    "en": "Southern · area 237.057 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 7,
+   "title": {
+    "ar": "الحمل",
+    "en": "Aries"
+   },
+   "alt": {
+    "ar": "Aries",
+    "en": "الحمل"
+   },
+   "meta": {
+    "ar": "شمالية · المساحة 441.395 درجة مربعة",
+    "en": "Northern · area 441.395 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 8,
+   "title": {
+    "ar": "ممسك الأعنة",
+    "en": "Auriga"
+   },
+   "alt": {
+    "ar": "Auriga",
+    "en": "ممسك الأعنة"
+   },
+   "meta": {
+    "ar": "شمالية · المساحة 657.438 درجة مربعة",
+    "en": "Northern · area 657.438 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 9,
+   "title": {
+    "ar": "العواء",
+    "en": "Bootes"
+   },
+   "alt": {
+    "ar": "Bootes",
+    "en": "العواء"
+   },
+   "meta": {
+    "ar": "شمالية · المساحة 906.831 درجة مربعة",
+    "en": "Northern · area 906.831 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 10,
+   "title": {
+    "ar": "آلة النقاش",
+    "en": "Caelum"
+   },
+   "alt": {
+    "ar": "Caelum",
+    "en": "آلة النقاش"
+   },
+   "meta": {
+    "ar": "جنوبية · المساحة 124.865 درجة مربعة",
+    "en": "Southern · area 124.865 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 11,
+   "title": {
+    "ar": "الزرافة",
+    "en": "Camelopardalis"
+   },
+   "alt": {
+    "ar": "Camelopardalis",
+    "en": "الزرافة"
+   },
+   "meta": {
+    "ar": "شمالية · المساحة 756.828 درجة مربعة",
+    "en": "Northern · area 756.828 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 12,
+   "title": {
+    "ar": "السرطان",
+    "en": "Cancer"
+   },
+   "alt": {
+    "ar": "Cancer",
+    "en": "السرطان"
+   },
+   "meta": {
+    "ar": "شمالية · المساحة 505.872 درجة مربعة",
+    "en": "Northern · area 505.872 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 13,
+   "title": {
+    "ar": "السلوقيان",
+    "en": "Canes Venatici"
+   },
+   "alt": {
+    "ar": "Canes Venatici",
+    "en": "السلوقيان"
+   },
+   "meta": {
+    "ar": "شمالية · المساحة 465.194 درجة مربعة",
+    "en": "Northern · area 465.194 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 14,
+   "title": {
+    "ar": "الكلب الأكبر",
+    "en": "Canis Major"
+   },
+   "alt": {
+    "ar": "Canis Major",
+    "en": "الكلب الأكبر"
+   },
+   "meta": {
+    "ar": "جنوبية · المساحة 380.118 درجة مربعة",
+    "en": "Southern · area 380.118 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 15,
+   "title": {
+    "ar": "الكلب الأصغر",
+    "en": "Canis Minor"
+   },
+   "alt": {
+    "ar": "Canis Minor",
+    "en": "الكلب الأصغر"
+   },
+   "meta": {
+    "ar": "شمالية · المساحة 183.367 درجة مربعة",
+    "en": "Northern · area 183.367 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 16,
+   "title": {
+    "ar": "الجدي",
+    "en": "Capricornus"
+   },
+   "alt": {
+    "ar": "Capricornus",
+    "en": "الجدي"
+   },
+   "meta": {
+    "ar": "جنوبية · المساحة 413.947 درجة مربعة",
+    "en": "Southern · area 413.947 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 17,
+   "title": {
+    "ar": "القاعدة",
+    "en": "Carina"
+   },
+   "alt": {
+    "ar": "Carina",
+    "en": "القاعدة"
+   },
+   "meta": {
+    "ar": "جنوبية · المساحة 494.184 درجة مربعة",
+    "en": "Southern · area 494.184 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 18,
+   "title": {
+    "ar": "ذات الكرسي",
+    "en": "Cassiopeia"
+   },
+   "alt": {
+    "ar": "Cassiopeia",
+    "en": "ذات الكرسي"
+   },
+   "meta": {
+    "ar": "شمالية · المساحة 598.407 درجة مربعة",
+    "en": "Northern · area 598.407 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 19,
+   "title": {
+    "ar": "قنطورس",
+    "en": "Centaurus"
+   },
+   "alt": {
+    "ar": "Centaurus",
+    "en": "قنطورس"
+   },
+   "meta": {
+    "ar": "جنوبية · المساحة 1060.422 درجة مربعة",
+    "en": "Southern · area 1060.422 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 20,
+   "title": {
+    "ar": "الملتهب",
+    "en": "Cepheus"
+   },
+   "alt": {
+    "ar": "Cepheus",
+    "en": "الملتهب"
+   },
+   "meta": {
+    "ar": "شمالية · المساحة 587.787 درجة مربعة",
+    "en": "Northern · area 587.787 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 21,
+   "title": {
+    "ar": "قيطس",
+    "en": "Cetus"
+   },
+   "alt": {
+    "ar": "Cetus",
+    "en": "قيطس"
+   },
+   "meta": {
+    "ar": "شمالية وجنوبية · المساحة 1231.411 درجة مربعة",
+    "en": "Northern & southern · area 1231.411 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 22,
+   "title": {
+    "ar": "الحرباء",
+    "en": "Chamaeleon"
+   },
+   "alt": {
+    "ar": "Chamaeleon",
+    "en": "الحرباء"
+   },
+   "meta": {
+    "ar": "جنوبية · المساحة 131.592 درجة مربعة",
+    "en": "Southern · area 131.592 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 23,
+   "title": {
+    "ar": "البيكار",
+    "en": "Circinus"
+   },
+   "alt": {
+    "ar": "Circinus",
+    "en": "البيكار"
+   },
+   "meta": {
+    "ar": "جنوبية · المساحة 93.353 درجة مربعة",
+    "en": "Southern · area 93.353 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 24,
+   "title": {
+    "ar": "الحمامة",
+    "en": "Columba"
+   },
+   "alt": {
+    "ar": "Columba",
+    "en": "الحمامة"
+   },
+   "meta": {
+    "ar": "جنوبية · المساحة 270.184 درجة مربعة",
+    "en": "Southern · area 270.184 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 25,
+   "title": {
+    "ar": "الهلبة",
+    "en": "Coma Berenices"
+   },
+   "alt": {
+    "ar": "Coma Berenices",
+    "en": "الهلبة"
+   },
+   "meta": {
+    "ar": "شمالية · المساحة 386.475 درجة مربعة",
+    "en": "Northern · area 386.475 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 26,
+   "title": {
+    "ar": "الإكليل الجنوبي",
+    "en": "Corona Australis"
+   },
+   "alt": {
+    "ar": "Corona Australis",
+    "en": "الإكليل الجنوبي"
+   },
+   "meta": {
+    "ar": "جنوبية · المساحة 127.696 درجة مربعة",
+    "en": "Southern · area 127.696 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 27,
+   "title": {
+    "ar": "الإكليل الشمالي",
+    "en": "Corona Borealis"
+   },
+   "alt": {
+    "ar": "Corona Borealis",
+    "en": "الإكليل الشمالي"
+   },
+   "meta": {
+    "ar": "شمالية · المساحة 178.710 درجة مربعة",
+    "en": "Northern · area 178.710 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 28,
+   "title": {
+    "ar": "الغراب",
+    "en": "Corvus"
+   },
+   "alt": {
+    "ar": "Corvus",
+    "en": "الغراب"
+   },
+   "meta": {
+    "ar": "جنوبية · المساحة 183.801 درجة مربعة",
+    "en": "Southern · area 183.801 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 29,
+   "title": {
+    "ar": "الباطية",
+    "en": "Crater"
+   },
+   "alt": {
+    "ar": "Crater",
+    "en": "الباطية"
+   },
+   "meta": {
+    "ar": "جنوبية · المساحة 282.398 درجة مربعة",
+    "en": "Southern · area 282.398 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 30,
+   "title": {
+    "ar": "الصليب الجنوبي",
+    "en": "Crux"
+   },
+   "alt": {
+    "ar": "Crux",
+    "en": "الصليب الجنوبي"
+   },
+   "meta": {
+    "ar": "جنوبية · المساحة 68.447 درجة مربعة",
+    "en": "Southern · area 68.447 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 31,
+   "title": {
+    "ar": "الدجاجة",
+    "en": "Cygnus"
+   },
+   "alt": {
+    "ar": "Cygnus",
+    "en": "الدجاجة"
+   },
+   "meta": {
+    "ar": "شمالية · المساحة 803.983 درجة مربعة",
+    "en": "Northern · area 803.983 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 32,
+   "title": {
+    "ar": "الدلفين",
+    "en": "Delphinus"
+   },
+   "alt": {
+    "ar": "Delphinus",
+    "en": "الدلفين"
+   },
+   "meta": {
+    "ar": "شمالية · المساحة 188.549 درجة مربعة",
+    "en": "Northern · area 188.549 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 33,
+   "title": {
+    "ar": "أبو سيف",
+    "en": "Dorado"
+   },
+   "alt": {
+    "ar": "Dorado",
+    "en": "أبو سيف"
+   },
+   "meta": {
+    "ar": "جنوبية · المساحة 179.173 درجة مربعة",
+    "en": "Southern · area 179.173 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 34,
+   "title": {
+    "ar": "التنين",
+    "en": "Draco"
+   },
+   "alt": {
+    "ar": "Draco",
+    "en": "التنين"
+   },
+   "meta": {
+    "ar": "شمالية · المساحة 1082.952 درجة مربعة",
+    "en": "Northern · area 1082.952 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 35,
+   "title": {
+    "ar": "قطعة الفرس",
+    "en": "Equuleus"
+   },
+   "alt": {
+    "ar": "Equuleus",
+    "en": "قطعة الفرس"
+   },
+   "meta": {
+    "ar": "شمالية · المساحة 71.641 درجة مربعة",
+    "en": "Northern · area 71.641 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 36,
+   "title": {
+    "ar": "النهر",
+    "en": "Eridanus"
+   },
+   "alt": {
+    "ar": "Eridanus",
+    "en": "النهر"
+   },
+   "meta": {
+    "ar": "شمالية وجنوبية · المساحة 1137.919 درجة مربعة",
+    "en": "Northern & southern · area 1137.919 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 37,
+   "title": {
+    "ar": "الكور",
+    "en": "Fornax"
+   },
+   "alt": {
+    "ar": "Fornax",
+    "en": "الكور"
+   },
+   "meta": {
+    "ar": "شمالية · المساحة 397.502 درجة مربعة",
+    "en": "Northern · area 397.502 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 38,
+   "title": {
+    "ar": "التوأمان",
+    "en": "Gemini"
+   },
+   "alt": {
+    "ar": "Gemini",
+    "en": "التوأمان"
+   },
+   "meta": {
+    "ar": "جنوبية · المساحة 513.761 درجة مربعة",
+    "en": "Southern · area 513.761 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 39,
+   "title": {
+    "ar": "الكركي",
+    "en": "Grus"
+   },
+   "alt": {
+    "ar": "Grus",
+    "en": "الكركي"
+   },
+   "meta": {
+    "ar": "شمالية · المساحة 365.513 درجة مربعة",
+    "en": "Northern · area 365.513 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 40,
+   "title": {
+    "ar": "الجاثي",
+    "en": "Hercules"
+   },
+   "alt": {
+    "ar": "Hercules",
+    "en": "الجاثي"
+   },
+   "meta": {
+    "ar": "جنوبية · المساحة 1225.148 درجة مربعة",
+    "en": "Southern · area 1225.148 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 41,
+   "title": {
+    "ar": "الساعة",
+    "en": "Horologium"
+   },
+   "alt": {
+    "ar": "Horologium",
+    "en": "الساعة"
+   },
+   "meta": {
+    "ar": "جنوبية · المساحة 248.885 درجة مربعة",
+    "en": "Southern · area 248.885 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 42,
+   "title": {
+    "ar": "الشجاع",
+    "en": "Hydra"
+   },
+   "alt": {
+    "ar": "Hydra",
+    "en": "الشجاع"
+   },
+   "meta": {
+    "ar": "شمالية وجنوبية · المساحة 1302.844 درجة مربعة",
+    "en": "Northern & southern · area 1302.844 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 43,
+   "title": {
+    "ar": "حية الماء",
+    "en": "Hydrus"
+   },
+   "alt": {
+    "ar": "Hydrus",
+    "en": "حية الماء"
+   },
+   "meta": {
+    "ar": "جنوبية · المساحة 243.035 درجة مربعة",
+    "en": "Southern · area 243.035 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 44,
+   "title": {
+    "ar": "الهندي",
+    "en": "Indus"
+   },
+   "alt": {
+    "ar": "Indus",
+    "en": "الهندي"
+   },
+   "meta": {
+    "ar": "جنوبية · المساحة 294.006 درجة مربعة",
+    "en": "Southern · area 294.006 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 45,
+   "title": {
+    "ar": "العظاءة",
+    "en": "Lacerta"
+   },
+   "alt": {
+    "ar": "Lacerta",
+    "en": "العظاءة"
+   },
+   "meta": {
+    "ar": "شمالية · المساحة 200.688 درجة مربعة",
+    "en": "Northern · area 200.688 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 46,
+   "title": {
+    "ar": "الأسد",
+    "en": "Leo"
+   },
+   "alt": {
+    "ar": "Leo",
+    "en": "الأسد"
+   },
+   "meta": {
+    "ar": "شمالية · المساحة 946.964 درجة مربعة",
+    "en": "Northern · area 946.964 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 47,
+   "title": {
+    "ar": "الأسد الأصغر",
+    "en": "Leo Minor"
+   },
+   "alt": {
+    "ar": "Leo Minor",
+    "en": "الأسد الأصغر"
+   },
+   "meta": {
+    "ar": "شمالية · المساحة 231.956 درجة مربعة",
+    "en": "Northern · area 231.956 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 48,
+   "title": {
+    "ar": "الأرنب",
+    "en": "Lepus"
+   },
+   "alt": {
+    "ar": "Lepus",
+    "en": "الأرنب"
+   },
+   "meta": {
+    "ar": "جنوبية · المساحة 290.291 درجة مربعة",
+    "en": "Southern · area 290.291 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 49,
+   "title": {
+    "ar": "الميزان",
+    "en": "Libra"
+   },
+   "alt": {
+    "ar": "Libra",
+    "en": "الميزان"
+   },
+   "meta": {
+    "ar": "جنوبية · المساحة 538.052 درجة مربعة",
+    "en": "Southern · area 538.052 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 50,
+   "title": {
+    "ar": "السبع",
+    "en": "Lupus"
+   },
+   "alt": {
+    "ar": "Lupus",
+    "en": "السبع"
+   },
+   "meta": {
+    "ar": "جنوبية · المساحة 333.683 درجة مربعة",
+    "en": "Southern · area 333.683 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 51,
+   "title": {
+    "ar": "الوشق",
+    "en": "Lynx"
+   },
+   "alt": {
+    "ar": "Lynx",
+    "en": "الوشق"
+   },
+   "meta": {
+    "ar": "شمالية · المساحة 545.386 درجة مربعة",
+    "en": "Northern · area 545.386 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 52,
+   "title": {
+    "ar": "القيثارة",
+    "en": "Lyra"
+   },
+   "alt": {
+    "ar": "Lyra",
+    "en": "القيثارة"
+   },
+   "meta": {
+    "ar": "شمالية · المساحة 286.476 درجة مربعة",
+    "en": "Northern · area 286.476 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 53,
+   "title": {
+    "ar": "الجبل",
+    "en": "Mensa"
+   },
+   "alt": {
+    "ar": "Mensa",
+    "en": "الجبل"
+   },
+   "meta": {
+    "ar": "جنوبية · المساحة 153.484 درجة مربعة",
+    "en": "Southern · area 153.484 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 54,
+   "title": {
+    "ar": "المجهر",
+    "en": "Microscopium"
+   },
+   "alt": {
+    "ar": "Microscopium",
+    "en": "المجهر"
+   },
+   "meta": {
+    "ar": "جنوبية · المساحة 209.513 درجة مربعة",
+    "en": "Southern · area 209.513 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 55,
+   "title": {
+    "ar": "وحيد القرن",
+    "en": "Monoceros"
+   },
+   "alt": {
+    "ar": "Monoceros",
+    "en": "وحيد القرن"
+   },
+   "meta": {
+    "ar": "شمالية وجنوبية · المساحة 481.569 درجة مربعة",
+    "en": "Northern & southern · area 481.569 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 56,
+   "title": {
+    "ar": "الذبابة",
+    "en": "Musca"
+   },
+   "alt": {
+    "ar": "Musca",
+    "en": "الذبابة"
+   },
+   "meta": {
+    "ar": "جنوبية · المساحة 138.355 درجة مربعة",
+    "en": "Southern · area 138.355 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 57,
+   "title": {
+    "ar": "مربع النجار",
+    "en": "Norma"
+   },
+   "alt": {
+    "ar": "Norma",
+    "en": "مربع النجار"
+   },
+   "meta": {
+    "ar": "جنوبية · المساحة 165.290 درجة مربعة",
+    "en": "Southern · area 165.290 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 58,
+   "title": {
+    "ar": "الثمن",
+    "en": "Octans"
+   },
+   "alt": {
+    "ar": "Octans",
+    "en": "الثمن"
+   },
+   "meta": {
+    "ar": "جنوبية · المساحة 291.045 درجة مربعة",
+    "en": "Southern · area 291.045 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 59,
+   "title": {
+    "ar": "الحواء",
+    "en": "Ophiuchus"
+   },
+   "alt": {
+    "ar": "Ophiuchus",
+    "en": "الحواء"
+   },
+   "meta": {
+    "ar": "شمالية وجنوبية · المساحة 948.340 درجة مربعة",
+    "en": "Northern & southern · area 948.340 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 60,
+   "title": {
+    "ar": "الجبار",
+    "en": "Orion"
+   },
+   "alt": {
+    "ar": "Orion",
+    "en": "الجبار"
+   },
+   "meta": {
+    "ar": "شمالية وجنوبية · المساحة 594.120 درجة مربعة",
+    "en": "Northern & southern · area 594.120 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 61,
+   "title": {
+    "ar": "الطاووس",
+    "en": "Pavo"
+   },
+   "alt": {
+    "ar": "Pavo",
+    "en": "الطاووس"
+   },
+   "meta": {
+    "ar": "جنوبية · المساحة 377.666 درجة مربعة",
+    "en": "Southern · area 377.666 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 62,
+   "title": {
+    "ar": "الفرس الأعظم",
+    "en": "Pegasus"
+   },
+   "alt": {
+    "ar": "Pegasus",
+    "en": "الفرس الأعظم"
+   },
+   "meta": {
+    "ar": "شمالية · المساحة 1120.794 درجة مربعة",
+    "en": "Northern · area 1120.794 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 63,
+   "title": {
+    "ar": "حامل رأس الغول",
+    "en": "Perseus"
+   },
+   "alt": {
+    "ar": "Perseus",
+    "en": "حامل رأس الغول"
+   },
+   "meta": {
+    "ar": "شمالية · المساحة 614.997 درجة مربعة",
+    "en": "Northern · area 614.997 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 64,
+   "title": {
+    "ar": "العنقاء",
+    "en": "Phoenix"
+   },
+   "alt": {
+    "ar": "Phoenix",
+    "en": "العنقاء"
+   },
+   "meta": {
+    "ar": "جنوبية · المساحة 469.319 درجة مربعة",
+    "en": "Southern · area 469.319 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 65,
+   "title": {
+    "ar": "آلة الرسام",
+    "en": "Pictor"
+   },
+   "alt": {
+    "ar": "Pictor",
+    "en": "آلة الرسام"
+   },
+   "meta": {
+    "ar": "جنوبية · المساحة 246.739 درجة مربعة",
+    "en": "Southern · area 246.739 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 66,
+   "title": {
+    "ar": "الحوت",
+    "en": "Pisces"
+   },
+   "alt": {
+    "ar": "Pisces",
+    "en": "الحوت"
+   },
+   "meta": {
+    "ar": "شمالية · المساحة 889.417 درجة مربعة",
+    "en": "Northern · area 889.417 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 67,
+   "title": {
+    "ar": "الحوت الجنوبي",
+    "en": "Piscis Austrinus"
+   },
+   "alt": {
+    "ar": "Piscis Austrinus",
+    "en": "الحوت الجنوبي"
+   },
+   "meta": {
+    "ar": "جنوبية · المساحة 245.375 درجة مربعة",
+    "en": "Southern · area 245.375 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 68,
+   "title": {
+    "ar": "الكوثل",
+    "en": "Puppis"
+   },
+   "alt": {
+    "ar": "Puppis",
+    "en": "الكوثل"
+   },
+   "meta": {
+    "ar": "جنوبية · المساحة 673.434 درجة مربعة",
+    "en": "Southern · area 673.434 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 69,
+   "title": {
+    "ar": "بيت الإبرة",
+    "en": "Pyxis"
+   },
+   "alt": {
+    "ar": "Pyxis",
+    "en": "بيت الإبرة"
+   },
+   "meta": {
+    "ar": "جنوبية · المساحة 220.833 درجة مربعة",
+    "en": "Southern · area 220.833 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 70,
+   "title": {
+    "ar": "الشبكة",
+    "en": "Reticulum"
+   },
+   "alt": {
+    "ar": "Reticulum",
+    "en": "الشبكة"
+   },
+   "meta": {
+    "ar": "جنوبية · المساحة 113.936 درجة مربعة",
+    "en": "Southern · area 113.936 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 71,
+   "title": {
+    "ar": "السهم",
+    "en": "Sagitta"
+   },
+   "alt": {
+    "ar": "Sagitta",
+    "en": "السهم"
+   },
+   "meta": {
+    "ar": "شمالية · المساحة 79.932 درجة مربعة",
+    "en": "Northern · area 79.932 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 72,
+   "title": {
+    "ar": "الرامي",
+    "en": "Sagittarius"
+   },
+   "alt": {
+    "ar": "Sagittarius",
+    "en": "الرامي"
+   },
+   "meta": {
+    "ar": "جنوبية · المساحة 867.432 درجة مربعة",
+    "en": "Southern · area 867.432 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 73,
+   "title": {
+    "ar": "العقرب",
+    "en": "Scorpius"
+   },
+   "alt": {
+    "ar": "Scorpius",
+    "en": "العقرب"
+   },
+   "meta": {
+    "ar": "جنوبية · المساحة 496.783 درجة مربعة",
+    "en": "Southern · area 496.783 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 74,
+   "title": {
+    "ar": "معمل النحات",
+    "en": "Sculptor"
+   },
+   "alt": {
+    "ar": "Sculptor",
+    "en": "معمل النحات"
+   },
+   "meta": {
+    "ar": "جنوبية · المساحة 474.764 درجة مربعة",
+    "en": "Southern · area 474.764 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 75,
+   "title": {
+    "ar": "الترس",
+    "en": "Scutum"
+   },
+   "alt": {
+    "ar": "Scutum",
+    "en": "الترس"
+   },
+   "meta": {
+    "ar": "جنوبية · المساحة 109.114 درجة مربعة",
+    "en": "Southern · area 109.114 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 76,
+   "title": {
+    "ar": "الحية",
+    "en": "Serpens"
+   },
+   "alt": {
+    "ar": "Serpens",
+    "en": "الحية"
+   },
+   "meta": {
+    "ar": "شمالية وجنوبية · المساحة 636.928 درجة مربعة",
+    "en": "Northern & southern · area 636.928 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 77,
+   "title": {
+    "ar": "السدس",
+    "en": "Sextans"
+   },
+   "alt": {
+    "ar": "Sextans",
+    "en": "السدس"
+   },
+   "meta": {
+    "ar": "شمالية وجنوبية · المساحة 313.515 درجة مربعة",
+    "en": "Northern & southern · area 313.515 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 78,
+   "title": {
+    "ar": "الثور",
+    "en": "Taurus"
+   },
+   "alt": {
+    "ar": "Taurus",
+    "en": "الثور"
+   },
+   "meta": {
+    "ar": "شمالية · المساحة 797.249 درجة مربعة",
+    "en": "Northern · area 797.249 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 79,
+   "title": {
+    "ar": "المرقب",
+    "en": "Telescopium"
+   },
+   "alt": {
+    "ar": "Telescopium",
+    "en": "المرقب"
+   },
+   "meta": {
+    "ar": "جنوبية · المساحة 251.512 درجة مربعة",
+    "en": "Southern · area 251.512 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 80,
+   "title": {
+    "ar": "المثلث",
+    "en": "Triangulum"
+   },
+   "alt": {
+    "ar": "Triangulum",
+    "en": "المثلث"
+   },
+   "meta": {
+    "ar": "شمالية · المساحة 131.847 درجة مربعة",
+    "en": "Northern · area 131.847 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 81,
+   "title": {
+    "ar": "المثلث الجنوبي",
+    "en": "Triangulum Australe"
+   },
+   "alt": {
+    "ar": "Triangulum Australe",
+    "en": "المثلث الجنوبي"
+   },
+   "meta": {
+    "ar": "جنوبية · المساحة 109.978 درجة مربعة",
+    "en": "Southern · area 109.978 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 82,
+   "title": {
+    "ar": "الطوقان",
+    "en": "Tucana"
+   },
+   "alt": {
+    "ar": "Tucana",
+    "en": "الطوقان"
+   },
+   "meta": {
+    "ar": "جنوبية · المساحة 294.557 درجة مربعة",
+    "en": "Southern · area 294.557 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 83,
+   "title": {
+    "ar": "الدب الأكبر",
+    "en": "Ursa Major"
+   },
+   "alt": {
+    "ar": "Ursa Major",
+    "en": "الدب الأكبر"
+   },
+   "meta": {
+    "ar": "شمالية · المساحة 1279.660 درجة مربعة",
+    "en": "Northern · area 1279.660 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 84,
+   "title": {
+    "ar": "الدب الأصغر",
+    "en": "Ursa Minor"
+   },
+   "alt": {
+    "ar": "Ursa Minor",
+    "en": "الدب الأصغر"
+   },
+   "meta": {
+    "ar": "شمالية · المساحة 255.864 درجة مربعة",
+    "en": "Northern · area 255.864 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 85,
+   "title": {
+    "ar": "الشراع",
+    "en": "Vela"
+   },
+   "alt": {
+    "ar": "Vela",
+    "en": "الشراع"
+   },
+   "meta": {
+    "ar": "جنوبية · المساحة 499.649 درجة مربعة",
+    "en": "Southern · area 499.649 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 86,
+   "title": {
+    "ar": "العذراء",
+    "en": "Virgo"
+   },
+   "alt": {
+    "ar": "Virgo",
+    "en": "العذراء"
+   },
+   "meta": {
+    "ar": "شمالية وجنوبية · المساحة 1294.428 درجة مربعة",
+    "en": "Northern & southern · area 1294.428 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 87,
+   "title": {
+    "ar": "السمكة الطائرة",
+    "en": "Volans"
+   },
+   "alt": {
+    "ar": "Volans",
+    "en": "السمكة الطائرة"
+   },
+   "meta": {
+    "ar": "جنوبية · المساحة 141.354 درجة مربعة",
+    "en": "Southern · area 141.354 sq. deg."
+   }
+  },
+  {
+   "c": "constellations",
+   "n": 88,
+   "title": {
+    "ar": "الثعلب",
+    "en": "Vulpecula"
+   },
+   "alt": {
+    "ar": "Vulpecula",
+    "en": "الثعلب"
+   },
+   "meta": {
+    "ar": "شمالية · المساحة 268.165 درجة مربعة",
+    "en": "Northern · area 268.165 sq. deg."
+   }
+  },
+  {
+   "c": "craters",
+   "title": {
+    "ar": "فوهة أبو الوفا",
+    "en": "Abul Wafa crater"
+   },
+   "alt": {
+    "ar": "Abul Wafa",
+    "en": "أبو الوفا"
+   },
+   "meta": {
+    "ar": "تكريماً لـ أبو الوفا البوزجاني · 1 شمالاً، 117 شرقاً · القطر 55 كم",
+    "en": "Named after أبو الوفا البوزجاني · 1 N, 117 E · 55 km across"
+   }
+  },
+  {
+   "c": "craters",
+   "title": {
+    "ar": "فوهة أبو الفِدا",
+    "en": "Abulfeda crater"
+   },
+   "alt": {
+    "ar": "Abulfeda",
+    "en": "أبو الفِدا"
+   },
+   "meta": {
+    "ar": "تكريماً لـ أبو الفِداء · 14 جنوباً، 14 شرقاً · القطر 65 كم",
+    "en": "Named after أبو الفِداء · 14 S, 14 E · 65 km across"
+   }
+  },
+  {
+   "c": "craters",
+   "title": {
+    "ar": "فوهة البكري",
+    "en": "Al-Bakri crater"
+   },
+   "alt": {
+    "ar": "Al-Bakri",
+    "en": "البكري"
+   },
+   "meta": {
+    "ar": "تكريماً لـ أبو عبيد الله البكري · 14 شمالاً، 20 شرقاً · القطر 12 كم",
+    "en": "Named after أبو عبيد الله البكري · 14 N, 20 E · 12 km across"
+   }
+  },
+  {
+   "c": "craters",
+   "title": {
+    "ar": "فوهة البيروني",
+    "en": "Al-Biruni crater"
+   },
+   "alt": {
+    "ar": "Al-Biruni",
+    "en": "البيروني"
+   },
+   "meta": {
+    "ar": "تكريماً لـ البيروني · 18 شمالاً، 93 شرقاً · القطر 77 كم",
+    "en": "Named after البيروني · 18 N, 93 E · 77 km across"
+   }
+  },
+  {
+   "c": "craters",
+   "title": {
+    "ar": "فوهة الخوارزمي",
+    "en": "Al-Khwarizmi crater"
+   },
+   "alt": {
+    "ar": "Al-Khwarizmi",
+    "en": "الخوارزمي"
+   },
+   "meta": {
+    "ar": "تكريماً لـ الخوارزمي · 7 شمالاً، 106 شرقاً · القطر 65 كم",
+    "en": "Named after الخوارزمي · 7 N, 106 E · 65 km across"
+   }
+  },
+  {
+   "c": "craters",
+   "title": {
+    "ar": "فوهة المراكشي",
+    "en": "Al-Marrakushi crater"
+   },
+   "alt": {
+    "ar": "Al-Marrakushi",
+    "en": "المراكشي"
+   },
+   "meta": {
+    "ar": "تكريماً لـ ابن البناء المراكشي · 10 جنوباً، 56 شرقاً · القطر 8 كم",
+    "en": "Named after ابن البناء المراكشي · 10 S, 56 E · 8 km across"
+   }
+  },
+  {
+   "c": "craters",
+   "title": {
+    "ar": "فوهة البتاني",
+    "en": "Albategnius crater"
+   },
+   "alt": {
+    "ar": "Albategnius",
+    "en": "البتاني"
+   },
+   "meta": {
+    "ar": "تكريماً لـ البتاني · 12 جنوباً، 4 شرقاً · القطر 114 كم",
+    "en": "Named after البتاني · 12 S, 4 E · 114 km across"
+   }
+  },
+  {
+   "c": "craters",
+   "title": {
+    "ar": "فوهة الفرغاني",
+    "en": "Alfraganus crater"
+   },
+   "alt": {
+    "ar": "Alfraganus",
+    "en": "الفرغاني"
+   },
+   "meta": {
+    "ar": "تكريماً لـ أحمد بن كثير الفرغاني · 5 جنوباً، 19 شرقاً · القطر 20 كم",
+    "en": "Named after أحمد بن كثير الفرغاني · 5 S, 19 E · 20 km across"
+   }
+  },
+  {
+   "c": "craters",
+   "title": {
+    "ar": "فوهة الحسن",
+    "en": "Alhazen crater"
+   },
+   "alt": {
+    "ar": "Alhazen",
+    "en": "الحسن"
+   },
+   "meta": {
+    "ar": "تكريماً لـ الحسن ابن الهيثم · 16 شمالاً، 72 شرقاً · القطر 32 كم",
+    "en": "Named after الحسن ابن الهيثم · 16 N, 72 E · 32 km across"
+   }
+  },
+  {
+   "c": "craters",
+   "title": {
+    "ar": "فوهة المأمون",
+    "en": "Almanon crater"
+   },
+   "alt": {
+    "ar": "Almanon",
+    "en": "المأمون"
+   },
+   "meta": {
+    "ar": "تكريماً لـ أبو جعفر عبدالله المأمون · 17 جنوبا، 15 شرقاً · القطر 49 كم",
+    "en": "Named after أبو جعفر عبدالله المأمون · 17 جنوبا, 15 E · 49 km across"
+   }
+  },
+  {
+   "c": "craters",
+   "title": {
+    "ar": "فوهة البطروجي",
+    "en": "Alpetragius crater"
+   },
+   "alt": {
+    "ar": "Alpetragius",
+    "en": "البطروجي"
+   },
+   "meta": {
+    "ar": "تكريماً لـ أبو إسحق البطروجي · 16 جنوباً، 5 غرباً · القطر 39 كم",
+    "en": "Named after أبو إسحق البطروجي · 16 S, 5 W · 39 km across"
+   }
+  },
+  {
+   "c": "craters",
+   "title": {
+    "ar": "فوهة الزرقالي",
+    "en": "Arzachel crater"
+   },
+   "alt": {
+    "ar": "Arzachel",
+    "en": "الزرقالي"
+   },
+   "meta": {
+    "ar": "تكريماً لـ أبو إسحق إبراهيم الزرقالي · 18 جنوباً، 2 غرباً · القطر 96 كم",
+    "en": "Named after أبو إسحق إبراهيم الزرقالي · 18 S, 2 W · 96 km across"
+   }
+  },
+  {
+   "c": "craters",
+   "title": {
+    "ar": "فوهة ابن سينا",
+    "en": "Avicenna crater"
+   },
+   "alt": {
+    "ar": "Avicenna",
+    "en": "ابن سينا"
+   },
+   "meta": {
+    "ar": "تكريماً لـ ابن سينا · 40 شمالاً، 97 غرباً · القطر 74 كم",
+    "en": "Named after ابن سينا · 40 N, 97 W · 74 km across"
+   }
+  },
+  {
+   "c": "craters",
+   "title": {
+    "ar": "فوهة الصوفي",
+    "en": "Azophi crater"
+   },
+   "alt": {
+    "ar": "Azophi",
+    "en": "الصوفي"
+   },
+   "meta": {
+    "ar": "تكريماً لـ عبد الرحمن الصوفي · 22 جنوباً، 13 شرقاً · القطر 47 كم",
+    "en": "Named after عبد الرحمن الصوفي · 22 S, 13 E · 47 km across"
+   }
+  },
+  {
+   "c": "craters",
+   "title": {
+    "ar": "فوهة جابر",
+    "en": "Geber crater"
+   },
+   "alt": {
+    "ar": "Geber",
+    "en": "جابر"
+   },
+   "meta": {
+    "ar": "تكريماً لـ جابر بن أفلح · 19 جنوباً، 14 شرقاً · القطر 44 كم",
+    "en": "Named after جابر بن أفلح · 19 S, 14 E · 44 km across"
+   }
+  },
+  {
+   "c": "craters",
+   "title": {
+    "ar": "فوهة ابن باجة",
+    "en": "Ibn Bajja crater"
+   },
+   "alt": {
+    "ar": "Ibn Bajja",
+    "en": "ابن باجة"
+   },
+   "meta": {
+    "ar": "تكريماً لـ ابن باجة · 86 جنوباً، 73 غربا · القطر 13 كم",
+    "en": "Named after ابن باجة · 86 S, 73 غربا · 13 km across"
+   }
+  },
+  {
+   "c": "craters",
+   "title": {
+    "ar": "فوهة ابن بطوطة",
+    "en": "Ibn Battuta crater"
+   },
+   "alt": {
+    "ar": "Ibn Battuta",
+    "en": "ابن بطوطة"
+   },
+   "meta": {
+    "ar": "تكريماً لـ ابن بطوطة · 7 جنوباً، 50 شرقاً · القطر 11 كم",
+    "en": "Named after ابن بطوطة · 7 S, 50 E · 11 km across"
+   }
+  },
+  {
+   "c": "craters",
+   "title": {
+    "ar": "فوهة ابن فرناس",
+    "en": "Ibn Firnas crater"
+   },
+   "alt": {
+    "ar": "Ibn Firnas",
+    "en": "ابن فرناس"
+   },
+   "meta": {
+    "ar": "تكريماً لـ ابن فرناس · 7 شمالاً، 122 شرقاً · القطر 89 كم",
+    "en": "Named after ابن فرناس · 7 N, 122 E · 89 km across"
+   }
+  },
+  {
+   "c": "craters",
+   "title": {
+    "ar": "فوهة ابن يونس",
+    "en": "Ibn Yunus crater"
+   },
+   "alt": {
+    "ar": "Ibn Yunus",
+    "en": "ابن يونس"
+   },
+   "meta": {
+    "ar": "تكريماً لـ ابن يونس · 14 شمالاً، 91 شرقاً · القطر 58 كم",
+    "en": "Named after ابن يونس · 14 N, 91 E · 58 km across"
+   }
+  },
+  {
+   "c": "craters",
+   "title": {
+    "ar": "فوهة ابن رُشد",
+    "en": "Ibn-Rushd crater"
+   },
+   "alt": {
+    "ar": "Ibn-Rushd",
+    "en": "ابن رُشد"
+   },
+   "meta": {
+    "ar": "تكريماً لـ ابن رُشد · 12 جنوباً، 22 شرقاً · القطر 32 كم",
+    "en": "Named after ابن رُشد · 12 S, 22 E · 32 km across"
+   }
+  },
+  {
+   "c": "craters",
+   "title": {
+    "ar": "فوهة ما شاء الله",
+    "en": "Messala crater"
+   },
+   "alt": {
+    "ar": "Messala",
+    "en": "ما شاء الله"
+   },
+   "meta": {
+    "ar": "تكريماً لـ ما شاء الله البصري · 39 شمالاً، 61 شرقاً · القطر 125 كم",
+    "en": "Named after ما شاء الله البصري · 39 N, 61 E · 125 km across"
+   }
+  },
+  {
+   "c": "craters",
+   "title": {
+    "ar": "فوهة نصير الدين",
+    "en": "Nasireddin crater"
+   },
+   "alt": {
+    "ar": "Nasireddin",
+    "en": "نصير الدين"
+   },
+   "meta": {
+    "ar": "تكريماً لـ نصير الدين الطوسي · 41 جنوباً، 0.2 شرقاً · القطر 52 كم",
+    "en": "Named after نصير الدين الطوسي · 41 S, 0.2 E · 52 km across"
+   }
+  },
+  {
+   "c": "craters",
+   "title": {
+    "ar": "فوهة عمر الخيام",
+    "en": "Omar Khayyam crater"
+   },
+   "alt": {
+    "ar": "Omar Khayyam",
+    "en": "عمر الخيام"
+   },
+   "meta": {
+    "ar": "تكريماً لـ عمر الخيام · 58 شمالاً، 102 غرباً · القطر 70 كم",
+    "en": "Named after عمر الخيام · 58 N, 102 W · 70 km across"
+   }
+  },
+  {
+   "c": "craters",
+   "title": {
+    "ar": "فوهة ثابت بن قرّة",
+    "en": "Thebit crater"
+   },
+   "alt": {
+    "ar": "Thebit",
+    "en": "ثابت بن قرّة"
+   },
+   "meta": {
+    "ar": "تكريماً لـ ثابت بن قرّة · 22 جنوباً، 4 غرباً · القطر 56 كم",
+    "en": "Named after ثابت بن قرّة · 22 S, 4 W · 56 km across"
+   }
+  },
+  {
+   "c": "craters",
+   "title": {
+    "ar": "فوهة أُلغ بيك",
+    "en": "Ulugh Beigh crater"
+   },
+   "alt": {
+    "ar": "Ulugh Beigh",
+    "en": "أُلغ بيك"
+   },
+   "meta": {
+    "ar": "تكريماً لـ أُلغ بيك · 33 شمالاً، 82 غرباً · القطر 54 كم",
+    "en": "Named after أُلغ بيك · 33 N, 82 W · 54 km across"
+   }
+  },
+  {
+   "c": "tools",
+   "title": {
+    "ar": "شرح الأقمار الصناعية المكعّبة (CubeSat) بالعربية",
+    "en": "CubeSats explained in Arabic"
+   },
+   "meta": {
+    "ar": "موقع تعليمي تفاعلي: مجسّم ثلاثي الأبعاد قابل للتفكيك، ومقارنة الأحجام، ورحلة القمر الصناعي، وأقمار عربية · إعداد: Ameer Hamam",
+    "en": "Interactive learning site: an explodable 3D model, size comparisons, a satellite's journey and Arab satellites · by Ameer Hamam"
+   },
+   "url": "https://itsak7m.github.io/cubesat-arabic/",
+   "kind": "link",
+   "featured": true
+  },
+  {
+   "c": "tools",
+   "title": {
+    "ar": "Stellarium: قبة سماوية على حاسوبك",
+    "en": "Stellarium: a planetarium on your computer"
+   },
+   "meta": {
+    "ar": "برنامج مجاني ومفتوح المصدر لعرض السماء كما تُرى من أي مكان وزمان · من الموقع الرسمي",
+    "en": "Free, open-source software that shows the sky from any place and time · official site"
+   },
+   "url": "https://stellarium.org/",
+   "kind": "link"
+  },
+  {
+   "c": "tools",
+   "title": {
+    "ar": "WorldWide Telescope",
+    "en": "WorldWide Telescope"
+   },
+   "meta": {
+    "ar": "استكشف صور التلسكوبات الأرضية والفضائية في واجهة واحدة · من الموقع الرسمي",
+    "en": "Explore imagery from ground and space telescopes in one interface · official site"
+   },
+   "url": "https://worldwidetelescope.org/",
+   "kind": "link"
+  },
+  {
+   "c": "tools",
+   "title": {
+    "ar": "تطبيق GLOBE Observer",
+    "en": "GLOBE Observer app"
+   },
+   "meta": {
+    "ar": "تطبيق علم المواطن من NASA لرصد السحب والبيئة ومشاركة البيانات مع العلماء · من الموقع الرسمي",
+    "en": "NASA's citizen-science app for observing clouds and the environment and sharing data with scientists · official site"
+   },
+   "url": "https://observer.globe.gov/",
+   "kind": "link"
+  }
+ ]
+}
