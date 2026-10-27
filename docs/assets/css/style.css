@@ -357,7 +357,8 @@ details[open] summary { margin-bottom: 12px; }
 .lib-item[hidden], .lib-group[hidden] { display: none; }
 .lib-more { margin-top: 14px; background: transparent; border: 1px solid var(--line); border-radius: 99px; padding: 6px 16px; font-weight: 600; color: var(--bronze-ink); cursor: pointer; }
 .lib-more:hover { border-color: var(--brass); }
-h1 bdi, h2 bdi, h3 bdi { white-space: nowrap; }
+bdi.nw { white-space: nowrap; }
+bdi { overflow-wrap: anywhere; }
 
 /* ---------- article ---------- */
 .article-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 48px; align-items: start; }

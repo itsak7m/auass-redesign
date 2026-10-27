@@ -42,7 +42,8 @@ const BUILD_VERSION = require('crypto').createHash('sha1')
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 // In Arabic text, isolate embedded Latin runs such as "(ASI Hack)" so brackets
 // don't flip when a line wraps.
-const bidi = (s, lang) => (lang === 'ar' ? esc(s).replace(/\(?[A-Za-z][A-Za-z0-9 .\-]*[A-Za-z0-9]\)?/g, (m) => `<bdi dir="ltr">${m}</bdi>`) : esc(s));
+// Short runs are kept on one line; long ones may wrap so they never overflow.
+const bidi = (s, lang) => (lang === 'ar' ? esc(s).replace(/\(?[A-Za-z][A-Za-z0-9 .\-]*[A-Za-z0-9]\)?/g, (m) => `<bdi dir="ltr"${m.length <= 24 ? ' class="nw"' : ''}>${m}</bdi>`) : esc(s));
 const t = (o, lang) => (o == null ? '' : typeof o === 'string' ? o : o[lang] != null ? o[lang] : o.ar);
 const ui = (ar, en) => ({ ar, en });
 const MONTHS = {
@@ -709,7 +710,7 @@ function archiveBody(ctx, html) {
     .replace(/<img /g, '<img loading="lazy" decoding="async" ')
     .replace(/<t([dh])(?=[ >])/g, '<t$1 dir="auto"')
     .replace(/<a href="(https?:[^"]*)"/g, (m, h) => `<a href="${h}" target="_blank" rel="noopener"`)
-    .replace(/<p class="yt" data-yt="([\w-]{11})"><\/p>/g, (m, id) => `<p class="yt"><a href="https://www.youtube.com/watch?v=${id}" target="_blank" rel="noopener" data-yt="${id}"><img src="https://i.ytimg.com/vi/${id}/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="yt-play">${icon('play')}<span>${lang === 'ar' ? 'تشغيل الفيديو' : 'Play video'}</span></span></a></p>`)
+    .replace(/<p class="yt" data-yt="([\w-]{11})"><\/p>/g, (m, id) => `<p class="yt"><a href="https://www.youtube.com/watch?v=${id}" target="_blank" rel="noopener" data-yt="${id}"><img src="https://i.ytimg.com/vi/${id}/hqdefault.jpg" alt="" loading="lazy" width="480" height="360" onerror="this.remove()"><span class="yt-play">${icon('play')}<span>${lang === 'ar' ? 'تشغيل الفيديو' : 'Play video'}</span></span></a></p>`)
     .replace(/<p class="media-file" data-kind="(video|audio)" data-href="([^"]*)"><\/p>/g, (m, k, h) => `<p class="media-file"><${k} controls preload="none" src="${h}"></${k}></p>`)
     .replace(/<p class="ext-embed" data-kind="(\w+)" data-href="([^"]*)"><\/p>/g, (m, k, h) => `<p class="ext-embed"><a class="btn btn-ghost-dark" href="${h}" target="_blank" rel="noopener">${icon('external')}${k === 'facebook' ? (lang === 'ar' ? 'المشاهدة على فيسبوك' : 'View on Facebook') : k === 'drive' ? (lang === 'ar' ? 'فتح الملف' : 'Open the file') : (lang === 'ar' ? 'فتح المحتوى المضمّن' : 'Open embedded content')}</a></p>`);
 }
