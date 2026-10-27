@@ -4,9 +4,9 @@
  "lang": "en",
  "type": "auass",
  "title": "Astronomy Magazine June 2019",
- "excerpt": "[button color=”red” size=”medium” link=”http://auass.com/wp-content/uploads/2019/04/Binder1.pdf” icon=”” target=”false”]PDF[/button]",
+ "excerpt": "<a href=\"@media/files/4557d862c88e4bb7.pdf\">PDF</a>",
  "image": "p/381b38a14ec4777d",
  "imageAlt": "",
  "video": false,
- "body": "<p>[button color=”red” size=”medium” link=”http://auass.com/wp-content/uploads/2019/04/Binder1.pdf” icon=”” target=”false”]PDF[/button]</p>"
+ "body": "<p><a href=\"@media/files/4557d862c88e4bb7.pdf\">PDF</a></p>"
 }
