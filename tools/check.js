@@ -70,6 +70,14 @@ const pages = [];
         };
       });
       const tag = `${p || '(home)'} @${width}`;
+      if (width < 500 && (p === '' || p === 'en')) {
+        // The mobile menu must open as a full-screen panel.
+        await page.click('[data-menu-btn]');
+        await page.waitForTimeout(350);
+        const h = await page.evaluate(() => document.querySelector('#site-nav').getBoundingClientRect().height);
+        if (h < 300) problems.push(`${tag}: mobile menu did not open (height ${Math.round(h)}px)`);
+        await page.click('[data-menu-btn]');
+      }
       if (info.overflow > 0) problems.push(`${tag}: horizontal overflow ${info.overflow}px ${info.wide.join(', ')}`);
       if (!info.noindex) problems.push(`${tag}: missing noindex`);
       if (!info.note) problems.push(`${tag}: missing prototype footer line`);

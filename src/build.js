@@ -84,7 +84,7 @@ function header(ctx) {
   <div class="wrap bar">
     <a class="brand" href="${ctx.r(prefix(lang))}">
       <img src="${ctx.r('assets/img/auass-seal.png')}" alt="${lang === 'ar' ? 'شعار الاتحاد العربي لعلوم الفضاء والفلك' : 'AUASS emblem'}" width="44" height="48">
-      <span class="brand-names"><span class="brand-ar">${esc(site.name.ar)}</span><span class="brand-en" lang="en" dir="ltr">${esc(site.name.en)}</span></span>
+      <span class="brand-names"><span class="bn-main" lang="${lang}">${esc(site.name[lang])}</span><span class="bn-sub" lang="${ctx.altLang}" dir="${ctx.altLang === 'ar' ? 'rtl' : 'ltr'}">${esc(site.name[ctx.altLang])}</span></span>
     </a>
     <nav class="nav" id="site-nav" aria-label="${lang === 'ar' ? 'القائمة الرئيسية' : 'Main menu'}">
       <ul>${links}</ul>
