@@ -8,5 +8,10 @@
  "image": null,
  "imageAlt": "",
  "video": false,
- "body": "<p>رابط المحاضرة: <a href=\"@media/files/945f311827319eb9.mp4\">هنا</a></p>\n<p class=\"media-file\" data-href=\"@media/files/945f311827319eb9.mp4\" data-kind=\"video\"></p>"
+ "body": "<p>رابط المحاضرة: <a href=\"@media/files/945f311827319eb9.mp4\">هنا</a></p>\n<p class=\"media-file\" data-href=\"@media/files/945f311827319eb9.mp4\" data-kind=\"video\"></p>",
+ "en": {
+  "title": "Lecture on climate change and its impact on biodiversity and the future of food – full recording",
+  "excerpt": "",
+  "body": "<p>Link to the lecture: <a href=\"@media/files/945f311827319eb9.mp4\">here</a></p>\n<p class=\"media-file\" data-href=\"@media/files/945f311827319eb9.mp4\" data-kind=\"video\"></p>"
+ }
 }

@@ -8,5 +8,10 @@
  "image": "p/bfe2438a6b4d2e13",
  "imageAlt": "",
  "video": false,
- "body": "<figure><img src=\"@media/p/bfe2438a6b4d2e13.webp\" alt=\"\" width=\"960\" height=\"1327\"></figure>"
+ "body": "<figure><img src=\"@media/p/bfe2438a6b4d2e13.webp\" alt=\"\" width=\"960\" height=\"1327\"></figure>",
+ "en": {
+  "title": "Invitation to the lecture \"Astronomy between reality and ambition\"",
+  "excerpt": "",
+  "body": "<figure><img src=\"@media/p/bfe2438a6b4d2e13.webp\" alt=\"\" width=\"960\" height=\"1327\"></figure>"
+ }
 }

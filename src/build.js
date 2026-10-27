@@ -200,13 +200,17 @@ function feedItem(p, lang) {
     return { key: p.slug, date: p.date, type: p.type, title: t(p.title, lang), excerpt: t(p.excerpt, lang), path: `news/${p.slug}/`,
       thumb: p.image ? curatedImg(p.image) : '', fit: p.imageFit === 'contain', curated: true };
   }
-  return { key: String(p.id), date: p.date, type: p.type, title: p.title, excerpt: p.excerpt, path: `news/${p.id}/`,
+  const tr = lang === 'en' && p.lang === 'ar' && p.en ? p.en : null;
+  return { key: String(p.id), date: p.date, type: p.type, title: tr ? tr.title : p.title, excerpt: tr ? tr.excerpt || '' : p.excerpt, path: `news/${p.id}/`,
     thumb: p.image ? `media/${p.image}-s.webp` : '', curated: false };
 }
 // Hand-written posts keep images in assets/img; uploads from the content manager land in media/.
 const curatedImg = (img) => (img.startsWith('media/') ? img : 'assets/img/' + img);
 const byDate = (a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0);
-const FEED = Object.fromEntries(LANGS.map((lang) => [lang, [...news.posts.map((p) => feedItem(p, lang)), ...archive.filter((a) => a.lang === lang).map((a) => feedItem(a, lang))].sort(byDate)]));
+// An archive post appears in a language when it was written in it, or (for
+// English) when it carries a translation under `en`.
+const inLang = (a, lang) => a.lang === lang || (lang === 'en' && !!a.en);
+const FEED = Object.fromEntries(LANGS.map((lang) => [lang, [...news.posts.map((p) => feedItem(p, lang)), ...archive.filter((a) => inLang(a, lang)).map((a) => feedItem(a, lang))].sort(byDate)]));
 const postsSorted = [...news.posts].sort(byDate);
 
 function fallbackFrame(type, lang) {
@@ -605,7 +609,7 @@ function newsPage(ctx) {
   const main = `${pageHero(ctx, { eyebrow: lang === 'ar' ? `${feed.length} منشوراً منذ ${yearsOf(lang).slice(-1)[0]}` : `${feed.length} posts since ${yearsOf(lang).slice(-1)[0]}`, title: lang === 'ar' ? 'الأخبار والمقالات' : 'News and articles', lead: lang === 'ar' ? 'أخبار الاتحاد ومحاضراته، وأخبار علمية ومقالات فلكية، ومعها أرشيف الموقع منذ سنواته الأولى.' : 'AUASS news and lectures, science news and astronomy articles, together with the archive of the old site.', crumbs: [{ label: lang === 'ar' ? 'الأخبار' : 'News' }] })}
 <section class="section paper" data-news data-index="${ctx.r(prefix(lang) + 'news/index.json')}?v=${NEWS_VERSION}" data-root="${ctx.r(prefix(lang))}" data-site="${ctx.r('')}" data-first="${NEWS_FIRST}">
   <div class="wrap">
-    ${lang === 'en' ? `<div class="upcoming-note">${icon('info')}<p>Most of the AUASS archive is in Arabic. This page lists the English posts; <a href="${ctx.r('news/')}" hreflang="ar">the Arabic news page</a> has all ${arCount} Arabic posts.</p></div>` : ''}
+    ${lang === 'en' ? `<div class="upcoming-note">${icon('info')}<p>Most of the AUASS archive is in Arabic. News, events and articles appear here in full English translation; science news shows an English title and summary with the original Arabic text. <a href="${ctx.r('news/')}" hreflang="ar">The Arabic news page</a> has all ${arCount} Arabic posts.</p></div>` : ''}
     <div class="filter-bar">
       <div class="search-box small">${icon('search')}<label class="sr" for="news-q">${lang === 'ar' ? 'ابحث في الأخبار' : 'Search news'}</label><input id="news-q" type="search" data-search placeholder="${lang === 'ar' ? 'ابحث: المريخ، الهلال، كسوف…' : 'Search: Mars, crescent, eclipse…'}" autocomplete="off"></div>
       ${chips(ctx, 'cat', Object.entries(news.types).map(([k, v]) => [k, t(v, lang)]), { label: lang === 'ar' ? 'الكل' : 'All', aria: lang === 'ar' ? 'تصفية حسب النوع' : 'Filter by type' })}
@@ -707,7 +711,7 @@ function archiveBody(ctx, html) {
   return html
     .replace(/@media\//g, ctx.r('media/'))
     .replace(/href="@site:([^"]*)"/g, (m, path) => `href="${ctx.r(prefix(lang) + path)}"`)
-    .replace(/href="@post:(\d+)"/g, (m, id) => { const a = archiveById[id]; return `href="${ctx.r(prefix(a.lang) + `news/${id}/`)}"`; })
+    .replace(/href="@post:(\d+)"/g, (m, id) => { const a = archiveById[id]; return `href="${ctx.r(prefix(a && inLang(a, lang) ? lang : a ? a.lang : 'ar') + `news/${id}/`)}"`; })
     .replace(/<img /g, '<img loading="lazy" decoding="async" ')
     .replace(/<t([dh])(?=[ >])/g, '<t$1 dir="auto"')
     .replace(/<a href="(https?:[^"]*)"/g, (m, h) => `<a href="${h}" target="_blank" rel="noopener"`)
@@ -722,28 +726,41 @@ function archivePostPage(ctx, a) {
   const related = FEED[lang].filter((x) => x.type === a.type && x.key !== String(a.id));
   const i = related.findIndex((x) => x.date <= a.date);
   const near = related.slice(Math.max(0, i - 1), Math.max(0, i - 1) + 3);
+  // English pages of Arabic posts use the translation under `en`: the full
+  // text when there is one, otherwise the English summary above the Arabic text.
+  const tr = lang === 'en' && a.lang === 'ar' ? a.en : null;
+  const title = tr ? tr.title : a.title;
+  const excerpt = tr ? tr.excerpt || '' : a.excerpt;
+  const body = tr && tr.body ? tr.body : a.body;
+  const bodyLang = tr && !tr.body ? 'ar' : lang;
+  const empty = !body.replace(/<[^>]+>/g, '').trim() && !/<img |data-yt|media-file|ext-embed|<a /.test(body);
   // The card image usually repeats an image in the body; show it only when the body has none.
-  const showImage = a.image && !a.body.includes('<img ');
+  const showImage = a.image && !body.includes('<img ');
+  const arHref = ctx.r(`news/${a.id}/`);
+  const note = !tr ? '' : tr.body
+    ? `<p class="tr-note">${icon('globe')}<span>Translated from the Arabic original. <a href="${arHref}" hreflang="ar" lang="ar">اقرأ النص الأصلي بالعربية</a></span></p>`
+    : `${excerpt ? `<p class="tr-lead">${esc(excerpt)}</p>` : ''}<p class="tr-note">${icon('globe')}<span>This post is in Arabic; the title and summary above are translated. The original text follows.</span></p>`;
   const main = `<article class="article">
   <header class="article-head dark">
     ${rete('rete page-rete')}
     <div class="wrap">
       <nav class="crumbs" aria-label="${lang === 'ar' ? 'مسار التنقل' : 'Breadcrumb'}"><a href="${ctx.r(prefix(lang))}">${lang === 'ar' ? 'الرئيسية' : 'Home'}</a><span aria-hidden="true">/</span><a href="${ctx.r(prefix(lang) + 'news/')}">${lang === 'ar' ? 'الأخبار' : 'News'}</a><span aria-hidden="true">/</span><a href="${ctx.r(prefix(lang) + `news/${a.date.slice(0, 4)}/`)}">${a.date.slice(0, 4)}</a></nav>
       <p class="kicker">${esc(typeLabel(a.type, lang))} · <time datetime="${a.date}">${fmtDate(a.date, lang)}</time></p>
-      <h1 class="page-title">${bidi(a.title, lang)}</h1>
+      <h1 class="page-title">${bidi(title, lang)}</h1>
     </div>
   </header>
   <div class="section paper">
     <div class="wrap narrow archive-post">
+      ${note}
       ${showImage ? `<figure class="ap-figure"><img src="${ctx.r(`media/${a.image}.webp`)}" alt="${esc(a.imageAlt || '')}"></figure>` : ''}
-      <div class="prose rich">${archiveBody(ctx, a.body)}</div>
+      ${empty ? `<p class="empty-post">${lang === 'ar' ? 'محتوى هذا المنشور (صورة أو ملف أو فيديو) لم يعد متاحاً على موقع الاتحاد الأصلي.' : 'The content of this post (an image, file or video) is no longer available on the original AUASS website.'}</p>` : `<div class="prose rich"${bodyLang !== lang ? ' lang="ar" dir="rtl"' : ''}>${archiveBody(ctx, body)}</div>`}
       <p class="archive-note">${icon('info')}<span>${lang === 'ar' ? 'منشور منقول من أرشيف موقع الاتحاد كما نُشر، مع تنظيف التنسيق.' : 'Migrated from the AUASS website archive as published, with the formatting tidied.'}</span></p>
-      ${shareBar(ctx, url, a.title)}
+      ${shareBar(ctx, url, title)}
     </div>
   </div>
   ${relatedSection(ctx, near.length ? near : FEED[lang].slice(0, 3))}
 </article>`;
-  return page(ctx, { title: a.title, description: a.excerpt }, main);
+  return page(ctx, { title, description: excerpt || title }, main);
 }
 
 // ---------- migrated pages ----------
@@ -1060,9 +1077,10 @@ for (const lang of LANGS) {
     write(prefix(lang) + p, articlePage(ctxFor(lang, p, 'news'), post));
   }
   for (const pg of infoPages) write(prefix(lang) + pagePath(pg), infoPage(ctxFor(lang, pagePath(pg), pg.section), pg));
-  for (const a of archive.filter((x) => x.lang === lang)) {
+  for (const a of archive.filter((x) => inLang(x, lang))) {
     const p = `news/${a.id}/`;
-    write(prefix(lang) + p, archivePostPage(ctxFor(lang, p, 'news', 'news/'), a));
+    const both = a.lang === 'ar' && a.en;
+    write(prefix(lang) + p, archivePostPage(ctxFor(lang, p, 'news', both ? p : 'news/'), a));
   }
   for (const y of yearsOf(lang)) {
     const p = `news/${y}/`;
@@ -1073,4 +1091,4 @@ for (const lang of LANGS) {
 write('before-after/', beforeAfterPage(ctxFor('ar', 'before-after/', 'before-after', '')));
 const nf = ctxFor('ar', '', 'notfound');
 fs.writeFileSync(path.join(OUT, '404.html'), notFoundPage({ ...nf, r: (to) => '/auass-redesign/' + to }));
-console.log('built', LANGS.length * (pages.length + news.posts.length + infoPages.length) + archive.length + yearsOf('ar').length + yearsOf('en').length + 2, 'pages into docs/');
+console.log('built', LANGS.length * (pages.length + news.posts.length + infoPages.length) + archive.length + archive.filter((a) => a.lang === 'ar' && a.en).length + yearsOf('ar').length + yearsOf('en').length + 2, 'pages into docs/');

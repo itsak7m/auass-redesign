@@ -616,6 +616,10 @@ html[dir="rtl"] .crater-btn[aria-current] { box-shadow: inset -3px 0 0 var(--bra
 .ext-embed .btn { gap: 8px; }
 .archive-note { display: flex; gap: 10px; align-items: flex-start; margin-top: 36px; font-size: 14px; color: var(--ink-2); }
 .archive-note .ico { flex: none; color: var(--bronze); margin-top: 3px; }
+.tr-note { display: flex; gap: 10px; align-items: flex-start; margin: 0 0 24px; padding: 12px 14px; border-radius: 10px; background: var(--paper-2, rgba(0,0,0,.04)); font-size: 15px; color: var(--ink-2); }
+.tr-note .ico { flex: none; color: var(--bronze); margin-top: 3px; }
+.tr-lead { font-size: 18px; line-height: 1.6; margin: 0 0 16px; }
+.empty-post { padding: 16px; border: 1px dashed var(--line, rgba(0,0,0,.2)); border-radius: 10px; color: var(--ink-2); }
 @media (max-width: 640px) {
   .news-row a { grid-template-columns: 72px minmax(0, 1fr); gap: 12px; }
   .news-row img, .nr-glyph { width: 72px; height: 56px; }
