@@ -706,13 +706,14 @@ function archiveBody(ctx, html) {
   const { lang } = ctx;
   return html
     .replace(/@media\//g, ctx.r('media/'))
+    .replace(/href="@site:([^"]*)"/g, (m, path) => `href="${ctx.r(prefix(lang) + path)}"`)
     .replace(/href="@post:(\d+)"/g, (m, id) => { const a = archiveById[id]; return `href="${ctx.r(prefix(a.lang) + `news/${id}/`)}"`; })
     .replace(/<img /g, '<img loading="lazy" decoding="async" ')
     .replace(/<t([dh])(?=[ >])/g, '<t$1 dir="auto"')
     .replace(/<a href="(https?:[^"]*)"/g, (m, h) => `<a href="${h}" target="_blank" rel="noopener"`)
     .replace(/<p class="yt" data-yt="([\w-]{11})"><\/p>/g, (m, id) => `<p class="yt"><a href="https://www.youtube.com/watch?v=${id}" target="_blank" rel="noopener" data-yt="${id}"><img src="https://i.ytimg.com/vi/${id}/hqdefault.jpg" alt="" loading="lazy" width="480" height="360" onerror="this.remove()"><span class="yt-play">${icon('play')}<span>${lang === 'ar' ? 'تشغيل الفيديو' : 'Play video'}</span></span></a></p>`)
-    .replace(/<p class="media-file" data-kind="(video|audio)" data-href="([^"]*)"><\/p>/g, (m, k, h) => `<p class="media-file"><${k} controls preload="none" src="${h}"></${k}></p>`)
-    .replace(/<p class="ext-embed" data-kind="(\w+)" data-href="([^"]*)"><\/p>/g, (m, k, h) => `<p class="ext-embed"><a class="btn btn-ghost-dark" href="${h}" target="_blank" rel="noopener">${icon('external')}${k === 'facebook' ? (lang === 'ar' ? 'المشاهدة على فيسبوك' : 'View on Facebook') : k === 'drive' ? (lang === 'ar' ? 'فتح الملف' : 'Open the file') : (lang === 'ar' ? 'فتح المحتوى المضمّن' : 'Open embedded content')}</a></p>`);
+    .replace(/<p class="media-file" (?:data-kind="(video|audio)" data-href="([^"]*)"|data-href="([^"]*)" data-kind="(video|audio)")><\/p>/g, (m, k1, h1, h2, k2) => { const k = k1 || k2, h = h1 || h2; return `<p class="media-file"><${k} controls preload="none" src="${h}"></${k}></p>`; })
+    .replace(/<p class="ext-embed" (?:data-kind="(\w+)" data-href="([^"]*)"|data-href="([^"]*)" data-kind="(\w+)")><\/p>/g, (m, k1, h1, h2, k2) => { const k = k1 || k2, h = h1 || h2; return `<p class="ext-embed"><a class="btn btn-ghost-dark" href="${h}" target="_blank" rel="noopener">${icon('external')}${k === 'facebook' ? (lang === 'ar' ? 'المشاهدة على فيسبوك' : 'View on Facebook') : k === 'drive' ? (lang === 'ar' ? 'فتح الملف' : 'Open the file') : (lang === 'ar' ? 'فتح المحتوى المضمّن' : 'Open embedded content')}</a></p>`; });
 }
 
 function archivePostPage(ctx, a) {
