@@ -280,12 +280,17 @@ function createGlobe({ DATA, byId, isAr, reduce, onPick }) {
   // Animation loop, paused while off screen.
   let visible = true;
   new IntersectionObserver((en) => { visible = en[0].isIntersecting; }).observe(stage);
-  const ease = 0.075;
-  function frame() {
+  // Time-based easing so the fly-to takes the same time on slow and fast devices.
+  let last = performance.now();
+  function frame(now) {
     requestAnimationFrame(frame);
+    const dt = Math.min(0.25, ((now || performance.now()) - last) / 1000);
+    last = now || performance.now();
     if (!visible || document.hidden) return;
+    const ease = 1 - Math.pow(1 - 0.075, dt * 60);
+    const spin = dt * 60;
     if (tYaw !== null) { yaw += (tYaw - yaw) * ease; if (Math.abs(tYaw - yaw) < 1e-4) tYaw = null; }
-    else if (!pts.size) { if (Math.abs(vYaw) > 1e-5) { yaw += vYaw; vYaw *= 0.94; } else if (auto) yaw += 0.0012; }
+    else if (!pts.size) { if (Math.abs(vYaw) > 1e-5) { yaw += vYaw * spin; vYaw *= Math.pow(0.94, spin); } else if (auto) yaw += 0.0012 * spin; }
     if (tPitch !== null) { pitch += (tPitch - pitch) * ease; if (Math.abs(tPitch - pitch) < 1e-4) tPitch = null; }
     if (tDist !== null) { dist += (tDist - dist) * ease; if (Math.abs(tDist - dist) < 1e-3) tDist = null; }
     globe.rotation.set(pitch, yaw, 0, 'XYZ');
