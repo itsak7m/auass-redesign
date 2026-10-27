@@ -673,13 +673,14 @@ function moonPage(ctx) {
   const fmtLon = (v) => `${Math.abs(v).toFixed(2)}° ${lang === 'ar' ? (v >= 0 ? 'شرقاً' : 'غرباً') : v >= 0 ? 'E' : 'W'}`;
   const cname = (c) => (lang === 'ar' ? c.ar : c.la);
   const list = moon.craters.map((c) => `<li><a class="crater-btn" href="#${c.id}" data-crater="${c.id}" data-side="${c.side}" data-text="${esc([c.ar, c.la, c.scholar.ar, c.scholar.en].join(' ').toLowerCase())}">
-  <span class="cb-name">${esc(cname(c))}</span>
+  <span class="cb-name">${esc(cname(c))}${lang === 'ar' ? ` <span class="cb-la" lang="en" dir="ltr">${esc(c.la)}</span>` : ''}</span>
   <span class="cb-sch">${esc(t(c.scholar, lang))}</span>
   <span class="cb-side side-${c.side}">${esc(sideName(c.side))}</span>
 </a></li>`).join('');
   const details = moon.craters.map((c) => `<article class="crater-detail" id="${c.id}" data-detail="${c.id}">
   <p class="kicker">${lang === 'ar' ? 'فوهة' : 'Crater'} · ${esc(sideName(c.side))}</p>
   <h2 class="cd-title">${esc(cname(c))} <span class="cd-alt" ${lang === 'ar' ? 'lang="en" dir="ltr"' : 'lang="ar" dir="rtl"'}>${esc(lang === 'ar' ? c.la : c.ar)}</span></h2>
+  <p class="cd-official"><span>${lang === 'ar' ? 'الاسم الرسمي على القمر' : 'Official name on the Moon'}:</span> ${bidi(t(c.official, lang), lang)}</p>
   <dl class="cd-facts">
     <div><dt>${lang === 'ar' ? 'خط العرض' : 'Latitude'}</dt><dd dir="ltr">${fmtLat(c.lat)}</dd></div>
     <div><dt>${lang === 'ar' ? 'خط الطول' : 'Longitude'}</dt><dd dir="ltr">${fmtLon(c.lon)}</dd></div>

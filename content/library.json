@@ -52,12 +52,12 @@
    "id": "craters",
    "glyph": "crater",
    "title": {
-    "ar": "فوهات قمرية بأسماء علماء عرب ومسلمين",
-    "en": "Lunar craters named after Arab and Muslim scholars"
+    "ar": "فوهات قمرية بأسماء علماء من الحضارة العربية والإسلامية",
+    "en": "Lunar craters named after scholars of Arab and Islamic civilisation"
    },
    "desc": {
-    "ar": "فوهات على سطح القمر سُمّيت تكريماً لعلماء عرب ومسلمين، مع موقعها وقطرها.",
-    "en": "Craters on the Moon named in honour of Arab and Muslim scholars, with location and diameter."
+    "ar": "فوهات على سطح القمر سمّاها الاتحاد الفلكي الدولي تكريماً لعلماء عاشوا وكتبوا بالعربية، مع موقعها وقطرها.",
+    "en": "Craters on the Moon named by the IAU in honour of scholars who lived and wrote in Arabic, with location and diameter."
    }
   },
   {
