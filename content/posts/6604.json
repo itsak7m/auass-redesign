@@ -4,9 +4,14 @@
  "lang": "ar",
  "type": "event",
  "title": "دعوة – محاضرة بعنوان “اكتشاف نيزك جديد بتركيب مميز (غير اعتيادي) في الأردن “",
- "excerpt": "Register Here:",
+ "excerpt": "",
  "image": "p/fb94b13e599f5767",
  "imageAlt": "",
  "video": false,
- "body": "<figure><img src=\"@media/p/fb94b13e599f5767.webp\" alt=\"\" width=\"666\" height=\"767\"></figure>\n"
+ "body": "<figure><img src=\"@media/p/fb94b13e599f5767.webp\" alt=\"\" width=\"666\" height=\"767\"></figure>\n",
+ "en": {
+  "title": "Invitation – lecture: \"Discovery of a new meteorite with an unusual composition in Jordan\"",
+  "excerpt": "",
+  "body": "<figure><img src=\"@media/p/fb94b13e599f5767.webp\" alt=\"\" width=\"666\" height=\"767\"></figure>"
+ }
 }

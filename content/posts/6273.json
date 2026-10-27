@@ -4,9 +4,14 @@
  "lang": "ar",
  "type": "event",
  "title": "دعوة عامة – محاضرة بعنوان ” محاضرة تعريفية عن الهيئة القومية للاستشعار “",
- "excerpt": "رابط التسجيل",
+ "excerpt": "",
  "image": "p/0d42d825ef78bd22",
  "imageAlt": "",
  "video": false,
- "body": "<figure><img src=\"@media/p/2ba105de4ece0b7b.webp\" alt=\"\" width=\"793\" height=\"1133\"></figure>\n<p><strong></strong></p>"
+ "body": "<figure><img src=\"@media/p/2ba105de4ece0b7b.webp\" alt=\"\" width=\"793\" height=\"1133\"></figure>",
+ "en": {
+  "title": "Public invitation – an introductory lecture on the National Authority for Remote Sensing",
+  "excerpt": "",
+  "body": "<figure><img src=\"@media/p/2ba105de4ece0b7b.webp\" alt=\"\" width=\"793\" height=\"1133\"></figure>"
+ }
 }

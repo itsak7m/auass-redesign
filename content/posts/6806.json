@@ -4,9 +4,13 @@
  "lang": "ar",
  "type": "event",
  "title": "دعوة عامة – ورشة علمية بعنوان “مشروع الإمارات لاستكشاف المريخ: من الحلم إلى الواقع أو الحقيقة”",
- "excerpt": "للتسجيل:",
+ "excerpt": "",
  "image": null,
  "imageAlt": "",
  "video": false,
- "body": "\n"
+ "body": "\n",
+ "en": {
+  "title": "Public invitation – workshop: \"The Emirates Mars Mission: from dream to reality\"",
+  "excerpt": ""
+ }
 }

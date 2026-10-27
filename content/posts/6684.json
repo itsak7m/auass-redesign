@@ -4,9 +4,13 @@
  "lang": "ar",
  "type": "event",
  "title": "دعوة عامة – محاضرة مشتركة بعنوان “لمحة عامة عن ثراء النيازك في العالم العربي ” و “نيازك من المغرب: نموذج تطور العلوم في الدول العربية”",
- "excerpt": "للتسجيل:",
+ "excerpt": "",
  "image": null,
  "imageAlt": "",
  "video": false,
- "body": "\n"
+ "body": "\n",
+ "en": {
+  "title": "Public invitation – joint lecture: \"An overview of the wealth of meteorites in the Arab world\" and \"Meteorites from Morocco: a model for the development of science in the Arab countries\"",
+  "excerpt": ""
+ }
 }

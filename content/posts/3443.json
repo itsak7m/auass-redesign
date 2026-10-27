@@ -4,9 +4,14 @@
  "lang": "ar",
  "type": "event",
  "title": "دعوة عامة لحضور المحاضرة العلمية “البيئة الفضائية والتحديات الحالية” للأستاذ الدكتور أسامة شلبية 28/1/2019",
- "excerpt": "السيرة الذاتية ا. د. اسامة شلبية",
+ "excerpt": "",
  "image": "p/b4676a648e6037b1",
  "imageAlt": "",
  "video": false,
- "body": "<p><img src=\"@media/p/738f7a3f29172796.webp\" alt=\"\" width=\"960\" height=\"638\"></p>\n<p>السيرة الذاتية ا. د. اسامة شلبية</p>"
+ "body": "<p><img src=\"@media/p/738f7a3f29172796.webp\" alt=\"\" width=\"960\" height=\"638\"></p>",
+ "en": {
+  "title": "Public invitation to the lecture \"The space environment and current challenges\" by Prof. Osama Shalabiea, 28 January 2019",
+  "excerpt": "",
+  "body": "<p><img src=\"@media/p/738f7a3f29172796.webp\" alt=\"\" width=\"960\" height=\"638\"></p>"
+ }
 }

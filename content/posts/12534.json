@@ -3,10 +3,15 @@
  "date": "2021-07-28",
  "lang": "ar",
  "type": "event",
- "title": "دعوة لحضور ندوة علمية بعنوان ” مكافحة التصحر مسؤولية مجتمعية “",
+ "title": "دعوة لحضور ندوة علمية بعنوان ”مكافحة التصحر مسؤولية مجتمعية“",
  "excerpt": "",
  "image": "p/e545951bf3d0d2d3",
  "imageAlt": "",
  "video": false,
- "body": "<figure><img src=\"@media/p/e545951bf3d0d2d3.webp\" alt=\"\" width=\"768\" height=\"666\"></figure>\n"
+ "body": "<figure><img src=\"@media/p/e545951bf3d0d2d3.webp\" alt=\"\" width=\"768\" height=\"666\"></figure>\n",
+ "en": {
+  "title": "Invitation to the scientific symposium \"Combating desertification is a social responsibility\"",
+  "excerpt": "",
+  "body": "<figure><img src=\"@media/p/e545951bf3d0d2d3.webp\" alt=\"\" width=\"768\" height=\"666\"></figure>"
+ }
 }

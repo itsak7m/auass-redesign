@@ -4,9 +4,14 @@
  "lang": "ar",
  "type": "event",
  "title": "دعوة عامة لحضور المحاضرة العلمية “علم الفلك الراديوي: عين على الكون الغير المرئي” للأستاذ الدكتور أسامة شلبية 29/1/2019",
- "excerpt": "السيرة الذاتية ا. د. اسامة شلبية",
+ "excerpt": "",
  "image": "p/ebf61c4db005c6b9",
  "imageAlt": "",
  "video": false,
- "body": "<p><img src=\"@media/p/ff01d6cdc2de7d45.webp\" alt=\"\" width=\"960\" height=\"545\"></p>\n<p>السيرة الذاتية ا. د. اسامة شلبية</p>"
+ "body": "<p><img src=\"@media/p/ff01d6cdc2de7d45.webp\" alt=\"\" width=\"960\" height=\"545\"></p>",
+ "en": {
+  "title": "Public invitation to the lecture \"Radio astronomy: an eye on the invisible universe\" by Prof. Osama Shalabiea, 29 January 2019",
+  "excerpt": "",
+  "body": "<p><img src=\"@media/p/ff01d6cdc2de7d45.webp\" alt=\"\" width=\"960\" height=\"545\"></p>"
+ }
 }

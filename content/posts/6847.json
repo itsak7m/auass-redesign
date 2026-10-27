@@ -4,9 +4,14 @@
  "lang": "ar",
  "type": "event",
  "title": "دعوة عامة – ورشة علمية بمناسبة اليوم العالمي للنيازك",
- "excerpt": "للتسجيل:",
+ "excerpt": "",
  "image": "p/52960df06a5e9538",
  "imageAlt": "",
  "video": false,
- "body": "<figure><img src=\"@media/p/52960df06a5e9538.webp\" alt=\"\" width=\"557\" height=\"965\"></figure>\n"
+ "body": "<figure><img src=\"@media/p/52960df06a5e9538.webp\" alt=\"\" width=\"557\" height=\"965\"></figure>\n",
+ "en": {
+  "title": "Public invitation – scientific workshop for International Meteorite Day",
+  "excerpt": "",
+  "body": "<figure><img src=\"@media/p/52960df06a5e9538.webp\" alt=\"\" width=\"557\" height=\"965\"></figure>"
+ }
 }

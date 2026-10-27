@@ -4,9 +4,14 @@
  "lang": "ar",
  "type": "event",
  "title": "المدرسة الصيفية الأولى – 2019 “الفيزياء الفلكية وعلوم الفضاء”",
- "excerpt": "المدرسة الصيفية الأولى – 2019 “الفيزياء الفلكية وعلوم الفضاء” برعاية كل من المركز الإقليمي لتدريس علوم وتكنولوجيا الفضاء لغرب آسيا-الأردن/ الأمم المتحدة والاتحاد العربي لعلوم الفضاء والفلك ومرصد القطامية الفلكي [button…",
+ "excerpt": "المدرسة الصيفية الأولى – 2019 “الفيزياء الفلكية وعلوم الفضاء” برعاية كل من المركز الإقليمي لتدريس علوم وتكنولوجيا الفضاء لغرب آسيا-الأردن/ الأمم المتحدة والاتحاد العربي لعلوم الفضاء والفلك ومرصد القطامية الفلكي",
  "image": "p/4a5ca5034fea5a43",
  "imageAlt": "",
  "video": false,
- "body": "<h2>المدرسة الصيفية الأولى – 2019</h2>\n<h2>“الفيزياء الفلكية وعلوم الفضاء”</h2>\n<p><img src=\"@media/p/d45141310f6e3c9e.webp\" alt=\"\" width=\"850\" height=\"761\"></p>\n<h3>برعاية كل من المركز الإقليمي لتدريس علوم وتكنولوجيا الفضاء لغرب آسيا-الأردن/ الأمم المتحدة والاتحاد العربي لعلوم الفضاء والفلك ومرصد القطامية الفلكي</h3>\n<p>المزيد من المعلومات</p>"
+ "body": "<h2>المدرسة الصيفية الأولى – 2019</h2>\n<h2>“الفيزياء الفلكية وعلوم الفضاء”</h2>\n<p><img src=\"@media/p/d45141310f6e3c9e.webp\" alt=\"\" width=\"850\" height=\"761\"></p>\n<h3>برعاية كل من المركز الإقليمي لتدريس علوم وتكنولوجيا الفضاء لغرب آسيا-الأردن/ الأمم المتحدة والاتحاد العربي لعلوم الفضاء والفلك ومرصد القطامية الفلكي</h3>",
+ "en": {
+  "title": "The first summer school 2019: \"Astrophysics and Space Sciences\"",
+  "excerpt": "The first summer school 2019 on \"Astrophysics and Space Sciences\", sponsored by the UN-affiliated Regional Centre for Space Science and Technology Education for Western Asia in Jordan, AUASS and the Kottamia Astronomical Observatory.",
+  "body": "<h2>The first summer school – 2019</h2>\n<h2>\"Astrophysics and Space Sciences\"</h2>\n<p><img src=\"@media/p/d45141310f6e3c9e.webp\" alt=\"\" width=\"850\" height=\"761\"></p>\n<h3>Sponsored by the Regional Centre for Space Science and Technology Education for Western Asia – Jordan / United Nations, the Arab Union for Astronomy and Space Sciences and the Kottamia Astronomical Observatory</h3>"
+ }
 }

@@ -4,9 +4,14 @@
  "lang": "ar",
  "type": "event",
  "title": "دعوة عامة لحضور المحاضرة العلمية “تكوين النجوم وتطورها وتركيبها” – الأستاذ الدكتور أسامة شلبية 27/1/2019",
- "excerpt": "السيرة الذاتية ا. د. اسامة شلبية",
+ "excerpt": "",
  "image": "p/3552c9204253325e",
  "imageAlt": "",
  "video": false,
- "body": "<p><img src=\"@media/p/25e5878c1a6ab793.webp\" alt=\"\" width=\"960\" height=\"540\"></p>\n<p>السيرة الذاتية ا. د. اسامة شلبية</p>"
+ "body": "<p><img src=\"@media/p/25e5878c1a6ab793.webp\" alt=\"\" width=\"960\" height=\"540\"></p>",
+ "en": {
+  "title": "Public invitation to the lecture \"Star formation, evolution and structure\" by Prof. Osama Shalabiea, 27 January 2019",
+  "excerpt": "",
+  "body": "<p><img src=\"@media/p/25e5878c1a6ab793.webp\" alt=\"\" width=\"960\" height=\"540\"></p>"
+ }
 }

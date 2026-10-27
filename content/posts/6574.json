@@ -4,9 +4,14 @@
  "lang": "ar",
  "type": "event",
  "title": "ورشة عمل بعنوان “GNSS APPLICATIONS”",
- "excerpt": "رابط التسجيل",
+ "excerpt": "",
  "image": "p/be1210827c0c1e5d",
  "imageAlt": "",
  "video": false,
- "body": "<figure><img src=\"@media/p/228a458c5e026f04.webp\" alt=\"\" width=\"910\" height=\"1133\"></figure>\n<p><a href=\"https://docs.google.com/forms/d/e/1FAIpQLSeWOhVzsVdk4mV01yeMrWoG--m3PvdIrSlNVnfwe9uaIJIumw/viewform\"><strong></strong></a></p>"
+ "body": "<figure><img src=\"@media/p/228a458c5e026f04.webp\" alt=\"\" width=\"910\" height=\"1133\"></figure>",
+ "en": {
+  "title": "Workshop: \"GNSS Applications\"",
+  "excerpt": "",
+  "body": "<figure><img src=\"@media/p/228a458c5e026f04.webp\" alt=\"\" width=\"910\" height=\"1133\"></figure>"
+ }
 }

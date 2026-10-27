@@ -8,5 +8,10 @@
  "image": "p/a7975539b49b4cdc",
  "imageAlt": "",
  "video": false,
- "body": "<figure><img src=\"@media/p/a7975539b49b4cdc.webp\" alt=\"\" width=\"720\" height=\"1040\"></figure>"
+ "body": "<figure><img src=\"@media/p/a7975539b49b4cdc.webp\" alt=\"\" width=\"720\" height=\"1040\"></figure>",
+ "en": {
+  "title": "Lecture: \"The James Webb Space Telescope\"",
+  "excerpt": "",
+  "body": "<figure><img src=\"@media/p/a7975539b49b4cdc.webp\" alt=\"\" width=\"720\" height=\"1040\"></figure>"
+ }
 }

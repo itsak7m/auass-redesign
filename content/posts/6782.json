@@ -4,9 +4,14 @@
  "lang": "ar",
  "type": "event",
  "title": "دعوة عامة – محاضرة مشتركة بعنوان “القواعد القانونية الدولية لحماية بيئة الفضاء” و “المسؤولية المدنية لنظام GNSS “",
- "excerpt": "التسجيل: 26 حزيران 2020: 29 حزيران 2020: 30 حزيران 2020:",
+ "excerpt": "",
  "image": "p/2af135db88b7e9f8",
  "imageAlt": "",
  "video": false,
- "body": "<figure><img src=\"@media/p/2af135db88b7e9f8.webp\" alt=\"\" width=\"960\" height=\"1012\"></figure>\n<p>26 حزيران 2020:</p>\n<p>29 حزيران 2020:</p>\n<p>30 حزيران 2020:</p>"
+ "body": "<figure><img src=\"@media/p/2af135db88b7e9f8.webp\" alt=\"\" width=\"960\" height=\"1012\"></figure>",
+ "en": {
+  "title": "Public invitation – joint lecture: \"International legal rules for protecting the space environment\" and \"Civil liability for GNSS\"",
+  "excerpt": "",
+  "body": "<figure><img src=\"@media/p/2af135db88b7e9f8.webp\" alt=\"\" width=\"960\" height=\"1012\"></figure>"
+ }
 }

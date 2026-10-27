@@ -8,5 +8,10 @@
  "image": null,
  "imageAlt": "",
  "video": true,
- "body": "<p class=\"yt\" data-yt=\"IcJKERqYgyY\"></p>"
+ "body": "<p class=\"yt\" data-yt=\"IcJKERqYgyY\"></p>",
+ "en": {
+  "title": "Lecture: \"In search of intelligent life in the universe\", organised by the IAU National Outreach Offices of Jordan and Tunisia",
+  "excerpt": "",
+  "body": "<p class=\"yt\" data-yt=\"IcJKERqYgyY\"></p>"
+ }
 }

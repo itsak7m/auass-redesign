@@ -8,5 +8,10 @@
  "image": null,
  "imageAlt": "",
  "video": false,
- "body": "<p class=\"ext-embed\" data-href=\"https://www.facebook.com/akram.farraj/posts/10155935463176127\" data-kind=\"facebook\"></p>\n<p>#تم_بحمد_الله مساء هذا اليوم مناقشة رسالة الطالب أكرم فراج، والذي (حسب اللجنة) بأن رسالته أفضل رسالة ماجستير يتم مناقشتها، وقد قام الطالب بجهد عظيم في مجال دراسة التقنيات الجيومكانية، تكونت لجنة المناقشة من أ.د إبراهيم العرود، أ.د سميح الرواشدة، أ.د محمد القرالة، وكانت رسالته تحت اشرافي وإشراف الدكتور عوني الخصاونة مدير المركز الجغرافي الملكي.</p>"
+ "body": "<p class=\"ext-embed\" data-href=\"https://www.facebook.com/akram.farraj/posts/10155935463176127\" data-kind=\"facebook\"></p>\n<p>#تم_بحمد_الله مساء هذا اليوم مناقشة رسالة الطالب أكرم فراج، والذي (حسب اللجنة) بأن رسالته أفضل رسالة ماجستير يتم مناقشتها، وقد قام الطالب بجهد عظيم في مجال دراسة التقنيات الجيومكانية، تكونت لجنة المناقشة من أ.د إبراهيم العرود، أ.د سميح الرواشدة، أ.د محمد القرالة، وكانت رسالته تحت اشرافي وإشراف الدكتور عوني الخصاونة مدير المركز الجغرافي الملكي.</p>",
+ "en": {
+  "title": "Thesis defence of student Akram Farraj",
+  "excerpt": "Student Akram Farraj defended his master's thesis on geospatial technologies, described by the examining committee as the best master's thesis it had examined; it was co-supervised by Dr. Awni Khasawneh.",
+  "body": "<p class=\"ext-embed\" data-href=\"https://www.facebook.com/akram.farraj/posts/10155935463176127\" data-kind=\"facebook\"></p>\n<p>Praise be to God, this evening student Akram Farraj defended his thesis, which, according to the committee, is the best master's thesis it has examined. The student made a great effort in the study of geospatial technologies. The examining committee consisted of Prof. Ibrahim Al-Oroud, Prof. Samih Al-Rawashdeh and Prof. Mohammad Al-Qaralleh, and the thesis was supervised by myself and by Dr. Awni Khasawneh, Director of the Royal Jordanian Geographic Centre.</p>"
+ }
 }

@@ -8,5 +8,10 @@
  "image": null,
  "imageAlt": "",
  "video": false,
- "body": "<p>دورة عن بعد ومجانية في علم الفلك الراديوي من مرصد جنوب أفريقيا لعلم الفلك الراديوي بالإضافة إلى طرائق استخدام البيانات وتحليلها ومشكلات وحلول</p>\n<p><a href=\"https://www.sarao.ac.za/e-learning-portal/\">https://www.sarao.ac.za/e-learning-portal/</a></p>"
+ "body": "<p>دورة عن بعد ومجانية في علم الفلك الراديوي من مرصد جنوب أفريقيا لعلم الفلك الراديوي بالإضافة إلى طرائق استخدام البيانات وتحليلها ومشكلات وحلول</p>\n<p><a href=\"https://www.sarao.ac.za/e-learning-portal/\">https://www.sarao.ac.za/e-learning-portal/</a></p>",
+ "en": {
+  "title": "An online course for those interested in radio astronomy",
+  "excerpt": "A free online course in radio astronomy from the South African Radio Astronomy Observatory, including how to use and analyse data, common problems and their solutions.",
+  "body": "<p>A free online course in radio astronomy from the South African Radio Astronomy Observatory (SARAO), covering how to use and analyse data, common problems and their solutions.</p>\n<p><a href=\"https://www.sarao.ac.za/e-learning-portal/\">https://www.sarao.ac.za/e-learning-portal/</a></p>"
+ }
 }

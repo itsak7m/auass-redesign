@@ -4,9 +4,14 @@
  "lang": "ar",
  "type": "event",
  "title": "دعوة عامة – محاضرة بعنوان “كيفية التعرف إلى مكونات الأغلفة الجوية للكواكب الخارجية”",
- "excerpt": "رابط التسجيل",
+ "excerpt": "",
  "image": "p/7fd405c284336311",
  "imageAlt": "",
  "video": false,
- "body": "<figure><img src=\"@media/p/bd17f930487344eb.webp\" alt=\"\" width=\"533\" height=\"765\"></figure>\n<p><strong></strong></p>"
+ "body": "<figure><img src=\"@media/p/bd17f930487344eb.webp\" alt=\"\" width=\"533\" height=\"765\"></figure>",
+ "en": {
+  "title": "Public invitation – lecture: \"How to identify the components of exoplanet atmospheres\"",
+  "excerpt": "",
+  "body": "<figure><img src=\"@media/p/bd17f930487344eb.webp\" alt=\"\" width=\"533\" height=\"765\"></figure>"
+ }
 }

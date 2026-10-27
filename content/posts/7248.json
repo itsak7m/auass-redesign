@@ -4,9 +4,14 @@
  "lang": "ar",
  "type": "event",
  "title": "دعوة لحضور المحاضرة العلمية “نمذجة التغيرات المكانية والزمانية للجزر الحرارية في المدن والعوامل المؤثرة باستخدام الاستشعار عن بعد ونظم المعلومات الجغرافية” يقدمها الدكتور جاسم محمد علي",
- "excerpt": "للتسجيل:",
+ "excerpt": "",
  "image": "p/35bbba4c70146eeb",
  "imageAlt": "",
  "video": false,
- "body": "<figure><img src=\"@media/p/35bbba4c70146eeb.webp\" alt=\"\" width=\"645\" height=\"840\"></figure>\n"
+ "body": "<figure><img src=\"@media/p/35bbba4c70146eeb.webp\" alt=\"\" width=\"645\" height=\"840\"></figure>\n",
+ "en": {
+  "title": "Invitation to the lecture \"Modelling spatial and temporal changes of urban heat islands and their drivers using remote sensing and GIS\" by Dr. Jasim Mohammed Ali",
+  "excerpt": "",
+  "body": "<figure><img src=\"@media/p/35bbba4c70146eeb.webp\" alt=\"\" width=\"645\" height=\"840\"></figure>"
+ }
 }

@@ -4,9 +4,14 @@
  "lang": "ar",
  "type": "event",
  "title": "دعوة عامة – محاضرة بعنوان “رصد الأقمار الصناعية بالليزر من مصر “",
- "excerpt": "للتسجيل:",
+ "excerpt": "",
  "image": "p/6cdaa45651d29be7",
  "imageAlt": "",
  "video": false,
- "body": "<figure><img src=\"@media/p/6cdaa45651d29be7.webp\" alt=\"\" width=\"667\" height=\"765\"></figure>\n"
+ "body": "<figure><img src=\"@media/p/6cdaa45651d29be7.webp\" alt=\"\" width=\"667\" height=\"765\"></figure>\n",
+ "en": {
+  "title": "Public invitation – lecture: \"Satellite laser ranging from Egypt\"",
+  "excerpt": "",
+  "body": "<figure><img src=\"@media/p/6cdaa45651d29be7.webp\" alt=\"\" width=\"667\" height=\"765\"></figure>"
+ }
 }

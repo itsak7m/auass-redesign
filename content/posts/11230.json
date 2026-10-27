@@ -8,5 +8,10 @@
  "image": "p/7b6001b483ccf577",
  "imageAlt": "",
  "video": false,
- "body": "<figure><img src=\"@media/p/7b6001b483ccf577.webp\" alt=\"\" width=\"605\" height=\"768\"></figure>"
+ "body": "<figure><img src=\"@media/p/7b6001b483ccf577.webp\" alt=\"\" width=\"605\" height=\"768\"></figure>",
+ "en": {
+  "title": "Invitation to a scientific lecture by Dr. Yousef Mustafa Yousef Khalil: \"The development of astronomical knowledge through the ages\"",
+  "excerpt": "",
+  "body": "<figure><img src=\"@media/p/7b6001b483ccf577.webp\" alt=\"\" width=\"605\" height=\"768\"></figure>"
+ }
 }

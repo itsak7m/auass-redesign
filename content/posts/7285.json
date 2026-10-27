@@ -4,9 +4,14 @@
  "lang": "ar",
  "type": "event",
  "title": "دعوة عامة – حضور المحاضرة العلمية ” دراسة راديوية لبقايا المستعرات العظمى في سحابة ماجلان “",
- "excerpt": "رابط التسجيل:",
+ "excerpt": "",
  "image": "p/4eac84a723b4d98a",
  "imageAlt": "",
  "video": false,
- "body": "<figure><img src=\"@media/p/4eac84a723b4d98a.webp\" alt=\"\" width=\"731\" height=\"840\"></figure>\n"
+ "body": "<figure><img src=\"@media/p/4eac84a723b4d98a.webp\" alt=\"\" width=\"731\" height=\"840\"></figure>\n",
+ "en": {
+  "title": "Public invitation – lecture: \"A radio study of supernova remnants in the Magellanic Clouds\"",
+  "excerpt": "",
+  "body": "<figure><img src=\"@media/p/4eac84a723b4d98a.webp\" alt=\"\" width=\"731\" height=\"840\"></figure>"
+ }
 }

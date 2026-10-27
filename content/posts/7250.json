@@ -4,9 +4,14 @@
  "lang": "ar",
  "type": "event",
  "title": "دعوة لحضور المحاضرة العلمية “إعداد وإنتاج الخرائط الرقمية” يقدمها الدكتور سطام الشقور",
- "excerpt": "للتسجيل:",
+ "excerpt": "",
  "image": "p/c1a7350b9b045c18",
  "imageAlt": "",
  "video": false,
- "body": "<figure><img src=\"@media/p/c1a7350b9b045c18.webp\" alt=\"\" width=\"643\" height=\"840\"></figure>\n"
+ "body": "<figure><img src=\"@media/p/c1a7350b9b045c18.webp\" alt=\"\" width=\"643\" height=\"840\"></figure>\n",
+ "en": {
+  "title": "Invitation to the lecture \"Preparing and producing digital maps\" by Dr. Suttam Al-Shqour",
+  "excerpt": "",
+  "body": "<figure><img src=\"@media/p/c1a7350b9b045c18.webp\" alt=\"\" width=\"643\" height=\"840\"></figure>"
+ }
 }

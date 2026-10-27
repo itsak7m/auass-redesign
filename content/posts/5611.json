@@ -8,5 +8,10 @@
  "image": "p/4c3c2f8a719cfa3a",
  "imageAlt": "",
  "video": true,
- "body": "<p class=\"yt\" data-yt=\"iOQoDxLQpLU\"></p>"
+ "body": "<p class=\"yt\" data-yt=\"iOQoDxLQpLU\"></p>",
+ "en": {
+  "title": "A special interview with Emirati astronaut Hazza Al Mansouri",
+  "excerpt": "",
+  "body": "<p class=\"yt\" data-yt=\"iOQoDxLQpLU\"></p>"
+ }
 }

@@ -3,10 +3,15 @@
  "date": "2021-07-25",
  "lang": "ar",
  "type": "event",
- "title": "محاضرة فلكية بعنوان: الاتزان الحراري لكوكب لأرض، د. قيس عزام العمري",
+ "title": "محاضرة فلكية بعنوان: الاتزان الحراري لكوكب الأرض، د. قيس عزام العمري",
  "excerpt": "",
  "image": null,
  "imageAlt": "",
  "video": true,
- "body": "<p class=\"yt\" data-yt=\"q06EKesJOME\"></p>"
+ "body": "<p class=\"yt\" data-yt=\"q06EKesJOME\"></p>",
+ "en": {
+  "title": "Astronomy lecture: \"The thermal equilibrium of planet Earth\", Dr. Qais Azzam Al-Omari",
+  "excerpt": "",
+  "body": "<p class=\"yt\" data-yt=\"q06EKesJOME\"></p>"
+ }
 }

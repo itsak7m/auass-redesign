@@ -8,5 +8,10 @@
  "image": "p/4b4b91f365f6fc11",
  "imageAlt": "",
  "video": false,
- "body": "\n<figure><img src=\"@media/p/4b4b91f365f6fc11.webp\" alt=\"\" width=\"768\" height=\"702\"></figure>"
+ "body": "\n<figure><img src=\"@media/p/4b4b91f365f6fc11.webp\" alt=\"\" width=\"768\" height=\"702\"></figure>",
+ "en": {
+  "title": "Invitation to the lecture \"Thermal imaging in remote sensing\"",
+  "excerpt": "",
+  "body": "<figure><img src=\"@media/p/4b4b91f365f6fc11.webp\" alt=\"\" width=\"768\" height=\"702\"></figure>"
+ }
 }

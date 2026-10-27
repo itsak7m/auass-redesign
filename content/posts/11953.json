@@ -8,5 +8,10 @@
  "image": "p/cea2d746c8d791e9",
  "imageAlt": "",
  "video": false,
- "body": "<figure><img src=\"@media/p/cea2d746c8d791e9.webp\" alt=\"\" width=\"960\" height=\"539\"></figure>\n"
+ "body": "<figure><img src=\"@media/p/cea2d746c8d791e9.webp\" alt=\"\" width=\"960\" height=\"539\"></figure>\n",
+ "en": {
+  "title": "Live link to the Dark Sky symposium",
+  "excerpt": "",
+  "body": "<figure><img src=\"@media/p/cea2d746c8d791e9.webp\" alt=\"\" width=\"960\" height=\"539\"></figure>"
+ }
 }

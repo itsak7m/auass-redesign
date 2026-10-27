@@ -4,9 +4,14 @@
  "lang": "ar",
  "type": "event",
  "title": "دعوة عامة – محاضرة بعنوان “المجرات النشطة والكوازارات “",
- "excerpt": "للتسجيل:",
+ "excerpt": "",
  "image": "p/b7b11f5292a891bb",
  "imageAlt": "",
  "video": false,
- "body": "<figure><img src=\"@media/p/b7b11f5292a891bb.webp\" alt=\"\" width=\"941\" height=\"1079\"></figure>\n"
+ "body": "<figure><img src=\"@media/p/b7b11f5292a891bb.webp\" alt=\"\" width=\"941\" height=\"1079\"></figure>\n",
+ "en": {
+  "title": "Public invitation – lecture: \"Active galaxies and quasars\"",
+  "excerpt": "",
+  "body": "<figure><img src=\"@media/p/b7b11f5292a891bb.webp\" alt=\"\" width=\"941\" height=\"1079\"></figure>"
+ }
 }

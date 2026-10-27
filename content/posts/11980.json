@@ -8,5 +8,10 @@
  "image": null,
  "imageAlt": "",
  "video": false,
- "body": "<p class=\"ext-embed\" data-href=\"https://web.facebook.com/ammar.sakaji.3/videos/3835372603217817/\" data-kind=\"facebook\"></p>"
+ "body": "<p class=\"ext-embed\" data-href=\"https://web.facebook.com/ammar.sakaji.3/videos/3835372603217817/\" data-kind=\"facebook\"></p>",
+ "en": {
+  "title": "Full recording of the Dark Sky symposium 2021",
+  "excerpt": "",
+  "body": "<p class=\"ext-embed\" data-href=\"https://web.facebook.com/ammar.sakaji.3/videos/3835372603217817/\" data-kind=\"facebook\"></p>"
+ }
 }

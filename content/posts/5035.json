@@ -8,5 +8,10 @@
  "image": "p/9989d8884ec0fd4d",
  "imageAlt": "",
  "video": false,
- "body": "<h2><img src=\"@media/p/67d01d96398cfbaa.webp\" alt=\"\" width=\"960\" height=\"639\"></h2>\n<h2>رصد خسوف القمر الجزئي في إربد</h2>\n<h3>يوم الثلاثاء ١٦-٧-٢٠١٩ الساعة التاسعة مساءً <br/>\nفي رحاب blooming academy <br/>\nبالتعاون مع الاتحاد العربي لعلوم الفضاء والفلك والجمعية الفلكية الأردنية.<br/>\nإربد. جنوب دوار صحارى. مقابل قصر العوادين<br/>\n </h3>"
+ "body": "<h2><img src=\"@media/p/67d01d96398cfbaa.webp\" alt=\"\" width=\"960\" height=\"639\"></h2>\n<h2>رصد خسوف القمر الجزئي في إربد</h2>\n<h3>يوم الثلاثاء ١٦-٧-٢٠١٩ الساعة التاسعة مساءً <br/>\nفي رحاب blooming academy <br/>\nبالتعاون مع الاتحاد العربي لعلوم الفضاء والفلك والجمعية الفلكية الأردنية.<br/>\nإربد. جنوب دوار صحارى. مقابل قصر العوادين</h3>",
+ "en": {
+  "title": "Observing the partial lunar eclipse in Irbid on Tuesday, 16 July 2019, at 9 pm",
+  "excerpt": "Observing the partial lunar eclipse in Irbid on Tuesday, 16 July 2019, at 9 pm at Blooming Academy, in cooperation with AUASS and the Jordanian Astronomical Society.",
+  "body": "<h2><img src=\"@media/p/67d01d96398cfbaa.webp\" alt=\"\" width=\"960\" height=\"639\"></h2>\n<h2>Observing the partial lunar eclipse in Irbid</h2>\n<h3>Tuesday, 16 July 2019, at 9 pm<br/>\nat Blooming Academy<br/>\nin cooperation with the Arab Union for Astronomy and Space Sciences and the Jordanian Astronomical Society.<br/>\nIrbid, south of Sahara roundabout, opposite Qasr Al-Awadeen</h3>"
+ }
 }

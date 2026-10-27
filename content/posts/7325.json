@@ -8,5 +8,10 @@
  "image": null,
  "imageAlt": "",
  "video": false,
- "body": "<p>الثريا – عدد نوفمبر</p>\n<p><a href=\"@media/files/79628ce160cbdb80.pdf\">تحميل الملف</a></p>"
+ "body": "<p>الثريا – عدد نوفمبر</p>\n<p><a href=\"@media/files/79628ce160cbdb80.pdf\">تحميل الملف</a></p>",
+ "en": {
+  "title": "Al-Thuraya magazine – November issue",
+  "excerpt": "Al-Thuraya magazine, November issue.",
+  "body": "<p>Al-Thuraya – November issue</p>\n<p><a href=\"@media/files/79628ce160cbdb80.pdf\">Download the file</a></p>"
+ }
 }

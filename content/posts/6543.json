@@ -4,9 +4,14 @@
  "lang": "ar",
  "type": "event",
  "title": "دعوة عامة – محاضرة بعنوان “مراقبة نوعية المياه من خلال الاستشعار عن بعد تم تنفيذه على بحيرة القرعون في لبنان”",
- "excerpt": "للتسجيل أضغط هنا",
+ "excerpt": "",
  "image": "p/1fa1463c20c71043",
  "imageAlt": "",
  "video": false,
- "body": "<figure><img src=\"@media/p/a410309eccb5e6c6.webp\" alt=\"\" width=\"948\" height=\"1133\"></figure>\n<p><strong></strong></p>"
+ "body": "<figure><img src=\"@media/p/a410309eccb5e6c6.webp\" alt=\"\" width=\"948\" height=\"1133\"></figure>",
+ "en": {
+  "title": "Public invitation – lecture: \"Monitoring water quality with remote sensing: a study of Lake Qaraoun in Lebanon\"",
+  "excerpt": "",
+  "body": "<figure><img src=\"@media/p/a410309eccb5e6c6.webp\" alt=\"\" width=\"948\" height=\"1133\"></figure>"
+ }
 }

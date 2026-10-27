@@ -8,5 +8,10 @@
  "image": "p/8bbbb6bfe062c9d7",
  "imageAlt": "",
  "video": false,
- "body": "<figure><img src=\"@media/p/8bbbb6bfe062c9d7.webp\" alt=\"\" width=\"960\" height=\"539\"></figure>"
+ "body": "<figure><img src=\"@media/p/8bbbb6bfe062c9d7.webp\" alt=\"\" width=\"960\" height=\"539\"></figure>",
+ "en": {
+  "title": "Invitation to a scientific lecture: \"The road to Mars\"",
+  "excerpt": "",
+  "body": "<figure><img src=\"@media/p/8bbbb6bfe062c9d7.webp\" alt=\"\" width=\"960\" height=\"539\"></figure>"
+ }
 }

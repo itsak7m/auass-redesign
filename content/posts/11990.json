@@ -8,5 +8,10 @@
  "image": "p/c99a4d3fcb752a19",
  "imageAlt": "",
  "video": false,
- "body": "<figure><img src=\"@media/p/c99a4d3fcb752a19.webp\" alt=\"\" width=\"960\" height=\"823\"></figure>\n"
+ "body": "<figure><img src=\"@media/p/c99a4d3fcb752a19.webp\" alt=\"\" width=\"960\" height=\"823\"></figure>\n",
+ "en": {
+  "title": "Invitation to a scientific symposium: \"The muon anomaly between theoretical calculations and Fermilab's latest results\"",
+  "excerpt": "",
+  "body": "<figure><img src=\"@media/p/c99a4d3fcb752a19.webp\" alt=\"\" width=\"960\" height=\"823\"></figure>"
+ }
 }

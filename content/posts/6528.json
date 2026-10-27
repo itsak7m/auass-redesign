@@ -4,9 +4,14 @@
  "lang": "ar",
  "type": "event",
  "title": "ورشة عمل بعنوان ” أنظمة الملاحة الفضائية العالمية”",
- "excerpt": "للتسجيل أضغط هنا",
+ "excerpt": "",
  "image": "p/3c93924a5491d2d8",
  "imageAlt": "",
  "video": false,
- "body": "<figure><img src=\"@media/p/591abe6630fd20f9.webp\" alt=\"\" width=\"793\" height=\"1133\"></figure>\n<p><a href=\"https://forms.gle/Rmk1gVVQPv3tnBBM9\"><strong></strong></a></p>"
+ "body": "<figure><img src=\"@media/p/591abe6630fd20f9.webp\" alt=\"\" width=\"793\" height=\"1133\"></figure>",
+ "en": {
+  "title": "Workshop: \"Global navigation satellite systems\"",
+  "excerpt": "",
+  "body": "<figure><img src=\"@media/p/591abe6630fd20f9.webp\" alt=\"\" width=\"793\" height=\"1133\"></figure>"
+ }
 }

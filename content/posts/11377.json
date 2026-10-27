@@ -8,5 +8,10 @@
  "image": null,
  "imageAlt": "",
  "video": false,
- "body": "<p class=\"ext-embed\" data-href=\"https://drive.google.com/file/d/15QRt7ld4g1ivOIeuHLavw21AaKt_PCbf/preview\" data-kind=\"drive\"></p>"
+ "body": "<p class=\"ext-embed\" data-href=\"https://drive.google.com/file/d/15QRt7ld4g1ivOIeuHLavw21AaKt_PCbf/preview\" data-kind=\"drive\"></p>",
+ "en": {
+  "title": "A meeting with NASA planetary scientist Dr. Essam Heggy: how studying the planets helps preserve life on Earth",
+  "excerpt": "",
+  "body": "<p class=\"ext-embed\" data-href=\"https://drive.google.com/file/d/15QRt7ld4g1ivOIeuHLavw21AaKt_PCbf/preview\" data-kind=\"drive\"></p>"
+ }
 }

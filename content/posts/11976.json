@@ -8,5 +8,10 @@
  "image": null,
  "imageAlt": "",
  "video": false,
- "body": "<p class=\"ext-embed\" data-href=\"https://www.facebook.com/ammar.sakaji.3/videos/3825574740864270/\" data-kind=\"facebook\"></p>"
+ "body": "<p class=\"ext-embed\" data-href=\"https://www.facebook.com/ammar.sakaji.3/videos/3825574740864270/\" data-kind=\"facebook\"></p>",
+ "en": {
+  "title": "Full recording of the prayer times symposium",
+  "excerpt": "",
+  "body": "<p class=\"ext-embed\" data-href=\"https://www.facebook.com/ammar.sakaji.3/videos/3825574740864270/\" data-kind=\"facebook\"></p>"
+ }
 }

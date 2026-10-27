@@ -8,5 +8,10 @@
  "image": "p/27e636f72c841ed7",
  "imageAlt": "",
  "video": false,
- "body": "<figure><img src=\"@media/p/408e740bc4097718.webp\" alt=\"\" width=\"960\" height=\"887\"></figure>"
+ "body": "<figure><img src=\"@media/p/408e740bc4097718.webp\" alt=\"\" width=\"960\" height=\"887\"></figure>",
+ "en": {
+  "title": "Speech by Dr. Awni Khasawneh, Head of the Regional Centre for Space Science and Technology Education for Western Asia, at an Arab online scientific symposium on the Hope Probe and its inspiring impact on the growth of the Arab space sector",
+  "excerpt": "",
+  "body": "<figure><img src=\"@media/p/408e740bc4097718.webp\" alt=\"\" width=\"960\" height=\"887\"></figure>"
+ }
 }

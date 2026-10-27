@@ -8,5 +8,10 @@
  "image": "p/4e2c9ed568d7ca24",
  "imageAlt": "",
  "video": true,
- "body": "<p class=\"yt\" data-yt=\"1ygsaNQALYo\"></p>"
+ "body": "<p class=\"yt\" data-yt=\"1ygsaNQALYo\"></p>",
+ "en": {
+  "title": "Lecture on black holes and gravitational waves by Prof. Shawqi Al-Dallal",
+  "excerpt": "",
+  "body": "<p class=\"yt\" data-yt=\"1ygsaNQALYo\"></p>"
+ }
 }

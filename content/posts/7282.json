@@ -4,9 +4,14 @@
  "lang": "ar",
  "type": "event",
  "title": "دعوة عامة – حضور المحاضرة العلمية ” المادة المظلمة تطور الفكرة والأدلة وخصائص الجاذبية والعديد من التفسيرات “",
- "excerpt": "رابط التسجيل:",
+ "excerpt": "",
  "image": "p/b85373094467a399",
  "imageAlt": "",
  "video": false,
- "body": "<figure><img src=\"@media/p/b85373094467a399.webp\" alt=\"\" width=\"639\" height=\"840\"></figure>\n"
+ "body": "<figure><img src=\"@media/p/b85373094467a399.webp\" alt=\"\" width=\"639\" height=\"840\"></figure>\n",
+ "en": {
+  "title": "Public invitation – lecture: \"Dark matter: the evolution of the idea, the evidence, its gravitational properties and its many interpretations\"",
+  "excerpt": "",
+  "body": "<figure><img src=\"@media/p/b85373094467a399.webp\" alt=\"\" width=\"639\" height=\"840\"></figure>"
+ }
 }

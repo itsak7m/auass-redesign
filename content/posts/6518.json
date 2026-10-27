@@ -4,9 +4,14 @@
  "lang": "ar",
  "type": "event",
  "title": "دعوة عامة – محاضرة بعنوان “علم الفلك من أجل التنمية في عهد 19-COVID “",
- "excerpt": "Announcement-for-Invitation-1 تنزيل للتسجيل أضغط هنا",
+ "excerpt": "",
  "image": "p/523e59e4ef1ceae5",
  "imageAlt": "",
  "video": false,
- "body": "<p><a href=\"@media/files/adb462735a834212.pdf\">Announcement-for-Invitation-1</a> — <a href=\"@media/files/adb462735a834212.pdf\" download>تنزيل الملف</a></p>\n<figure><img src=\"@media/p/25429d0dc03cc701.webp\" alt=\"\" width=\"793\" height=\"1133\"></figure>\n<p><strong></strong></p>"
+ "body": "<p><a href=\"@media/files/adb462735a834212.pdf\">Announcement-for-Invitation-1</a> — <a href=\"@media/files/adb462735a834212.pdf\" download>تنزيل الملف</a></p>\n<figure><img src=\"@media/p/25429d0dc03cc701.webp\" alt=\"\" width=\"793\" height=\"1133\"></figure>",
+ "en": {
+  "title": "Public invitation – lecture: \"Astronomy for development in the era of COVID-19\"",
+  "excerpt": "",
+  "body": "<p><a href=\"@media/files/adb462735a834212.pdf\">Announcement-for-Invitation-1</a> — <a href=\"@media/files/adb462735a834212.pdf\" download>Download the file</a></p>\n<figure><img src=\"@media/p/25429d0dc03cc701.webp\" alt=\"\" width=\"793\" height=\"1133\"></figure>"
+ }
 }
