@@ -1,0 +1,625 @@
+{
+ "title": {
+  "ar": "فوهات قمرية بأسماء علماء عرب ومسلمين",
+  "en": "Lunar craters named after Arab and Muslim scholars"
+ },
+ "lead": {
+  "ar": "خمس وعشرون فوهة على سطح القمر سمّاها الاتحاد الفلكي الدولي تكريماً لعلماء من الحضارة العربية والإسلامية. سبع منها في الجهة البعيدة التي لا تُرى من الأرض. لفّ القمر واختر فوهة.",
+  "en": "Twenty-five craters on the Moon were named by the International Astronomical Union in honour of scholars of Arab and Islamic civilisation. Seven lie on the far side, never visible from Earth. Spin the Moon and pick a crater."
+ },
+ "sides": {
+  "near": {
+   "ar": "الجهة القريبة",
+   "en": "Near side"
+  },
+  "limb": {
+   "ar": "قرب حافة القرص",
+   "en": "Near the limb"
+  },
+  "far": {
+   "ar": "الجهة البعيدة",
+   "en": "Far side"
+  }
+ },
+ "credits": {
+  "ar": "خريطة القمر: NASA، مركز غودارد، مشروع CGI Moon Kit (بيانات LRO/LROC وLOLA). الأسماء والإحداثيات والأقطار وسبب التسمية: سجل الاتحاد الفلكي الدولي لأسماء معالم الكواكب (IAU/WGPSN). قائمة الفوهات: الاتحاد العربي لعلوم الفضاء والفلك.",
+  "en": "Moon map: NASA Goddard, CGI Moon Kit (LRO/LROC and LOLA data). Names, coordinates, diameters and name origins: IAU Gazetteer of Planetary Nomenclature (WGPSN). Crater list: AUASS."
+ },
+ "bioNote": {
+  "ar": "نبذة مختصرة أُعدّت لهذا النموذج، وتحتاج مراجعة الاتحاد قبل اعتمادها.",
+  "en": "Short note written for this prototype; to be reviewed by AUASS before publication."
+ },
+ "craters": [
+  {
+   "id": "abulfeda",
+   "iauId": 23,
+   "la": "Abulfeda",
+   "ar": "أبو الفِدا",
+   "lat": -13.87,
+   "lon": 13.91,
+   "diam": 62.2,
+   "side": "near",
+   "scholar": {
+    "ar": "أبو الفداء",
+    "en": "Ismail Ibn Abū al-Fidā"
+   },
+   "origin": {
+    "ar": "إسماعيل أبو الفداء؛ جغرافي سوري (1273–1331).",
+    "en": "Ismail Ibn Abū al-Fidā; Syrian geographer (1273-1331)."
+   },
+   "bio": {
+    "ar": "أمير حماة ومؤرخ وجغرافي، مؤلف كتاب «تقويم البلدان».",
+    "en": "Prince of Hama, historian and geographer, author of Taqwim al-Buldan (A Sketch of the Countries)."
+   },
+   "approved": "1935"
+  },
+  {
+   "id": "abul-wafa",
+   "iauId": 22,
+   "la": "Abul Wafa",
+   "ar": "أبو الوفا",
+   "lat": 0.96,
+   "lon": 116.63,
+   "diam": 54.2,
+   "side": "far",
+   "scholar": {
+    "ar": "أبو الوفاء البوزجاني",
+    "en": "Abū al-Wafā al-Būzajāni"
+   },
+   "origin": {
+    "ar": "أبو الوفاء البوزجاني؛ رياضي وفلكي فارسي (940–998).",
+    "en": "Abū al-Wafā al-Būzajāni; Persian mathematician, astronomer (940-998)."
+   },
+   "bio": {
+    "ar": "عالم رياضيات وفلك من بوزجان في خراسان، عمل في بغداد، وأسهم في تطوير حساب المثلثات الكروي.",
+    "en": "Mathematician and astronomer from Buzjan in Khorasan who worked in Baghdad and helped develop spherical trigonometry."
+   },
+   "approved": "1970"
+  },
+  {
+   "id": "ulugh-beigh",
+   "iauId": 6207,
+   "la": "Ulugh Beigh",
+   "ar": "أُلغ بيك",
+   "lat": 32.67,
+   "lon": -81.96,
+   "diam": 57.0,
+   "side": "limb",
+   "scholar": {
+    "ar": "أولغ بيك",
+    "en": "Ulugh-Beg"
+   },
+   "origin": {
+    "ar": "أولغ بيك؛ فلكي ورياضي مغولي (1394–1449).",
+    "en": "Ulugh-Beg; Mongolian astronomer, mathematician (1394-1449)."
+   },
+   "bio": {
+    "ar": "حاكم سمرقند وفلكي، بنى مرصد سمرقند وأصدر «زيج السلطان» وفيه فهرس للنجوم.",
+    "en": "Ruler of Samarkand and astronomer who built the Samarkand observatory and compiled a star catalogue in his Zij-i Sultani."
+   },
+   "approved": "1961"
+  },
+  {
+   "id": "ibn-bajja",
+   "iauId": 14534,
+   "la": "Ibn Bajja",
+   "ar": "ابن باجة",
+   "lat": -86.3,
+   "lon": -75.04,
+   "diam": 12.0,
+   "side": "limb",
+   "scholar": {
+    "ar": "ابن باجة",
+    "en": "Spanish-Arab astronomer and philosopher (c. 1095-1138)."
+   },
+   "origin": {
+    "ar": "فلكي وفيلسوف عربي أندلسي (نحو 1095–1138).",
+    "en": "Spanish-Arab astronomer and philosopher (c. 1095-1138)."
+   },
+   "bio": {
+    "ar": "فيلسوف وعالم أندلسي من سرقسطة، كتب في الفلك والطبيعيات والموسيقى.",
+    "en": "Andalusian philosopher and scholar from Zaragoza who wrote on astronomy, physics and music."
+   },
+   "approved": "Jan 22, 2009",
+   "auassNote": {
+    "ar": "القطر في جدول الاتحاد 13 كم.",
+    "en": "The AUASS table lists 13 km."
+   }
+  },
+  {
+   "id": "ibn-battuta",
+   "iauId": 2633,
+   "la": "Ibn Battuta",
+   "ar": "ابن بطوطة",
+   "lat": -6.95,
+   "lon": 50.44,
+   "diam": 11.5,
+   "side": "near",
+   "scholar": {
+    "ar": "ابن بطوطة",
+    "en": "Abu Abd Allah Mohammed Ibn Abd Allah"
+   },
+   "origin": {
+    "ar": "أبو عبد الله محمد بن عبد الله؛ جغرافي مغربي (1304–1377).",
+    "en": "Abu Abd Allah Mohammed Ibn Abd Allah; Moroccan geographer (1304-1377)."
+   },
+   "bio": {
+    "ar": "رحالة من طنجة، دوّن رحلاته في كتاب «تحفة النظار في غرائب الأمصار وعجائب الأسفار».",
+    "en": "Traveller from Tangier who recorded his journeys in the Rihla."
+   },
+   "approved": "1976"
+  },
+  {
+   "id": "ibn-rushd",
+   "iauId": 2636,
+   "la": "Ibn Rushd",
+   "ar": "ابن رُشد",
+   "lat": -11.69,
+   "lon": 21.71,
+   "diam": 31.1,
+   "side": "near",
+   "scholar": {
+    "ar": "ابن رشد",
+    "en": "Abu al-Walîd Ibn Rushd (Averroës)"
+   },
+   "origin": {
+    "ar": "أبو الوليد بن رشد؛ فيلسوف وطبيب عربي أندلسي (1126–1198).",
+    "en": "Abu al-Walîd Ibn Rushd (Averroës); Spanish-Arab philosopher/doctor (1126-1198)."
+   },
+   "bio": {
+    "ar": "فيلسوف وطبيب وقاضٍ من قرطبة، اشتهر بشروحه على مؤلفات أرسطو.",
+    "en": "Philosopher, physician and judge from Córdoba, famous for his commentaries on Aristotle."
+   },
+   "approved": "1976"
+  },
+  {
+   "id": "avicenna",
+   "iauId": 509,
+   "la": "Avicenna",
+   "ar": "ابن سينا",
+   "lat": 39.63,
+   "lon": -97.28,
+   "diam": 73.0,
+   "side": "far",
+   "scholar": {
+    "ar": "ابن سينا",
+    "en": "Abu Ali Al-Hussein Ibn Abdallah"
+   },
+   "origin": {
+    "ar": "أبو علي الحسين بن عبد الله (ابن سينا)؛ طبيب فارسي (980–1037).",
+    "en": "Abu Ali Al-Hussein Ibn Abdallah; Persian doctor (980-1037)."
+   },
+   "bio": {
+    "ar": "طبيب وفيلسوف، مؤلف «القانون في الطب» الذي ظل مرجعاً في الطب قروناً طويلة.",
+    "en": "Physician and philosopher, author of the Canon of Medicine, a standard medical reference for centuries."
+   },
+   "approved": "1970"
+  },
+  {
+   "id": "ibn-firnas",
+   "iauId": 2634,
+   "la": "Ibn Firnas",
+   "ar": "ابن فرناس",
+   "lat": 6.83,
+   "lon": 122.3,
+   "diam": 88.3,
+   "side": "far",
+   "scholar": {
+    "ar": "عباس بن فرناس",
+    "en": "Abbas Ibn Firnas"
+   },
+   "origin": {
+    "ar": "عباس بن فرناس؛ عالم وتقني عربي أندلسي (توفي 887).",
+    "en": "Abbas Ibn Firnas; Spanish-Arab humanitarian, technologist (unkn- A.D. 887)."
+   },
+   "bio": {
+    "ar": "عالم ومخترع من قرطبة، يُروى أنه من أوائل من حاولوا الطيران.",
+    "en": "Scholar and inventor from Córdoba, remembered as one of the first people to attempt flight."
+   },
+   "approved": "1976"
+  },
+  {
+   "id": "ibn-yunus",
+   "iauId": 2635,
+   "la": "Ibn Yunus",
+   "ar": "ابن يونس",
+   "lat": 14.14,
+   "lon": 91.14,
+   "diam": 59.7,
+   "side": "far",
+   "scholar": {
+    "ar": "ابن يونس المصري",
+    "en": "Abul al-Hasan ben Ahmad"
+   },
+   "origin": {
+    "ar": "أبو الحسن علي بن عبد الرحمن بن أحمد (ابن يونس)؛ فلكي مصري (950–1009).",
+    "en": "Abul al-Hasan ben Ahmad; Egyptian astronomer (950-1009)."
+   },
+   "bio": {
+    "ar": "فلكي في القاهرة الفاطمية، مؤلف «الزيج الحاكمي الكبير».",
+    "en": "Astronomer in Fatimid Cairo, author of al-Zij al-Hakimi al-Kabir."
+   },
+   "approved": "1970"
+  },
+  {
+   "id": "albategnius",
+   "iauId": 162,
+   "la": "Albategnius",
+   "ar": "البتاني",
+   "lat": -11.24,
+   "lon": 4.01,
+   "diam": 130.8,
+   "side": "near",
+   "scholar": {
+    "ar": "البتاني",
+    "en": "Muhammed Ben Geber Al-Battānī"
+   },
+   "origin": {
+    "ar": "محمد بن جابر البتاني؛ فلكي ورياضي عربي (نحو 858–929).",
+    "en": "Muhammed Ben Geber Al-Battānī; Arab astronomer, mathematician (c. 858-929)."
+   },
+   "bio": {
+    "ar": "فلكي من حرّان عمل في الرقة، اشتهر بأرصاده الدقيقة وبتحديده طول السنة الشمسية، ومن أشهر أعماله «الزيج الصابئ».",
+    "en": "Astronomer from Harran who worked in Raqqa, known for precise observations and his value for the length of the solar year; author of al-Zij al-Sabi'."
+   },
+   "approved": "1935",
+   "auassNote": {
+    "ar": "القطر في جدول الاتحاد 114 كم.",
+    "en": "The AUASS table lists 114 km."
+   }
+  },
+  {
+   "id": "alpetragius",
+   "iauId": 202,
+   "la": "Alpetragius",
+   "ar": "البطروجي",
+   "lat": -16.05,
+   "lon": -4.51,
+   "diam": 40.0,
+   "side": "near",
+   "scholar": {
+    "ar": "أبو إسحاق البطروجي",
+    "en": "Al-Bitrūjī Al-Ishbīlī, Abū Ishāq"
+   },
+   "origin": {
+    "ar": "أبو إسحاق البطروجي الإشبيلي؛ فلكي أندلسي (توفي نحو 1100).",
+    "en": "Al-Bitrūjī Al-Ishbīlī, Abū Ishāq; Spanish astronomer (unkn-c. 1100)."
+   },
+   "bio": {
+    "ar": "فلكي أندلسي اقترح نموذجاً بديلاً لحركة الكواكب عن نموذج بطليموس.",
+    "en": "Andalusian astronomer who proposed an alternative to Ptolemy's model of planetary motion."
+   },
+   "approved": "1935"
+  },
+  {
+   "id": "al-bakri",
+   "iauId": 145,
+   "la": "Al Bakri",
+   "ar": "البكري",
+   "lat": 14.34,
+   "lon": 20.25,
+   "diam": 12.2,
+   "side": "near",
+   "scholar": {
+    "ar": "أبو عبيد البكري",
+    "en": "Abū Ubayd Abdallāh Ibn abd al-Azīz Ibn Muhammad"
+   },
+   "origin": {
+    "ar": "أبو عبيد عبد الله بن عبد العزيز بن محمد؛ جغرافي عربي أندلسي (1010–1094).",
+    "en": "Abū Ubayd Abdallāh Ibn abd al-Azīz Ibn Muhammad; Spanish-Arab geographer (1010-1094)."
+   },
+   "bio": {
+    "ar": "جغرافي ومؤرخ من الأندلس، مؤلف كتاب «المسالك والممالك».",
+    "en": "Geographer and historian from al-Andalus, author of al-Masalik wa-l-Mamalik (Book of Roads and Kingdoms)."
+   },
+   "approved": "1976"
+  },
+  {
+   "id": "al-biruni",
+   "iauId": 146,
+   "la": "Al Biruni",
+   "ar": "البيروني",
+   "lat": 18.07,
+   "lon": 92.62,
+   "diam": 80.4,
+   "side": "far",
+   "scholar": {
+    "ar": "أبو الريحان البيروني",
+    "en": "Abū ar-Rayhān Muhammad ibn Ahmad al-Birūnī"
+   },
+   "origin": {
+    "ar": "أبو الريحان محمد بن أحمد البيروني؛ فلكي ورياضي وجغرافي فارسي (973–1048).",
+    "en": "Abū ar-Rayhān Muhammad ibn Ahmad al-Birūnī; Persian astronomer, mathematician, geographer (973-1048)."
+   },
+   "bio": {
+    "ar": "عالم موسوعي من خوارزم كتب في الفلك والرياضيات والجغرافيا، وقدّر نصف قطر الأرض، ومن أشهر كتبه «القانون المسعودي».",
+    "en": "Polymath from Khwarazm who wrote on astronomy, mathematics and geography, estimated the Earth's radius, and wrote al-Qanun al-Mas'udi."
+   },
+   "approved": "1970"
+  },
+  {
+   "id": "alhazen",
+   "iauId": 183,
+   "la": "Alhazen",
+   "ar": "الحسن",
+   "lat": 15.91,
+   "lon": 71.83,
+   "diam": 34.6,
+   "side": "limb",
+   "scholar": {
+    "ar": "الحسن بن الهيثم",
+    "en": "Abū Ali Al-Hasan Ibn Al Haitham"
+   },
+   "origin": {
+    "ar": "أبو علي الحسن بن الهيثم؛ رياضي عراقي (987–1038).",
+    "en": "Abū Ali Al-Hasan Ibn Al Haitham; Iraqi mathematician (987-1038)."
+   },
+   "bio": {
+    "ar": "عالم من البصرة عمل في القاهرة، مؤلف «كتاب المناظر» في علم البصريات، ويُعدّ من رواد المنهج التجريبي.",
+    "en": "Scholar from Basra who worked in Cairo, author of the Book of Optics and a pioneer of the experimental method."
+   },
+   "approved": "1935"
+  },
+  {
+   "id": "al-khwarizmi",
+   "iauId": 149,
+   "la": "Al Khwarizmi",
+   "ar": "الخوارزمي",
+   "lat": 7.02,
+   "lon": 107.01,
+   "diam": 56.2,
+   "side": "far",
+   "scholar": {
+    "ar": "محمد بن موسى الخوارزمي",
+    "en": "Abū Ja'far Muhammad Ibn Mūsā"
+   },
+   "origin": {
+    "ar": "أبو جعفر محمد بن موسى؛ رياضي عراقي (توفي بعد 847).",
+    "en": "Abū Ja'far Muhammad Ibn Mūsā; Iraqi mathematician (unkn-after 847)."
+   },
+   "bio": {
+    "ar": "رياضي وفلكي في بيت الحكمة ببغداد، أعطى كتابه في الجبر هذا العلمَ اسمه، ومن اسمه جاءت كلمة «خوارزمية».",
+    "en": "Mathematician and astronomer at the House of Wisdom in Baghdad; his book on al-jabr gave algebra its name, and his own name gave us the word \"algorithm\"."
+   },
+   "approved": "1973",
+   "auassNote": {
+    "ar": "القطر في جدول الاتحاد 65 كم.",
+    "en": "The AUASS table lists 65 km."
+   }
+  },
+  {
+   "id": "arzachel",
+   "iauId": 412,
+   "la": "Arzachel",
+   "ar": "الزرقالي",
+   "lat": -18.26,
+   "lon": -1.93,
+   "diam": 97.0,
+   "side": "near",
+   "scholar": {
+    "ar": "أبو إسحاق إبراهيم الزرقالي",
+    "en": "Al-Zarqālī"
+   },
+   "origin": {
+    "ar": "الزرقالي؛ فلكي عربي أندلسي (توفي 1100).",
+    "en": "Al-Zarqālī; Spanish-Arabic astronomer (died 1100)."
+   },
+   "bio": {
+    "ar": "فلكي وصانع آلات من طليطلة، أسهم في «الأزياج الطليطلية»، وابتكر الصفيحة الزرقالية، وهي نوع من الإسطرلاب يصلح لكل خطوط العرض.",
+    "en": "Astronomer and instrument maker from Toledo who contributed to the Toledan Tables and devised the saphea, a universal astrolabe plate."
+   },
+   "approved": "1935"
+  },
+  {
+   "id": "azophi",
+   "iauId": 524,
+   "la": "Azophi",
+   "ar": "الصوفي",
+   "lat": -22.19,
+   "lon": 12.7,
+   "diam": 47.5,
+   "side": "near",
+   "scholar": {
+    "ar": "عبد الرحمن الصوفي",
+    "en": "Al-Sufi, Abderrahman"
+   },
+   "origin": {
+    "ar": "عبد الرحمن الصوفي؛ فلكي فارسي (903–986).",
+    "en": "Al-Sufi, Abderrahman; Persian astronomer (903-986)."
+   },
+   "bio": {
+    "ar": "فلكي، مؤلف «كتاب صور الكواكب الثابتة»، وفيه أقدم وصف معروف لمجرة المرأة المسلسلة (أندروميدا).",
+    "en": "Astronomer, author of the Book of Fixed Stars, which contains the earliest known description of the Andromeda Galaxy."
+   },
+   "approved": "1935"
+  },
+  {
+   "id": "alfraganus",
+   "iauId": 181,
+   "la": "Alfraganus",
+   "ar": "الفرغاني",
+   "lat": -5.42,
+   "lon": 18.97,
+   "diam": 20.5,
+   "side": "near",
+   "scholar": {
+    "ar": "أحمد بن كثير الفرغاني",
+    "en": "Al-Fargani, Abu'l-'Abbās Ahmad Ibn Muhammad Ibn Kathīr"
+   },
+   "origin": {
+    "ar": "أبو العباس أحمد بن محمد بن كثير الفرغاني؛ فلكي فارسي (توفي نحو 840).",
+    "en": "Al-Fargani, Abu'l-'Abbās Ahmad Ibn Muhammad Ibn Kathīr; Persian astronomer (unkn-c. 840)."
+   },
+   "bio": {
+    "ar": "فلكي عمل في بغداد في عهد المأمون، تُرجم كتابه «جوامع علم النجوم» إلى اللاتينية وانتشر في أوروبا.",
+    "en": "Astronomer in Baghdad under al-Ma'mun; his Elements of Astronomy was translated into Latin and widely read in Europe."
+   },
+   "approved": "1935"
+  },
+  {
+   "id": "almanon",
+   "iauId": 196,
+   "la": "Almanon",
+   "ar": "المأمون",
+   "lat": -16.85,
+   "lon": 15.14,
+   "diam": 47.8,
+   "side": "near",
+   "scholar": {
+    "ar": "الخليفة عبد الله المأمون",
+    "en": "Abdalla Al Mamun"
+   },
+   "origin": {
+    "ar": "عبد الله المأمون؛ فلكي فارسي (786–833).",
+    "en": "Abdalla Al Mamun; Persian astronomer (786-833)."
+   },
+   "bio": {
+    "ar": "الخليفة العباسي الذي رعى بيت الحكمة في بغداد، وأمر بإنشاء مراصد فلكية وبقياس طول درجة من خط الزوال.",
+    "en": "The Abbasid caliph who sponsored the House of Wisdom in Baghdad, founded observatories, and commissioned a measurement of a degree of the meridian."
+   },
+   "approved": "1935"
+  },
+  {
+   "id": "al-marrakushi",
+   "iauId": 150,
+   "la": "Al Marrakushi",
+   "ar": "المراكشي",
+   "lat": -10.45,
+   "lon": 55.77,
+   "diam": 8.6,
+   "side": "near",
+   "scholar": {
+    "ar": "أبو علي الحسن المراكشي",
+    "en": "Abū `Ali al-Hasan Ibn `Ali al-Marrakushi"
+   },
+   "origin": {
+    "ar": "أبو علي الحسن بن علي المراكشي؛ فلكي ورياضي مغربي (نشط نحو 1281/1282).",
+    "en": "Abū `Ali al-Hasan Ibn `Ali al-Marrakushi; Moroccan astronomer, mathematician (fl. c. A.D. 1281/1282)."
+   },
+   "bio": {
+    "ar": "فلكي ورياضي مغربي، ألّف كتاباً موسوعياً في علم الميقات والآلات الفلكية والمزاول بعنوان «جامع المبادئ والغايات في علم الميقات».",
+    "en": "Moroccan astronomer and mathematician who wrote an encyclopaedic work on timekeeping, astronomical instruments and sundials, Jami' al-Mabadi' wa-l-Ghayat."
+   },
+   "approved": "1976",
+   "auassNote": {
+    "ar": "جدول الاتحاد ينسب الفوهة إلى ابن البناء المراكشي، بينما يذكر سجل الاتحاد الفلكي الدولي أبا علي الحسن المراكشي.",
+    "en": "The AUASS table attributes this crater to Ibn al-Banna al-Marrakushi; the IAU gazetteer names Abu Ali al-Hasan al-Marrakushi."
+   }
+  },
+  {
+   "id": "thebit",
+   "iauId": 5957,
+   "la": "Thebit",
+   "ar": "ثابت بن قرّة",
+   "lat": -22.01,
+   "lon": -4.02,
+   "diam": 54.6,
+   "side": "near",
+   "scholar": {
+    "ar": "ثابت بن قرة",
+    "en": "Al-Sābi' al-Harrani Thābit Ibn Qurra"
+   },
+   "origin": {
+    "ar": "ثابت بن قرة الصابئ الحرّاني؛ فلكي عراقي (836–901).",
+    "en": "Al-Sābi' al-Harrani Thābit Ibn Qurra; Iraqi astronomer (836-901)."
+   },
+   "bio": {
+    "ar": "رياضي وفلكي ومترجم من حرّان عمل في بغداد، ترجم وصحّح كتباً يونانية في الرياضيات والفلك.",
+    "en": "Mathematician, astronomer and translator from Harran who worked in Baghdad, translating and correcting Greek works on mathematics and astronomy."
+   },
+   "approved": "1935"
+  },
+  {
+   "id": "geber",
+   "iauId": 2128,
+   "la": "Geber",
+   "ar": "جابر",
+   "lat": -19.46,
+   "lon": 13.85,
+   "diam": 44.7,
+   "side": "near",
+   "scholar": {
+    "ar": "جابر بن أفلح",
+    "en": "Jābir Ibn Aflah Al-Ishbīlī, Abū Muhammad"
+   },
+   "origin": {
+    "ar": "أبو محمد جابر بن أفلح الإشبيلي؛ فلكي عربي أندلسي (النصف الأول من القرن الثاني عشر).",
+    "en": "Jābir Ibn Aflah Al-Ishbīlī, Abū Muhammad; Spanish-Arab astronomer (fl. first half of twelfth cent.)."
+   },
+   "bio": {
+    "ar": "فلكي ورياضي من إشبيلية، انتقد بعض جوانب نظام بطليموس، وأسهم في حساب المثلثات الكروي.",
+    "en": "Astronomer and mathematician from Seville who criticised parts of Ptolemy's system and contributed to spherical trigonometry."
+   },
+   "approved": "1935"
+  },
+  {
+   "id": "omar-khayyam",
+   "iauId": 4456,
+   "la": "Omar Khayyam",
+   "ar": "عمر الخيام",
+   "lat": 58.21,
+   "lon": -102.22,
+   "diam": 68.6,
+   "side": "far",
+   "scholar": {
+    "ar": "عمر الخيام",
+    "en": "Al-Khayyāmī"
+   },
+   "origin": {
+    "ar": "الخيامي؛ رياضي وفلكي وشاعر فارسي (نحو 1048 – نحو 1131).",
+    "en": "Al-Khayyāmī; Persian mathematician, astronomer, poet (c. 1048-c. 1131)."
+   },
+   "bio": {
+    "ar": "رياضي وفلكي وشاعر، أسهم في إصلاح التقويم (التقويم الجلالي)، واشتهر برباعياته.",
+    "en": "Mathematician, astronomer and poet who helped reform the calendar (the Jalali calendar) and is famous for his quatrains."
+   },
+   "approved": "1970"
+  },
+  {
+   "id": "messala",
+   "iauId": 3868,
+   "la": "Messala",
+   "ar": "ما شاء الله",
+   "lat": 39.31,
+   "lon": 60.06,
+   "diam": 122.4,
+   "side": "near",
+   "scholar": {
+    "ar": "ما شاء الله بن أثري البصري",
+    "en": "(Ma-Sa-Allah)"
+   },
+   "origin": {
+    "ar": "ما شاء الله؛ فلكي يهودي (توفي نحو 815).",
+    "en": "(Ma-Sa-Allah); Jewish astronomer (unkn- c. 815)."
+   },
+   "bio": {
+    "ar": "فلكي من البصرة عمل في بلاط الخليفة المنصور وشارك في اختيار موعد تأسيس بغداد، وتُنسب إليه رسالة في الإسطرلاب.",
+    "en": "Astronomer from Basra at the court of Caliph al-Mansur who helped choose the date for founding Baghdad; a treatise on the astrolabe is attributed to him."
+   },
+   "approved": "1935"
+  },
+  {
+   "id": "nasireddin",
+   "iauId": 4157,
+   "la": "Nasireddin",
+   "ar": "نصير الدين",
+   "lat": -41.04,
+   "lon": 0.14,
+   "diam": 52.0,
+   "side": "near",
+   "scholar": {
+    "ar": "نصير الدين الطوسي",
+    "en": "Nasir-Al-Din (Mohammed Ibn Hassan)"
+   },
+   "origin": {
+    "ar": "نصير الدين (محمد بن الحسن)؛ فلكي فارسي (1201–1274).",
+    "en": "Nasir-Al-Din (Mohammed Ibn Hassan); Persian astronomer (1201-1274)."
+   },
+   "bio": {
+    "ar": "فلكي وفيلسوف أسس مرصد مراغة، وابتكر ما يُعرف بـ «مزدوجة الطوسي».",
+    "en": "Astronomer and philosopher who founded the Maragha observatory and devised the \"Tusi couple\"."
+   },
+   "approved": "1935"
+  }
+ ]
+}

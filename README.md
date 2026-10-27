@@ -29,6 +29,7 @@ A redesign concept for the Arab Union for Astronomy and Space Sciences website. 
 npm run build                    # يبني docs/ من content/ و src/
 node tools/check.js [shots-dir]  # يفحص: scroll أفقي، روابط داخلية، صور، أخطاء JS، noindex، سطر التذييل
 node tools/before-after-shots.js && npm run build   # يحدّث لقطات صفحة "قبل وبعد"
+node tools/moon-preview.js && npm run build         # يحدّث صورة القمر المصغّرة بالرئيسية
 ```
 
 ما في أي مكتبة لازمة للبناء، بس Node 18 أو أحدث. الفحص بيحتاج Playwright.
@@ -37,7 +38,13 @@ node tools/before-after-shots.js && npm run build   # يحدّث لقطات صف
 
 بنعدّل `content/sky.json` (الشهر، والأحداث، وأطوار القمر) من جدول الاتحاد الشهري، وبعدين بنشغّل `npm run build`. الحدث الجاي بيتحدد ويتميّز تلقائياً حسب تاريخ اليوم.
 
+## القمر التفاعلي (`/moon/`)
+
+بيانات الفوهات بملف `content/moon.json`، والكود بـ `src/assets/js/moon.js` (three.js بنسخة محلية بمجلد `src/assets/vendor/`). القمر بيستعمل خريطة 2K أو 4K حسب حجم الشاشة، وإذا الجهاز ما بيدعم WebGL بتظهر خريطة مسطحة عليها نفس العلامات.
+
 ## مصادر الصور
 
 - صورة الواجهة: سديم القاعدة بعدسة تلسكوب جيمس ويب (NASA, ESA, CSA, STScI).
+- خريطة القمر: NASA Goddard، مشروع CGI Moon Kit (بيانات LRO/LROC وLOLA).
+- بيانات الفوهات: سجل الاتحاد الفلكي الدولي لأسماء معالم الكواكب (IAU/WGPSN).
 - الشعار وصور الأخبار والقيادة من موقع الاتحاد.

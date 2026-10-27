@@ -11,7 +11,7 @@ const ROOT = path.join(__dirname, '..');
 const OUT = path.join(ROOT, 'docs');
 const load = (n) => JSON.parse(fs.readFileSync(path.join(ROOT, 'content', n + '.json'), 'utf8'));
 const site = load('site'), news = load('news'), events = load('events'), sky = load('sky');
-const about = load('about'), library = load('library'), join = load('join');
+const about = load('about'), library = load('library'), join = load('join'), moon = load('moon');
 const LANGS = ['ar', 'en'];
 const BUILD_VERSION = Date.now().toString(36);
 
@@ -305,6 +305,15 @@ function homePage(ctx) {
     { id: 'books', glyph: 'book', n: counts.books, unit: ui('كتاباً عربياً في الفلك', 'Arabic astronomy books') }
   ].map((h) => {
     const c = library.collections.find((x) => x.id === h.id);
+    if (h.id === 'craters') {
+      return `<a class="heritage-card moon-card reveal" href="${ctx.r(prefix(lang) + 'moon/')}">
+  <img class="mc-img" src="${ctx.r('assets/img/moon/moon-preview.jpg')}" alt="" loading="lazy" width="320" height="320">
+  <p class="hc-n"><b>${h.n}</b> ${esc(t(h.unit, lang))}</p>
+  <h3 class="hc-title">${esc(t(c.title, lang))}</h3>
+  <p class="hc-desc">${lang === 'ar' ? 'لفّ القمر ثلاثي الأبعاد واكتشف الفوهات وأصحابها، ومنها سبع في الجهة البعيدة.' : 'Spin a 3D Moon and discover each crater and its namesake, including seven on the far side.'}</p>
+  <span class="more">${lang === 'ar' ? 'استكشف القمر' : 'Explore the Moon'}${icon('arrow', 'ico flip')}</span>
+</a>`;
+    }
     return `<a class="heritage-card reveal" href="${ctx.r(prefix(lang) + 'library/')}?c=${h.id}">
   ${icon(h.glyph, 'ico big')}
   <p class="hc-n"><b>${h.n}</b> ${esc(t(h.unit, lang))}</p>
@@ -433,7 +442,8 @@ function libraryPage(ctx) {
     const rows = items.map((i) => {
       const title = t(i.title, lang), alt = i.alt ? t(i.alt, lang) : '';
       const text = [title, alt, t(i.meta, lang), i.sub ? t(i.sub, lang) : ''].join(' ').toLowerCase();
-      const link = i.url ? `<a class="li-link" href="${i.url}" target="_blank" rel="noopener">${icon(i.kind === 'pdf' ? 'download' : 'external')}<span>${i.kind === 'pdf' ? (lang === 'ar' ? 'تحميل PDF' : 'Download PDF') : (lang === 'ar' ? 'زيارة الموقع' : 'Visit site')}</span></a>` : '';
+      const moonLink = i.c === 'craters' ? `<a class="li-link" href="${ctx.r(prefix(lang) + 'moon/')}#${i.alt.ar.toLowerCase().replace(/[^a-z]+/g, '-')}">${icon('crater')}<span>${lang === 'ar' ? 'على القمر' : 'On the Moon'}</span></a>` : '';
+      const link = moonLink || (i.url ? `<a class="li-link" href="${i.url}" target="_blank" rel="noopener">${icon(i.kind === 'pdf' ? 'download' : 'external')}<span>${i.kind === 'pdf' ? (lang === 'ar' ? 'تحميل PDF' : 'Download PDF') : (lang === 'ar' ? 'زيارة الموقع' : 'Visit site')}</span></a>` : '');
       return `<li class="lib-item${i.featured ? ' featured' : ''}" data-text="${esc(text)}">
   ${i.n ? `<span class="li-n">${i.n}</span>` : ''}
   <div class="li-main">
@@ -445,7 +455,7 @@ function libraryPage(ctx) {
 </li>`;
     }).join('');
     return `<section class="lib-group" data-group="${c.id}" id="c-${c.id}">
-  <header class="lg-head">${icon(c.glyph, 'ico big')}<div><h2>${esc(t(c.title, lang))}</h2><p>${esc(t(c.desc, lang))}</p></div></header>
+  <header class="lg-head">${icon(c.glyph, 'ico big')}<div><h2>${esc(t(c.title, lang))}</h2><p>${esc(t(c.desc, lang))}</p>${c.id === 'craters' ? `<a class="btn btn-navy lg-cta" href="${ctx.r(prefix(lang) + 'moon/')}">${icon('crater')}${lang === 'ar' ? 'استكشفها على القمر ثلاثي الأبعاد' : 'Explore them on the 3D Moon'}</a>` : ''}</div></header>
   <ul class="lib-list${c.id === 'constellations' || c.id === 'craters' ? ' cols' : ''}">${rows}</ul>
   <button type="button" class="lib-more" data-more hidden>${lang === 'ar' ? `عرض الكل (${items.length})` : `Show all (${items.length})`}</button>
 </section>`;
@@ -656,6 +666,81 @@ function beforeAfterPage(ctx) {
   return page(ctx, { title: 'قبل وبعد' }, main);
 }
 
+function moonPage(ctx) {
+  const { lang } = ctx;
+  const sideName = (s) => t(moon.sides[s], lang);
+  const fmtLat = (v) => `${Math.abs(v).toFixed(2)}° ${lang === 'ar' ? (v >= 0 ? 'شمالاً' : 'جنوباً') : v >= 0 ? 'N' : 'S'}`;
+  const fmtLon = (v) => `${Math.abs(v).toFixed(2)}° ${lang === 'ar' ? (v >= 0 ? 'شرقاً' : 'غرباً') : v >= 0 ? 'E' : 'W'}`;
+  const cname = (c) => (lang === 'ar' ? c.ar : c.la);
+  const list = moon.craters.map((c) => `<li><a class="crater-btn" href="#${c.id}" data-crater="${c.id}" data-side="${c.side}" data-text="${esc([c.ar, c.la, c.scholar.ar, c.scholar.en].join(' ').toLowerCase())}">
+  <span class="cb-name">${esc(cname(c))}</span>
+  <span class="cb-sch">${esc(t(c.scholar, lang))}</span>
+  <span class="cb-side side-${c.side}">${esc(sideName(c.side))}</span>
+</a></li>`).join('');
+  const details = moon.craters.map((c) => `<article class="crater-detail" id="${c.id}" data-detail="${c.id}">
+  <p class="kicker">${lang === 'ar' ? 'فوهة' : 'Crater'} · ${esc(sideName(c.side))}</p>
+  <h2 class="cd-title">${esc(cname(c))} <span class="cd-alt" ${lang === 'ar' ? 'lang="en" dir="ltr"' : 'lang="ar" dir="rtl"'}>${esc(lang === 'ar' ? c.la : c.ar)}</span></h2>
+  <dl class="cd-facts">
+    <div><dt>${lang === 'ar' ? 'خط العرض' : 'Latitude'}</dt><dd dir="ltr">${fmtLat(c.lat)}</dd></div>
+    <div><dt>${lang === 'ar' ? 'خط الطول' : 'Longitude'}</dt><dd dir="ltr">${fmtLon(c.lon)}</dd></div>
+    <div><dt>${lang === 'ar' ? 'القطر' : 'Diameter'}</dt><dd>${c.diam} ${lang === 'ar' ? 'كم' : 'km'}</dd></div>
+  </dl>
+  <h3 class="cd-h">${lang === 'ar' ? 'سبب التسمية' : 'Named after'}</h3>
+  <p class="cd-origin">${esc(t(c.origin, lang))}</p>
+  ${lang === 'ar' ? `<p class="cd-origin-en" lang="en" dir="ltr">IAU: ${esc(c.origin.en)}</p>` : ''}
+  <h3 class="cd-h">${lang === 'ar' ? 'نبذة' : 'About'}</h3>
+  <p class="cd-bio">${esc(t(c.bio, lang))}</p>
+  <p class="cd-note">${esc(t(moon.bioNote, lang))}</p>
+  ${c.auassNote ? `<p class="cd-note">${icon('info')} ${esc(t(c.auassNote, lang))}</p>` : ''}
+  <a class="more" href="https://planetarynames.wr.usgs.gov/Feature/${c.iauId}" target="_blank" rel="noopener">${lang === 'ar' ? 'السجل الرسمي في الاتحاد الفلكي الدولي' : 'Official IAU gazetteer entry'}${icon('external')}</a>
+</article>`).join('');
+  const pins = moon.craters.map((c) => `<a class="map-pin" href="#${c.id}" data-crater="${c.id}" style="left:${(((c.lon + 180) / 360) * 100).toFixed(2)}%;top:${(((90 - c.lat) / 180) * 100).toFixed(2)}%" aria-label="${esc(cname(c))}"></a>`).join('');
+  const data = moon.craters.map((c) => ({ id: c.id, lat: c.lat, lon: c.lon, diam: c.diam, name: cname(c) }));
+  const main = `${pageHero(ctx, { eyebrow: lang === 'ar' ? 'التراث الفلكي العربي' : 'Arab astronomical heritage', title: t(moon.title, lang), lead: t(moon.lead, lang), crumbs: [{ label: lang === 'ar' ? 'المكتبة' : 'Library', href: ctx.r(prefix(lang) + 'library/') }, { label: lang === 'ar' ? 'القمر' : 'The Moon' }] })}
+<section class="moon dark" aria-label="${esc(t(moon.title, lang))}" data-moon>
+  <div class="wrap moon-grid">
+    <div class="moon-stage" data-stage>
+      ${rete('rete moon-rete', 2)}
+      <div class="moon-map" data-map dir="ltr">
+        <img src="${ctx.r('assets/img/moon/moon-2k.jpg')}" alt="${lang === 'ar' ? 'خريطة مسطحة لسطح القمر عليها مواقع الفوهات' : 'Flat map of the lunar surface with crater locations'}" width="2048" height="1024" loading="lazy">
+        ${pins}
+      </div>
+      <canvas class="moon-canvas" data-canvas role="img" aria-label="${lang === 'ar' ? 'نموذج ثلاثي الأبعاد للقمر يمكن تدويره، عليه مواقع الفوهات' : 'Rotatable 3D model of the Moon showing the craters'}" hidden></canvas>
+      <div class="moon-label" data-label hidden></div>
+      <div class="moon-ctrl" data-ctrl hidden>
+        <button type="button" class="round-btn" data-act="in" aria-label="${lang === 'ar' ? 'تكبير' : 'Zoom in'}">+</button>
+        <button type="button" class="round-btn" data-act="out" aria-label="${lang === 'ar' ? 'تصغير' : 'Zoom out'}">−</button>
+        <button type="button" class="pill-btn" data-act="flip">${lang === 'ar' ? 'الجهة الأخرى' : 'Other side'}</button>
+        <button type="button" class="pill-btn" data-act="reset">${lang === 'ar' ? 'الوجه المقابل للأرض' : 'Earth-facing side'}</button>
+      </div>
+      <p class="moon-hint" data-hint hidden>${lang === 'ar' ? 'اسحب لتدوير القمر، واضغط على علامة لعرض الفوهة' : 'Drag to spin the Moon; tap a marker to open a crater'}</p>
+    </div>
+    <aside class="moon-panel">
+      <div class="moon-details" data-details aria-live="polite">
+        <div class="crater-intro" data-intro>
+          ${icon('crater', 'ico big')}
+          <p>${lang === 'ar' ? 'اختر فوهة من القائمة أو من القمر لعرض موقعها وصاحبها وسبب تسميتها.' : 'Pick a crater from the list or on the Moon to see where it is, who it honours and why.'}</p>
+        </div>
+        ${details}
+      </div>
+      <div class="crater-tools">
+        <div class="search-box small">${icon('search')}<label class="sr" for="cr-q">${lang === 'ar' ? 'ابحث عن فوهة أو عالِم' : 'Search craters or scholars'}</label><input id="cr-q" type="search" data-q placeholder="${lang === 'ar' ? 'ابحث: البيروني، ابن الهيثم…' : 'Search: Al-Biruni, Alhazen…'}" autocomplete="off"></div>
+        <div class="chips" role="group" aria-label="${lang === 'ar' ? 'تصفية حسب الموقع' : 'Filter by location'}" data-sides>
+          <button type="button" class="chip" aria-pressed="true" data-value="">${lang === 'ar' ? 'الكل' : 'All'} (${moon.craters.length})</button>
+          <button type="button" class="chip" aria-pressed="false" data-value="near">${esc(sideName('near'))}</button>
+          <button type="button" class="chip" aria-pressed="false" data-value="far">${esc(sideName('far'))} (${moon.craters.filter((c) => c.side === 'far').length})</button>
+        </div>
+      </div>
+      <ol class="crater-list" data-list>${list}</ol>
+    </aside>
+  </div>
+  <p class="wrap moon-credits">${esc(t(moon.credits, lang))}</p>
+  <script type="application/json" id="moon-data">${JSON.stringify({ craters: data, tex2k: ctx.r('assets/img/moon/moon-2k.jpg'), tex4k: ctx.r('assets/img/moon/moon-4k.jpg'), relief: ctx.r('assets/img/moon/moon-relief.jpg') })}</script>
+</section>
+<script type="module" src="${ctx.r('assets/js/moon.js')}?v=${BUILD_VERSION}"></script>`;
+  return page(ctx, { title: t(moon.title, lang), description: t(moon.lead, lang) }, main);
+}
+
 function notFoundPage(ctx) {
   return page(ctx, { title: '404' }, `${pageHero(ctx, { title: 'الصفحة غير موجودة · Page not found', lead: '' })}<section class="section paper"><div class="wrap"><p><a class="btn btn-brass" href="${ctx.r('')}">الرئيسية</a> <a class="btn btn-ghost-dark" href="${ctx.r('en/')}">Home (English)</a></p></div></section>`);
 }
@@ -685,7 +770,7 @@ fs.writeFileSync(path.join(OUT, '.nojekyll'), '');
 
 const pages = [
   ['', 'home', homePage], ['about/', 'about', aboutPage], ['events/', 'events', eventsPage], ['library/', 'library', libraryPage],
-  ['news/', 'news', newsPage], ['join/', 'join', joinPage], ['contact/', 'contact', contactPage]
+  ['news/', 'news', newsPage], ['join/', 'join', joinPage], ['contact/', 'contact', contactPage], ['moon/', 'library', moonPage]
 ];
 for (const lang of LANGS) {
   for (const [p, section, fn] of pages) write(prefix(lang) + p, fn(ctxFor(lang, p, section)));
