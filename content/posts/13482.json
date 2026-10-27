@@ -8,5 +8,5 @@
  "image": null,
  "imageAlt": "",
  "video": false,
- "body": "<p>رابط المحاضرة: <a href=\"@media/files/945f311827319eb9.mp4\">هنا</a></p>\n<figure><p class=\"media-file\" data-href=\"@media/files/945f311827319eb9.mp4\" data-kind=\"video\"></p></figure>"
+ "body": "<p>رابط المحاضرة: <a href=\"@media/files/945f311827319eb9.mp4\">هنا</a></p>\n<p class=\"media-file\" data-href=\"@media/files/945f311827319eb9.mp4\" data-kind=\"video\"></p>"
 }

@@ -8,5 +8,5 @@
  "image": "p/deb05adc5bdf5a19",
  "imageAlt": "",
  "video": false,
- "body": "<figure><p class=\"media-file\" data-href=\"@media/files/049bf5271e71c926.mp4\" data-kind=\"video\"></p></figure>"
+ "body": "<p class=\"media-file\" data-href=\"@media/files/049bf5271e71c926.mp4\" data-kind=\"video\"></p>"
 }

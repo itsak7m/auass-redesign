@@ -8,5 +8,5 @@
  "image": null,
  "imageAlt": "",
  "video": false,
- "body": "<figure><p class=\"media-file\" data-href=\"@media/files/50434b18a9a2507c.mp4\" data-kind=\"video\"></p></figure>\n<p>The US Geological Survey released the first ever comprehensive moon map with rock layers, fissures, and various layers in great detail.</p>"
+ "body": "<p class=\"media-file\" data-href=\"@media/files/50434b18a9a2507c.mp4\" data-kind=\"video\"></p>\n<p>The US Geological Survey released the first ever comprehensive moon map with rock layers, fissures, and various layers in great detail.</p>"
 }
