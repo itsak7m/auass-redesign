@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const DOCS = path.join(__dirname, '..', 'docs');
 const BASE = '/auass-redesign/';
-const TYPES = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.png': 'image/png', '.jpg': 'image/jpeg', '.svg': 'image/svg+xml', '.json': 'application/json' };
+const TYPES = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.png': 'image/png', '.jpg': 'image/jpeg', '.svg': 'image/svg+xml', '.webp': 'image/webp', '.json': 'application/json', '.yml': 'text/yaml' };
 function resolve(urlPath) {
   if (!urlPath.startsWith(BASE)) return null;
   let f = path.join(DOCS, decodeURIComponent(urlPath.slice(BASE.length).split('?')[0].split('#')[0]));

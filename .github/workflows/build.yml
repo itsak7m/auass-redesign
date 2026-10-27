@@ -1,0 +1,31 @@
+# Rebuilds docs/ (the GitHub Pages site) whenever content or templates change,
+# including edits saved from the content manager at /admin/.
+name: Build site
+on:
+  push:
+    branches: [main]
+    paths: ['content/**', 'src/**']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: build-site
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node src/build.js
+      - name: Commit the rebuilt site
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A docs
+          if git diff --cached --quiet; then echo "No changes"; exit 0; fi
+          git commit -m "Rebuild site from ${GITHUB_SHA::7}"
+          git pull --rebase origin main
+          git push origin HEAD:main

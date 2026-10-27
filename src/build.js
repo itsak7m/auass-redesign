@@ -13,7 +13,30 @@ const load = (n) => JSON.parse(fs.readFileSync(path.join(ROOT, 'content', n + '.
 const site = load('site'), news = load('news'), events = load('events'), sky = load('sky');
 const about = load('about'), library = load('library'), join = load('join'), moon = load('moon');
 const LANGS = ['ar', 'en'];
-const BUILD_VERSION = Date.now().toString(36);
+// Posts migrated from the old WordPress site, one JSON file each (see README).
+const POSTS_DIR = path.join(ROOT, 'content', 'posts');
+const archive = fs.readdirSync(POSTS_DIR).filter((f) => f.endsWith('.json')).map((f) => JSON.parse(fs.readFileSync(path.join(POSTS_DIR, f), 'utf8')));
+const archiveById = Object.fromEntries(archive.map((a) => [a.id, a]));
+// Pages migrated from the old site (conferences, AW-ROAD, knowledge pages...).
+const PAGES_DIR = path.join(ROOT, 'content', 'pages');
+const infoPages = fs.readdirSync(PAGES_DIR).filter((f) => f.endsWith('.json')).map((f) => JSON.parse(fs.readFileSync(path.join(PAGES_DIR, f), 'utf8')))
+  .sort((a, b) => a.order - b.order);
+const council = load('council');
+const ui0 = (ar, en) => ({ ar, en });
+const PAGE_GROUPS = {
+  series: ui0('سلاسل المؤتمرات والأنشطة', 'Conference series and activities'),
+  arab: ui0('المؤتمرات العربية لعلوم الفضاء والفلك', 'The Arab Conferences for Astronomy and Space Sciences'),
+  other: ui0('مؤتمرات وندوات وملتقيات أخرى', 'Other conferences, meetings and workshops'),
+  awroad: ui0('المكتب الإقليمي لتنمية الفلك', 'AW-ROAD'),
+  more: ui0('الهيئات الفلكية العربية', 'Arab astronomy bodies'),
+  legal: ui0('السياسات', 'Policies'),
+  knowledge: ui0('معارف فلكية', 'Astronomy knowledge')
+};
+const pagePath = (pg) => `${pg.section}/${pg.slug}/`;
+// Cache-busting token: changes only when the stylesheet or scripts change, so
+// rebuilding unchanged content gives byte-identical pages.
+const BUILD_VERSION = require('crypto').createHash('sha1')
+  .update(['css/style.css', 'js/main.js', 'js/moon.js'].map((f) => fs.readFileSync(path.join(__dirname, 'assets', f))).join('')).digest('hex').slice(0, 8);
 
 // ---------- helpers ----------
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -124,6 +147,7 @@ function footer(ctx) {
   <div class="wrap f-bottom">
     <p class="proto-note" lang="ar" dir="rtl">${esc(site.prototypeNote.ar)}</p>
     ${lang === 'en' ? `<p class="proto-note">${esc(site.prototypeNote.en)}</p>` : ''}
+    <p class="f-legal">${infoPages.filter((x) => x.group === 'legal').map((pg) => `<a href="${ctx.r(prefix(lang) + pagePath(pg))}">${esc(pageTitle(pg, lang))}</a>`).join(' · ')}</p>
     <p class="f-credit">${lang === 'ar' ? 'صورة الواجهة: سديم القاعدة بعدسة تلسكوب جيمس ويب' : 'Hero image: Carina Nebula by the James Webb Space Telescope'} · <span dir="ltr">${site.heroCredit}</span></p>
   </div>
 </footer>
@@ -162,27 +186,58 @@ function pageHero(ctx, { eyebrow, title, lead, crumbs }) {
 }
 
 // ---------- components ----------
-const postsSorted = [...news.posts].sort((a, b) => (a.date < b.date ? 1 : -1));
 const eventsSorted = [...events.items].sort((a, b) => (a.start < b.start ? 1 : -1));
-const postBySlug = Object.fromEntries(news.posts.map((p) => [p.slug, p]));
-const CAT_GLYPH = { union: 'seal', lecture: 'telescope', announcement: 'calendar' };
+const TYPE_GLYPH = { auass: 'seal', event: 'telescope', science: 'orbit', article: 'book' };
+const typeLabel = (type, lang) => t(news.types[type], lang);
 const newsHref = (ctx, slug) => ctx.r(prefix(ctx.lang) + `news/${slug}/`);
 
-function newsCard(ctx, p, { headingLevel = 3 } = {}) {
+// One feed per language: the hand-written posts (in both languages) plus the
+// migrated archive posts written in that language. Paths are relative to the
+// language root; image paths are relative to the site root.
+function feedItem(p, lang) {
+  if (p.slug) {
+    return { key: p.slug, date: p.date, type: p.type, title: t(p.title, lang), excerpt: t(p.excerpt, lang), path: `news/${p.slug}/`,
+      thumb: p.image ? curatedImg(p.image) : '', fit: p.imageFit === 'contain', curated: true };
+  }
+  return { key: String(p.id), date: p.date, type: p.type, title: p.title, excerpt: p.excerpt, path: `news/${p.id}/`,
+    thumb: p.image ? `media/${p.image}-s.webp` : '', curated: false };
+}
+// Hand-written posts keep images in assets/img; uploads from the content manager land in media/.
+const curatedImg = (img) => (img.startsWith('media/') ? img : 'assets/img/' + img);
+const byDate = (a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0);
+const FEED = Object.fromEntries(LANGS.map((lang) => [lang, [...news.posts.map((p) => feedItem(p, lang)), ...archive.filter((a) => a.lang === lang).map((a) => feedItem(a, lang))].sort(byDate)]));
+const postsSorted = [...news.posts].sort(byDate);
+
+function fallbackFrame(type, lang) {
+  return `<div class="frame frame-fallback">${rete('rete')}${icon(TYPE_GLYPH[type], 'ico big')}<span>${esc(typeLabel(type, lang))}</span></div>`;
+}
+
+function newsCard(ctx, it, { headingLevel = 3 } = {}) {
   const { lang } = ctx;
-  const media = p.image
-    ? `<div class="frame"><img src="${ctx.r('assets/img/' + p.image)}" alt="" loading="lazy"${p.imageFit === 'contain' ? ' class="fit-contain"' : ''}></div>`
-    : `<div class="frame frame-fallback">${rete('rete')}${icon(CAT_GLYPH[p.category], 'ico big')}<span>${esc(t(news.categories[p.category], lang))}</span></div>`;
-  return `<article class="news-card" data-cat="${p.category}" data-text="${esc((t(p.title, lang) + ' ' + t(p.excerpt, lang)).toLowerCase())}">
-  <a class="card-link" href="${newsHref(ctx, p.slug)}">
+  const media = it.thumb
+    ? `<div class="frame"><img src="${ctx.r(it.thumb)}" alt="" loading="lazy" decoding="async"${it.fit ? ' class="fit-contain"' : ''}></div>`
+    : fallbackFrame(it.type, lang);
+  return `<article class="news-card" data-cat="${it.type}" data-text="${esc((it.title + ' ' + it.excerpt).toLowerCase())}">
+  <a class="card-link" href="${ctx.r(prefix(lang) + it.path)}">
     ${media}
     <div class="nc-body">
-      <p class="kicker">${esc(t(news.categories[p.category], lang))}</p>
-      <h${headingLevel} class="nc-title">${bidi(t(p.title, lang), lang)}</h${headingLevel}>
-      <p class="nc-date"><time datetime="${p.date}">${fmtDate(p.date, lang)}</time></p>
+      <p class="kicker">${esc(typeLabel(it.type, lang))}</p>
+      <h${headingLevel} class="nc-title">${bidi(it.title, lang)}</h${headingLevel}>
+      <p class="nc-date"><time datetime="${it.date}">${fmtDate(it.date, lang)}</time></p>
     </div>
   </a>
 </article>`;
+}
+
+// Compact row used by the year archive and the events archive.
+function newsRow(ctx, it) {
+  const { lang } = ctx;
+  return `<li class="news-row" data-cat="${it.type}">
+  <a href="${ctx.r(prefix(lang) + it.path)}">
+    ${it.thumb ? `<img src="${ctx.r(it.thumb)}" alt="" loading="lazy" decoding="async" width="96" height="72">` : `<span class="nr-glyph">${icon(TYPE_GLYPH[it.type])}</span>`}
+    <span class="nr-main"><span class="kicker">${esc(typeLabel(it.type, lang))} · <time datetime="${it.date}">${fmtDate(it.date, lang)}</time></span><span class="nr-title">${bidi(it.title, lang)}</span></span>
+  </a>
+</li>`;
 }
 
 function eventRow(ctx, e) {
@@ -220,7 +275,23 @@ function skyCard(ctx, e) {
 </li>`;
 }
 
-function skySection(ctx, { standalone = false } = {}) {
+// Tonight's Moon and the next total solar eclipse over the Arab world.
+// Both are computed in the browser (main.js) from the current date.
+function tonight(ctx) {
+  const { lang } = ctx;
+  return `<div class="tonight" data-tonight hidden>
+  <div class="tn-card">
+    <svg class="tn-moon" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="45" class="tn-dark"/><path class="tn-lit" data-moon-lit d=""/><circle cx="50" cy="50" r="45" class="tn-rim"/></svg>
+    <div><p class="kicker">${lang === 'ar' ? 'القمر الليلة' : 'The Moon tonight'}</p><p class="tn-big" data-moon-name></p><p class="tn-small" data-moon-info></p></div>
+  </div>
+  <div class="tn-card">
+    ${skyGlyph('eclipse')}
+    <div><p class="kicker">${lang === 'ar' ? 'الكسوف الكلي القادم في المنطقة العربية' : 'Next total solar eclipse over the Arab world'}</p><p class="tn-big"><span data-eclipse-days></span></p><p class="tn-small">${lang === 'ar' ? '2 آب 2027: كلّي في المغرب والجزائر وتونس وليبيا ومصر والسعودية واليمن، وجزئي في الأردن وبلاد الشام.' : '2 August 2027: total across Morocco, Algeria, Tunisia, Libya, Egypt, Saudi Arabia and Yemen; partial in Jordan and the Levant.'}</p></div>
+  </div>
+</div>`;
+}
+
+function skySection(ctx, { standalone = false, withTonight = false } = {}) {
   const { lang } = ctx;
   const phases = sky.phases.map((p) => `<li>${skyGlyph(p.glyph)}<span class="ph-label">${esc(t(p.label, lang))}</span><time datetime="${p.date}">${fmtDate(p.date, lang)}</time></li>`).join('');
   return `<section class="sky dark" id="sky" aria-labelledby="sky-title">
@@ -233,6 +304,7 @@ function skySection(ctx, { standalone = false } = {}) {
         <button type="button" class="round-btn" data-sky-next aria-label="${lang === 'ar' ? 'التالي' : 'Next'}">${icon('arrow', 'ico flip')}</button>
       </div>
     </div>
+    ${withTonight ? tonight(ctx) : ''}
     <p class="sky-status" data-sky-status hidden></p>
     <ol class="sky-strip" data-sky-strip tabindex="0" aria-label="${lang === 'ar' ? 'أحداث الشهر الفلكية' : 'Astronomical events this month'}">${sky.events.map((e) => skyCard(ctx, e)).join('')}</ol>
     <div class="sky-foot">
@@ -332,11 +404,11 @@ function homePage(ctx) {
   const newsSec = `<section class="section paper2" aria-labelledby="news-title">
   <div class="wrap">
     ${sectionHead(lang === 'ar' ? 'آخر ما نشره الاتحاد' : 'Latest from AUASS', `<span id="news-title">${lang === 'ar' ? 'الأخبار' : 'News'}</span>`, moreLink(ctx.r(prefix(lang) + 'news/'), lang === 'ar' ? 'كل الأخبار' : 'All news'))}
-    <div class="news-grid">${postsSorted.slice(0, 4).map((p) => newsCard(ctx, p)).join('')}</div>
+    <div class="news-grid">${FEED[lang].slice(0, 4).map((it) => newsCard(ctx, it)).join('')}</div>
   </div>
 </section>`;
 
-  return page(ctx, { title: '', description: t(site.description, lang) }, hero + skySection(ctx) + evs + joinBand + heritage + newsSec);
+  return page(ctx, { title: '', description: t(site.description, lang) }, hero + skySection(ctx, { withTonight: true }) + evs + joinBand + heritage + newsSec);
 }
 
 function aboutPage(ctx) {
@@ -393,6 +465,16 @@ function aboutPage(ctx) {
     <div class="words">${words}</div>
   </div>
 </section>
+<section class="section paper2" aria-labelledby="more-title">
+  <div class="wrap">
+    ${sectionHead('', `<span id="more-title">${lang === 'ar' ? 'المزيد عن الاتحاد' : 'More about AUASS'}</span>`)}
+    <ul class="page-links">
+      <li><a href="${ctx.r(prefix(lang) + 'about/council/')}">${icon('network')}<span>${lang === 'ar' ? `المجلس الأعلى للاتحاد (${council.members.length} عضواً)` : `The AUASS High Council (${council.members.length} members)`}</span></a></li>
+      <li><a href="${ctx.r(prefix(lang) + 'events/conferences/')}">${icon('seal')}<span>${lang === 'ar' ? 'مؤتمرات الاتحاد' : 'AUASS conferences'}</span></a></li>
+    </ul>
+    ${pageLinks(ctx, infoPages.filter((x) => x.section === 'about' && x.group !== 'legal'))}
+  </div>
+</section>
 <section class="section dark timeline-sec" aria-labelledby="tl-title">
   ${rete('rete tl-rete')}
   <div class="wrap">
@@ -427,8 +509,30 @@ function eventsPage(ctx) {
     <p class="empty" data-empty hidden>${lang === 'ar' ? 'لا توجد فعاليات من هذا النوع.' : 'No events of this type.'}</p>
   </div>
 </section>
+<section class="section paper" aria-labelledby="conf-title">
+  <div class="wrap conf-band">
+    <div>${icon('seal', 'ico big')}<h2 class="sec-title" id="conf-title">${lang === 'ar' ? 'مؤتمرات الاتحاد' : 'AUASS conferences'}</h2><p>${lang === 'ar' ? `${infoPages.filter((x) => x.section === 'events').length} صفحة عن المؤتمرات العربية والمؤتمر الفلكي الإسلامي والملتقيات والندوات.` : `${infoPages.filter((x) => x.section === 'events').length} pages on the Arab conferences, the Islamic Astronomical Conference, meetings and seminars.`}</p></div>
+    <a class="btn btn-navy" href="${ctx.r(prefix(lang) + 'events/conferences/')}">${lang === 'ar' ? 'تصفّح المؤتمرات' : 'Browse the conferences'}</a>
+  </div>
+</section>
+${eventsArchive(ctx)}
 ${skySection(ctx)}`;
   return page(ctx, { title: lang === 'ar' ? 'الفعاليات' : 'Events' }, main);
+}
+
+// Every lecture, workshop and conference post in the archive, by year.
+function eventsArchive(ctx) {
+  const { lang } = ctx;
+  const items = FEED[lang].filter((it) => it.type === 'event' && !it.curated);
+  const byYear = {};
+  items.forEach((it) => { (byYear[it.date.slice(0, 4)] = byYear[it.date.slice(0, 4)] || []).push(it); });
+  const years = Object.keys(byYear).sort().reverse();
+  return `<section class="section paper2" aria-labelledby="eva-title">
+  <div class="wrap">
+    ${sectionHead(lang === 'ar' ? `${items.length} منشوراً عن المحاضرات والورش والمؤتمرات` : `${items.length} posts about lectures, workshops and conferences`, `<span id="eva-title">${lang === 'ar' ? 'أرشيف الفعاليات' : 'Events archive'}</span>`)}
+    <div class="ev-archive">${years.map((y, i) => `<details class="eva-year"${i === 0 ? ' open' : ''}><summary><span class="year">${y}</span><span class="eva-n">${byYear[y].length}</span></summary><ul class="news-rows">${byYear[y].map((it) => newsRow(ctx, it)).join('')}</ul></details>`).join('')}</div>
+  </div>
+</section>`;
 }
 
 function libraryPage(ctx) {
@@ -469,6 +573,7 @@ function libraryPage(ctx) {
       <input id="lib-q" type="search" data-search placeholder="${lang === 'ar' ? 'ابحث: العقاب، البيروني، الهلال، Gaia…' : 'Search: Aquila, Al-Biruni, crescent, Gaia…'}" autocomplete="off">
     </div>
     <div class="col-grid" data-cols>${cols}</div>
+    <div class="knowledge"><h2 class="kn-title">${lang === 'ar' ? 'صفحات معرفية' : 'Knowledge pages'}</h2>${pageLinks(ctx, infoPages.filter((x) => x.section === 'library'))}</div>
     <p class="lib-status" data-status aria-live="polite"></p>
     <div class="lib-groups">${groups}</div>
     <p class="empty" data-empty hidden>${lang === 'ar' ? 'لا توجد نتائج مطابقة.' : 'No matching results.'}</p>
@@ -477,31 +582,94 @@ function libraryPage(ctx) {
   return page(ctx, { title: lang === 'ar' ? 'المكتبة' : 'Library' }, main);
 }
 
+const NEWS_FIRST = 24;
+const NEWS_VERSION = require('crypto').createHash('sha1').update(JSON.stringify(FEED)).digest('hex').slice(0, 8);
+const yearsOf = (lang) => [...new Set(FEED[lang].map((it) => it.date.slice(0, 4)))].sort().reverse();
+
+function yearNav(ctx, current) {
+  const { lang } = ctx;
+  const counts = {};
+  FEED[lang].forEach((it) => { const y = it.date.slice(0, 4); counts[y] = (counts[y] || 0) + 1; });
+  return `<nav class="year-nav" aria-label="${lang === 'ar' ? 'الأرشيف حسب السنة' : 'Archive by year'}">
+  <h2 class="yn-title">${lang === 'ar' ? 'الأرشيف حسب السنة' : 'Archive by year'}</h2>
+  <ul>${yearsOf(lang).map((y) => `<li><a href="${ctx.r(prefix(lang) + `news/${y}/`)}"${y === current ? ' aria-current="page"' : ''}>${y} <span>${counts[y]}</span></a></li>`).join('')}</ul>
+</nav>`;
+}
+
 function newsPage(ctx) {
   const { lang } = ctx;
-  const main = `${pageHero(ctx, { eyebrow: '', title: lang === 'ar' ? 'الأخبار' : 'News', lead: lang === 'ar' ? 'أخبار الاتحاد ومحاضراته وإعلاناته.' : 'AUASS news, lectures and announcements.', crumbs: [{ label: lang === 'ar' ? 'الأخبار' : 'News' }] })}
-<section class="section paper">
+  const feed = FEED[lang];
+  const tpl = Object.keys(news.types).map((k) => `<template data-fallback="${k}">${fallbackFrame(k, lang)}</template>`).join('');
+  const arCount = FEED.ar.length;
+  const main = `${pageHero(ctx, { eyebrow: lang === 'ar' ? `${feed.length} منشوراً منذ ${yearsOf(lang).slice(-1)[0]}` : `${feed.length} posts since ${yearsOf(lang).slice(-1)[0]}`, title: lang === 'ar' ? 'الأخبار والمقالات' : 'News and articles', lead: lang === 'ar' ? 'أخبار الاتحاد ومحاضراته، وأخبار علمية ومقالات فلكية، ومعها أرشيف الموقع منذ سنواته الأولى.' : 'AUASS news and lectures, science news and astronomy articles, together with the archive of the old site.', crumbs: [{ label: lang === 'ar' ? 'الأخبار' : 'News' }] })}
+<section class="section paper" data-news data-index="${ctx.r(prefix(lang) + 'news/index.json')}?v=${NEWS_VERSION}" data-root="${ctx.r(prefix(lang))}" data-site="${ctx.r('')}" data-first="${NEWS_FIRST}">
   <div class="wrap">
+    ${lang === 'en' ? `<div class="upcoming-note">${icon('info')}<p>Most of the AUASS archive is in Arabic. This page lists the English posts; <a href="${ctx.r('news/')}" hreflang="ar">the Arabic news page</a> has all ${arCount} Arabic posts.</p></div>` : ''}
     <div class="filter-bar">
-      <div class="search-box small">${icon('search')}<label class="sr" for="news-q">${lang === 'ar' ? 'ابحث في الأخبار' : 'Search news'}</label><input id="news-q" type="search" data-search placeholder="${lang === 'ar' ? 'ابحث في الأخبار' : 'Search news'}" autocomplete="off"></div>
-      ${chips(ctx, 'cat', Object.entries(news.categories).map(([k, v]) => [k, t(v, lang)]), { label: lang === 'ar' ? 'الكل' : 'All', aria: lang === 'ar' ? 'تصفية حسب التصنيف' : 'Filter by category' })}
+      <div class="search-box small">${icon('search')}<label class="sr" for="news-q">${lang === 'ar' ? 'ابحث في الأخبار' : 'Search news'}</label><input id="news-q" type="search" data-search placeholder="${lang === 'ar' ? 'ابحث: المريخ، الهلال، كسوف…' : 'Search: Mars, crescent, eclipse…'}" autocomplete="off"></div>
+      ${chips(ctx, 'cat', Object.entries(news.types).map(([k, v]) => [k, t(v, lang)]), { label: lang === 'ar' ? 'الكل' : 'All', aria: lang === 'ar' ? 'تصفية حسب النوع' : 'Filter by type' })}
     </div>
-    <div class="news-grid" data-filter-scope="cat" data-attr="cat">${postsSorted.map((p) => newsCard(ctx, p, { headingLevel: 2 })).join('')}</div>
+    <p class="lib-status" data-news-status aria-live="polite"></p>
+    <div class="news-grid" data-news-list>${feed.slice(0, NEWS_FIRST).map((it) => newsCard(ctx, it, { headingLevel: 2 })).join('')}</div>
     <p class="empty" data-empty hidden>${lang === 'ar' ? 'لا توجد أخبار مطابقة.' : 'No matching news.'}</p>
+    <p class="more-row"><button type="button" class="btn btn-ghost-dark" data-news-more>${lang === 'ar' ? 'عرض المزيد' : 'Show more'}</button></p>
+    ${yearNav(ctx)}
+    ${tpl}
   </div>
 </section>`;
   return page(ctx, { title: lang === 'ar' ? 'الأخبار' : 'News' }, main);
 }
 
+function newsIndexJson(lang) {
+  // Compact search index for the news page: title, date, type, path, thumb, text.
+  return JSON.stringify(FEED[lang].map((it) => ({ t: it.title, d: it.date, y: it.type, u: it.path, i: it.thumb, x: it.excerpt.slice(0, 140) })));
+}
+
+function newsYearPage(ctx, year) {
+  const { lang } = ctx;
+  const items = FEED[lang].filter((it) => it.date.startsWith(year));
+  const byMonth = {};
+  items.forEach((it) => { const m = Number(it.date.slice(5, 7)); (byMonth[m] = byMonth[m] || []).push(it); });
+  const months = Object.keys(byMonth).map(Number).sort((a, b) => b - a).map((m) => `<section class="year-group" data-group>
+  <h2 class="year">${MONTHS[lang][m - 1]} ${year}</h2>
+  <ul class="news-rows">${byMonth[m].map((it) => newsRow(ctx, it)).join('')}</ul>
+</section>`).join('');
+  const main = `${pageHero(ctx, { eyebrow: lang === 'ar' ? `${items.length} منشوراً` : `${items.length} posts`, title: lang === 'ar' ? `أرشيف ${year}` : `${year} archive`, crumbs: [{ label: lang === 'ar' ? 'الأخبار' : 'News', href: ctx.r(prefix(lang) + 'news/') }, { label: year }] })}
+<section class="section paper">
+  <div class="wrap">
+    <div class="filter-bar">${chips(ctx, 'cat', Object.entries(news.types).map(([k, v]) => [k, t(v, lang)]), { label: lang === 'ar' ? 'الكل' : 'All', aria: lang === 'ar' ? 'تصفية حسب النوع' : 'Filter by type' })}</div>
+    <div data-filter-scope="cat" data-attr="cat">${months}</div>
+    <p class="empty" data-empty hidden>${lang === 'ar' ? 'لا توجد منشورات من هذا النوع في هذه السنة.' : 'No posts of this type in this year.'}</p>
+    ${yearNav(ctx, year)}
+  </div>
+</section>`;
+  return page(ctx, { title: lang === 'ar' ? `أرشيف الأخبار ${year}` : `News archive ${year}` }, main);
+}
+
+function shareBar(ctx, url, title) {
+  const { lang } = ctx;
+  const share = [
+    ['facebook', `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, 'Facebook'],
+    ['whatsapp', `https://wa.me/?text=${encodeURIComponent(title + ' ' + url)}`, 'WhatsApp'],
+    ['x', `https://x.com/intent/post?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`, 'X']
+  ].map(([i, h, l]) => `<a class="round-btn" href="${h}" target="_blank" rel="noopener" aria-label="${lang === 'ar' ? 'مشاركة عبر' : 'Share on'} ${l}">${icon(i)}</a>`).join('');
+  return `<div class="share"><span>${lang === 'ar' ? 'شارك' : 'Share'}</span>${share}<button type="button" class="round-btn" data-copy="${url}" aria-label="${lang === 'ar' ? 'نسخ الرابط' : 'Copy link'}">${icon('link')}</button><span class="copied" data-copied hidden>${lang === 'ar' ? 'تم نسخ الرابط' : 'Link copied'}</span></div>`;
+}
+
+function relatedSection(ctx, items) {
+  const { lang } = ctx;
+  return `<section class="section paper2" aria-labelledby="rel-title">
+    <div class="wrap">
+      ${sectionHead('', `<span id="rel-title">${lang === 'ar' ? 'منشورات أخرى' : 'More posts'}</span>`, moreLink(ctx.r(prefix(lang) + 'news/'), lang === 'ar' ? 'كل الأخبار' : 'All news'))}
+      <div class="news-grid three">${items.map((x) => newsCard(ctx, x)).join('')}</div>
+    </div>
+  </section>`;
+}
+
 function articlePage(ctx, p) {
   const { lang } = ctx;
   const url = `https://itsak7m.github.io/auass-redesign/${prefix(lang)}news/${p.slug}/`;
-  const share = [
-    ['facebook', `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, 'Facebook'],
-    ['whatsapp', `https://wa.me/?text=${encodeURIComponent(t(p.title, lang) + ' ' + url)}`, 'WhatsApp'],
-    ['x', `https://x.com/intent/post?url=${encodeURIComponent(url)}&text=${encodeURIComponent(t(p.title, lang))}`, 'X']
-  ].map(([i, h, l]) => `<a class="round-btn" href="${h}" target="_blank" rel="noopener" aria-label="${lang === 'ar' ? 'مشاركة عبر' : 'Share on'} ${l}">${icon(i)}</a>`).join('');
-  const related = postsSorted.filter((x) => x.slug !== p.slug).slice(0, 3);
+  const related = FEED[lang].filter((x) => x.key !== p.slug).slice(0, 3);
   const facts = p.facts ? `<dl class="facts">${p.facts.map((f) => `<div><dt>${esc(t(f.k, lang))}</dt><dd>${esc(t(f.v, lang))}</dd></div>`).join('')}</dl>` : '';
   const cta = p.cta ? `<p><a class="btn btn-brass" href="${ctx.r(prefix(lang))}${p.cta.href}">${esc(t(p.cta.label, lang))}</a></p>` : '';
   const main = `<article class="article">
@@ -509,31 +677,137 @@ function articlePage(ctx, p) {
     ${rete('rete page-rete')}
     <div class="wrap">
       <nav class="crumbs" aria-label="${lang === 'ar' ? 'مسار التنقل' : 'Breadcrumb'}"><a href="${ctx.r(prefix(lang))}">${lang === 'ar' ? 'الرئيسية' : 'Home'}</a><span aria-hidden="true">/</span><a href="${ctx.r(prefix(lang) + 'news/')}">${lang === 'ar' ? 'الأخبار' : 'News'}</a></nav>
-      <p class="kicker">${esc(t(news.categories[p.category], lang))} · <time datetime="${p.date}">${fmtDate(p.date, lang)}</time></p>
+      <p class="kicker">${esc(typeLabel(p.type, lang))} · <time datetime="${p.date}">${fmtDate(p.date, lang)}</time></p>
       <h1 class="page-title">${bidi(t(p.title, lang), lang)}</h1>
       <p class="page-lead">${esc(t(p.excerpt, lang))}</p>
     </div>
   </header>
   <div class="section paper">
     <div class="wrap article-grid${p.image ? '' : ' no-image'}">
-      ${p.image ? `<figure class="article-figure"><div class="frame${p.imageFit === 'contain' ? ' tall' : ''}"><img src="${ctx.r('assets/img/' + p.image)}" alt="${esc(t(p.title, lang))}"${p.imageFit === 'contain' ? ' class="fit-contain"' : ''}></div></figure>` : ''}
+      ${p.image ? `<figure class="article-figure"><div class="frame${p.imageFit === 'contain' ? ' tall' : ''}"><img src="${ctx.r(curatedImg(p.image))}" alt="${esc(t(p.title, lang))}"${p.imageFit === 'contain' ? ' class="fit-contain"' : ''}></div></figure>` : ''}
       <div class="article-body">
         ${facts}
         <div class="prose">${t(p.body, lang).map((x) => `<p>${esc(x)}</p>`).join('')}</div>
         ${cta}
         ${p.tags ? `<p class="tags" dir="ltr">${p.tags.map((x) => `<span>${esc(x)}</span>`).join('')}</p>` : ''}
-        <div class="share"><span>${lang === 'ar' ? 'شارك الخبر' : 'Share'}</span>${share}<button type="button" class="round-btn" data-copy="${url}" aria-label="${lang === 'ar' ? 'نسخ الرابط' : 'Copy link'}">${icon('link')}</button><span class="copied" data-copied hidden>${lang === 'ar' ? 'تم نسخ الرابط' : 'Link copied'}</span></div>
+        ${shareBar(ctx, url, t(p.title, lang))}
       </div>
     </div>
   </div>
-  <section class="section paper2" aria-labelledby="rel-title">
-    <div class="wrap">
-      ${sectionHead('', `<span id="rel-title">${lang === 'ar' ? 'أخبار أخرى' : 'More news'}</span>`, moreLink(ctx.r(prefix(lang) + 'news/'), lang === 'ar' ? 'كل الأخبار' : 'All news'))}
-      <div class="news-grid three">${related.map((x) => newsCard(ctx, x)).join('')}</div>
-    </div>
-  </section>
+  ${relatedSection(ctx, related)}
 </article>`;
   return page(ctx, { title: t(p.title, lang), description: t(p.excerpt, lang) }, main);
+}
+
+// Body HTML of a migrated post: resolve media and post links, lazy-load
+// images, open external links in a new tab and turn embeds into light links.
+function archiveBody(ctx, html) {
+  const { lang } = ctx;
+  return html
+    .replace(/@media\//g, ctx.r('media/'))
+    .replace(/href="@post:(\d+)"/g, (m, id) => { const a = archiveById[id]; return `href="${ctx.r(prefix(a.lang) + `news/${id}/`)}"`; })
+    .replace(/<img /g, '<img loading="lazy" decoding="async" ')
+    .replace(/<t([dh])(?=[ >])/g, '<t$1 dir="auto"')
+    .replace(/<a href="(https?:[^"]*)"/g, (m, h) => `<a href="${h}" target="_blank" rel="noopener"`)
+    .replace(/<p class="yt" data-yt="([\w-]{11})"><\/p>/g, (m, id) => `<p class="yt"><a href="https://www.youtube.com/watch?v=${id}" target="_blank" rel="noopener" data-yt="${id}"><img src="https://i.ytimg.com/vi/${id}/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="yt-play">${icon('play')}<span>${lang === 'ar' ? 'تشغيل الفيديو' : 'Play video'}</span></span></a></p>`)
+    .replace(/<p class="media-file" data-kind="(video|audio)" data-href="([^"]*)"><\/p>/g, (m, k, h) => `<p class="media-file"><${k} controls preload="none" src="${h}"></${k}></p>`)
+    .replace(/<p class="ext-embed" data-kind="(\w+)" data-href="([^"]*)"><\/p>/g, (m, k, h) => `<p class="ext-embed"><a class="btn btn-ghost-dark" href="${h}" target="_blank" rel="noopener">${icon('external')}${k === 'facebook' ? (lang === 'ar' ? 'المشاهدة على فيسبوك' : 'View on Facebook') : k === 'drive' ? (lang === 'ar' ? 'فتح الملف' : 'Open the file') : (lang === 'ar' ? 'فتح المحتوى المضمّن' : 'Open embedded content')}</a></p>`);
+}
+
+function archivePostPage(ctx, a) {
+  const { lang } = ctx;
+  const url = `https://itsak7m.github.io/auass-redesign/${prefix(lang)}news/${a.id}/`;
+  const related = FEED[lang].filter((x) => x.type === a.type && x.key !== String(a.id));
+  const i = related.findIndex((x) => x.date <= a.date);
+  const near = related.slice(Math.max(0, i - 1), Math.max(0, i - 1) + 3);
+  // The card image usually repeats an image in the body; show it only when the body has none.
+  const showImage = a.image && !a.body.includes('<img ');
+  const main = `<article class="article">
+  <header class="article-head dark">
+    ${rete('rete page-rete')}
+    <div class="wrap">
+      <nav class="crumbs" aria-label="${lang === 'ar' ? 'مسار التنقل' : 'Breadcrumb'}"><a href="${ctx.r(prefix(lang))}">${lang === 'ar' ? 'الرئيسية' : 'Home'}</a><span aria-hidden="true">/</span><a href="${ctx.r(prefix(lang) + 'news/')}">${lang === 'ar' ? 'الأخبار' : 'News'}</a><span aria-hidden="true">/</span><a href="${ctx.r(prefix(lang) + `news/${a.date.slice(0, 4)}/`)}">${a.date.slice(0, 4)}</a></nav>
+      <p class="kicker">${esc(typeLabel(a.type, lang))} · <time datetime="${a.date}">${fmtDate(a.date, lang)}</time></p>
+      <h1 class="page-title">${bidi(a.title, lang)}</h1>
+    </div>
+  </header>
+  <div class="section paper">
+    <div class="wrap narrow archive-post">
+      ${showImage ? `<figure class="ap-figure"><img src="${ctx.r(`media/${a.image}.webp`)}" alt="${esc(a.imageAlt || '')}"></figure>` : ''}
+      <div class="prose rich">${archiveBody(ctx, a.body)}</div>
+      <p class="archive-note">${icon('info')}<span>${lang === 'ar' ? 'منشور منقول من أرشيف موقع الاتحاد كما نُشر، مع تنظيف التنسيق.' : 'Migrated from the AUASS website archive as published, with the formatting tidied.'}</span></p>
+      ${shareBar(ctx, url, a.title)}
+    </div>
+  </div>
+  ${relatedSection(ctx, near.length ? near : FEED[lang].slice(0, 3))}
+</article>`;
+  return page(ctx, { title: a.title, description: a.excerpt }, main);
+}
+
+// ---------- migrated pages ----------
+const SECTION_HUB = {
+  events: { path: 'events/conferences/', label: ui('المؤتمرات', 'Conferences') },
+  about: { path: 'about/', label: ui('عن الاتحاد', 'About') },
+  library: { path: 'library/', label: ui('المكتبة', 'Library') }
+};
+const GROUP_GLYPH = { series: 'calendar', arab: 'seal', other: 'globe', awroad: 'network', more: 'network', legal: 'paper', knowledge: 'book' };
+const pageTitle = (pg, lang) => pg.title[lang] || pg.title.ar || pg.title.en;
+
+function pageLinks(ctx, list) {
+  const { lang } = ctx;
+  return `<ul class="page-links">${list.map((pg) => `<li><a href="${ctx.r(prefix(lang) + pagePath(pg))}">${icon(GROUP_GLYPH[pg.group])}<span${pg.title[lang] ? '' : ` lang="${pg.title.ar ? 'ar' : 'en'}"`}>${bidi(pageTitle(pg, lang), lang)}</span></a></li>`).join('')}</ul>`;
+}
+
+function infoPage(ctx, pg) {
+  const { lang } = ctx;
+  const has = !!pg.body[lang];
+  const bodyLang = has ? lang : pg.body.ar ? 'ar' : 'en';
+  const hub = SECTION_HUB[pg.section];
+  const crumbs = pg.section === 'events'
+    ? [{ label: lang === 'ar' ? 'الفعاليات' : 'Events', href: ctx.r(prefix(lang) + 'events/') }, { label: t(hub.label, lang), href: ctx.r(prefix(lang) + hub.path) }]
+    : [{ label: t(hub.label, lang), href: ctx.r(prefix(lang) + hub.path) }];
+  const siblings = infoPages.filter((x) => x.group === pg.group && x.slug !== pg.slug);
+  const main = `${pageHero(ctx, { eyebrow: t(PAGE_GROUPS[pg.group], lang), title: pageTitle(pg, lang), crumbs })}
+<section class="section paper">
+  <div class="wrap narrow archive-post">
+    ${has ? '' : `<div class="upcoming-note">${icon('info')}<p>${lang === 'ar' ? 'هذه الصفحة منشورة باللغة الإنجليزية فقط على موقع الاتحاد، وتظهر هنا كما نُشرت.' : 'This page is available in Arabic only on the AUASS website; it is shown here as published.'}</p></div>`}
+    <div class="prose rich"${bodyLang !== lang ? ` lang="${bodyLang}" dir="${bodyLang === 'ar' ? 'rtl' : 'ltr'}"` : ''}>${archiveBody(ctx, pg.body[bodyLang])}</div>
+    <p class="archive-note">${icon('info')}<span>${lang === 'ar' ? 'صفحة منقولة من موقع الاتحاد كما نُشرت، مع تنظيف التنسيق وحذف عناوين البريد والهواتف الشخصية.' : 'Migrated from the AUASS website as published, with the formatting tidied and personal emails and phone numbers removed.'}</span></p>
+  </div>
+</section>
+${siblings.length ? `<section class="section paper2"><div class="wrap">${sectionHead('', esc(t(PAGE_GROUPS[pg.group], lang)))}${pageLinks(ctx, siblings)}</div></section>` : ''}`;
+  return page(ctx, { title: pageTitle(pg, lang) }, main);
+}
+
+function conferencesPage(ctx) {
+  const { lang } = ctx;
+  const groups = ['series', 'arab', 'other'].map((g) => `<section class="conf-group">
+  <h2 class="sec-title">${esc(t(PAGE_GROUPS[g], lang))}</h2>
+  ${pageLinks(ctx, infoPages.filter((x) => x.group === g))}
+</section>`).join('');
+  const main = `${pageHero(ctx, { eyebrow: lang === 'ar' ? 'منذ مؤتمر التأسيس عام 1998' : 'Since the founding conference in 1998', title: lang === 'ar' ? 'المؤتمرات' : 'Conferences', lead: lang === 'ar' ? 'المؤتمرات العربية لعلوم الفضاء والفلك، والمؤتمر الفلكي الإسلامي، والملتقيات والندوات والمهرجانات التي نظّمها الاتحاد أو شارك فيها.' : 'The Arab Conferences for Astronomy and Space Sciences, the Islamic Astronomical Conference, and the meetings, seminars and festivals AUASS has organised or joined.', crumbs: [{ label: lang === 'ar' ? 'الفعاليات' : 'Events', href: ctx.r(prefix(lang) + 'events/') }, { label: lang === 'ar' ? 'المؤتمرات' : 'Conferences' }] })}
+<section class="section paper"><div class="wrap conf-groups">${groups}</div></section>`;
+  return page(ctx, { title: lang === 'ar' ? 'المؤتمرات' : 'Conferences' }, main);
+}
+
+function councilPage(ctx) {
+  const { lang } = ctx;
+  const cards = council.members.map((m) => `<article class="member">
+  ${m.photo ? `<img src="${ctx.r(m.photo)}" alt="" loading="lazy" width="120" height="120">` : `<span class="m-glyph">${icon('seal', 'ico big')}</span>`}
+  <div>
+    <h2 class="m-name">${esc(t(m.name, lang))}</h2>
+    ${t(m.country, lang) ? `<p class="kicker">${esc(t(m.country, lang))}</p>` : ''}
+    <ul class="m-roles">${t(m.roles, lang).map((r) => `<li>${bidi(r, lang)}</li>`).join('')}</ul>
+  </div>
+</article>`).join('');
+  const main = `${pageHero(ctx, { eyebrow: lang === 'ar' ? `${council.members.length} عضواً من الدول العربية` : `${council.members.length} members from across the Arab world`, title: lang === 'ar' ? 'المجلس الأعلى للاتحاد' : 'AUASS High Council', crumbs: [{ label: lang === 'ar' ? 'عن الاتحاد' : 'About', href: ctx.r(prefix(lang) + 'about/') }, { label: lang === 'ar' ? 'المجلس الأعلى' : 'High Council' }] })}
+<section class="section paper">
+  <div class="wrap">
+    <div class="members">${cards}</div>
+    <p class="archive-note">${icon('info')}<span>${esc(t(council.note, lang))}</span></p>
+  </div>
+</section>`;
+  return page(ctx, { title: lang === 'ar' ? 'المجلس الأعلى' : 'High Council' }, main);
 }
 
 function demoForm(ctx, fields, submit) {
@@ -765,13 +1039,17 @@ function copyDir(src, dst) {
   }
 }
 
-fs.rmSync(OUT, { recursive: true, force: true });
+// docs/media holds the migrated images and is kept between builds.
+fs.mkdirSync(OUT, { recursive: true });
+for (const f of fs.readdirSync(OUT)) if (f !== 'media') fs.rmSync(path.join(OUT, f), { recursive: true, force: true });
 copyDir(path.join(__dirname, 'assets'), path.join(OUT, 'assets'));
+copyDir(path.join(__dirname, 'admin'), path.join(OUT, 'admin'));
 fs.writeFileSync(path.join(OUT, '.nojekyll'), '');
 
 const pages = [
   ['', 'home', homePage], ['about/', 'about', aboutPage], ['events/', 'events', eventsPage], ['library/', 'library', libraryPage],
-  ['news/', 'news', newsPage], ['join/', 'join', joinPage], ['contact/', 'contact', contactPage], ['moon/', 'library', moonPage]
+  ['news/', 'news', newsPage], ['join/', 'join', joinPage], ['contact/', 'contact', contactPage], ['moon/', 'library', moonPage],
+  ['events/conferences/', 'events', conferencesPage], ['about/council/', 'about', councilPage]
 ];
 for (const lang of LANGS) {
   for (const [p, section, fn] of pages) write(prefix(lang) + p, fn(ctxFor(lang, p, section)));
@@ -779,8 +1057,18 @@ for (const lang of LANGS) {
     const p = `news/${post.slug}/`;
     write(prefix(lang) + p, articlePage(ctxFor(lang, p, 'news'), post));
   }
+  for (const pg of infoPages) write(prefix(lang) + pagePath(pg), infoPage(ctxFor(lang, pagePath(pg), pg.section), pg));
+  for (const a of archive.filter((x) => x.lang === lang)) {
+    const p = `news/${a.id}/`;
+    write(prefix(lang) + p, archivePostPage(ctxFor(lang, p, 'news', 'news/'), a));
+  }
+  for (const y of yearsOf(lang)) {
+    const p = `news/${y}/`;
+    write(prefix(lang) + p, newsYearPage(ctxFor(lang, p, 'news', yearsOf(lang === 'ar' ? 'en' : 'ar').includes(y) ? p : 'news/'), y));
+  }
+  fs.writeFileSync(path.join(OUT, prefix(lang), 'news', 'index.json'), newsIndexJson(lang));
 }
 write('before-after/', beforeAfterPage(ctxFor('ar', 'before-after/', 'before-after', '')));
 const nf = ctxFor('ar', '', 'notfound');
 fs.writeFileSync(path.join(OUT, '404.html'), notFoundPage({ ...nf, r: (to) => '/auass-redesign/' + to }));
-console.log('built', LANGS.length * (pages.length + news.posts.length) + 2, 'pages into docs/');
+console.log('built', LANGS.length * (pages.length + news.posts.length + infoPages.length) + archive.length + yearsOf('ar').length + yearsOf('en').length + 2, 'pages into docs/');

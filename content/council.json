@@ -1,0 +1,403 @@
+{
+ "members": [
+  {
+   "name": {
+    "ar": "أ.د حميد مجول النعيمي",
+    "en": "Prof. Hamid M.K. Al-Naimiy"
+   },
+   "country": {
+    "ar": "",
+    "en": ""
+   },
+   "roles": {
+    "ar": [
+     "مؤسس ورئيس الإتحاد",
+     "مدير جامعة الشارقة - الإمارات العربية المتحدة",
+     "أستاذ الفيزياء الفلكية - جامعة الشارقة"
+    ],
+    "en": [
+     "President of the Arab Union for Astronomy and Space Sciences",
+     "Director of the University of Sharjah",
+     "General Director of the Sharjah Academy for Space Science and Technology"
+    ]
+   },
+   "photo": "assets/img/people/al-naimiy.jpg"
+  },
+  {
+   "name": {
+    "ar": "د. م. عوني الخصاونة",
+    "en": "Dr. Eng. Awni Mohammed Al-Khasawneh"
+   },
+   "country": {
+    "ar": "",
+    "en": ""
+   },
+   "roles": {
+    "ar": [
+     "الأمين العام للاتحاد",
+     "المدير التنفيذي للمكتب الاقليمي لتنمية الفلك في المنطقة العربية"
+    ],
+    "en": [
+     "Secretary General of AUASS",
+     "Executive Director of the Regional Office for the Development of Astronomy in the Arab Region of the International Astronomical Union"
+    ]
+   },
+   "photo": "media/council/3e7a8ad6e906a185.webp"
+  },
+  {
+   "name": {
+    "ar": "د. محمد العصيري",
+    "en": "Dr. Mohammad Assiry"
+   },
+   "country": {
+    "ar": "",
+    "en": ""
+   },
+   "roles": {
+    "ar": [
+     "نائب رئيس الاتحاد",
+     "رئيس الجمعية الفلكية السورية"
+    ],
+    "en": [
+     "Vice President of AUASS",
+     "President of the Syrian Astronomical Society"
+    ]
+   },
+   "photo": "media/council/f210deff9f0cbe1f.webp"
+  },
+  {
+   "name": {
+    "ar": "أ.د شوقي علي الدلال",
+    "en": "Prof. Shawqi Ali Al-Dalal"
+   },
+   "country": {
+    "ar": "البحرين",
+    "en": "Bahrain"
+   },
+   "roles": {
+    "ar": [
+     "نائب رئيس - الجامعة الأهلية بالبحرين أستاذ الفيزياء رئيس الجمعية الفلكية البحرينية عميد البحث العلمي - الجامعة الأهلية بالبحرين"
+    ],
+    "en": [
+     "Vice President - Ahliyya University of Bahrain, Professor of Physics, President of the Bahrain Astronomical Society, Dean of Scientific Research - Ahliyya University of Bahrain"
+    ]
+   },
+   "photo": "media/council/9485dc4404fcf38c.webp"
+  },
+  {
+   "name": {
+    "ar": "أ.د مشهور احمد سلامه الوردات",
+    "en": "Prof. Mashhoor Ahmad Salameh Al-Wardat"
+   },
+   "country": {
+    "ar": "",
+    "en": ""
+   },
+   "roles": {
+    "ar": [
+     "أستاذ الفيزياء الفلكية - جامعة الشارقة",
+     "الأمين المالي للاتحاد"
+    ],
+    "en": [
+     "Professor of Astrophysics - University of Sharjah",
+     "Financial Secretary of the AUASS"
+    ]
+   },
+   "photo": "media/council/c4f0dae5976cf36d.webp"
+  },
+  {
+   "name": {
+    "ar": "د. منيب العيد",
+    "en": "Prof. Mounib Eid"
+   },
+   "country": {
+    "ar": "لبنان",
+    "en": "Lebanon"
+   },
+   "roles": {
+    "ar": [
+     "الجامعة الأمريكية في بيروت، قسم الفيزياء، كلية الآداب والعلوم"
+    ],
+    "en": [
+     "American University of Beirut, Department of Physics, Faculty of Arts and Sciences"
+    ]
+   },
+   "photo": "media/council/d386fdb4cb7c75be.webp"
+  },
+  {
+   "name": {
+    "ar": "د. محمد ناصر الاحبابي",
+    "en": "Dr. Mohammad Nasser Al-Ahbabi"
+   },
+   "country": {
+    "ar": "الإمارات",
+    "en": "UAE"
+   },
+   "roles": {
+    "ar": [
+     "مدير عام وكالة الإمارات للفضاء"
+    ],
+    "en": [
+     "Director General of the UAE Space Agency"
+    ]
+   },
+   "photo": "media/council/c3e6cd45731d5f9b.webp"
+  },
+  {
+   "name": {
+    "ar": "الدكتور محمد أمين بوقنقول",
+    "en": "Dr. Mohammed Amin Buknkol"
+   },
+   "country": {
+    "ar": "الجزائر",
+    "en": "Algeria"
+   },
+   "roles": {
+    "ar": [
+     "أستاذ باحث لدى الوكالة الفضائية الجزائرية. تخصص: ديناميكا الهواء"
+    ],
+    "en": [
+     "Research professor at the Algerian Space Agency. Specialization: Aerodynamics"
+    ]
+   },
+   "photo": "media/council/bc781aa5873df525.webp"
+  },
+  {
+   "name": {
+    "ar": "د. هاله جسار",
+    "en": "Dr. Hala Jassar"
+   },
+   "country": {
+    "ar": "الكويت",
+    "en": "Kuwait"
+   },
+   "roles": {
+    "ar": [
+     "قائم بأعمال قسم الفيزياء - جامعة الكويت"
+    ],
+    "en": [
+     "Acting Director of the Physics Department - Kuwait University"
+    ]
+   },
+   "photo": "media/council/4e9528774f8da754.webp"
+  },
+  {
+   "name": {
+    "ar": "د. صالح الشيذاني",
+    "en": "Dr. Saleh Al-Shaythani"
+   },
+   "country": {
+    "ar": "عُمان",
+    "en": "Oman"
+   },
+   "roles": {
+    "ar": [
+     "الأستاذ المساعد في قسم الفيزياء بجامعة السلطان قابوس"
+    ],
+    "en": [
+     "Assistant Professor in the Department of Physics at Sultan Qaboos University"
+    ]
+   },
+   "photo": ""
+  },
+  {
+   "name": {
+    "ar": "أ.د. أشرف شاكر",
+    "en": "Prof. Ashraf Shaker"
+   },
+   "country": {
+    "ar": "مصر",
+    "en": "Egypt"
+   },
+   "roles": {
+    "ar": [
+     "رئيس قسم الفلك (التابع له مرصد القطامية الفلكي) - المعهد القومى للبحوث الفلكية و الجيوفيزيقية"
+    ],
+    "en": [
+     "Head of the Astronomy Department (affiliated with the Katameya Astronomical Observatory) - National Institute for Astronomical and Geophysical Research"
+    ]
+   },
+   "photo": "media/council/878a7c08c575c35c.webp"
+  },
+  {
+   "name": {
+    "ar": "د. صالح نصر",
+    "en": "Dr. Saleh Nasr"
+   },
+   "country": {
+    "ar": "تونس",
+    "en": "Tunisia"
+   },
+   "roles": {
+    "ar": [
+     "أستاذ تعليم عالي باختصاص فيزياء",
+     "كلية العلوم بالمنستير"
+    ],
+    "en": [
+     "Professor of higher education, specializing in physics",
+     "Faculty of Science, Monastir"
+    ]
+   },
+   "photo": "media/council/2c910f599fe0a211.webp"
+  },
+  {
+   "name": {
+    "ar": "د. أحمد رأفت غضية",
+    "en": "Dr. Ahmed Ra’afat Ghodiya"
+   },
+   "country": {
+    "ar": "فلسطين",
+    "en": "Palestine"
+   },
+   "roles": {
+    "ar": [
+     "استاذ مشارك",
+     "التخصص: استشعار عن بعد ونظم المعلومات الجغرافية",
+     "جامعة النجاح الوطنية"
+    ],
+    "en": [
+     "Associate Professor, Specialization: Remote Sensing and Geographic Information Systems, An-Najah National University"
+    ]
+   },
+   "photo": "media/council/c181064583369567.webp"
+  },
+  {
+   "name": {
+    "ar": "د. حسن دغماوي",
+    "en": "Dr. Hassane Darhmaoui"
+   },
+   "country": {
+    "ar": "المغرب",
+    "en": "Morocco"
+   },
+   "roles": {
+    "ar": [
+     "جامعة الأخوين - إفران"
+    ],
+    "en": [
+     "Al Akhawayn University in Ifrane"
+    ]
+   },
+   "photo": "media/council/5c76c8c50da6787b.webp"
+  },
+  {
+   "name": {
+    "ar": "د. فيصل العبدلي",
+    "en": "Dr. Faisal Al-Abdali"
+   },
+   "country": {
+    "ar": "ليبيا",
+    "en": "Libya"
+   },
+   "roles": {
+    "ar": [
+     "الهيئة الليبية للبحث العلمي"
+    ],
+    "en": [
+     "Libyan Authority for Scientific Research"
+    ]
+   },
+   "photo": "media/council/e3de0e6150d70e05.webp"
+  },
+  {
+   "name": {
+    "ar": "الاستاذ الدكتور مجيد محمود جراد",
+    "en": "Prof. Majeed Mahmoud Jarad"
+   },
+   "country": {
+    "ar": "العراق",
+    "en": "Iraq"
+   },
+   "roles": {
+    "ar": [
+     "عميد كلية العلوم / جامعة الأنبار سابقاً. متقاعد حالياً"
+    ],
+    "en": [
+     "Dean of the College of Science/Anbar University previously. Currently retired"
+    ]
+   },
+   "photo": "media/council/7ff97783ef97bd41.webp"
+  },
+  {
+   "name": {
+    "ar": "السيد صالح محمد الصعب",
+    "en": "Mr. Saleh Mohammed Al-Saab"
+   },
+   "country": {
+    "ar": "السعودية",
+    "en": "Saudi Arabia"
+   },
+   "roles": {
+    "ar": [
+     "مدينة الملك عبد العزيز للعلوم والتقنية سابقاً"
+    ],
+    "en": [
+     "Formerly King Abdulaziz City for Science and Technology"
+    ]
+   },
+   "photo": "media/council/1b1568b096cc0afa.webp"
+  },
+  {
+   "name": {
+    "ar": "د. علي طاهر",
+    "en": "Dr. Ali Taher"
+   },
+   "country": {
+    "ar": "السودان",
+    "en": "Sudan"
+   },
+   "roles": {
+    "ar": [
+     "معهد السودان للعلوم الطبيعية"
+    ],
+    "en": [
+     "Sudan Institute of Natural Sciences"
+    ]
+   },
+   "photo": "media/council/f518d6fb8afaa0c6.webp"
+  },
+  {
+   "name": {
+    "ar": "د. سهيل مصدع",
+    "en": "Dr. Suhail Masda"
+   },
+   "country": {
+    "ar": "اليمن",
+    "en": "Yemen"
+   },
+   "roles": {
+    "ar": [
+     "نائب رئيس جامعة المهرة للدراسات والبحث العلمي"
+    ],
+    "en": [
+     "Vice President of Al-Mahrah University for Higher Studies and Scientific Research"
+    ]
+   },
+   "photo": "media/council/7cbdd75c4f6a4b6f.webp"
+  },
+  {
+   "name": {
+    "ar": "طالب دكتوراه أعل الشيخ ولد محمد نافع",
+    "en": "PhD student, Sheikh Ould Mohamed Nafi"
+   },
+   "country": {
+    "ar": "موريتانيا",
+    "en": "Mauritania"
+   },
+   "roles": {
+    "ar": [
+     "باحث في مجال الفوهات النيازك والنيازك في موريتانيا",
+     "مؤسس ورئيس الجمعية الموريتانية لعلم الفلك"
+    ],
+    "en": [
+     "Researcher in the field of meteorite craters and meteorites in Mauritania. Founder and President of the Mauritanian Society of Astronomy"
+    ]
+   },
+   "photo": "media/council/1dd1ddd89b5e68f0.webp"
+  }
+ ],
+ "note": {
+  "ar": "أعضاء المجلس الأعلى كما وردوا في موقع الاتحاد. حُذفت عناوين البريد الشخصية؛ للتواصل مع الأعضاء يُرجى مراسلة أمانة الاتحاد.",
+  "en": "High Council members as listed on the AUASS website. Personal email addresses have been removed; please contact members through the AUASS secretariat."
+ }
+}

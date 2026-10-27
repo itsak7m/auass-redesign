@@ -34,7 +34,8 @@ const P = {
   instagram: '<rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17" cy="7" r=".8" fill="currentColor"/>',
   youtube: '<rect x="2.8" y="6" width="18.4" height="12" rx="3.5"/><path d="M10.2 9.4v5.2l4.6-2.6z"/>',
   whatsapp: '<path d="M4.5 19.5l1.1-3.9A8 8 0 1 1 8.6 18.6z"/><path d="M9.2 8.8c.3 2.6 2.8 5.3 5.6 5.8l1-1.2-1.7-.9-.9.8c-1-.4-2-1.5-2.4-2.4l.8-.9-.9-1.7z"/>',
-  x: '<path d="M5 4.5l14 15M19 4.5l-14 15"/>'
+  x: '<path d="M5 4.5l14 15M19 4.5l-14 15"/>',
+  play: '<circle cx="12" cy="12" r="9"/><path d="M10 8.3v7.4l6-3.7z" fill="currentColor"/>'
 };
 
 function icon(name, cls = 'ico') {
@@ -54,6 +55,7 @@ const SKY = {
   meteor: '<path d="M8 10l14 14M14 7l18 18M21 6l14 14"/><circle cx="23" cy="25" r="1.4" fill="currentColor"/><circle cx="33" cy="26" r="1.6" fill="currentColor"/><circle cx="36" cy="21" r="1.4" fill="currentColor"/>',
   mercury: '<path d="M6 34h36"/><circle cx="30" cy="27" r="3.5"/><path d="M12 34a12 12 0 0 1 24 0" stroke-dasharray="2 3"/>',
   venus: '<circle cx="24" cy="24" r="7" fill="currentColor" fill-opacity=".25"/><circle cx="24" cy="24" r="12" stroke-dasharray="2 3"/><circle cx="33" cy="16" r="3"/>',
+  eclipse: '<circle cx="24" cy="24" r="11" fill="currentColor" fill-opacity=".9" stroke="none"/><circle cx="24" cy="24" r="13.5"/><path d="M24 4v4M24 40v4M4 24h4M40 24h4M9.9 9.9l2.8 2.8M35.3 35.3l2.8 2.8M9.9 38.1l2.8-2.8M35.3 12.7l2.8-2.8" stroke-dasharray="0"/>',
   pleiades: '<path d="M14 9a12 12 0 1 0 0 24a9.5 9.5 0 1 1 0-24z"/><circle cx="29" cy="12" r="1.5" fill="currentColor"/><circle cx="34" cy="15" r="1.2" fill="currentColor"/><circle cx="31" cy="19" r="1.7" fill="currentColor"/><circle cx="37" cy="20" r="1.1" fill="currentColor"/><circle cx="35" cy="24" r="1.4" fill="currentColor"/><circle cx="40" cy="15" r="1" fill="currentColor"/>'
 };
 

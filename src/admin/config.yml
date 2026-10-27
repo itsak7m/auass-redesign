@@ -1,0 +1,174 @@
+# Content manager for the AUASS site (Sveltia CMS, compatible with Decap CMS).
+# Sign in with a GitHub account that can write to the repository. Every save
+# is a commit; the "Build site" workflow then rebuilds docs/ automatically.
+backend:
+  name: github
+  repo: itsak7m/auass-redesign
+  branch: main
+  commit_messages:
+    create: "Add {{collection}} “{{slug}}” from the content manager"
+    update: "Update {{collection}} “{{slug}}” from the content manager"
+    delete: "Delete {{collection}} “{{slug}}” from the content manager"
+media_folder: docs/media/uploads
+public_folder: media/uploads
+site_url: https://itsak7m.github.io/auass-redesign/
+
+collections:
+  - name: news
+    label: "الأخبار المحررة"
+    files:
+      - name: news
+        label: "الأخبار المحررة (بالعربية والإنجليزية)"
+        file: content/news.json
+        format: json
+        fields:
+          - { name: types, label: "أنواع المنشورات", widget: hidden }
+          - name: posts
+            label: "الأخبار"
+            label_singular: "خبر"
+            widget: list
+            summary: "{{fields.date}} · {{fields.title.ar}}"
+            fields:
+              - { name: slug, label: "الرابط (بالإنجليزية، بدون مسافات)", widget: string, pattern: ['^[a-z0-9-]+$', "حروف إنجليزية صغيرة وأرقام وشرطات فقط"] }
+              - { name: date, label: "التاريخ", widget: datetime, time_format: false, format: "YYYY-MM-DD", picker_utc: true }
+              - { name: type, label: "النوع", widget: select, options: [{ label: "أخبار الاتحاد", value: auass }, { label: "محاضرات وفعاليات", value: event }, { label: "أخبار علمية", value: science }, { label: "مقالات", value: article }] }
+              - { name: featured, label: "خبر مميز", widget: boolean, required: false }
+              - { name: image, label: "الصورة", widget: image, required: false }
+              - { name: title, label: "العنوان", widget: object, fields: [{ name: ar, label: "بالعربية", widget: string }, { name: en, label: "English", widget: string, required: false }] }
+              - { name: excerpt, label: "الملخص", widget: object, fields: [{ name: ar, label: "بالعربية", widget: text }, { name: en, label: "English", widget: text, required: false }] }
+              - name: body
+                label: "النص (فقرة لكل عنصر)"
+                widget: object
+                fields:
+                  - { name: ar, label: "بالعربية", widget: list, field: { name: p, label: "فقرة", widget: text } }
+                  - { name: en, label: "English", widget: list, required: false, field: { name: p, label: "Paragraph", widget: text } }
+
+  - name: posts
+    label: "أرشيف المنشورات"
+    label_singular: "منشور"
+    folder: content/posts
+    format: json
+    extension: json
+    create: true
+    identifier_field: title
+    slug: "{{fields.id}}"
+    summary: "{{date}} · {{title}}"
+    sortable_fields: [date, title]
+    fields:
+      - { name: id, label: "رقم المنشور", widget: number, value_type: int }
+      - { name: date, label: "التاريخ", widget: datetime, time_format: false, format: "YYYY-MM-DD", picker_utc: true }
+      - { name: lang, label: "اللغة", widget: select, options: [{ label: "العربية", value: ar }, { label: "English", value: en }] }
+      - { name: type, label: "النوع", widget: select, options: [{ label: "أخبار الاتحاد", value: auass }, { label: "محاضرات وفعاليات", value: event }, { label: "أخبار علمية", value: science }, { label: "مقالات", value: article }] }
+      - { name: title, label: "العنوان", widget: string }
+      - { name: excerpt, label: "الملخص", widget: text }
+      - { name: image, label: "صورة البطاقة (مسار داخل media)", widget: string, required: false }
+      - { name: imageAlt, label: "وصف الصورة", widget: string, required: false }
+      - { name: video, label: "يحتوي فيديو", widget: boolean, required: false }
+      - { name: body, label: "النص (HTML)", widget: code, default_language: html, output_code_only: true }
+
+  - name: events
+    label: "الفعاليات"
+    files:
+      - name: events
+        label: "الفعاليات"
+        file: content/events.json
+        format: json
+        fields:
+          - { name: types, label: "الأنواع", widget: hidden }
+          - name: items
+            label: "الفعاليات"
+            label_singular: "فعالية"
+            widget: list
+            summary: "{{fields.start}} · {{fields.title.ar}}"
+            fields:
+              - { name: id, label: "المعرّف", widget: string }
+              - { name: type, label: "النوع", widget: select, options: [{ label: "محاضرات وندوات", value: lecture }, { label: "مؤتمرات", value: conference }, { label: "ورش ودورات", value: workshop }, { label: "رصد وفعاليات عامة", value: observation }] }
+              - { name: start, label: "تاريخ البدء", widget: datetime, time_format: false, format: "YYYY-MM-DD", picker_utc: true }
+              - { name: end, label: "تاريخ الانتهاء", widget: datetime, time_format: false, format: "YYYY-MM-DD", picker_utc: true, required: false }
+              - { name: title, label: "العنوان", widget: object, fields: [{ name: ar, label: "بالعربية", widget: string }, { name: en, label: "English", widget: string, required: false }] }
+              - { name: place, label: "المكان", widget: object, fields: [{ name: ar, label: "بالعربية", widget: string }, { name: en, label: "English", widget: string, required: false }] }
+              - { name: mode, label: "الحضور", widget: select, options: [{ label: "حضوري", value: in-person }, { label: "عبر الإنترنت", value: online }, { label: "حضوري وعبر الإنترنت", value: hybrid }] }
+              - { name: summary, label: "الوصف", widget: object, fields: [{ name: ar, label: "بالعربية", widget: text }, { name: en, label: "English", widget: text, required: false }] }
+              - { name: news, label: "رابط الخبر (slug)", widget: string, required: false }
+
+  - name: sky
+    label: "سماء الشهر"
+    files:
+      - name: sky
+        label: "سماء الشهر"
+        file: content/sky.json
+        format: json
+        fields:
+          - { name: month, label: "الشهر", widget: object, fields: [{ name: ar, label: "بالعربية", widget: string }, { name: en, label: "English", widget: string, required: false }] }
+          - { name: region, label: "المنطقة", widget: object, fields: [{ name: ar, label: "بالعربية", widget: string }, { name: en, label: "English", widget: string, required: false }] }
+          - { name: timezone, label: "التوقيت", widget: object, fields: [{ name: ar, label: "بالعربية", widget: string }, { name: en, label: "English", widget: string, required: false }] }
+          - { name: credit, label: "المصدر", widget: object, fields: [{ name: ar, label: "بالعربية", widget: string }, { name: en, label: "English", widget: string, required: false }] }
+          - { name: source, label: "خبر المصدر (slug)", widget: string }
+          - { name: visibility, label: "تسميات الرؤية", widget: hidden }
+          - name: events
+            label: "الأحداث"
+            label_singular: "حدث"
+            widget: list
+            summary: "{{fields.date}} · {{fields.title.ar}}"
+            fields:
+              - { name: date, label: "التاريخ", widget: datetime, time_format: false, format: "YYYY-MM-DD", picker_utc: true }
+              - { name: end, label: "حتى تاريخ", widget: datetime, time_format: false, format: "YYYY-MM-DD", picker_utc: true, required: false }
+              - { name: time, label: "الوقت (24 ساعة، مثل 16:25)", widget: string, required: false }
+              - { name: glyph, label: "الرمز", widget: select, options: [moon-new, moon-first, moon-full, moon-last, saturn, conj, meteor, mercury, venus, pleiades, eclipse] }
+              - { name: vis, label: "الرؤية من الأردن", widget: select, options: [{ label: "مرئي", value: visible }, { label: "مرئي جزئياً", value: limited }, { label: "غير مرئي", value: hidden }] }
+              - { name: title, label: "العنوان", widget: object, fields: [{ name: ar, label: "بالعربية", widget: string }, { name: en, label: "English", widget: string, required: false }] }
+              - { name: note, label: "ملاحظة", widget: object, fields: [{ name: ar, label: "بالعربية", widget: text }, { name: en, label: "English", widget: text, required: false }] }
+          - name: phases
+            label: "أطوار القمر"
+            widget: list
+            fields:
+              - { name: date, label: "التاريخ", widget: datetime, time_format: false, format: "YYYY-MM-DD", picker_utc: true }
+              - { name: glyph, label: "الرمز", widget: select, options: [moon-new, moon-first, moon-full, moon-last] }
+              - { name: label, label: "التسمية", widget: object, fields: [{ name: ar, label: "بالعربية", widget: string }, { name: en, label: "English", widget: string, required: false }] }
+
+  - name: council
+    label: "المجلس الأعلى"
+    files:
+      - name: council
+        label: "أعضاء المجلس الأعلى"
+        file: content/council.json
+        format: json
+        fields:
+          - { name: note, label: "ملاحظة أسفل الصفحة", widget: object, fields: [{ name: ar, label: "بالعربية", widget: text }, { name: en, label: "English", widget: text, required: false }] }
+          - name: members
+            label: "الأعضاء"
+            label_singular: "عضو"
+            widget: list
+            summary: "{{fields.name.ar}}"
+            fields:
+              - { name: name, label: "الاسم", widget: object, fields: [{ name: ar, label: "بالعربية", widget: string }, { name: en, label: "English", widget: string, required: false }] }
+              - { name: country, label: "الدولة", widget: object, fields: [{ name: ar, label: "بالعربية", widget: string }, { name: en, label: "English", widget: string, required: false }] }
+              - name: roles
+                label: "المناصب"
+                widget: object
+                fields:
+                  - { name: ar, label: "بالعربية", widget: list, field: { name: r, label: "منصب", widget: string } }
+                  - { name: en, label: "English", widget: list, field: { name: r, label: "Role", widget: string } }
+              - { name: photo, label: "الصورة", widget: image, required: false }
+
+  - name: pages
+    label: "صفحات المؤتمرات والمعارف"
+    label_singular: "صفحة"
+    folder: content/pages
+    format: json
+    extension: json
+    create: false
+    identifier_field: slug
+    summary: "{{title.ar}}"
+    fields:
+      - { name: slug, label: "الرابط", widget: string }
+      - { name: section, label: "القسم", widget: select, options: [events, about, library] }
+      - { name: group, label: "المجموعة", widget: select, options: [series, arab, other, awroad, more, legal, knowledge] }
+      - { name: order, label: "الترتيب", widget: number, value_type: int }
+      - { name: title, label: "العنوان", widget: object, fields: [{ name: ar, label: "بالعربية", widget: string }, { name: en, label: "English", widget: string, required: false }] }
+      - name: body
+        label: "النص (HTML)"
+        widget: object
+        fields:
+          - { name: ar, label: "بالعربية", widget: code, default_language: html, output_code_only: true, required: false }
+          - { name: en, label: "English", widget: code, default_language: html, output_code_only: true, required: false }

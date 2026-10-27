@@ -63,6 +63,26 @@
     if (n) n.addEventListener('click', function () { step(1); });
   }
 
+  // Tonight's Moon (mean synodic month from a known new Moon; accurate to
+  // within about a day) and the countdown to the 2 August 2027 eclipse.
+  var tn = $('[data-tonight]');
+  if (tn) {
+    var ar = document.documentElement.lang === 'ar';
+    var P = 29.530588853, ref = Date.UTC(2000, 0, 6, 18, 14);
+    var age = ((Date.now() - ref) / 864e5 % P + P) % P, f = age / P;
+    var k = Math.cos(2 * Math.PI * f), waxing = f < 0.5, rx = (45 * Math.abs(k)).toFixed(2);
+    var inner = waxing ? (k > 0 ? 0 : 1) : (k > 0 ? 1 : 0);
+    $('[data-moon-lit]', tn).setAttribute('d', 'M50 5A45 45 0 0 ' + (waxing ? 1 : 0) + ' 50 95A' + rx + ' 45 0 0 ' + inner + ' 50 5Z');
+    var names = ar ? ['محاق', 'هلال متزايد', 'تربيع أول', 'أحدب متزايد', 'بدر', 'أحدب متناقص', 'تربيع أخير', 'هلال متناقص'] : ['New Moon', 'Waxing crescent', 'First quarter', 'Waxing gibbous', 'Full Moon', 'Waning gibbous', 'Last quarter', 'Waning crescent'];
+    var idx = Math.floor((f * 8) + 0.5) % 8;
+    var lit = Math.round((1 - k) / 2 * 100), days = Math.floor(age);
+    $('[data-moon-name]', tn).textContent = names[idx];
+    $('[data-moon-info]', tn).textContent = ar ? ('الإضاءة نحو ' + lit + '٪ · عمر القمر ' + days + ' يوماً تقريباً') : ('About ' + lit + '% lit · ' + days + ' days since new Moon');
+    var left = Math.ceil((Date.UTC(2027, 7, 2, 10, 7) - Date.now()) / 864e5);
+    $('[data-eclipse-days]', tn).textContent = left > 0 ? (ar ? 'بعد ' + left + ' يوماً' : 'In ' + left + ' days') : (ar ? 'وقع في 2 آب 2027' : 'Took place on 2 August 2027');
+    tn.hidden = false;
+  }
+
   // Chip filters + optional search (events and news pages)
   var scope = $('[data-filter-scope]');
   if (scope) {
@@ -92,6 +112,75 @@
     });
     if (search) search.addEventListener('input', apply);
   }
+
+  // News: the first posts are in the page; search, type filter and "show more"
+  // run over a JSON index of every post, fetched on first use.
+  var newsEl = $('[data-news]');
+  if (newsEl) {
+    var nList = $('[data-news-list]', newsEl), nMore = $('[data-news-more]', newsEl), nStatus = $('[data-news-status]', newsEl);
+    var nInput = $('[data-search]', newsEl), nChips = $('[data-chips]', newsEl), nEmpty = $('[data-empty]', newsEl);
+    var isAr = document.documentElement.lang === 'ar';
+    var nNorm = function (s) { return s.toLowerCase().replace(/[ً-ْ]/g, '').replace(/[أإآ]/g, 'ا').replace(/ى/g, 'ي').replace(/ة/g, 'ه'); };
+    var nEsc = function (s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); };
+    var MON = isAr ? ['كانون الثاني', 'شباط', 'آذار', 'نيسان', 'أيار', 'حزيران', 'تموز', 'آب', 'أيلول', 'تشرين الأول', 'تشرين الثاني', 'كانون الأول'] : ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    var labels = {};
+    $$('.chip', nChips).forEach(function (c) { if (c.dataset.value) labels[c.dataset.value] = c.textContent; });
+    var data = null, nType = '', limit = Number(newsEl.dataset.first), PAGE = 24, loading = false;
+    var fmt = function (d) { var p = d.split('-'); return Number(p[2]) + ' ' + MON[Number(p[1]) - 1] + ' ' + p[0]; };
+    var card = function (it) {
+      var tpl = $('template[data-fallback="' + it.y + '"]', newsEl);
+      var media = it.i ? '<div class="frame"><img src="' + newsEl.dataset.site + it.i + '" alt="" loading="lazy" decoding="async"></div>' : (tpl ? tpl.innerHTML : '');
+      return '<article class="news-card"><a class="card-link" href="' + newsEl.dataset.root + it.u + '">' + media +
+        '<div class="nc-body"><p class="kicker">' + nEsc(labels[it.y] || '') + '</p><h2 class="nc-title">' + nEsc(it.t) + '</h2>' +
+        '<p class="nc-date"><time datetime="' + it.d + '">' + fmt(it.d) + '</time></p></div></a></article>';
+    };
+    var render = function () {
+      var q = nNorm(nInput.value.trim());
+      var words = q.split(/\s+/).filter(Boolean);
+      var hits = data.filter(function (it) {
+        return (!nType || it.y === nType) && words.every(function (w) { return it.n.indexOf(w) !== -1; });
+      });
+      nList.innerHTML = hits.slice(0, limit).map(card).join('');
+      nMore.hidden = hits.length <= limit;
+      nEmpty.hidden = hits.length > 0;
+      nStatus.textContent = (q || nType) ? (isAr ? hits.length + ' نتيجة' : hits.length + (hits.length === 1 ? ' result' : ' results')) : '';
+    };
+    var withData = function (fn) {
+      if (data) return fn();
+      if (loading) return;
+      loading = true;
+      nStatus.textContent = isAr ? 'جارٍ التحميل…' : 'Loading…';
+      fetch(newsEl.dataset.index).then(function (r) { return r.json(); }).then(function (j) {
+        data = j.map(function (it) { it.n = nNorm(it.t + ' ' + it.x); return it; });
+        loading = false;
+        fn();
+      }).catch(function () { loading = false; nStatus.textContent = isAr ? 'تعذّر تحميل الأرشيف.' : 'Could not load the archive.'; });
+    };
+    var timer;
+    nInput.addEventListener('input', function () { clearTimeout(timer); timer = setTimeout(function () { limit = PAGE; withData(render); }, 180); });
+    nChips.addEventListener('click', function (e) {
+      var b = e.target.closest('.chip');
+      if (!b) return;
+      nType = b.dataset.value;
+      $$('.chip', nChips).forEach(function (c) { c.setAttribute('aria-pressed', String(c === b)); });
+      limit = PAGE;
+      withData(render);
+    });
+    nMore.addEventListener('click', function () { limit += PAGE; withData(render); });
+  }
+
+  // Video placeholders in archived posts: swap in the player on click.
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[data-yt]');
+    if (!a || e.ctrlKey || e.metaKey) return;
+    e.preventDefault();
+    var f = document.createElement('iframe');
+    f.src = 'https://www.youtube-nocookie.com/embed/' + a.dataset.yt + '?autoplay=1';
+    f.title = 'YouTube';
+    f.allow = 'autoplay; encrypted-media; picture-in-picture';
+    f.allowFullscreen = true;
+    a.parentNode.replaceChild(f, a);
+  });
 
   // Library: collection cards + search across every item
   var lib = $('[data-library]');

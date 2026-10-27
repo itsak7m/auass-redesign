@@ -1,17 +1,33 @@
 {
-  "categories": {
-    "union": { "ar": "أخبار الاتحاد", "en": "AUASS News" },
-    "lecture": { "ar": "محاضرات", "en": "Lectures" },
-    "announcement": { "ar": "إعلانات", "en": "Announcements" }
+  "types": {
+    "auass": {
+      "ar": "أخبار الاتحاد",
+      "en": "AUASS news"
+    },
+    "event": {
+      "ar": "محاضرات وفعاليات",
+      "en": "Lectures and events"
+    },
+    "science": {
+      "ar": "أخبار علمية",
+      "en": "Science news"
+    },
+    "article": {
+      "ar": "مقالات",
+      "en": "Articles"
+    }
   },
   "posts": [
     {
       "slug": "jordan-sky-october-2026",
       "date": "2026-09-21",
-      "category": "announcement",
+      "type": "auass",
       "image": "news/jordan-sky-oct-2026.jpg",
       "imageFit": "contain",
-      "title": { "ar": "أهم الأحداث الفلكية في سماء الأردن: تشرين الأول 2026", "en": "Key Astronomical Events in Jordan's Sky: October 2026" },
+      "title": {
+        "ar": "أهم الأحداث الفلكية في سماء الأردن: تشرين الأول 2026",
+        "en": "Key Astronomical Events in Jordan's Sky: October 2026"
+      },
       "excerpt": {
         "ar": "جدول أبرز الظواهر الفلكية في سماء الأردن خلال تشرين الأول/أكتوبر 2026، من إعداد المدرّبة الفلكية دلال اللالا.",
         "en": "A guide to the main sky events visible from Jordan in October 2026, prepared by astronomy trainer Dalal Al-Lala."
@@ -26,13 +42,22 @@
           "The guide was prepared by astronomy trainer Dalal Al-Lala, a member of AUASS. All times are Amman time."
         ]
       },
-      "cta": { "href": "#sky", "label": { "ar": "تصفّح سماء الشهر تفاعلياً", "en": "Explore this month's sky" } }
+      "cta": {
+        "href": "#sky",
+        "label": {
+          "ar": "تصفّح سماء الشهر تفاعلياً",
+          "en": "Explore this month's sky"
+        }
+      }
     },
     {
       "slug": "astrophotography-workshop-2026",
       "date": "2026-09-21",
-      "category": "union",
-      "title": { "ar": "ورشة التصوير الفلكي ومعالجة الصور الفلكية", "en": "Astrophotography and Image Processing Workshop" },
+      "type": "event",
+      "title": {
+        "ar": "ورشة التصوير الفلكي ومعالجة الصور الفلكية",
+        "en": "Astrophotography and Image Processing Workshop"
+      },
       "excerpt": {
         "ar": "عقد الاتحاد في مقره يوم 14 أيلول 2026 ورشة متخصصة في التصوير الفلكي ومعالجة الصور الفلكية بالتعاون مع فريق Luminode.",
         "en": "On 14 September 2026, AUASS held a specialised astrophotography and image-processing workshop at its headquarters, in cooperation with the Luminode team."
@@ -57,8 +82,11 @@
     {
       "slug": "space-law-lecture-2026",
       "date": "2026-09-21",
-      "category": "lecture",
-      "title": { "ar": "قانون الفضاء بين الحاضر والمستقبل", "en": "Space Law: Present and Future" },
+      "type": "event",
+      "title": {
+        "ar": "قانون الفضاء بين الحاضر والمستقبل",
+        "en": "Space Law: Present and Future"
+      },
       "excerpt": {
         "ar": "محاضرة علمية قدّمها الباحث زيد الدهامشة عبر منصة الاتحاد حول تطور قانون الفضاء وتحدياته ومستقبله.",
         "en": "A lecture by researcher Zaid Al-Dahamsheh, held on the AUASS platform, on the evolution, challenges and future of space law."
@@ -83,8 +111,11 @@
     {
       "slug": "crescent-and-venus-observation-2026",
       "date": "2026-09-21",
-      "category": "union",
-      "title": { "ar": "رصد الهلال والزهرة", "en": "Observing the Crescent Moon and Venus" },
+      "type": "event",
+      "title": {
+        "ar": "رصد الهلال والزهرة",
+        "en": "Observing the Crescent Moon and Venus"
+      },
       "excerpt": {
         "ar": "أمسية رصد فلكي في مرج الحمام، عمّان، يوم 14 أيلول 2026، بالتعاون بين الاتحاد وجمعية زركشات.",
         "en": "An evening of stargazing in Marj Al-Hamam, Amman, on 14 September 2026, organised with the Zarkashat Society."
@@ -108,19 +139,67 @@
       "slug": "arab-space-innovation-hackathon",
       "featured": true,
       "date": "2026-09-05",
-      "category": "union",
+      "type": "auass",
       "image": "news/hackathon.jpg",
-      "title": { "ar": "هاكاثون الابتكار الفضائي العربي", "en": "Arab Space Innovation Hackathon" },
+      "title": {
+        "ar": "هاكاثون الابتكار الفضائي العربي",
+        "en": "Arab Space Innovation Hackathon"
+      },
       "excerpt": {
         "ar": "يعلن الاتحاد عن رعايته لـ ASI Hack، هاكاثون عربي يجمع الطلاب والشباب للعمل على تحديات حقيقية في الفلك والفضاء والتكنولوجيا، يومي 25 و26 أيلول 2026 عبر الإنترنت.",
         "en": "AUASS announces its sponsorship of ASI Hack, an Arab hackathon bringing students and young people together to work on real challenges in astronomy, space and technology, held online on 25–26 September 2026."
       },
       "facts": [
-        { "k": { "ar": "الموعد", "en": "Dates" }, "v": { "ar": "25–26 أيلول 2026", "en": "25–26 September 2026" } },
-        { "k": { "ar": "المكان", "en": "Where" }, "v": { "ar": "عبر الإنترنت", "en": "Online" } },
-        { "k": { "ar": "الرعاية", "en": "Sponsor" }, "v": { "ar": "الاتحاد العربي لعلوم الفضاء والفلك", "en": "Arab Union for Astronomy and Space Sciences" } },
-        { "k": { "ar": "التنظيم", "en": "Organiser" }, "v": { "ar": "فريق كاسيوبيا مصر", "en": "Cassiopeia Egypt team" } },
-        { "k": { "ar": "شريك استراتيجي", "en": "Strategic partner" }, "v": { "ar": "فريق الفضاء العربي", "en": "Arab Space Team" } }
+        {
+          "k": {
+            "ar": "الموعد",
+            "en": "Dates"
+          },
+          "v": {
+            "ar": "25–26 أيلول 2026",
+            "en": "25–26 September 2026"
+          }
+        },
+        {
+          "k": {
+            "ar": "المكان",
+            "en": "Where"
+          },
+          "v": {
+            "ar": "عبر الإنترنت",
+            "en": "Online"
+          }
+        },
+        {
+          "k": {
+            "ar": "الرعاية",
+            "en": "Sponsor"
+          },
+          "v": {
+            "ar": "الاتحاد العربي لعلوم الفضاء والفلك",
+            "en": "Arab Union for Astronomy and Space Sciences"
+          }
+        },
+        {
+          "k": {
+            "ar": "التنظيم",
+            "en": "Organiser"
+          },
+          "v": {
+            "ar": "فريق كاسيوبيا مصر",
+            "en": "Cassiopeia Egypt team"
+          }
+        },
+        {
+          "k": {
+            "ar": "شريك استراتيجي",
+            "en": "Strategic partner"
+          },
+          "v": {
+            "ar": "فريق الفضاء العربي",
+            "en": "Arab Space Team"
+          }
+        }
       ],
       "body": {
         "ar": [
@@ -140,14 +219,21 @@
           "From the Arab world… to space."
         ]
       },
-      "tags": ["#ASIHack", "#Build_Beyond", "#ArabSpaceInnovationHackathon"]
+      "tags": [
+        "#ASIHack",
+        "#Build_Beyond",
+        "#ArabSpaceInnovationHackathon"
+      ]
     },
     {
       "slug": "space-agriculture-lecture",
       "date": "2026-04-28",
-      "category": "lecture",
+      "type": "event",
       "image": "news/space-agriculture.jpg",
-      "title": { "ar": "محاضرة: الزراعة في الفضاء", "en": "Lecture: Farming in Space" },
+      "title": {
+        "ar": "محاضرة: الزراعة في الفضاء",
+        "en": "Lecture: Farming in Space"
+      },
       "excerpt": {
         "ar": "محاضرة أسبوعية قدّمها د. خالد رمضان يوم السبت 25 نيسان 2026 عبر منصة Zoom.",
         "en": "A weekly lecture by Dr. Khaled Ramadan, held on Zoom on Saturday 25 April 2026."
@@ -166,8 +252,11 @@
     {
       "slug": "mearim7-call-for-participation",
       "date": "2025-07-05",
-      "category": "announcement",
-      "title": { "ar": "كونوا معنا في مؤتمر MEARIM7: لقاء العلم والفضاء", "en": "Join Us at MEARIM7, Where Science and Space Meet" },
+      "type": "event",
+      "title": {
+        "ar": "كونوا معنا في مؤتمر MEARIM7: لقاء العلم والفضاء",
+        "en": "Join Us at MEARIM7, Where Science and Space Meet"
+      },
       "excerpt": {
         "ar": "دعوة للمشاركة في الاجتماع الإقليمي السابع للاتحاد الفلكي الدولي في الشرق الأوسط وأفريقيا، 11–13 تشرين الثاني 2025 في الجامعة الأردنية.",
         "en": "A call to take part in the 7th Middle East and Africa Regional IAU Meeting, 11–13 November 2025 at the University of Jordan."
@@ -192,8 +281,11 @@
     {
       "slug": "jordan-youth-in-space",
       "date": "2025-05-26",
-      "category": "lecture",
-      "title": { "ar": "شباب الأردن في الفضاء: رحلة نجاح نحو المستقبل", "en": "Jordan's Youth in Space: A Journey of Success" },
+      "type": "event",
+      "title": {
+        "ar": "شباب الأردن في الفضاء: رحلة نجاح نحو المستقبل",
+        "en": "Jordan's Youth in Space: A Journey of Success"
+      },
       "excerpt": {
         "ar": "جلسة شبابية بالتعاون مع نجمة الأردن لأبحاث علوم الفضاء، يوم السبت 24 أيار 2025 عبر منصة Zoom.",
         "en": "A youth session with Jordan Star for Space Science Research, held on Zoom on Saturday 24 May 2025."
@@ -212,9 +304,12 @@
     {
       "slug": "astronomical-skills-course-2025",
       "date": "2025-05-10",
-      "category": "announcement",
+      "type": "event",
       "image": "news/astronomical-skills.jpg",
-      "title": { "ar": "دورة المهارات الفلكية", "en": "Astronomical Skills Course" },
+      "title": {
+        "ar": "دورة المهارات الفلكية",
+        "en": "Astronomical Skills Course"
+      },
       "excerpt": {
         "ar": "الدورة الفلكية الأكثر طلباً، تقدّمها المدرّبة الفلكية دلال اللالا من 27 إلى 29 أيار 2025 عبر منصة Zoom.",
         "en": "AUASS's most requested astronomy course, taught by trainer Dalal Al-Lala on Zoom from 27 to 29 May 2025."
@@ -233,9 +328,12 @@
     {
       "slug": "space-law-committee-launch",
       "date": "2025-05-09",
-      "category": "union",
+      "type": "auass",
       "image": "news/space-law-committee.jpg",
-      "title": { "ar": "إطلاق لجنة قانون الفضاء والتشريعات في الشرق الأوسط", "en": "Launch of the Space Law and Regulation Committee for the Middle East" },
+      "title": {
+        "ar": "إطلاق لجنة قانون الفضاء والتشريعات في الشرق الأوسط",
+        "en": "Launch of the Space Law and Regulation Committee for the Middle East"
+      },
       "excerpt": {
         "ar": "فعالية إطلاق لجنة قانون الفضاء والتشريعات التابعة للاتحاد، يوم السبت 17 أيار 2025 عبر منصة Zoom.",
         "en": "The launch of AUASS's Space Law and Regulation Committee, held on Zoom on Saturday 17 May 2025."
