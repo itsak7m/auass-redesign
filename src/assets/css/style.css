@@ -601,7 +601,7 @@ html[dir="rtl"] .crater-btn[aria-current] { box-shadow: inset -3px 0 0 var(--bra
 .prose.rich figcaption { font-size: 14px; color: var(--ink-2); text-align: center; margin-top: 6px; }
 .prose.rich blockquote { border-inline-start: 3px solid var(--brass); padding-inline-start: 18px; color: var(--ink-2); }
 .prose.rich .table-wrap { overflow-x: auto; }
-.prose.rich table { border-collapse: collapse; font-size: 15px; min-width: 100%; }
+.prose.rich table { border-collapse: collapse; font-size: 15px; min-width: 100%; overflow-wrap: normal; }
 .prose.rich td, .prose.rich th { border: 1px solid var(--line); padding: 6px 10px; vertical-align: top; }
 .prose.rich hr { border: 0; border-top: 1px solid var(--line); }
 .ap-figure { margin: 0 0 28px; }

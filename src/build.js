@@ -781,6 +781,7 @@ function infoPage(ctx, pg) {
   const { lang } = ctx;
   const has = !!pg.body[lang];
   const bodyLang = has ? lang : pg.body.ar ? 'ar' : 'en';
+  const summary = pg.summary && pg.summary[lang];
   const hub = SECTION_HUB[pg.section];
   const crumbs = pg.section === 'events'
     ? [{ label: lang === 'ar' ? 'الفعاليات' : 'Events', href: ctx.r(prefix(lang) + 'events/') }, { label: t(hub.label, lang), href: ctx.r(prefix(lang) + hub.path) }]
@@ -789,7 +790,9 @@ function infoPage(ctx, pg) {
   const main = `${pageHero(ctx, { eyebrow: t(PAGE_GROUPS[pg.group], lang), title: pageTitle(pg, lang), crumbs })}
 <section class="section paper">
   <div class="wrap narrow archive-post">
-    ${has ? '' : `<div class="upcoming-note">${icon('info')}<p>${lang === 'ar' ? 'هذه الصفحة منشورة باللغة الإنجليزية فقط على موقع الاتحاد، وتظهر هنا كما نُشرت.' : 'This page is available in Arabic only on the AUASS website; it is shown here as published.'}</p></div>`}
+    ${has ? '' : summary
+    ? `<div class="tr-lead prose rich">${archiveBody(ctx, summary)}</div><p class="tr-note">${icon('globe')}<span>This page is in Arabic; the summary above is in English. The original text follows.</span></p>`
+    : `<div class="upcoming-note">${icon('info')}<p>${lang === 'ar' ? 'هذه الصفحة منشورة باللغة الإنجليزية فقط على موقع الاتحاد، وتظهر هنا كما نُشرت.' : 'This page is available in Arabic only on the AUASS website; it is shown here as published.'}</p></div>`}
     <div class="prose rich"${bodyLang !== lang ? ` lang="${bodyLang}" dir="${bodyLang === 'ar' ? 'rtl' : 'ltr'}"` : ''}>${archiveBody(ctx, pg.body[bodyLang])}</div>
     <p class="archive-note">${icon('info')}<span>${lang === 'ar' ? 'صفحة منقولة من موقع الاتحاد كما نُشرت، مع تنظيف التنسيق وحذف عناوين البريد والهواتف الشخصية.' : 'Migrated from the AUASS website as published, with the formatting tidied and personal emails and phone numbers removed.'}</span></p>
   </div>
