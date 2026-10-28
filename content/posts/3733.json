@@ -8,5 +8,9 @@
  "image": "p/42b86fa62d5beec6",
  "imageAlt": "",
  "video": true,
- "body": "<p class=\"yt\" data-yt=\"QZBK3K4f-Qc\"></p>"
+ "body": "<p class=\"yt\" data-yt=\"QZBK3K4f-Qc\"></p>",
+ "en": {
+  "title": "Uranus 101",
+  "excerpt": ""
+ }
 }

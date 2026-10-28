@@ -8,5 +8,9 @@
  "image": "p/ebde6faa8968e01b",
  "imageAlt": "",
  "video": false,
- "body": "<figure><img src=\"@media/p/015a469b306509bb.webp\" alt=\"\" width=\"420\" height=\"1024\"></figure>\n<figure><img src=\"@media/p/1a8b3836e0b2317b.webp\" alt=\"\" width=\"667\" height=\"1024\"></figure>"
+ "body": "<figure><img src=\"@media/p/015a469b306509bb.webp\" alt=\"\" width=\"420\" height=\"1024\"></figure>\n<figure><img src=\"@media/p/1a8b3836e0b2317b.webp\" alt=\"\" width=\"667\" height=\"1024\"></figure>",
+ "en": {
+  "title": "Question: what is the accepted evidence that the Earth revolves around the Sun?",
+  "excerpt": ""
+ }
 }

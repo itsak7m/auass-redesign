@@ -8,5 +8,9 @@
  "image": null,
  "imageAlt": "",
  "video": true,
- "body": "<p class=\"yt\" data-yt=\"lFTsLarFAR4\"></p>"
+ "body": "<p class=\"yt\" data-yt=\"lFTsLarFAR4\"></p>",
+ "en": {
+  "title": "From the astronomical observing workshop at Zarqa University",
+  "excerpt": ""
+ }
 }

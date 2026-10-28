@@ -8,5 +8,9 @@
  "image": "p/0c3b5562af46213d",
  "imageAlt": "",
  "video": false,
- "body": "<p><img src=\"@media/p/0c3b5562af46213d.webp\" alt=\"\" width=\"840\" height=\"413\"></p>"
+ "body": "<p><img src=\"@media/p/0c3b5562af46213d.webp\" alt=\"\" width=\"840\" height=\"413\"></p>",
+ "en": {
+  "title": "Learn about the Atlas Dark Sky project",
+  "excerpt": ""
+ }
 }

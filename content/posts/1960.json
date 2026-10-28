@@ -8,5 +8,9 @@
  "image": null,
  "imageAlt": "",
  "video": false,
- "body": ""
+ "body": "",
+ "en": {
+  "title": "The New Horizons spacecraft",
+  "excerpt": ""
+ }
 }

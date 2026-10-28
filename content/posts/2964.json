@@ -8,5 +8,9 @@
  "image": null,
  "imageAlt": "",
  "video": false,
- "body": "<p><a href=\"https://youtu.be/rPJ6dDdEYkQ\">https://youtu.be/rPJ6dDdEYkQ</a></p>"
+ "body": "<p><a href=\"https://youtu.be/rPJ6dDdEYkQ\">https://youtu.be/rPJ6dDdEYkQ</a></p>",
+ "en": {
+  "title": "Learn about the \"Dark Sky\" project to create the largest light reserve in Morocco",
+  "excerpt": ""
+ }
 }

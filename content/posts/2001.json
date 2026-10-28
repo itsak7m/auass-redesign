@@ -8,5 +8,9 @@
  "image": "p/b544afa63cc10942",
  "imageAlt": "",
  "video": false,
- "body": "<figure><img src=\"@media/p/b544afa63cc10942.webp\" alt=\"\" width=\"960\" height=\"789\"><figcaption> متحف اللوفر -كتاب الصوفي -صور الكواكب الـ48</figcaption></figure>"
+ "body": "<figure><img src=\"@media/p/b544afa63cc10942.webp\" alt=\"\" width=\"960\" height=\"789\"><figcaption> متحف اللوفر -كتاب الصوفي -صور الكواكب الـ48</figcaption></figure>",
+ "en": {
+  "title": "The Louvre: al-Sufi's book with images of the 48 constellations",
+  "excerpt": "The Louvre: al-Sufi's book with images of the 48 constellations."
+ }
 }

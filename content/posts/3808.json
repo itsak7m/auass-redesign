@@ -8,5 +8,9 @@
  "image": "p/65bcdf191f43df80",
  "imageAlt": "",
  "video": false,
- "body": "<p>يمكنك من خلال الرابط التالي الدخول إلى أرشيف صور القمر الصناعي الروسي (Electro L2)</p>\n<p>الدخول للأرشيف</p>"
+ "body": "<p>يمكنك من خلال الرابط التالي الدخول إلى أرشيف صور القمر الصناعي الروسي (Electro L2)</p>\n<p>الدخول للأرشيف</p>",
+ "en": {
+  "title": "Image archive of the Russian satellite Electro-L2",
+  "excerpt": "A link to the image archive of the Russian satellite Electro-L2."
+ }
 }

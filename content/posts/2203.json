@@ -8,5 +8,9 @@
  "image": "p/4cc829581a7688b5",
  "imageAlt": "",
  "video": false,
- "body": "<h2><img src=\"@media/p/793fb5c3ea8721d3.webp\" alt=\"\" width=\"945\" height=\"529\"></h2>\n<h2><strong>رابط مشاهدة الفيديو</strong></h2>\n<p><a href=\"https://www.nytimes.com/video/science/100000006012333/nasa-parker-solar-probe.html\">https://www.nytimes.com/video/science/100000006012333/nasa-parker-solar-probe.html</a></p>"
+ "body": "<h2><img src=\"@media/p/793fb5c3ea8721d3.webp\" alt=\"\" width=\"945\" height=\"529\"></h2>\n<h2><strong>رابط مشاهدة الفيديو</strong></h2>\n<p><a href=\"https://www.nytimes.com/video/science/100000006012333/nasa-parker-solar-probe.html\">https://www.nytimes.com/video/science/100000006012333/nasa-parker-solar-probe.html</a></p>",
+ "en": {
+  "title": "A great New York Times video, \"Touching the Sun\", answers questions about the Parker Solar Probe",
+  "excerpt": ""
+ }
 }
