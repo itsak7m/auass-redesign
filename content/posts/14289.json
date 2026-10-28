@@ -8,5 +8,10 @@
  "image": "p/aec136891a5e4362",
  "imageAlt": "",
  "video": false,
- "body": "<figure>\n<figure><img src=\"@media/p/aec136891a5e4362.webp\" alt=\"\" width=\"768\" height=\"768\"></figure>\n<figure><img src=\"@media/p/66a510e9437c90c6.webp\" alt=\"\" width=\"768\" height=\"768\"></figure>\n</figure>"
+ "body": "<figure>\n<figure><img src=\"@media/p/aec136891a5e4362.webp\" alt=\"\" width=\"768\" height=\"768\"></figure>\n<figure><img src=\"@media/p/66a510e9437c90c6.webp\" alt=\"\" width=\"768\" height=\"768\"></figure>\n</figure>",
+ "en": {
+  "title": "Invitation to a lecture on space geodesy",
+  "excerpt": "",
+  "body": "<figure>\n<figure><img src=\"@media/p/aec136891a5e4362.webp\" alt=\"\" width=\"768\" height=\"768\"></figure>\n<figure><img src=\"@media/p/66a510e9437c90c6.webp\" alt=\"\" width=\"768\" height=\"768\"></figure>\n</figure>"
+ }
 }

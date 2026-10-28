@@ -8,5 +8,10 @@
  "image": "p/a7651ed0e9664e4a",
  "imageAlt": "",
  "video": false,
- "body": "<figure><img src=\"@media/p/a7651ed0e9664e4a.webp\" alt=\"\" width=\"812\" height=\"1600\"></figure>"
+ "body": "<figure><img src=\"@media/p/a7651ed0e9664e4a.webp\" alt=\"\" width=\"812\" height=\"1600\"></figure>",
+ "en": {
+  "title": "Invitation to the lecture \"What astronomical phenomena have taught us\"",
+  "excerpt": "",
+  "body": "<figure><img src=\"@media/p/a7651ed0e9664e4a.webp\" alt=\"\" width=\"812\" height=\"1600\"></figure>"
+ }
 }

@@ -8,5 +8,10 @@
  "image": "p/fe87c6e99efd5fe8",
  "imageAlt": "",
  "video": false,
- "body": "<figure><img src=\"@media/p/fe87c6e99efd5fe8.webp\" alt=\"\" width=\"960\" height=\"643\"></figure>\n<figure><img src=\"@media/p/a7a08c66dd621e49.webp\" alt=\"\" width=\"960\" height=\"720\"></figure>\n<figure><img src=\"@media/p/c66ba70622047545.webp\" alt=\"\" width=\"960\" height=\"720\"></figure>"
+ "body": "<figure><img src=\"@media/p/fe87c6e99efd5fe8.webp\" alt=\"\" width=\"960\" height=\"643\"></figure>\n<figure><img src=\"@media/p/a7a08c66dd621e49.webp\" alt=\"\" width=\"960\" height=\"720\"></figure>\n<figure><img src=\"@media/p/c66ba70622047545.webp\" alt=\"\" width=\"960\" height=\"720\"></figure>",
+ "en": {
+  "title": "The astronomy teacher workshop",
+  "excerpt": "",
+  "body": "<figure><img src=\"@media/p/fe87c6e99efd5fe8.webp\" alt=\"\" width=\"960\" height=\"643\"></figure>\n<figure><img src=\"@media/p/a7a08c66dd621e49.webp\" alt=\"\" width=\"960\" height=\"720\"></figure>\n<figure><img src=\"@media/p/c66ba70622047545.webp\" alt=\"\" width=\"960\" height=\"720\"></figure>"
+ }
 }

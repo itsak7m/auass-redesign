@@ -8,5 +8,10 @@
  "image": null,
  "imageAlt": "",
  "video": false,
- "body": "<p><a href=\"@media/files/cd798b6c9808a287.pdf\">الظواهر الفلكية لعام 2025 نهائي</a> — <a href=\"@media/files/cd798b6c9808a287.pdf\" download>تنزيل الملف</a></p>"
+ "body": "<p><a href=\"@media/files/cd798b6c9808a287.pdf\">الظواهر الفلكية لعام 2025 نهائي</a> — <a href=\"@media/files/cd798b6c9808a287.pdf\" download>تنزيل الملف</a></p>",
+ "en": {
+  "title": "Astronomical phenomena of 2025",
+  "excerpt": "",
+  "body": "<p><a href=\"@media/files/cd798b6c9808a287.pdf\">Astronomical phenomena of 2025 (final)</a> — <a href=\"@media/files/cd798b6c9808a287.pdf\" download>Download the file</a></p>"
+ }
 }

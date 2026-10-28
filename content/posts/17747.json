@@ -8,5 +8,10 @@
  "image": "p/5f5a16916a3d5322",
  "imageAlt": "",
  "video": false,
- "body": "<p class=\"media-file\" data-href=\"@media/files/97cf8bd3a0dc3c13.mp4\" data-kind=\"video\"></p>"
+ "body": "<p class=\"media-file\" data-href=\"@media/files/97cf8bd3a0dc3c13.mp4\" data-kind=\"video\"></p>",
+ "en": {
+  "title": "Astronomy news",
+  "excerpt": "",
+  "body": "<p class=\"media-file\" data-href=\"@media/files/97cf8bd3a0dc3c13.mp4\" data-kind=\"video\"></p>"
+ }
 }

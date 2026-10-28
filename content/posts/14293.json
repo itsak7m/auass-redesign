@@ -3,10 +3,15 @@
  "date": "2023-12-16",
  "lang": "ar",
  "type": "event",
- "title": "دعوة لحضور المحاضرة الموسومة تحت عنوان: اكتشاف فيزياء نظامنا الشمسي",
+ "title": "دعوة لحضور محاضرة: اكتشاف فيزياء نظامنا الشمسي",
  "excerpt": "*محاضرتنا اليوم* يسر الاتحاد العربي لعلوم الفضاء والفلك دعوتكم لحضور المحاضرة الموسومة تحت عنوان: اكتشاف فيزياء نظامنا الشمسي التي يقدمها عضو المجلس الأعلى: أ.د مُنيب العيد وذلك: يوم السبت الموافق 16 كانون الأول/ديسمبر…",
  "image": "p/0cef0f61886d09b3",
  "imageAlt": "",
  "video": false,
- "body": "<figure><img src=\"@media/p/0cef0f61886d09b3.webp\" alt=\"\" width=\"658\" height=\"945\"></figure>\n<p>*محاضرتنا اليوم*</p>\n<p>يسر الاتحاد العربي لعلوم الفضاء والفلك <br/>دعوتكم لحضور المحاضرة الموسومة تحت عنوان:</p>\n<p>اكتشاف فيزياء نظامنا الشمسي<br/>التي يقدمها عضو المجلس الأعلى: أ.د مُنيب العيد</p>\n<p>وذلك:<br/>يوم السبت الموافق 16 كانون الأول/ديسمبر 2023<br/>في تمام الساعة الثالثة مساءً بالتوقيت العالمي، الخامسة مساءً بتوقيت القاهرة، السادسة مساءً بتوقيت عمّان، السابعة بتوقيت دُبي.<br/>عبر الفضاء الإلكتروني للاتحاد العربي.</p>\n<p>• نشجع تلاميذ الجامعة والمدارس الثانوية للمشاركة في هذه المحاضرة المفيدة.</p>\n<p>وجودكم يسعدنا!</p>"
+ "body": "<figure><img src=\"@media/p/0cef0f61886d09b3.webp\" alt=\"\" width=\"658\" height=\"945\"></figure>\n<p>*محاضرتنا اليوم*</p>\n<p>يسر الاتحاد العربي لعلوم الفضاء والفلك <br/>دعوتكم لحضور المحاضرة الموسومة تحت عنوان:</p>\n<p>اكتشاف فيزياء نظامنا الشمسي<br/>التي يقدمها عضو المجلس الأعلى: أ.د مُنيب العيد</p>\n<p>وذلك:<br/>يوم السبت الموافق 16 كانون الأول/ديسمبر 2023<br/>في تمام الساعة الثالثة مساءً بالتوقيت العالمي، الخامسة مساءً بتوقيت القاهرة، السادسة مساءً بتوقيت عمّان، السابعة بتوقيت دُبي.<br/>عبر الفضاء الإلكتروني للاتحاد العربي.</p>\n<p>• نشجع تلاميذ الجامعة والمدارس الثانوية للمشاركة في هذه المحاضرة المفيدة.</p>\n<p>وجودكم يسعدنا!</p>",
+ "en": {
+  "title": "Invitation to the lecture \"Discovering the physics of our solar system\"",
+  "excerpt": "AUASS invites you to an online lecture by High Council member Prof. Mounib El Eid, \"Discovering the physics of our solar system\", on Saturday, 16 December 2023; university and secondary school students are encouraged to attend.",
+  "body": "<figure><img src=\"@media/p/0cef0f61886d09b3.webp\" alt=\"\" width=\"658\" height=\"945\"></figure>\n<p>*Our lecture today*</p>\n<p>The Arab Union for Astronomy and Space Sciences <br/>is pleased to invite you to the lecture entitled:</p>\n<p>Discovering the physics of our solar system<br/>given by High Council member Prof. Mounib El Eid</p>\n<p>on:<br/>Saturday, 16 December 2023,<br/>at 3 pm UT, 5 pm Cairo time, 6 pm Amman time and 7 pm Dubai time,<br/>in the Arab Union's online space.</p>\n<p>• We encourage university and secondary school students to attend this useful lecture.</p>\n<p>We look forward to seeing you!</p>"
+ }
 }

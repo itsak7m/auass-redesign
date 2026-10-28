@@ -8,5 +8,10 @@
  "image": "p/22236d3da54611b3",
  "imageAlt": "",
  "video": false,
- "body": "<figure>\n<figure><img src=\"@media/p/22236d3da54611b3.webp\" alt=\"\" width=\"960\" height=\"686\"></figure>\n</figure>"
+ "body": "<figure>\n<figure><img src=\"@media/p/22236d3da54611b3.webp\" alt=\"\" width=\"960\" height=\"686\"></figure>\n</figure>",
+ "en": {
+  "title": "Workshop: \"The astronomy teacher\"",
+  "excerpt": "",
+  "body": "<figure>\n<figure><img src=\"@media/p/22236d3da54611b3.webp\" alt=\"\" width=\"960\" height=\"686\"></figure>\n</figure>"
+ }
 }

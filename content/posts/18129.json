@@ -8,5 +8,10 @@
  "image": "p/deb05adc5bdf5a19",
  "imageAlt": "",
  "video": false,
- "body": "<p class=\"media-file\" data-href=\"@media/files/049bf5271e71c926.mp4\" data-kind=\"video\"></p>"
+ "body": "<p class=\"media-file\" data-href=\"@media/files/049bf5271e71c926.mp4\" data-kind=\"video\"></p>",
+ "en": {
+  "title": "Is the Earth flat?",
+  "excerpt": "",
+  "body": "<p class=\"media-file\" data-href=\"@media/files/049bf5271e71c926.mp4\" data-kind=\"video\"></p>"
+ }
 }

@@ -8,5 +8,10 @@
  "image": "p/712b5cc8c1ae2958",
  "imageAlt": "",
  "video": false,
- "body": "<p>المصدر: دليل الظواهر الفلكية لعام 2024. تأليف وهيب عيسى الناصر، مطبعة الأيام.</p>\n<figure><img src=\"@media/p/712b5cc8c1ae2958.webp\" alt=\"\" width=\"960\" height=\"1288\"></figure>"
+ "body": "<p>المصدر: دليل الظواهر الفلكية لعام 2024. تأليف وهيب عيسى الناصر، مطبعة الأيام.</p>\n<figure><img src=\"@media/p/712b5cc8c1ae2958.webp\" alt=\"\" width=\"960\" height=\"1288\"></figure>",
+ "en": {
+  "title": "Guide to astronomical phenomena for 2024",
+  "excerpt": "Source: Guide to astronomical phenomena for 2024, by Waheeb Essa Al-Naser, Al-Ayam Press.",
+  "body": "<p>Source: Guide to astronomical phenomena for 2024, by Waheeb Essa Al-Naser, Al-Ayam Press.</p>\n<figure><img src=\"@media/p/712b5cc8c1ae2958.webp\" alt=\"\" width=\"960\" height=\"1288\"></figure>"
+ }
 }

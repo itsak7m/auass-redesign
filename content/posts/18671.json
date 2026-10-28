@@ -4,9 +4,14 @@
  "lang": "ar",
  "type": "article",
  "title": "مجلة بلقيس رسائل من السماء الإصدار الثاني",
- "excerpt": "مجلة بلقيس (رسائل من السماء) الإصدار الثاني_٠١٣٣٥٠ Download",
+ "excerpt": "مجلة بلقيس (رسائل من السماء)، الإصدار الثاني (ملف PDF).",
  "image": null,
  "imageAlt": "",
  "video": false,
- "body": "<p><a href=\"@media/files/04a8c9d373ba9405.pdf\">مجلة بلقيس (رسائل من السماء) الإصدار الثاني</a> — <a href=\"@media/files/04a8c9d373ba9405.pdf\" download>تنزيل الملف</a></p>"
+ "body": "<p><a href=\"@media/files/04a8c9d373ba9405.pdf\">مجلة بلقيس (رسائل من السماء) الإصدار الثاني</a> — <a href=\"@media/files/04a8c9d373ba9405.pdf\" download>تنزيل الملف</a></p>",
+ "en": {
+  "title": "Balqees magazine: \"Messages from the Sky\", second issue",
+  "excerpt": "Balqees magazine (\"Messages from the Sky\"), second issue (PDF file).",
+  "body": "<p><a href=\"@media/files/04a8c9d373ba9405.pdf\">Balqees magazine (\"Messages from the Sky\"), second issue</a> — <a href=\"@media/files/04a8c9d373ba9405.pdf\" download>Download the file</a></p>"
+ }
 }

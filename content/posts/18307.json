@@ -4,9 +4,14 @@
  "lang": "ar",
  "type": "article",
  "title": "كتاب المواقيت والقبلة – دليل الحساب الفلكي",
- "excerpt": "كتاب المواقيت والقبلة – دليل الحساب الفلكي Download",
+ "excerpt": "كتاب المواقيت والقبلة – دليل الحساب الفلكي (ملف PDF).",
  "image": null,
  "imageAlt": "",
  "video": false,
- "body": "<p><a href=\"@media/files/60594dcd330c2176.pdf\">كتاب المواقيت والقبلة – دليل الحساب الفلكي</a> — <a href=\"@media/files/60594dcd330c2176.pdf\" download>تنزيل الملف</a></p>"
+ "body": "<p><a href=\"@media/files/60594dcd330c2176.pdf\">كتاب المواقيت والقبلة – دليل الحساب الفلكي</a> — <a href=\"@media/files/60594dcd330c2176.pdf\" download>تنزيل الملف</a></p>",
+ "en": {
+  "title": "\"Prayer times and the qibla – a guide to astronomical calculation\" (book)",
+  "excerpt": "The book \"Prayer times and the qibla – a guide to astronomical calculation\" (PDF file).",
+  "body": "<p><a href=\"@media/files/60594dcd330c2176.pdf\">Prayer times and the qibla – a guide to astronomical calculation</a> — <a href=\"@media/files/60594dcd330c2176.pdf\" download>Download the file</a></p>"
+ }
 }

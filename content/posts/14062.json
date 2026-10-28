@@ -8,5 +8,10 @@
  "image": "p/8f6fc74e7358b857",
  "imageAlt": "",
  "video": false,
- "body": "<figure><img src=\"@media/p/8f6fc74e7358b857.webp\" alt=\"\" width=\"960\" height=\"540\"></figure>\n<figure><img src=\"@media/p/8e5ec6192e82d094.webp\" alt=\"\" width=\"960\" height=\"348\"></figure>"
+ "body": "<figure><img src=\"@media/p/8f6fc74e7358b857.webp\" alt=\"\" width=\"960\" height=\"540\"></figure>\n<figure><img src=\"@media/p/8e5ec6192e82d094.webp\" alt=\"\" width=\"960\" height=\"348\"></figure>",
+ "en": {
+  "title": "Astronomy skills course (3)",
+  "excerpt": "",
+  "body": "<figure><img src=\"@media/p/8f6fc74e7358b857.webp\" alt=\"\" width=\"960\" height=\"540\"></figure>\n<figure><img src=\"@media/p/8e5ec6192e82d094.webp\" alt=\"\" width=\"960\" height=\"348\"></figure>"
+ }
 }

@@ -8,5 +8,10 @@
  "image": "p/eb2dd82535d47870",
  "imageAlt": "",
  "video": false,
- "body": "<figure><img src=\"@media/p/a120f79cf8e352d2.webp\" alt=\"\" width=\"960\" height=\"1280\"></figure>"
+ "body": "<figure><img src=\"@media/p/a120f79cf8e352d2.webp\" alt=\"\" width=\"960\" height=\"1280\"></figure>",
+ "en": {
+  "title": "International Conference on Renewable Energy, Oil and Gas and Climate Change (IREGOCCC)",
+  "excerpt": "",
+  "body": "<figure><img src=\"@media/p/a120f79cf8e352d2.webp\" alt=\"\" width=\"960\" height=\"1280\"></figure>"
+ }
 }

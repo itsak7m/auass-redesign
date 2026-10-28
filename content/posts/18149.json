@@ -8,5 +8,10 @@
  "image": "p/fa5ce5b191756797",
  "imageAlt": "",
  "video": false,
- "body": "<p class=\"media-file\" data-href=\"@media/files/236123d7ae28cd36.mp4\" data-kind=\"video\"></p>"
+ "body": "<p class=\"media-file\" data-href=\"@media/files/236123d7ae28cd36.mp4\" data-kind=\"video\"></p>",
+ "en": {
+  "title": "From space to Earth",
+  "excerpt": "",
+  "body": "<p class=\"media-file\" data-href=\"@media/files/236123d7ae28cd36.mp4\" data-kind=\"video\"></p>"
+ }
 }
