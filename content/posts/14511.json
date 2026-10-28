@@ -8,5 +8,9 @@
  "image": "p/21a700db97e1cf04",
  "imageAlt": "",
  "video": false,
- "body": "<figure><img src=\"@media/p/21a700db97e1cf04.webp\" alt=\"\" width=\"960\" height=\"540\"></figure>"
+ "body": "<figure><img src=\"@media/p/21a700db97e1cf04.webp\" alt=\"\" width=\"960\" height=\"540\"></figure>",
+ "en": {
+  "title": "Astronomical calendar 2024, by astronomer Ammar Essa Mohammed Abdullah",
+  "excerpt": ""
+ }
 }

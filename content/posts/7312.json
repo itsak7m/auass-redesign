@@ -8,5 +8,9 @@
  "image": null,
  "imageAlt": "",
  "video": false,
- "body": "<p class=\"media-file\" data-href=\"@media/files/5605997712d48908.mp4\" data-kind=\"video\"></p>"
+ "body": "<p class=\"media-file\" data-href=\"@media/files/5605997712d48908.mp4\" data-kind=\"video\"></p>",
+ "en": {
+  "title": "Turkish scholar Fuat Sezgin: awareness is the foundation of civilisation",
+  "excerpt": ""
+ }
 }

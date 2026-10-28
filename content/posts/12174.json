@@ -8,5 +8,9 @@
  "image": null,
  "imageAlt": "",
  "video": false,
- "body": "<p class=\"ext-embed\" data-href=\"https://www.facebook.com/BAPSC/videos/1444633855915580/\" data-kind=\"facebook\"></p>"
+ "body": "<p class=\"ext-embed\" data-href=\"https://www.facebook.com/BAPSC/videos/1444633855915580/\" data-kind=\"facebook\"></p>",
+ "en": {
+  "title": "Eratosthenes 2021",
+  "excerpt": ""
+ }
 }

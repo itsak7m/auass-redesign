@@ -8,5 +8,9 @@
  "image": "p/1a8103b630ec205d",
  "imageAlt": "",
  "video": false,
- "body": "<p><em>(الفيديو لم يعد متاحاً على يوتيوب)</em></p>"
+ "body": "<p><em>(الفيديو لم يعد متاحاً على يوتيوب)</em></p>",
+ "en": {
+  "title": "A short video marking 20 years of the XMM telescope, which observes celestial objects in X-rays",
+  "excerpt": ""
+ }
 }

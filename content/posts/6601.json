@@ -8,5 +8,9 @@
  "image": null,
  "imageAlt": "",
  "video": false,
- "body": "<p class=\"media-file\" data-href=\"@media/files/5bcbf52fac287487.mp4\" data-kind=\"video\"></p>"
+ "body": "<p class=\"media-file\" data-href=\"@media/files/5bcbf52fac287487.mp4\" data-kind=\"video\"></p>",
+ "en": {
+  "title": "A simulated launch of Falcon 9 with two astronauts, nine years after the last crewed launch from the US, Atlantis in 2011",
+  "excerpt": ""
+ }
 }

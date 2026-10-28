@@ -8,5 +8,9 @@
  "image": "p/429b9072f43bfff7",
  "imageAlt": "",
  "video": false,
- "body": "<figure><img src=\"@media/p/429b9072f43bfff7.webp\" alt=\"\" width=\"960\" height=\"960\"></figure>\n<figure><img src=\"@media/p/71c2cefae52cc52f.webp\" alt=\"\" width=\"720\" height=\"1280\"></figure>"
+ "body": "<figure><img src=\"@media/p/429b9072f43bfff7.webp\" alt=\"\" width=\"960\" height=\"960\"></figure>\n<figure><img src=\"@media/p/71c2cefae52cc52f.webp\" alt=\"\" width=\"720\" height=\"1280\"></figure>",
+ "en": {
+  "title": "The first SpaceScope summer school for astronomy and space enthusiasts",
+  "excerpt": ""
+ }
 }

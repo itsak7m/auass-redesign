@@ -8,5 +8,9 @@
  "image": "p/5dfd6f1d22cf0b8d",
  "imageAlt": "",
  "video": false,
- "body": "<p class=\"media-file\" data-href=\"@media/files/8315523ef22d4ef6.mp4\" data-kind=\"video\"></p>"
+ "body": "<p class=\"media-file\" data-href=\"@media/files/8315523ef22d4ef6.mp4\" data-kind=\"video\"></p>",
+ "en": {
+  "title": "Photographing the ISS crossing the Sun's disc – Al-Zaaq Observatory",
+  "excerpt": ""
+ }
 }

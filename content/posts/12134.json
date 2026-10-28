@@ -8,5 +8,9 @@
  "image": null,
  "imageAlt": "",
  "video": false,
- "body": "<p class=\"media-file\" data-href=\"http://www.jgs-jo.net/wp-content/uploads/2021/05/WhatsApp%20Video%202021-05-04%20at%2011.44.26%20PM.mp4\" data-kind=\"video\"></p>"
+ "body": "<p class=\"media-file\" data-href=\"http://www.jgs-jo.net/wp-content/uploads/2021/05/WhatsApp%20Video%202021-05-04%20at%2011.44.26%20PM.mp4\" data-kind=\"video\"></p>",
+ "en": {
+  "title": "Video: the roundness of the Earth",
+  "excerpt": ""
+ }
 }

@@ -8,5 +8,9 @@
  "image": "p/0332e6e427b59df6",
  "imageAlt": "",
  "video": false,
- "body": "<p class=\"media-file\" data-href=\"@media/files/e68a6d2d1ff6684e.mp4\" data-kind=\"video\"></p>"
+ "body": "<p class=\"media-file\" data-href=\"@media/files/e68a6d2d1ff6684e.mp4\" data-kind=\"video\"></p>",
+ "en": {
+  "title": "Video: al-Marba'aniya",
+  "excerpt": ""
+ }
 }

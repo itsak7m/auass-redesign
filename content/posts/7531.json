@@ -8,5 +8,9 @@
  "image": null,
  "imageAlt": "",
  "video": false,
- "body": "<p>إعداد: الأستاذ الدكتور وهيب عيسى الناصر</p>\n<p>أستاذ الفيزياء التطبيقية، رئيس الجمعية الفلكية البحرينية</p>\n"
+ "body": "<p>إعداد: الأستاذ الدكتور وهيب عيسى الناصر</p>\n<p>أستاذ الفيزياء التطبيقية، رئيس الجمعية الفلكية البحرينية</p>\n",
+ "en": {
+  "title": "The main astronomical phenomena of 2021",
+  "excerpt": "Prepared by Prof. Dr. Waheeb Essa Al-Naser, professor of applied physics and President of the Bahrain Astronomical Society."
+ }
 }

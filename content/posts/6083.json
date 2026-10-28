@@ -8,5 +8,9 @@
  "image": "p/0a2b05e42a811c3d",
  "imageAlt": "",
  "video": false,
- "body": "<p class=\"media-file\" data-href=\"@media/files/dd048c75b9138e3e.mp4\" data-kind=\"video\"></p>\n<p class=\"media-file\" data-href=\"@media/files/cb4525de5a0ab459.mp4\" data-kind=\"video\"></p>\n<p><strong> فيديوهات توضح مرصد جبل أم الدامي في وادي رم والذي يقع على ارتفاع ١٨٥٤ متر</strong></p>"
+ "body": "<p class=\"media-file\" data-href=\"@media/files/dd048c75b9138e3e.mp4\" data-kind=\"video\"></p>\n<p class=\"media-file\" data-href=\"@media/files/cb4525de5a0ab459.mp4\" data-kind=\"video\"></p>\n<p><strong> فيديوهات توضح مرصد جبل أم الدامي في وادي رم والذي يقع على ارتفاع ١٨٥٤ متر</strong></p>",
+ "en": {
+  "title": "The Umm al-Dami observatory",
+  "excerpt": "Videos of the observatory on Jabal Umm al-Dami in Wadi Rum, at an altitude of 1,854 metres."
+ }
 }

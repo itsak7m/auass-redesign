@@ -8,5 +8,9 @@
  "image": "p/d902acaa2b538bc9",
  "imageAlt": "",
  "video": true,
- "body": "<p class=\"yt\" data-yt=\"XhwF1Oztsxc\"></p>\n<p>المصدر: قناة ديسكفري ساينس<br/>\nترجمة: م. ماجد أبو زاهرة</p>"
+ "body": "<p class=\"yt\" data-yt=\"XhwF1Oztsxc\"></p>\n<p>المصدر: قناة ديسكفري ساينس<br/>\nترجمة: م. ماجد أبو زاهرة</p>",
+ "en": {
+  "title": "Translated video: Hubble's scientific revolution",
+  "excerpt": "Source: Discovery Science; translated by Eng. Majed Abu Zahra."
+ }
 }

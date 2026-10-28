@@ -8,5 +8,9 @@
  "image": null,
  "imageAlt": "",
  "video": true,
- "body": "<p class=\"yt\" data-yt=\"0aEljhIYA6c\"></p>"
+ "body": "<p class=\"yt\" data-yt=\"0aEljhIYA6c\"></p>",
+ "en": {
+  "title": "The first attempt to create a human colony on the Moon in a \"private mission\"",
+  "excerpt": ""
+ }
 }

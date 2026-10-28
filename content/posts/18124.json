@@ -8,5 +8,9 @@
  "image": "p/365096881ffa97cf",
  "imageAlt": "",
  "video": false,
- "body": "<figure><img src=\"@media/p/12f0609d736c25e9.webp\" alt=\"\" width=\"768\" height=\"526\"></figure>\n<p>تجدونها في <a href=\"@site:library/\">المكتبة</a>.</p>"
+ "body": "<figure><img src=\"@media/p/12f0609d736c25e9.webp\" alt=\"\" width=\"768\" height=\"526\"></figure>\n<p>تجدونها في <a href=\"@site:library/\">المكتبة</a>.</p>",
+ "en": {
+  "title": "New magazines uploaded",
+  "excerpt": ""
+ }
 }

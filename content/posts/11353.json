@@ -8,5 +8,9 @@
  "image": null,
  "imageAlt": "",
  "video": true,
- "body": "<p class=\"yt\" data-yt=\"U5Q7PpVTgBA\"></p>"
+ "body": "<p class=\"yt\" data-yt=\"U5Q7PpVTgBA\"></p>",
+ "en": {
+  "title": "The Moon and lunar images from Al-Ajairi Observatory in Kuwait",
+  "excerpt": ""
+ }
 }

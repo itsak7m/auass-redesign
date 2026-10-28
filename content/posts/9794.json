@@ -8,5 +8,9 @@
  "image": null,
  "imageAlt": "",
  "video": false,
- "body": "<figure><ul><li></li><li></li></ul></figure>\n<p>ساعات قليلة تفصلنا عن موعد إطلاق أول تجربة علمية من الكويت إلى الفضاء. ستكون هذه التجربة ضمن حمولة المركبة الفضائية الجديدة دراجون 2 المصممة من قبل شركة سبيس إكس بهدف توصيل الإمدادات لرواد الفضاء في محطة الفضاء الدولية</p>\n<p>Few hours separate us from the launch of Kuwait's first scientific experiment to space. This experiment will be part of the payload of the new spacecraft Dragon 2 designed by SpaceX to deliver supplies to astronauts on the International Space Station. The space flight of this experiment is enabled by agreement with DreamUp</p>"
+ "body": "<figure><ul><li></li><li></li></ul></figure>\n<p>ساعات قليلة تفصلنا عن موعد إطلاق أول تجربة علمية من الكويت إلى الفضاء. ستكون هذه التجربة ضمن حمولة المركبة الفضائية الجديدة دراجون 2 المصممة من قبل شركة سبيس إكس بهدف توصيل الإمدادات لرواد الفضاء في محطة الفضاء الدولية</p>\n<p>Few hours separate us from the launch of Kuwait's first scientific experiment to space. This experiment will be part of the payload of the new spacecraft Dragon 2 designed by SpaceX to deliver supplies to astronauts on the International Space Station. The space flight of this experiment is enabled by agreement with DreamUp</p>",
+ "en": {
+  "title": "The launch of the first scientific experiment from Kuwait to space",
+  "excerpt": "Hours away: the first Kuwaiti scientific experiment flies to space aboard SpaceX's new Dragon 2 cargo spacecraft, which carries supplies to the International Space Station."
+ }
 }

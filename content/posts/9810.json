@@ -8,5 +8,9 @@
  "image": null,
  "imageAlt": "",
  "video": false,
- "body": "<p class=\"media-file\" data-href=\"@media/files/448dd84d136dc53d.mp4\" data-kind=\"video\"></p>"
+ "body": "<p class=\"media-file\" data-href=\"@media/files/448dd84d136dc53d.mp4\" data-kind=\"video\"></p>",
+ "en": {
+  "title": "A stunning shot of the \"Great Conjunction\" over Burj Khalifa",
+  "excerpt": ""
+ }
 }

@@ -8,5 +8,9 @@
  "image": "p/3af4cc054e347cc6",
  "imageAlt": "",
  "video": false,
- "body": "<figure><img src=\"@media/p/3af4cc054e347cc6.webp\" alt=\"\" width=\"960\" height=\"1200\"></figure>"
+ "body": "<figure><img src=\"@media/p/3af4cc054e347cc6.webp\" alt=\"\" width=\"960\" height=\"1200\"></figure>",
+ "en": {
+  "title": "A picture of Amman on Jordan's Independence Day",
+  "excerpt": ""
+ }
 }

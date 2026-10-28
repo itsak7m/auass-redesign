@@ -8,5 +8,9 @@
  "image": null,
  "imageAlt": "",
  "video": false,
- "body": "<figure>\n<p><em>(الفيديو لم يعد متاحاً على يوتيوب)</em></p>\n</figure>"
+ "body": "<figure>\n<p><em>(الفيديو لم يعد متاحاً على يوتيوب)</em></p>\n</figure>",
+ "en": {
+  "title": "Are we alone in this universe?",
+  "excerpt": ""
+ }
 }

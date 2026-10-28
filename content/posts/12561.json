@@ -8,5 +8,9 @@
  "image": "p/63c8631f5f697090",
  "imageAlt": "",
  "video": false,
- "body": "<figure><img src=\"@media/p/63c8631f5f697090.webp\" alt=\"””\" width=\"960\" height=\"1358\"></figure>"
+ "body": "<figure><img src=\"@media/p/63c8631f5f697090.webp\" alt=\"””\" width=\"960\" height=\"1358\"></figure>",
+ "en": {
+  "title": "A digital counter for the seasons and star risings",
+  "excerpt": ""
+ }
 }

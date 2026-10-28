@@ -8,5 +8,9 @@
  "image": null,
  "imageAlt": "",
  "video": true,
- "body": "<p class=\"yt\" data-yt=\"E2Djpy9qtWg\"></p>"
+ "body": "<p class=\"yt\" data-yt=\"E2Djpy9qtWg\"></p>",
+ "en": {
+  "title": "Newton's cradle and its applications in our lives and in astronomy",
+  "excerpt": ""
+ }
 }

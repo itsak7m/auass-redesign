@@ -8,5 +8,9 @@
  "image": "p/c841c1337c1ca01c",
  "imageAlt": "",
  "video": false,
- "body": "<p>قراءة الخبر (هنا)</p>"
+ "body": "<p>قراءة الخبر (هنا)</p>",
+ "en": {
+  "title": "China begins launching stages of the Chinese space station",
+  "excerpt": ""
+ }
 }

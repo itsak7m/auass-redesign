@@ -8,5 +8,9 @@
  "image": "p/e78fce53528d1e6f",
  "imageAlt": "",
  "video": false,
- "body": "<figure>\n<figure><img src=\"@media/p/e78fce53528d1e6f.webp\" alt=\"\" width=\"720\" height=\"1040\"></figure>\n<figure><img src=\"@media/p/637ec38f982f66a3.webp\" alt=\"\" width=\"720\" height=\"1040\"></figure>\n<figure><img src=\"@media/p/337ee55bc9b91242.webp\" alt=\"\" width=\"720\" height=\"1040\"></figure>\n<figure><img src=\"@media/p/a7fb12fd3d35188d.webp\" alt=\"\" width=\"720\" height=\"1040\"></figure>\n</figure>"
+ "body": "<figure>\n<figure><img src=\"@media/p/e78fce53528d1e6f.webp\" alt=\"\" width=\"720\" height=\"1040\"></figure>\n<figure><img src=\"@media/p/637ec38f982f66a3.webp\" alt=\"\" width=\"720\" height=\"1040\"></figure>\n<figure><img src=\"@media/p/337ee55bc9b91242.webp\" alt=\"\" width=\"720\" height=\"1040\"></figure>\n<figure><img src=\"@media/p/a7fb12fd3d35188d.webp\" alt=\"\" width=\"720\" height=\"1040\"></figure>\n</figure>",
+ "en": {
+  "title": "World Space Week",
+  "excerpt": ""
+ }
 }

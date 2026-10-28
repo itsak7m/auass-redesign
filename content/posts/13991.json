@@ -8,5 +8,9 @@
  "image": null,
  "imageAlt": "",
  "video": false,
- "body": "<p class=\"media-file\" data-href=\"@media/files/8debd5af42287db5.mp4\" data-kind=\"video\"></p>"
+ "body": "<p class=\"media-file\" data-href=\"@media/files/8debd5af42287db5.mp4\" data-kind=\"video\"></p>",
+ "en": {
+  "title": "Half the stars in the sky have Arabic names",
+  "excerpt": ""
+ }
 }
