@@ -48,6 +48,10 @@ def targets(repo, mode):
     out = []
     for f in sorted(glob.glob(os.path.join(repo, 'content/posts/*.json')), key=lambda x: int(re.sub(r'\D', '', os.path.basename(x)))):
         p = json.load(open(f))
+        if mode == 'body':
+            if p['lang'] == 'ar' and p.get('en') and not p['en'].get('body') and re.sub(r'<[^>]+>|\s', '', p.get('body', '')):
+                out.append((f, p))
+            continue
         if p['lang'] != 'ar' or p.get('en'):
             continue
         if mode == 'full' and p['type'] in ('event', 'auass', 'article'):
@@ -62,7 +66,9 @@ def dump(repo, outdir, mode, chars):
     batches, cur, size = [], [], 0
     for f, p in targets(repo, mode):
         rec = f"=== {p['id']} | {p['type']}\nT: {p['title']}\nX: {p.get('excerpt', '')}\n"
-        if mode == 'full':
+        if mode == 'body':
+            rec = f"=== {p['id']} | {p['type']}\nT: {p['en']['title']}\nX: {p['en'].get('excerpt', '')}\n"
+        if mode in ('full', 'body'):
             b, tok = tokenize(p['body'])
             tokens[str(p['id'])] = tok
             rec += 'B:\n' + b.strip() + '\n'
@@ -100,7 +106,7 @@ def apply(repo, outdir, fn):
     for pid, r in recs.items():
         f = os.path.join(repo, 'content/posts', pid + '.json')
         s, p = ld(f)
-        en = {'title': r['title'], 'excerpt': r['excerpt']}
+        en = dict(p['en']) if p.get('en') else {'title': r['title'], 'excerpt': r['excerpt']}
         if r['body']:
             tok = tokens[pid]
             src, _ = tokenize(p['body'])
