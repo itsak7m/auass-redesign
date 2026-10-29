@@ -572,6 +572,7 @@ function libraryPage(ctx) {
   const main = `${pageHero(ctx, { eyebrow: lang === 'ar' ? 'مجلات · كتب · أبحاث · معارف فلكية' : 'Magazines · books · research · astronomy knowledge', title: lang === 'ar' ? 'المكتبة' : 'Library', lead: lang === 'ar' ? 'محتوى الاتحاد العلمي في مكان واحد، مع بحث فوري.' : "AUASS's scientific content in one place, with instant search.", crumbs: [{ label: lang === 'ar' ? 'المكتبة' : 'Library' }] })}
 <section class="section paper library" data-library>
   <div class="wrap">
+    <p class="lib-wm"><a class="btn btn-navy" href="${ctx.r(prefix(lang) + 'worship-months/')}">${icon('calendar')}${lang === 'ar' ? 'أشهر العبادة: حسابات فلكية لرمضان والعيدين ومحرم' : 'Months of worship: astronomical dates for Ramadan, the Eids and Muharram'}</a></p>
     <div class="search-box">
       ${icon('search')}
       <label class="sr" for="lib-q">${lang === 'ar' ? 'ابحث في المكتبة' : 'Search the library'}</label>
@@ -959,6 +960,117 @@ function beforeAfterPage(ctx) {
   return page(ctx, { title: 'قبل وبعد' }, main);
 }
 
+// ---------- months of worship: astronomical calendar ----------
+let HIJRI = null;
+const H_MONTHS = {
+  ar: ['محرم', 'صفر', 'ربيع الأول', 'ربيع الآخر', 'جمادى الأولى', 'جمادى الآخرة', 'رجب', 'شعبان', 'رمضان', 'شوال', 'ذو القعدة', 'ذو الحجة'],
+  en: ['Muharram', 'Safar', "Rabi' al-Awwal", "Rabi' al-Thani", 'Jumada al-Ula', 'Jumada al-Akhirah', 'Rajab', "Sha'ban", 'Ramadan', 'Shawwal', "Dhu al-Qi'dah", 'Dhu al-Hijjah']
+};
+const WEEKDAYS = {
+  ar: ['الأحد', 'الاثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة', 'السبت'],
+  en: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+};
+const VIS = {
+  A: { ar: 'تُرى بالعين المجرّدة', en: 'Naked eye', short: { ar: 'بالعين', en: 'Eye' } },
+  B: { ar: 'تُرى بالعين في ظروف جيدة، وقد تحتاج منظاراً لتحديدها', en: 'Naked eye in good conditions; binoculars may help to find it', short: { ar: 'بالعين*', en: 'Eye*' } },
+  C: { ar: 'بالمنظار أو التلسكوب فقط', en: 'Binoculars or telescope only', short: { ar: 'منظار', en: 'Optical' } },
+  D: { ar: 'لا يمكن رؤيتها حتى بالمنظار', en: 'Not visible even with optical aid', short: { ar: 'لا تُرى', en: 'Not visible' } }
+};
+
+function worshipPage(ctx) {
+  const { lang } = ctx;
+  const ar = lang === 'ar';
+  if (!HIJRI) {
+    const H = require('./lib/hijri');
+    const now = Date.now();
+    let months = H.build(1452);
+    const cur = months.filter((m) => m.first <= now).pop();
+    const y0 = cur ? cur.y : months[0].y;
+    HIJRI = { H, months: months.filter((m) => m.y >= y0 && m.y <= y0 + 2), y0 };
+  }
+  const { H, months, y0 } = HIJRI;
+  const fmtDay = (ms) => { const d = new Date(ms); return `${WEEKDAYS[lang][d.getUTCDay()]} ${d.getUTCDate()} ${MONTHS[lang][d.getUTCMonth()]} ${d.getUTCFullYear()}`; };
+  const fmtConj = (ms) => {
+    const d = new Date(ms + 3 * 3600e3), pad = (n) => String(n).padStart(2, '0');
+    return `${d.getUTCDate()} ${MONTHS[lang][d.getUTCMonth()]} ${d.getUTCFullYear()} · <bdi dir="ltr">${pad(d.getUTCHours())}:${pad(d.getUTCMinutes())}</bdi>`;
+  };
+  const dayShort = (iso) => { const [, m, d] = iso.split('-').map(Number); return `${d} ${MONTHS[lang][m - 1]}`; };
+  const badge = (v, makkahEve) => {
+    const c = v.cls === 'X' ? 'D' : v.cls;
+    const info = t(VIS[c], lang);
+    const shift = v.evening !== makkahEve ? ` <span class="wm-shift">${ar ? (v.evening > makkahEve ? '+١ يوم' : '−١ يوم') : (v.evening > makkahEve ? '+1 d' : '−1 d')}</span>` : '';
+    const detail = v.V != null ? `${ar ? 'عمر الهلال' : 'Age'} ${v.ageH.toFixed(1)} ${ar ? 'ساعة' : 'h'} · ${ar ? 'المكث' : 'lag'} ${Math.max(0, Math.round(v.lag))} ${ar ? 'د' : 'min'} · V=${v.V.toFixed(1)}` : (ar ? 'الهلال لم يولد بعد' : 'Moon not yet born');
+    return `<span class="wm-pill wm-${c.toLowerCase()}" title="${esc(info + ' — ' + detail)}">${esc(VIS[c].short[lang])}</span>${shift}`;
+  };
+  const key = (y, m) => months.find((x) => x.y === y && x.m === m);
+  const years = [...new Set(months.map((m) => m.y))];
+  const yearBlocks = years.map((y) => {
+    const first = key(y, 1), ram = key(y, 9), shaw = key(y, 10), dhh = key(y, 12);
+    const keys = [
+      [ar ? 'رأس السنة الهجرية' : 'Islamic New Year', first.first],
+      [ar ? 'يوم عاشوراء' : 'Day of Ashura', first.first + 9 * H.DAY],
+      [ar ? 'أول رمضان' : '1 Ramadan', ram.first],
+      [ar ? 'عيد الفطر' : 'Eid al-Fitr', shaw.first],
+      [ar ? 'يوم عرفة' : 'Day of Arafah', dhh.first + 8 * H.DAY],
+      [ar ? 'عيد الأضحى' : 'Eid al-Adha', dhh.first + 9 * H.DAY]
+    ].map(([n, ms]) => `<li><span class="wm-k-name">${esc(n)}</span><span class="wm-k-date">${esc(fmtDay(ms))}</span></li>`).join('');
+    const rows = months.filter((m) => m.y === y).map((m) => {
+      const mk = m.vis.makkah.evening;
+      const worship = [1, 9, 10, 12].includes(m.m);
+      return `<tr${worship ? ' class="is-worship"' : ''}>
+  <th scope="row">${esc(H_MONTHS[lang][m.m - 1])}</th>
+  <td>${esc(fmtDay(m.first))}${m.len ? `<span class="wm-len">${m.len} ${ar ? 'يوماً' : 'days'}</span>` : ''}</td>
+  <td class="wm-conj">${fmtConj(m.conj)}</td>
+  <td class="wm-ev">${esc(dayShort(mk))}</td>
+  ${H.CITIES.map((c) => `<td>${badge(m.vis[c.id], mk)}</td>`).join('')}
+</tr>`;
+    }).join('');
+    const lo = months.find((m) => m.y === y), hi = months.filter((m) => m.y === y).pop();
+    return `<section class="wm-year reveal" id="y${y}" aria-labelledby="h${y}">
+  <h2 id="h${y}" class="wm-h">${ar ? `السنة الهجرية ${y} هـ` : `Hijri year ${y} AH`} <span class="wm-span">${esc(MONTHS[lang][new Date(lo.first).getUTCMonth()])} ${new Date(lo.first).getUTCFullYear()} – ${esc(MONTHS[lang][new Date(hi.first).getUTCMonth()])} ${new Date(hi.first).getUTCFullYear()}</span></h2>
+  <ul class="wm-keys">${keys}</ul>
+  <div class="table-wrap"><table class="ba-table wm-table">
+    <caption class="sr">${ar ? `بدايات أشهر السنة الهجرية ${y} وإمكانية رؤية الهلال` : `Month starts of Hijri year ${y} and crescent visibility`}</caption>
+    <thead><tr>
+      <th scope="col">${ar ? 'الشهر' : 'Month'}</th>
+      <th scope="col">${ar ? 'أول الشهر (أم القرى)' : '1st of month (Umm al-Qura)'}</th>
+      <th scope="col">${ar ? 'الاقتران (توقيت مكة)' : 'Conjunction (Makkah time)'}</th>
+      <th scope="col">${ar ? 'مساء الرصد' : 'Observing evening'}</th>
+      ${H.CITIES.map((c) => `<th scope="col">${esc(t(c, lang))}</th>`).join('')}
+    </tr></thead>
+    <tbody>${rows}</tbody>
+  </table></div>
+</section>`;
+  }).join('');
+  const legend = ['A', 'B', 'C', 'D'].map((c) => `<li><span class="wm-pill wm-${c.toLowerCase()}">${esc(VIS[c].short[lang])}</span> ${esc(t(VIS[c], lang))}</li>`).join('');
+  const intro = ar
+    ? 'مواعيد بدايات الأشهر الهجرية، وفي مقدمتها رمضان وشوال وذو الحجة ومحرم، محسوبة فلكياً، مع إمكانية رؤية هلال كل شهر في عمّان ومكة المكرمة والقاهرة والدار البيضاء.'
+    : 'Start dates of the Hijri months, above all Ramadan, Shawwal, Dhu al-Hijjah and Muharram, computed astronomically, with the chance of seeing each crescent from Amman, Makkah, Cairo and Casablanca.';
+  const method = ar
+    ? `<h2>كيف حُسبت؟</h2>
+<p><strong>أول الشهر:</strong> بقاعدة تقويم أم القرى: إذا وقع الاقتران قبل غروب الشمس في مكة المكرمة يوم التاسع والعشرين، وغاب القمر بعد غروب الشمس، فالغد أول الشهر، وإلا يُتمّ الشهر ثلاثين يوماً. وهي حسابات فلكية لا تُغني عن الإعلان الرسمي في كل بلد.</p>
+<p><strong>إمكانية الرؤية:</strong> بمعيار عودة (Odeh 2004) الذي يعتمد على ارتفاع القمر وعرض الهلال عند أفضل وقت للرصد بعد الغروب، ويعطي القيمة V: الهلال يُرى بالعين المجردة إذا بلغت V ‏5.65 فأكثر، وبالعين في ظروف جيدة بين 2 و5.65، وبالمنظار فقط بين ‎−0.96 و2، ولا يُرى إن قلّت عن ذلك. إشارة +١ يوم تعني أن الهلال لم يولد في مساء الرصد في تلك المدينة، فحُسبت إمكانية رؤيته في المساء التالي.</p>
+<p><strong>الأدوات:</strong> مكتبة astronomy-engine المفتوحة المصدر (ترخيص MIT) لحساب مواضع الشمس والقمر. الاقتران بتوقيت مكة (UTC+3).</p>
+<p class="wm-note">الحكم الشرعي ببدء الشهر يكون برؤية الهلال أو بما تعتمده الجهة الرسمية في كل بلد (دار الإفتاء أو المحكمة الشرعية أو لجنة الأهلة). هذه الصفحة معلومات فلكية تعليمية من الاتحاد العربي لعلوم الفضاء والفلك.</p>`
+    : `<h2>How it is computed</h2>
+<p><strong>Start of the month:</strong> by the Umm al-Qura rule: if the conjunction falls before sunset in Makkah on the 29th and the Moon sets after the Sun, the next day is the 1st of the month; otherwise the month completes thirty days. These are astronomical calculations and do not replace the official announcement in each country.</p>
+<p><strong>Crescent visibility:</strong> by the Odeh (2004) criterion, which uses the Moon's altitude and the crescent's width at the best time after sunset, giving a value V: the crescent is visible to the naked eye if V is 5.65 or more, with the naked eye in good conditions between 2 and 5.65, with binoculars or a telescope only between −0.96 and 2, and not visible below that. A +1 d mark means the Moon was not yet born on the observing evening in that city, so visibility was computed for the following evening.</p>
+<p><strong>Tools:</strong> the open-source astronomy-engine library (MIT licence) for the positions of the Sun and Moon. Conjunction times are in Makkah time (UTC+3).</p>
+<p class="wm-note">The religious ruling on the start of a month rests on sighting the crescent or on what the official authority in each country adopts (Iftaa department, Shari'a court or moon-sighting committee). This page is astronomical information for education, from the Arab Union for Space Sciences and Astronomy.</p>`;
+  const title = ar ? 'أشهر العبادة: حسابات فلكية' : 'Months of worship: astronomical calculations';
+  const main = `${pageHero(ctx, { eyebrow: ar ? 'تقويم هجري فلكي' : 'Astronomical Hijri calendar', title: ar ? 'أشهر العبادة' : 'Months of worship', lead: intro, crumbs: [{ label: ar ? 'المكتبة' : 'Library', href: ctx.r(prefix(lang) + 'library/') }, { label: ar ? 'أشهر العبادة' : 'Months of worship' }] })}
+<section class="section paper wm">
+  <div class="wrap">
+    <nav class="wm-tabs" aria-label="${ar ? 'السنوات الهجرية' : 'Hijri years'}">${years.map((y) => `<a class="btn btn-ghost-dark" href="#y${y}">${y} ${ar ? 'هـ' : 'AH'}</a>`).join('')}</nav>
+    ${yearBlocks}
+    <section class="wm-legend"><h2>${ar ? 'دليل الألوان' : 'Key'}</h2><ul>${legend}</ul></section>
+    <section class="wm-method prose">${method}</section>
+  </div>
+</section>`;
+  return page(ctx, { title, description: intro }, main);
+}
+
+
 function moonPage(ctx) {
   const { lang } = ctx;
   const sideName = (s) => t(moon.sides[s], lang);
@@ -1067,7 +1179,7 @@ fs.writeFileSync(path.join(OUT, '.nojekyll'), '');
 
 const pages = [
   ['', 'home', homePage], ['about/', 'about', aboutPage], ['events/', 'events', eventsPage], ['library/', 'library', libraryPage],
-  ['news/', 'news', newsPage], ['join/', 'join', joinPage], ['contact/', 'contact', contactPage], ['moon/', 'library', moonPage],
+  ['news/', 'news', newsPage], ['join/', 'join', joinPage], ['contact/', 'contact', contactPage], ['moon/', 'library', moonPage], ['worship-months/', 'library', worshipPage],
   ['events/conferences/', 'events', conferencesPage], ['about/council/', 'about', councilPage]
 ];
 for (const lang of LANGS) {
