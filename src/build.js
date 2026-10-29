@@ -754,7 +754,6 @@ function archivePostPage(ctx, a) {
       ${note}
       ${showImage ? `<figure class="ap-figure"><img src="${ctx.r(`media/${a.image}.webp`)}" alt="${esc(a.imageAlt || '')}"></figure>` : ''}
       ${empty ? `<p class="empty-post">${lang === 'ar' ? 'محتوى هذا المنشور (صورة أو ملف أو فيديو) لم يعد متاحاً على موقع الاتحاد الأصلي.' : 'The content of this post (an image, file or video) is no longer available on the original AUASS website.'}</p>` : `<div class="prose rich"${bodyLang !== lang ? ' lang="ar" dir="rtl"' : ''}>${archiveBody(ctx, body)}</div>`}
-      <p class="archive-note">${icon('info')}<span>${lang === 'ar' ? 'منشور منقول من أرشيف موقع الاتحاد كما نُشر، مع تنظيف التنسيق.' : 'Migrated from the AUASS website archive as published, with the formatting tidied.'}</span></p>
       ${shareBar(ctx, url, title)}
     </div>
   </div>
@@ -794,7 +793,6 @@ function infoPage(ctx, pg) {
     ? `<div class="tr-lead prose rich">${archiveBody(ctx, summary)}</div><p class="tr-note">${icon('globe')}<span>This page is in Arabic; the summary above is in English. The original text follows.</span></p>`
     : `<div class="upcoming-note">${icon('info')}<p>${lang === 'ar' ? 'هذه الصفحة منشورة باللغة الإنجليزية فقط على موقع الاتحاد، وتظهر هنا كما نُشرت.' : 'This page is available in Arabic only on the AUASS website; it is shown here as published.'}</p></div>`}
     <div class="prose rich"${bodyLang !== lang ? ` lang="${bodyLang}" dir="${bodyLang === 'ar' ? 'rtl' : 'ltr'}"` : ''}>${archiveBody(ctx, pg.body[bodyLang])}</div>
-    <p class="archive-note">${icon('info')}<span>${lang === 'ar' ? 'صفحة منقولة من موقع الاتحاد كما نُشرت، مع تنظيف التنسيق وحذف عناوين البريد والهواتف الشخصية.' : 'Migrated from the AUASS website as published, with the formatting tidied and personal emails and phone numbers removed.'}</span></p>
   </div>
 </section>
 ${siblings.length ? `<section class="section paper2"><div class="wrap">${sectionHead('', esc(t(PAGE_GROUPS[pg.group], lang)))}${pageLinks(ctx, siblings)}</div></section>` : ''}`;
@@ -826,7 +824,6 @@ function councilPage(ctx) {
 <section class="section paper">
   <div class="wrap">
     <div class="members">${cards}</div>
-    <p class="archive-note">${icon('info')}<span>${esc(t(council.note, lang))}</span></p>
   </div>
 </section>`;
   return page(ctx, { title: lang === 'ar' ? 'المجلس الأعلى' : 'High Council' }, main);
