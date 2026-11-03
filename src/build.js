@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Static site generator for the AUASS redesign concept.
+// Static site generator for the AUASS website.
 // Reads content/*.json, renders every page in Arabic (/) and English (/en/),
 // and writes plain HTML/CSS/JS to docs/ for GitHub Pages. No dependencies.
 
@@ -71,6 +71,14 @@ function fmtTime(hm, lang) {
 // Page paths are written without a leading slash ("about/"). Each page links
 // with paths relative to its own depth so the site works under /auass-redesign/.
 const prefix = (lang) => (lang === 'en' ? 'en/' : '');
+// Deployment: content/site.json "deploy". With a domain set the site becomes
+// indexable (canonical URLs, sitemap, robots.txt, CNAME); without one it stays
+// noindex, since the github.io address is only a staging URL.
+const DEPLOY = site.deploy || {};
+const LIVE = !!DEPLOY.live;
+const DOMAIN = (DEPLOY.domain || '').trim();
+const BASE_URL = DOMAIN ? `https://${DOMAIN}/` : DEPLOY.baseUrl || 'https://itsak7m.github.io/auass-redesign/';
+const BASE_PATH = new URL(BASE_URL).pathname;
 function rel(fromPage, to) { const depth = fromPage.split('/').filter(Boolean).length; return ('../'.repeat(depth) || './') + to; }
 
 // ---------- shared chrome ----------
@@ -82,11 +90,17 @@ function head(ctx, { title, description }) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
-<title>${esc(full)}</title>
+${DOMAIN ? '' : '<meta name="robots" content="noindex, nofollow">\n'}<title>${esc(full)}</title>
 <meta name="description" content="${esc(description || t(site.description, lang))}">
 <meta property="og:title" content="${esc(full)}">
 <meta property="og:description" content="${esc(description || t(site.description, lang))}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="${esc(t(site.name, lang))}">
+<meta property="og:locale" content="${lang === 'ar' ? 'ar_AR' : 'en_US'}">
+<meta property="og:url" content="${BASE_URL}${prefix(lang)}${ctx.page || ''}">
+<meta property="og:image" content="${BASE_URL}assets/img/auass-seal.png">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="${BASE_URL}${prefix(lang)}${ctx.page || ''}">
 <meta name="theme-color" content="#0B1530">
 <link rel="icon" href="${ctx.r('assets/img/auass-seal.png')}">
 <link rel="alternate" hreflang="${ctx.altLang}" href="${ctx.altHref}">
@@ -146,8 +160,8 @@ function footer(ctx) {
     <div><h2 class="f-h">${lang === 'ar' ? 'مواقع ذات صلة' : 'Related sites'}</h2><ul class="f-list f-related">${related}</ul></div>
   </div>
   <div class="wrap f-bottom">
-    <p class="proto-note" lang="ar" dir="rtl">${esc(site.prototypeNote.ar)}</p>
-    ${lang === 'en' ? `<p class="proto-note">${esc(site.prototypeNote.en)}</p>` : ''}
+    ${LIVE ? `<p class="proto-note">${esc(t(site.credit, lang))}</p>` : `<p class="proto-note" lang="ar" dir="rtl">${esc(site.prototypeNote.ar)}</p>
+    ${lang === 'en' ? `<p class="proto-note">${esc(site.prototypeNote.en)}</p>` : ''}`}
     <p class="f-legal">${infoPages.filter((x) => x.group === 'legal').map((pg) => `<a href="${ctx.r(prefix(lang) + pagePath(pg))}">${esc(pageTitle(pg, lang))}</a>`).join(' · ')}</p>
     <p class="f-credit">${lang === 'ar' ? 'صورة الواجهة: سديم القاعدة بعدسة تلسكوب جيمس ويب' : 'Hero image: Carina Nebula by the James Webb Space Telescope'} · <span dir="ltr">${site.heroCredit}</span></p>
   </div>
@@ -674,7 +688,7 @@ function relatedSection(ctx, items) {
 
 function articlePage(ctx, p) {
   const { lang } = ctx;
-  const url = `https://itsak7m.github.io/auass-redesign/${prefix(lang)}news/${p.slug}/`;
+  const url = `${BASE_URL}${prefix(lang)}news/${p.slug}/`;
   const related = FEED[lang].filter((x) => x.key !== p.slug).slice(0, 3);
   const facts = p.facts ? `<dl class="facts">${p.facts.map((f) => `<div><dt>${esc(t(f.k, lang))}</dt><dd>${esc(t(f.v, lang))}</dd></div>`).join('')}</dl>` : '';
   const cta = p.cta ? `<p><a class="btn btn-brass" href="${ctx.r(prefix(lang))}${p.cta.href}">${esc(t(p.cta.label, lang))}</a></p>` : '';
@@ -723,7 +737,7 @@ function archiveBody(ctx, html) {
 
 function archivePostPage(ctx, a) {
   const { lang } = ctx;
-  const url = `https://itsak7m.github.io/auass-redesign/${prefix(lang)}news/${a.id}/`;
+  const url = `${BASE_URL}${prefix(lang)}news/${a.id}/`;
   const related = FEED[lang].filter((x) => x.type === a.type && x.key !== String(a.id));
   const i = related.findIndex((x) => x.date <= a.date);
   const near = related.slice(Math.max(0, i - 1), Math.max(0, i - 1) + 3);
@@ -830,7 +844,7 @@ function councilPage(ctx) {
   return page(ctx, { title: lang === 'ar' ? 'المجلس الأعلى' : 'High Council' }, main);
 }
 
-function demoForm(ctx, fields, submit) {
+function demoForm(ctx, fields, submit, subject) {
   const { lang } = ctx;
   const f = fields.map((x) => {
     const id = `f-${x.name}`;
@@ -842,10 +856,10 @@ function demoForm(ctx, fields, submit) {
         : `<input id="${id}" name="${x.name}" type="${x.type || 'text'}"${x.autocomplete ? ` autocomplete="${x.autocomplete}"` : ''}${x.type === 'email' ? ' dir="ltr"' : ''}${req}>`;
     return `<div class="field${x.wide ? ' wide' : ''}"><label for="${id}">${esc(x.label)}${x.required ? ' <span aria-hidden="true">*</span>' : ''}</label>${control}</div>`;
   }).join('');
-  return `<form class="demo-form" data-demo-form novalidate>
+  return `<form class="demo-form" ${LIVE ? `data-mail-form data-mailto="${site.email}" data-subject="${esc(subject || submit)}"` : 'data-demo-form'} novalidate>
   <div class="form-grid">${f}</div>
   <button type="submit" class="btn btn-brass">${esc(submit)}</button>
-  <div class="demo-msg" role="status" data-demo-msg hidden>${icon('info')}<p>${lang === 'ar' ? 'هذا نموذج عرض ضمن التصميم المقترح، ولم يتم إرسال أي بيانات. في الموقع الفعلي يصل الطلب إلى أمانة الاتحاد.' : 'This is a demo form in the proposed design; no data has been sent. On the live site, the request would reach the AUASS secretariat.'}</p></div>
+  <div class="demo-msg" role="status" data-demo-msg hidden>${icon('info')}<p>${LIVE ? (lang === 'ar' ? `فتحنا لك رسالة جاهزة في تطبيق البريد، اضغط إرسال لتصل إلى ${site.email}. إذا لم تفتح، راسلنا مباشرة على هذا العنوان.` : `We opened a ready message in your mail app; press send and it will reach ${site.email}. If nothing opened, write to us at that address.`) : lang === 'ar' ? 'هذا نموذج عرض ضمن التصميم المقترح، ولم يتم إرسال أي بيانات. في الموقع الفعلي يصل الطلب إلى أمانة الاتحاد.' : 'This is a demo form in the proposed design; no data has been sent. On the live site, the request would reach the AUASS secretariat.'}</p></div>
 </form>`;
 }
 
@@ -865,7 +879,7 @@ function joinPage(ctx) {
     { name: 'email', label: lang === 'ar' ? 'البريد الإلكتروني' : 'Email', type: 'email', required: true, autocomplete: 'email' },
     { name: 'phone', label: lang === 'ar' ? 'رقم الهاتف' : 'Phone', type: 'tel', autocomplete: 'tel' },
     { name: 'msg', label: lang === 'ar' ? 'نبذة عن الجهة أو الاختصاص' : 'About your organisation or speciality', type: 'textarea', wide: true }
-  ], lang === 'ar' ? 'إرسال طلب الانتساب' : 'Send application');
+  ], lang === 'ar' ? 'إرسال طلب الانتساب' : 'Send application', lang === 'ar' ? 'طلب انتساب إلى الاتحاد' : 'Membership application');
   const main = `${pageHero(ctx, { eyebrow: lang === 'ar' ? 'أربعة مستويات للعضوية' : 'Four membership levels', title: lang === 'ar' ? 'انضم للاتحاد' : 'Join AUASS', lead: t(join.intro, lang), crumbs: [{ label: lang === 'ar' ? 'انضم للاتحاد' : 'Join' }] })}
 <section class="section paper">
   <div class="wrap">
@@ -896,7 +910,7 @@ function contactPage(ctx) {
     { name: 'email', label: lang === 'ar' ? 'البريد الإلكتروني' : 'Email', type: 'email', required: true, autocomplete: 'email' },
     { name: 'topic', label: lang === 'ar' ? 'الموضوع' : 'Topic', type: 'select', options: lang === 'ar' ? ['استفسار عام', 'الفعاليات والمحاضرات', 'العضوية', 'التعاون والشراكات', 'الإعلام'] : ['General enquiry', 'Events and lectures', 'Membership', 'Cooperation and partnerships', 'Media'], wide: true },
     { name: 'msg', label: lang === 'ar' ? 'الرسالة' : 'Message', type: 'textarea', required: true, wide: true }
-  ], lang === 'ar' ? 'إرسال' : 'Send');
+  ], lang === 'ar' ? 'إرسال' : 'Send', lang === 'ar' ? 'رسالة من موقع الاتحاد' : 'Message from the AUASS website');
   const main = `${pageHero(ctx, { eyebrow: '', title: lang === 'ar' ? 'اتصل بنا' : 'Contact us', lead: lang === 'ar' ? 'مقر الاتحاد في عمّان، الأردن.' : 'AUASS headquarters, Amman, Jordan.', crumbs: [{ label: lang === 'ar' ? 'اتصل بنا' : 'Contact' }] })}
 <section class="section paper">
   <div class="wrap contact-grid">
@@ -1200,7 +1214,21 @@ for (const lang of LANGS) {
   }
   fs.writeFileSync(path.join(OUT, prefix(lang), 'news', 'index.json'), newsIndexJson(lang));
 }
-write('before-after/', beforeAfterPage(ctxFor('ar', 'before-after/', 'before-after', '')));
+if (!LIVE) if (!LIVE) write('before-after/', beforeAfterPage(ctxFor('ar', 'before-after/', 'before-after', '')));
 const nf = ctxFor('ar', '', 'notfound');
-fs.writeFileSync(path.join(OUT, '404.html'), notFoundPage({ ...nf, r: (to) => '/auass-redesign/' + to }));
+fs.writeFileSync(path.join(OUT, '404.html'), notFoundPage({ ...nf, r: (to) => BASE_PATH + to }));
+// Domain-dependent files: only when a real domain is configured.
+if (DOMAIN) {
+  const urls = [];
+  (function walk(dir, rel) {
+    for (const f of fs.readdirSync(dir, { withFileTypes: true })) {
+      if (f.isDirectory()) { if (!['assets', 'admin', 'media'].includes(f.name)) walk(path.join(dir, f.name), rel + f.name + '/'); }
+      else if (f.name === 'index.html') urls.push(rel);
+    }
+  })(OUT, '');
+  urls.sort();
+  fs.writeFileSync(path.join(OUT, 'sitemap.xml'), '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + urls.map((u) => '<url><loc>' + BASE_URL + u + '</loc></url>').join('\n') + '\n</urlset>\n');
+  fs.writeFileSync(path.join(OUT, 'robots.txt'), 'User-agent: *\nDisallow: /admin/\nSitemap: ' + BASE_URL + 'sitemap.xml\n');
+  fs.writeFileSync(path.join(OUT, 'CNAME'), DOMAIN + '\n');
+}
 console.log('built', LANGS.length * (pages.length + news.posts.length + infoPages.length) + archive.length + archive.filter((a) => a.lang === 'ar' && a.en).length + yearsOf('ar').length + yearsOf('en').length + 2, 'pages into docs/');

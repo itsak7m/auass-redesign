@@ -1,21 +1,22 @@
 # auass-redesign
 
-نموذج مقترح لإعادة تصميم موقع **الاتحاد العربي لعلوم الفضاء والفلك** ([auass.com](https://auass.com/)). إعداد: Ameer Hamam.
+موقع **الاتحاد العربي لعلوم الفضاء والفلك** ([auass.com](https://auass.com/)) بتصميمه الجديد. تصميم وتطوير: Ameer Hamam.
 
-A redesign concept for the Arab Union for Astronomy and Space Sciences website. Arabic (RTL) first, with a full English version.
+The redesigned website of the Arab Union for Astronomy and Space Sciences. Arabic (RTL) first, with a full English version.
 
 - **العرض المباشر:** https://itsak7m.github.io/auass-redesign/
 - **المقترح والقرارات:** [BRIEF.md](BRIEF.md)
-- **تدقيق الموقع الحالي:** [AUDIT.md](AUDIT.md)
+- **تدقيق الموقع القديم:** [AUDIT.md](AUDIT.md)
+- **خطة النشر ونقل الدومين:** [LAUNCH.md](LAUNCH.md)
 
-> نموذج للعرض: الصفحات عليها `noindex`، والفورمات ما بتبعث أي بيانات.
+> الموقع بنسخته النهائية. الصفحات `noindex` لحد ما نحط الدومين بـ `content/site.json` (`deploy.domain`). الفورمات بتفتح رسالة بريد جاهزة على `info@auass.com`.
 
 ## البنية
 
 | المسار | المحتوى |
 |---|---|
 | `content/*.json` | المحتوى المحرَّر باللغتين: الأخبار، والفعاليات، وسماء الشهر، وعن الاتحاد، والمجلس الأعلى، والمكتبة، والانتساب، والإعدادات العامة |
-| `content/posts/` | أرشيف موقع الاتحاد: 1416 منشوراً منقولاً من 2007 إلى 2026، ملف JSON لكل منشور (الترجمة الإنجليزية بحقل `en` بنفس الملف) |
+| `content/posts/` | أرشيف موقع الاتحاد: 1415 منشوراً منقولاً من 2007 إلى 2026، ملف JSON لكل منشور (الترجمة الإنجليزية بحقل `en` بنفس الملف) |
 | `content/pages/` | 43 صفحة منقولة: المؤتمرات، ومكتب تنمية الفلك، والصفحات المعرفية، والسياسات (`title` و`body` بالعربي والإنجليزي) |
 | `src/build.js` | مولّد صفحات static بدون أي مكتبات خارجية، بيطلّع الصفحات لمجلد `docs/` |
 | `src/lib/icons.js` | الأيقونات ورسوم السماء ونقوش الإسطرلاب (SVG) |
@@ -59,7 +60,6 @@ A redesign concept for the Arab Union for Astronomy and Space Sciences website. 
 npm run build                    # يبني docs/ من content/ و src/
 node tools/check.js [shots-dir]  # يفحص: scroll أفقي، روابط داخلية، صور، أخطاء JS، noindex، سطر التذييل (عينة من الأرشيف)
 node tools/check.js --all        # نفس الفحص على كل صفحة بالأرشيف
-node tools/before-after-shots.js && npm run build   # يحدّث لقطات صفحة "قبل وبعد"
 node tools/moon-preview.js && npm run build         # يحدّث صورة القمر المصغّرة بالرئيسية
 ```
 

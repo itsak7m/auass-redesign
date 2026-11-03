@@ -256,6 +256,32 @@
     });
   });
 
+  // Live forms: validate, then open a ready-made email to the secretariat.
+  $$('[data-mail-form]').forEach(function (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var bad = null;
+      $$('[required]', form).forEach(function (f) {
+        var ok = f.value.trim() !== '' && (f.type !== 'email' || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.value));
+        f.classList.toggle('invalid', !ok);
+        f.setAttribute('aria-invalid', String(!ok));
+        if (!ok && !bad) bad = f;
+      });
+      if (bad) { bad.focus(); return; }
+      var lines = [];
+      $$('input, select, textarea', form).forEach(function (f) {
+        var lab = form.querySelector('label[for="' + f.id + '"]');
+        if (f.value.trim() && lab) lines.push(lab.textContent.replace(/\s*\*\s*$/, '').trim() + ': ' + f.value.trim());
+      });
+      var topic = form.querySelector('[name="topic"]');
+      var subject = (topic && topic.value ? topic.value + ' | ' : '') + form.dataset.subject;
+      location.href = 'mailto:' + form.dataset.mailto + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(lines.join('\n'));
+      var msg = $('[data-demo-msg]', form);
+      msg.hidden = false;
+      msg.scrollIntoView({ block: 'nearest', behavior: reduce ? 'auto' : 'smooth' });
+    });
+  });
+
   // Copy article link
   $$('[data-copy]').forEach(function (b) {
     b.addEventListener('click', function () {

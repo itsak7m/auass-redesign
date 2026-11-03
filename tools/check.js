@@ -10,6 +10,7 @@ const path = require('path');
 const { chromium } = require('playwright');
 
 const DOCS = path.join(__dirname, '..', 'docs');
+const DEPLOY = JSON.parse(fs.readFileSync(require('path').join(__dirname, '..', 'content', 'site.json'), 'utf8')).deploy || {};
 const BASE = '/auass-redesign/';
 const ALL = process.argv.includes('--all');
 const shotDir = process.argv.slice(2).find((a) => !a.startsWith('--'));
@@ -82,7 +83,8 @@ function staticCheck(problems) {
           overflow: de.scrollWidth - de.clientWidth,
           wide,
           noindex: !!document.querySelector('meta[name=robots][content*=noindex]'),
-          note: document.body.innerText.includes('نموذج مقترح لإعادة تصميم الموقع — إعداد: Ameer Hamam'),
+          note: document.body.innerText.includes('Ameer Hamam'),
+          canonical: !!document.querySelector('link[rel=canonical]'),
           h1: document.querySelectorAll('h1').length,
           brokenImgs: [...document.images].filter((i) => i.complete && i.naturalWidth === 0).map((i) => i.src),
           links: [...document.querySelectorAll('a[href]')].map((a) => a.href)
@@ -98,8 +100,10 @@ function staticCheck(problems) {
         await page.click('[data-menu-btn]');
       }
       if (info.overflow > 0) problems.push(`${tag}: horizontal overflow ${info.overflow}px ${info.wide.join(', ')}`);
-      if (!info.noindex) problems.push(`${tag}: missing noindex`);
-      if (!info.note) problems.push(`${tag}: missing prototype footer line`);
+      if (!DEPLOY.domain && !info.noindex) problems.push(`${tag}: missing noindex (no domain configured)`);
+      if (DEPLOY.domain && info.noindex) problems.push(`${tag}: noindex on a live domain`);
+      if (!info.note) problems.push(`${tag}: missing footer credit line`);
+      if (!info.canonical) problems.push(`${tag}: missing canonical link`);
       if (info.h1 !== 1) problems.push(`${tag}: ${info.h1} h1 elements`);
       info.brokenImgs.forEach((s) => problems.push(`${tag}: broken image ${s}`));
       errors.forEach((e) => problems.push(`${tag}: ${e}`));
