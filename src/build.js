@@ -10,7 +10,15 @@ const { icon, skyGlyph, rete } = require('./lib/icons');
 const ROOT = path.join(__dirname, '..');
 const OUT = path.join(ROOT, 'docs');
 const load = (n) => JSON.parse(fs.readFileSync(path.join(ROOT, 'content', n + '.json'), 'utf8'));
-const site = load('site'), news = load('news'), events = load('events'), sky = load('sky');
+const site = load('site'), news = load('news'), events = load('events');
+// "This month's sky" is computed for the current month at every build (see src/lib/skycalc.js).
+// content/sky.json only supplies the labels, and an editor-written month if its monthKey matches.
+const skyStatic = load('sky');
+const skyCalc = require('./lib/skycalc');
+const NOW = Date.now();
+const sky = skyStatic.monthKey === skyCalc.monthOf(NOW).key ? skyStatic : skyCalc.generate(skyStatic, NOW);
+const nextEclipse = skyCalc.nextSolarEclipse(NOW);
+const NEW_MOONS = skyCalc.newMoons(NOW, 40).join(',');
 const about = load('about'), library = load('library'), join = load('join'), moon = load('moon');
 const LANGS = ['ar', 'en'];
 // Posts migrated from the old WordPress site, one JSON file each (see README).
@@ -298,14 +306,14 @@ function skyCard(ctx, e) {
 // Both are computed in the browser (main.js) from the current date.
 function tonight(ctx) {
   const { lang } = ctx;
-  return `<div class="tonight" data-tonight hidden>
+  return `<div class="tonight" data-tonight data-newmoons="${NEW_MOONS}" hidden>
   <div class="tn-card">
     <svg class="tn-moon" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="45" class="tn-dark"/><path class="tn-lit" data-moon-lit d=""/><circle cx="50" cy="50" r="45" class="tn-rim"/></svg>
     <div><p class="kicker">${lang === 'ar' ? 'القمر الليلة' : 'The Moon tonight'}</p><p class="tn-big" data-moon-name></p><p class="tn-small" data-moon-info></p></div>
   </div>
   <div class="tn-card">
     ${skyGlyph('eclipse')}
-    <div><p class="kicker">${lang === 'ar' ? 'الكسوف الكلي القادم في المنطقة العربية' : 'Next total solar eclipse over the Arab world'}</p><p class="tn-big"><span data-eclipse-days></span></p><p class="tn-small">${lang === 'ar' ? '2 آب 2027: كلّي في المغرب والجزائر وتونس وليبيا ومصر والسعودية واليمن، وجزئي في الأردن وبلاد الشام.' : '2 August 2027: total across Morocco, Algeria, Tunisia, Libya, Egypt, Saudi Arabia and Yemen; partial in Jordan and the Levant.'}</p></div>
+    <div><p class="kicker">${lang === 'ar' ? 'الكسوف الشمسي القادم المرئي من الأردن' : 'Next solar eclipse visible from Jordan'}</p><p class="tn-big"><span data-eclipse-days${nextEclipse ? ` data-eclipse-ts="${nextEclipse.ms}"` : ''}></span></p><p class="tn-small">${nextEclipse ? (lang === 'ar' ? `${fmtDate(nextEclipse.date, lang)}: كسوف ${{ total: 'كلي', annular: 'حلقي', partial: 'جزئي', hybrid: 'هجين' }[nextEclipse.kind] || 'جزئي'} من عمّان، يغطي نحو ${nextEclipse.pct}% من قرص الشمس.` : `${fmtDate(nextEclipse.date, lang)}: a ${nextEclipse.kind} solar eclipse from Amman, covering about ${nextEclipse.pct}% of the Sun's disc.`) : ''}</p></div>
   </div>
 </div>`;
 }
@@ -328,7 +336,7 @@ function skySection(ctx, { standalone = false, withTonight = false } = {}) {
     <ol class="sky-strip" data-sky-strip tabindex="0" aria-label="${lang === 'ar' ? 'أحداث الشهر الفلكية' : 'Astronomical events this month'}">${sky.events.map((e) => skyCard(ctx, e)).join('')}</ol>
     <div class="sky-foot">
       <ul class="phases" aria-label="${lang === 'ar' ? 'أطوار القمر' : 'Moon phases'}">${phases}</ul>
-      <p class="sky-credit">${esc(t(sky.credit, lang))}. ${standalone ? '' : `<a href="${newsHref(ctx, sky.source)}">${lang === 'ar' ? 'المصدر' : 'Source'}</a>`}</p>
+      <p class="sky-credit">${esc(t(sky.credit, lang))}${standalone || !sky.source ? '' : `. <a href="${newsHref(ctx, sky.source)}">${lang === 'ar' ? 'المصدر' : 'Source'}</a>`}</p>
     </div>
   </div>
 </section>`;

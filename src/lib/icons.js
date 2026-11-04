@@ -56,6 +56,8 @@ const SKY = {
   mercury: '<path d="M6 34h36"/><circle cx="30" cy="27" r="3.5"/><path d="M12 34a12 12 0 0 1 24 0" stroke-dasharray="2 3"/>',
   venus: '<circle cx="24" cy="24" r="7" fill="currentColor" fill-opacity=".25"/><circle cx="24" cy="24" r="12" stroke-dasharray="2 3"/><circle cx="33" cy="16" r="3"/>',
   eclipse: '<circle cx="24" cy="24" r="11" fill="currentColor" fill-opacity=".9" stroke="none"/><circle cx="24" cy="24" r="13.5"/><path d="M24 4v4M24 40v4M4 24h4M40 24h4M9.9 9.9l2.8 2.8M35.3 35.3l2.8 2.8M9.9 38.1l2.8-2.8M35.3 12.7l2.8-2.8" stroke-dasharray="0"/>',
+  planet: '<circle cx="24" cy="24" r="10"/><path d="M14.5 20h19M14 28h20" stroke-dasharray="3 2.5"/><circle cx="39" cy="12" r="2" fill="currentColor"/>',
+  sun: '<circle cx="24" cy="24" r="8" fill="currentColor" fill-opacity=".85" stroke="none"/><path d="M24 6v6M24 36v6M6 24h6M36 24h6M11.3 11.3l4.2 4.2M32.5 32.5l4.2 4.2M11.3 36.7l4.2-4.2M32.5 15.5l4.2-4.2"/>',
   pleiades: '<path d="M14 9a12 12 0 1 0 0 24a9.5 9.5 0 1 1 0-24z"/><circle cx="29" cy="12" r="1.5" fill="currentColor"/><circle cx="34" cy="15" r="1.2" fill="currentColor"/><circle cx="31" cy="19" r="1.7" fill="currentColor"/><circle cx="37" cy="20" r="1.1" fill="currentColor"/><circle cx="35" cy="24" r="1.4" fill="currentColor"/><circle cx="40" cy="15" r="1" fill="currentColor"/>'
 };
 

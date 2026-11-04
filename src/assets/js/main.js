@@ -63,13 +63,17 @@
     if (n) n.addEventListener('click', function () { step(1); });
   }
 
-  // Tonight's Moon (mean synodic month from a known new Moon; accurate to
-  // within about a day) and the countdown to the 2 August 2027 eclipse.
+  // Tonight's Moon (real new-Moon times computed at build; falls back to the mean
+  // synodic month) and the countdown to the next eclipse visible from Jordan.
   var tn = $('[data-tonight]');
   if (tn) {
     var ar = document.documentElement.lang === 'ar';
     var P = 29.530588853, ref = Date.UTC(2000, 0, 6, 18, 14);
     var age = ((Date.now() - ref) / 864e5 % P + P) % P, f = age / P;
+    var nm = (tn.getAttribute('data-newmoons') || '').split(',').map(Number).filter(Boolean), now = Date.now();
+    for (var i = 0; i < nm.length - 1; i++) {
+      if (nm[i] <= now && now < nm[i + 1]) { age = (now - nm[i]) / 864e5; f = (now - nm[i]) / (nm[i + 1] - nm[i]); break; }
+    }
     var k = Math.cos(2 * Math.PI * f), waxing = f < 0.5, rx = (45 * Math.abs(k)).toFixed(2);
     var inner = waxing ? (k > 0 ? 0 : 1) : (k > 0 ? 1 : 0);
     $('[data-moon-lit]', tn).setAttribute('d', 'M50 5A45 45 0 0 ' + (waxing ? 1 : 0) + ' 50 95A' + rx + ' 45 0 0 ' + inner + ' 50 5Z');
@@ -78,8 +82,11 @@
     var lit = Math.round((1 - k) / 2 * 100), days = Math.floor(age);
     $('[data-moon-name]', tn).textContent = names[idx];
     $('[data-moon-info]', tn).textContent = ar ? ('الإضاءة نحو ' + lit + '٪ · عمر القمر ' + days + ' يوماً تقريباً') : ('About ' + lit + '% lit · ' + days + ' days since new Moon');
-    var left = Math.ceil((Date.UTC(2027, 7, 2, 10, 7) - Date.now()) / 864e5);
-    $('[data-eclipse-days]', tn).textContent = left > 0 ? (ar ? 'بعد ' + left + ' يوماً' : 'In ' + left + ' days') : (ar ? 'وقع في 2 آب 2027' : 'Took place on 2 August 2027');
+    var ec = $('[data-eclipse-days]', tn), ts = Number(ec.getAttribute('data-eclipse-ts'));
+    if (ts) {
+      var left = Math.ceil((ts - Date.now()) / 864e5);
+      ec.textContent = left > 0 ? (ar ? 'بعد ' + left + ' يوماً' : 'In ' + left + ' days') : (ar ? 'وقع اليوم' : 'Happening today');
+    }
     tn.hidden = false;
   }
 

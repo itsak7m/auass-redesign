@@ -1,10 +1,14 @@
 # Rebuilds docs/ (the GitHub Pages site) whenever content or templates change,
-# including edits saved from the content manager at /admin/.
+# including edits saved from the content manager at /admin/, and every night at
+# 00:05 Amman time so the computed pages (this month's sky, the months of worship,
+# the Moon and eclipse widgets) stay current without anyone touching them.
 name: Build site
 on:
   push:
     branches: [main]
     paths: ['content/**', 'src/**']
+  schedule:
+    - cron: '5 21 * * *'
   workflow_dispatch:
 permissions:
   contents: write
