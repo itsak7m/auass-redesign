@@ -148,7 +148,7 @@ html[dir="ltr"] .ico.back { transform: scaleX(-1); }
 
 /* ---------- hero ---------- */
 .hero { padding-top: clamp(48px, 7vw, 96px); }
-.hero-photo { position: absolute; inset: 0; background: url("../img/hero-carina.jpg") center 30% / cover no-repeat; opacity: .6; }
+.hero-photo { position: absolute; inset: 0; background: url("../img/hero-carina.jpg") center 30% / cover no-repeat; background-image: image-set(url("../img/hero-carina.webp") type("image/webp"), url("../img/hero-carina.jpg") type("image/jpeg")); opacity: .6; }
 .hero-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(270deg, rgba(11, 21, 48, .96) 0%, rgba(11, 21, 48, .72) 50%, rgba(11, 21, 48, .3) 100%), linear-gradient(0deg, var(--navy) 0%, rgba(11, 21, 48, 0) 40%); }
 html[dir="ltr"] .hero-photo::after { background: linear-gradient(90deg, rgba(11, 21, 48, .96) 0%, rgba(11, 21, 48, .72) 50%, rgba(11, 21, 48, .3) 100%), linear-gradient(0deg, var(--navy) 0%, rgba(11, 21, 48, 0) 40%); }
 .hero-rete { width: min(720px, 90vw); height: auto; aspect-ratio: 1; inset-inline-end: -120px; top: -60px; opacity: .55; }

@@ -90,7 +90,7 @@ const BASE_PATH = new URL(BASE_URL).pathname;
 function rel(fromPage, to) { const depth = fromPage.split('/').filter(Boolean).length; return ('../'.repeat(depth) || './') + to; }
 
 // ---------- shared chrome ----------
-function head(ctx, { title, description }) {
+function head(ctx, { title, description, preload }) {
   const { lang } = ctx;
   const full = title ? `${title} | ${t(site.name, lang)}` : t(site.name, lang);
   return `<!doctype html>
@@ -110,13 +110,16 @@ ${DOMAIN ? '' : '<meta name="robots" content="noindex, nofollow">\n'}<title>${es
 <meta name="twitter:card" content="summary">
 <link rel="canonical" href="${BASE_URL}${prefix(lang)}${ctx.page || ''}">
 <meta name="theme-color" content="#0B1530">
-<link rel="icon" href="${ctx.r('assets/img/auass-seal.png')}">
-<link rel="alternate" hreflang="${ctx.altLang}" href="${ctx.altHref}">
+<link rel="icon" href="${ctx.r('assets/img/auass-seal-88.png')}">
+<link rel="alternate" hreflang="${lang}" href="${BASE_URL}${prefix(lang)}${ctx.page || ''}">
+<link rel="alternate" hreflang="${ctx.altLang}" href="${ctx.altAbs}">
+<link rel="alternate" hreflang="x-default" href="${lang === 'ar' ? BASE_URL + (ctx.page || '') : ctx.altAbs}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=Marcellus&family=Reem+Kufi:wght@500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=Marcellus&family=Reem+Kufi:wght@500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=Marcellus&family=Reem+Kufi:wght@500;600&display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="${ctx.r('assets/css/style.css')}?v=${BUILD_VERSION}">
-</head>`;
+${preload ? `<link rel="preload" as="image" href="${ctx.r(preload)}" type="image/webp" fetchpriority="high">\n` : ''}</head>`;
 }
 
 function header(ctx) {
@@ -129,7 +132,7 @@ function header(ctx) {
 <header class="site-header" data-header>
   <div class="wrap bar">
     <a class="brand" href="${ctx.r(prefix(lang))}">
-      <img src="${ctx.r('assets/img/auass-seal.png')}" alt="${lang === 'ar' ? 'شعار الاتحاد العربي لعلوم الفضاء والفلك' : 'AUASS emblem'}" width="44" height="48">
+      <img src="${ctx.r('assets/img/auass-seal-88.png')}" alt="${lang === 'ar' ? 'شعار الاتحاد العربي لعلوم الفضاء والفلك' : 'AUASS emblem'}" width="44" height="48">
       <span class="brand-names"><span class="bn-main" lang="${lang}">${esc(site.name[lang])}</span><span class="bn-sub" lang="${ctx.altLang}" dir="${ctx.altLang === 'ar' ? 'rtl' : 'ltr'}">${esc(site.name[ctx.altLang])}</span></span>
     </a>
     <nav class="nav" id="site-nav" aria-label="${lang === 'ar' ? 'القائمة الرئيسية' : 'Main menu'}">
@@ -137,7 +140,7 @@ function header(ctx) {
       <a class="btn btn-brass nav-join" href="${ctx.r(prefix(lang) + site.join.path)}"${ctx.section === 'join' ? ' aria-current="page"' : ''}>${esc(t(site.join.label, lang))}</a>
       <a class="lang-switch" href="${ctx.altHref}" hreflang="${ctx.altLang}" lang="${ctx.altLang}">${lang === 'ar' ? 'English' : 'العربية'}</a>
     </nav>
-    <a class="btn btn-brass bar-join" href="${ctx.r(prefix(lang) + site.join.path)}"><span class="lbl-long">${esc(t(site.join.label, lang))}</span><span class="lbl-short" aria-hidden="true">${lang === 'ar' ? 'انضم' : 'Join'}</span></a>
+    <a class="btn btn-brass bar-join" href="${ctx.r(prefix(lang) + site.join.path)}" aria-label="${esc(t(site.join.label, lang))}"><span class="lbl-long">${esc(t(site.join.label, lang))}</span><span class="lbl-short" aria-hidden="true">${lang === 'ar' ? 'انضم' : 'Join'}</span></a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-btn>
       <span class="sr">${lang === 'ar' ? 'القائمة' : 'Menu'}</span>${icon('menu', 'ico i-open')}${icon('close', 'ico i-close')}
     </button>
@@ -153,7 +156,7 @@ function footer(ctx) {
   return `<footer class="site-footer">
   <div class="wrap footer-grid">
     <div class="f-brand">
-      <img src="${ctx.r('assets/img/auass-seal.png')}" alt="" width="56" height="62" loading="lazy">
+      <img src="${ctx.r('assets/img/auass-seal-88.png')}" alt="" width="56" height="62" loading="lazy">
       <p class="f-name">${esc(t(site.name, lang))}</p>
       <p class="f-desc">${esc(t(site.description, lang))}</p>
       <div class="social">${social}</div>
@@ -435,7 +438,7 @@ function homePage(ctx) {
   </div>
 </section>`;
 
-  return page(ctx, { title: '', description: t(site.description, lang) }, hero + skySection(ctx, { withTonight: true }) + evs + joinBand + heritage + newsSec);
+  return page(ctx, { title: '', description: t(site.description, lang), preload: 'assets/img/hero-carina.webp' }, hero + skySection(ctx, { withTonight: true }) + evs + joinBand + heritage + newsSec);
 }
 
 function aboutPage(ctx) {
@@ -1177,7 +1180,7 @@ function notFoundPage(ctx) {
 function ctxFor(lang, pagePath, section, altPath) {
   const r = (to) => rel(prefix(lang) + pagePath, to);
   const altLang = lang === 'ar' ? 'en' : 'ar';
-  return { lang, section, page: pagePath, r, altLang, altHref: r(prefix(altLang) + (altPath != null ? altPath : pagePath)) };
+  return { lang, section, page: pagePath, r, altLang, altHref: r(prefix(altLang) + (altPath != null ? altPath : pagePath)), altAbs: BASE_URL + prefix(altLang) + (altPath != null ? altPath : pagePath) };
 }
 function write(rel, html) {
   const file = path.join(OUT, rel, 'index.html');
